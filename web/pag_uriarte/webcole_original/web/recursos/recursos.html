@@ -1,0 +1,293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Recursos generales</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="shortcut icon" href="imagenes/favicon.ico">
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+  <style type="text/css">
+*.centradovert
+{
+height: 269px;
+display: table-cell;
+vertical-align: middle;
+}
+  </style>
+</head>
+
+
+<body>
+
+<h2>Parche para conformidad&nbsp;CSS2 en Internet
+Explorer&nbsp;</h2>
+
+<div class="section">
+<ul>
+
+</ul>
+
+<acronym title="Cascading Style Sheets">CSS</acronym>
+es una tecnica
+muy poderosa, pero muchas de sus caracter&iacute;sticas
+m&aacute;s
+avanzadas no son usadas por los desarrolladores de webs debid
+al&nbsp;
+escaso ajuste a los est&aacute;ndares CSS de Internet Explorer.
+Ello ha
+llevado a algunos desarrolladores a buscar maneras de conseguir que
+aumente el ajuste de Internet Explorer para garantizar que, si se
+utilizan t&eacute;cnicas estandarizadas, se consiga una
+visualizaci&oacute;n similar en todos los navegadores. Uno de ellos
+es
+Dean Edwards que ha creado un script que ofrece bajo licencia Creative
+Commons desde su p&aacute;gina <a href="http://dean.edwards.name/IE7/" target="_blank">http://dean.edwards.name/IE7/</a><br>
+
+<br>
+
+En esta documentaci&oacute;n se ha utilizado este script para
+intentar
+garantizar la visualizaci&oacute;n m&aacute;s
+homog&eacute;nea. Es
+posible que cuando esta documentaci&oacute;n llegue a tus manos
+exista
+una versi&oacute;n m&aacute;s actualizada en la
+p&aacute;gina del autor
+pero hemos incluido en el cd la <a href="../programas/parcheIE7/IE7_0_9.zip">versi&oacute;n
+0.9 (alfa)</a>
+<ul>
+
+</ul>
+
+<p>Los pasos a seguir para su utilizaci&oacute;n son:</p>
+
+<ul>
+
+  <li>Extraer los contenidos del archivo comprimido en una
+carpeta de tu sitio (te recomendamos que la llames ie7)</li>
+
+  <li>Incluir en el c&oacute;digo del documento <abbr title="HyperText Markup Language">HTML</abbr>/<abbr title="eXtensible Markup Language">XML</abbr>&nbsp;la
+referencia a la librer&iacute;a de Javascript IE7 para activar el
+parche tal como se indica a continuaci&oacute;n.</li>
+
+  <li>Cerciorarse de que la ruta en la que se va a buscar el
+parche es correcta seg&uacute;n la posici&oacute;n de la
+carpeta en la que hemos descomprimido los archivos.</li>
+
+</ul>
+
+</div>
+
+<h3><a id="html"><abbr title="HyperText Markup Language">Inclusi&oacute;n de la
+referencia en documentos HTML</abbr></a></h3>
+
+<div class="section">
+<p>Para activar el parche en documentos HTML hay que incluir en
+la cabecera de la p&aacute;gina el enlace a la librer&iacute;a <code><strong>ie7-standard-p.js</strong></code>.</p>
+
+<code>&lt;!-- parche para conformidad css en navegadores
+microsoft --&gt;<br>
+
+&lt;!--[if lt IE 7]&gt;<br>
+
+&lt;script src="/ie7/ie7-standard-p.js"
+type="text/javascript"&gt;<br>
+
+&lt;/script&gt;<br>
+
+&lt;![endif]--&gt;</code>
+<p>El enlace hay que incluirlo despu&eacute;s de todas las
+etiquetas&nbsp;<em></em><code>&lt;meta&gt;</code>
+utilizadas para declarar un <code>Content-type</code>
+(en caso contrario se experimentar&aacute; un importante error
+haciendo
+que no se ejecute hasta que no se recargue la p&aacute;gina).</p>
+
+<p>Tal como puede verse el enlace al script est&aacute;
+encerrado entre
+comentarios condicionales. Estos comentarios condicionales entre
+corchetes son una especificaci&oacute;n propietaria de Internet
+Explorer, lo cual quiere decir que el resto de los navegadores no
+procesaran.</p>
+
+</div>
+
+<h3><a id="html"><abbr title="HyperText Markup Language">Inclusi&oacute;n de la
+referencia en documentos&nbsp;</abbr></a></h3>
+
+<h3><a id="xml"><abbr title="eXtensible Markup Language">XML</abbr></a></h3>
+
+<div class="section">
+<p>Para activar el parche en documentos <abbr>XML</abbr>
+se incluye igualmente el enlace a la librer&iacute;a <code><strong>ie7-standard-p.js</strong></code>.
+Es importante se&ntilde;alar que hay que prefijar la etiqueta <code>script</code>
+con el espacio de nombres&nbsp;<code>html</code>&nbsp;</p>
+
+<code>&lt;!--&nbsp;</code><code>parche para
+conformidad css en navegadores microsoft</code><code>
+--&gt;<br>
+
+&lt;!--[if lt IE 7]&gt;<br>
+
+&nbsp;&lt;html:script src="/ie7/ie7-standard-p.js"
+type="text/javascript"&gt;<br>
+
+&nbsp;&lt;/html:script&gt;<br>
+
+&lt;![endif]--&gt;</code><br>
+
+</div>
+
+<h2>Crear un bookmarlet para cambiar&nbsp;el
+tama&ntilde;o de la ventana del navegador</h2>
+
+<br>
+
+<p>Un bookmarlet es un peque&ntilde;o fragmento de
+c&oacute;digo javascript que permite realizar alguna
+acci&oacute;n sobre la p&aacute;gina que en ese momento se
+est&aacute; mostrando en el navegador. Al dise&ntilde;ar
+p&aacute;ginas web puede resultarnos interesante comprobar
+c&oacute;mo quedar&iacute;a nuestra p&aacute;gina cuando la
+vea un usuario con una resoluci&oacute;n de pantalla
+diferente.&nbsp;</p>
+
+<p>Vamos a suponer que nuestra pantalla tiene una
+resoluci&oacute;n de 1024x768&nbsp;p&iacute;xeles que es
+pr&aacute;cticamente el est&aacute;ndar actual. Si
+quisi&eacute;ramos comprobar c&oacute;mo se
+visualizar&iacute;a la p&aacute;gina en una pantalla de
+800x600&nbsp;p&iacute;xeles nos vendr&iacute;a muy bien
+disponer de un bookmarlet. Podr&aacute;s crearlo para Internet
+Explorer, Mozilla o Firefox. La forma de hacerlo es la siguiente:</p>
+
+<ol>
+
+  <li>Crea un marcador o favorito nuevo con una p&aacute;gina
+cualquiera</li>
+
+  <li>Pasa a <span class="refmenu">administrar
+marcadores</span> u <span class="refmenu">organizar
+favoritos</span> seg&uacute;n te encuentres en
+Mozilla/Firefox o Internet Explorer</li>
+
+  <li>Pulsa con el bot&oacute;n derecho sobre el
+marcador/favorito que acabas de crear y elige <span class="refmenu">propiedades</span></li>
+
+  <li>Ren&oacute;mbralo y en el campo <span class="refmenu">ubicaci&oacute;n /direcci&oacute;n
+url (seg&uacute;n el navegador) </span>sustituye la
+direcci&oacute;n por el siguiente c&oacute;digo <code>javascript:resizeTo(800,600)</code></li>
+
+  <li>En Mozilla arrastra el nuevo marcador a la<span class="refmenu"> barra de herramientas personal</span>&nbsp;</li>
+
+  <li>En Firefox arrastra el nuevo marcador hasta la <span class="refmenu">barra de herramientas de marcadores</span></li>
+
+  <li>En Internet Explorer mu&eacute;velo a la carpeta <span class="refmenu">v&iacute;nculos</span></li>
+
+</ol>
+
+<p>L&oacute;gicamente, en los puntos 5, 6 y 7
+tendr&aacute;s que tener visible esta barra para poder utilizar tu
+nuevo bookmarlet. A partir de ahora cuando quieras comprobar
+c&oacute;mo se ver&aacute; una de las p&aacute;ginas que
+est&aacute;s haciendo bastar&aacute; con que pulses sobre
+&eacute;l y la ventana se redimensionar&aacute;
+autom&aacute;ticamente a 800x600 p&iacute;xeles (o a cualquier
+otra resoluci&oacute;n menor que la que tienes establecida en tu
+equipo que hubieras puesto)</p>
+
+<p>
+Si realizas una b&uacute;squeda por el t&eacute;rmino
+bookmarlets puedes encontrar muchas otras peque&ntilde;as piezas de
+c&oacute;digo que pueden resultarte muy &uacute;tiles.
+</p>
+
+<h2>Generador de favicon</h2>
+
+<p>Si est&aacute;s viendo esta p&aacute;gina con Mozilla,
+Firefox u Operar habr&aacute;s comprobado que ha aparecido un icono
+personalizado en la barra de direcciones. En el caso de Explorer es
+necesario que la p&aacute;gina se haya guardado en los favoritos<br>
+
+te has fijado en la barra de direcciones habr&aacute;s
+comprobado que esta p&aacute;gina tiene un icono personalizado.</p>
+
+<p><a href="http://www.html-kit.com/favicon/" target="_blank" onclick="return top.js.OpenExtLink(window,event,this)">http://www.html-kit.com<wbr>/favicon/</a></p>
+
+<h2>Modelos de estructuras de p&aacute;ginas</h2>
+
+<p>Una excelente p&aacute;gina en franc&eacute;s de la
+que se han obetenido varias ideas para los men&uacute;s explicados
+en la secci&oacute;n de aplicaci&oacute;n de
+t&eacute;cnicas CSS. <a href="http://css.alsacreations.com/Modeles-de-mise-en-page-en-CSS" target="_blank">http://css.alsacreations.com/Modeles-de-mise-en-page-en-CSS</a></p>
+
+<p></p>
+
+<h2>Generador de estructuras de tres columnas con CSS</h2>
+
+<p>En ingl&eacute;s pero muy personalizable <a href="http://www.csscreator.com/version2/pagelayout.php" target="_blank">http://www.csscreator.com/version2/pagelayout.php</a></p>
+
+<h2>Fuentes de im&aacute;genes libres de derechos</h2>
+
+<p><a href="http://www.openphoto.net/" target="_blank" onclick="return top.js.OpenExtLink(window,event,this)">http://www.openphoto.net/</a><br>
+
+<a href="http://yotophoto.com/" target="_blank" onclick="return top.js.OpenExtLink(window,event,this)">http://yotophoto.com/</a><br>
+
+<a href="http://pixelperfectdigital.com/index.php" target="_blank" onclick="return top.js.OpenExtLink(window,event,this)">http://pixelperfectdigital.com<wbr>/index.php</a></p>
+
+<p><a href="http://www.openclipart.org/" target="_blank" onclick="return top.js.OpenExtLink(window,event,this)">http://www.openclipart.org/</a></p>
+
+<h2>Extensiones</h2>
+
+Lorem ipsum en l&iacute;nea <a href="http://www.lorem-ipsum.info/generator3-es" target="_blank">http://www.lorem-ipsum.info/generator3-es</a><br>
+
+Lorem ipsum <a href="http://www.chevrel.org/fr/extensions/xpi/loremnvu.xpi" target="_blank">http://www.chevrel.org/fr/extensions/xpi/loremnvu.xpi</a>
+<h2>Sitios para aprender dise&ntilde;o con CSS</h2>
+
+<p><img class="flotizq" style="width: 358px; height: 269px;" alt="Captura de pantalla de CSSZengarden" title="Captura de pantalla de CSSZengarden" src="imagenes/csszengarden.png"></p>
+
+<div class="centradovert">
+<p>Este es uno de los sitios que no te puedes perder si quieres
+empezar por maravillarte con las creaciones de montones de autores,
+continuar aprendiendo de de lo que han hecho y ,para terminar,
+experimentar y participar con un dise&ntilde;o propio si te animas.</p>
+
+<p>La idea es muy sencilla: hay un texto com&uacute;n y se
+puede jugar con &eacute;l para distribuirlo por la superficie de la
+p&aacute;gina y lograr una presentaci&oacute;n diferente. No se
+puede a&ntilde;adir m&aacute;s texto pero s&iacute; se
+pueden modificar las im&aacute;genes y colores de la
+p&aacute;gina.</p>
+
+<p>De verdad, no te lo pierdas.&nbsp;<a target="_blank" href="http://www.csszengarden.com/">www.csszengarden.com/
+</a> </p>
+
+</div>
+
+<img class="flotder" style="width: 358px; height: 269px;" alt="Captura de pantalla de la p&aacute;gina de incio de Camale&oacute;n" title="Captura de pantalla de la p&aacute;gina de incio de Camale&oacute;n" src="imagenes/camaleon.png">
+<div class="centradovert">
+<p>Aunque lo cierto es que cuando quieres aprender lo que haces
+es leer un lenguaje com&uacute;n formado por las reglas de estilo,
+CSSZengarden puede tener una dificultad inicial porque el texto
+est&aacute; escrito en ingl&eacute;s. </p>
+
+<p>Si te resulta m&aacute;s familiar enfrentarte a un texto
+escrito en castellano puedes visitar otra interesante p&aacute;gina
+basada en la misma idea que la anterior: un texto com&uacute;n que
+cuya presentaci&oacute;n hay que modificar utilizando
+&uacute;nicamente estilos. Lo encontrar&aacute;s en&nbsp;<a href="http://www.camaleoncss.com" target="_blank">www.camaleoncss.com</a>
+(Tampoco deber&iacute;as perd&eacute;rtelo)</p>
+
+</div>
+
+</body>
+</html>

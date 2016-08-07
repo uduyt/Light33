@@ -1,0 +1,500 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+
+
+  
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+
+  
+
+
+  
+  
+  
+  <title>Transferencias con gFTP</title>
+  <meta content="Ra&uacute;l Luna" name="author">
+
+
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+
+
+  
+  
+  <link rel="stylesheet" href="filezilla.css" type="text/css">
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Publicaci&oacute;n&gt;&gt;gFTP</p>
+
+</div>
+<div id="flechadcha">
+<a href="../recursos/recursos1.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="ftpxp.htm" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<h3>Datos hipot&eacute;ticos</h3>
+
+
+
+<p>Explicar el acceso v&iacute;a FTP a un servidor puede ser
+una tarea un tanto compleja si no recurrimos a un ejemplo concreto. Es
+por ello por lo que voy a utilizar unos datos para definir a un usuario
+hipot&eacute;tico de forma que contemos con ellos como referencia y
+puedas hacer un paralelismo con tu situaci&oacute;n&nbsp;</p>
+
+<p>real.</p>
+
+
+
+<div class="datos">
+<dl>
+
+  <dt>Nombre real:</dt>
+
+  <dd>Ra&uacute;l Luna</dd>
+
+  <dt>Direcci&oacute;n e-mail : </dt>
+
+  <dd>rluna@platea.pntic.mec.es</dd>
+
+  <dt>Servidor:</dt>
+
+  <dd>platea.pntic.mec.es</dd>
+
+  <dt>Nombre de usuario: </dt>
+
+  <dd>rluna </dd>
+
+  <dt>Contrase&ntilde;a:</dt>
+
+  <dd>jarb236</dd>
+
+</dl>
+
+
+</div>
+
+<h3>Configuraci&oacute;n de una
+conexi&oacute;n</h3>
+
+<p>Como ya comentamos en la introducci&oacute;n vamos a
+utilizar como modelo el servicio ofrecido por el CNICE que puede
+presentar caracter&iacute;sticas similares a las de muchos
+proveedores. Si tu proveedor de acceso es diferente podr&aacute;s
+tomarlo como referencia pero tendr&aacute;s que consultar la
+documentaci&oacute;n sobre disponibilidad e instrucciones
+espec&iacute;ficas de acceso en tu caso. </p>
+
+
+
+
+<p>Tomemos pues los datos del usuario cuya direcci&oacute;n
+de correo es <em>rluna@platea.pntic.mec.es </em>que, por
+lo que hemos visto hasta el momento, tendr&aacute; como nombre de
+usuario para el servicio de correo lo que aparece antes del signo @,
+esto es, <strong>rluna. </strong> En la
+mayor&iacute;a de los servidores tambi&eacute;n ser&aacute;
+este el nombre de usuario para acceder al servicio de ftp, y
+as&iacute; ocurre en el caso del CNICE. Si el nombre de usuario es
+el mismo que para el correo electr&oacute;nico es l&oacute;gico
+suponer que la contrase&ntilde;a ser&aacute; tambi&eacute;n
+la misma y as&iacute; ocurre tambi&eacute;n en este caso.</p>
+
+
+
+
+<p class="avisos">En algunos casos el nombre de usuario no
+es s&oacute;lo lo
+que precede al signo @ sino que puede ser toda la direcci&oacute;n
+de correo electr&oacute;nico u otro dato que te habr&aacute;
+suministrado tu proveedor.</p>
+
+
+
+
+<p>En cuanto al nombre del ordenador en el que tenemos reservado
+el espacio, en el caso de las cuentas del CNICE coincide con el
+ordenador en el que se almacena nuestro correo, por lo que en el
+ejemplo que estamos viendo ser&iacute;a <strong>platea.pntic.mec.es</strong>,
+aunque hay que tener en cuenta que este caso no es tan general como en
+lo referido al nombre de usuario y la contrase&ntilde;a: hay muchos
+servidores en los que el espacio de almacenamiento est&aacute;
+alojado en un servidor con un nombre diferente al del correo.</p>
+
+
+
+
+<p>Veamos pues un resumen de un par de situaciones que pueden
+cubrir una gran parte de la casu&iacute;stica.</p>
+
+
+
+
+<table style="width: 100%;" border="0" cellspacing="2">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <th width="22%">
+      
+      
+      
+      <div>e-mail</div>
+
+
+
+
+      </th>
+
+
+
+
+      <th width="29%">
+      
+      
+      
+      <div>usuario</div>
+
+
+
+
+      </th>
+
+
+
+
+      <th width="12%">
+      
+      
+      
+      <div>contrase&ntilde;a</div>
+
+
+
+
+      </th>
+
+
+
+
+      <th width="37%">
+      
+      
+      
+      <div>ordenador remoto</div>
+
+
+
+
+      </th>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr bgcolor="#f9ecb9">
+
+
+
+
+      <td>rluna@platea.pntic.mec.es</td>
+
+
+
+
+      <td>lo que precede a @ = rluna</td>
+
+
+
+
+      <td>la misma del correo</td>
+
+
+
+
+      <td>el mismo del correo =
+platea.pntic.mec.es</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr bgcolor="#f9ecb9">
+
+
+
+
+      <td>mercedesgr@ya.com</td>
+
+
+
+
+      <td>todo el e-mail =
+mercedesgr@ya.com</td>
+
+
+
+
+      <td>la misma del correo</td>
+
+
+
+
+      <td>diferente al de correo =
+ftp.ya.com</td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p>Una vez conocidos estos datos los introduciremos en la zona
+destinada al efecto. </p>
+
+
+
+<p class="imgcentr" align="center"> <img title="Zona de introducci&oacute;n de datos de conexi&oacute;n" style="width: 614px; height: 38px;" alt="Zona de introducci&oacute;n de datos de conexi&oacute;n" src="imagenes/datosconexion.png" class="recuadroimg"></p>
+
+
+
+<p>El puerto de comunicaciones utilizado de forma general para
+las transferencias ftp es el 21 y aunque lo dejes en blanco el programa
+lo completar&aacute; autom&aacute;ticamente. Una vez
+introducidos los datos s&oacute;lo queda pulsar el icono <img style="width: 45px; height: 44px;" alt="Conexi&oacute;n / desconexi&oacute;n" title="Conexi&oacute;n / desconexi&oacute;n" src="imagenes/iconoconexiondesconexion.png"> para
+que se inicie la conexi&oacute;n al servidor. Cuando quieras
+desconectar tendr&aacute;s que pulsar nuevamente este icono.</p>
+
+
+
+<h3>El entorno general</h3>
+
+
+
+<p>Cuando se establece una conexi&oacute;n con un sitio FTP
+se muestran en la zona izquierda de la pantalla los archivos y carpetas
+existentes en el propio PC y los del sitio FTP en la derecha. La
+ventana principal presenta el siguiente interfaz:</p>
+
+
+
+<p class="imgcentr" align="center"><img style="width: 639px; height: 458px;" alt="Entorno general de gFTP con indicaci&oacute;n de zonas" title="Entorno general de gFTP con indicaci&oacute;n de zonas" src="imagenes/entornogeneral.png"></p>
+
+
+
+<dl>
+
+
+
+  <dt> <img src="imagenes/a.png" height="30" hspace="5" width="30">Men&uacute;:
+  </dt>
+
+
+
+  <dd>Como en cualquier aplicaci&oacute;n da acceso a todas
+las funciones del programa.<br>
+
+
+
+&nbsp; </dd>
+
+
+
+  <dt><img src="imagenes/b.png" height="30" hspace="5" width="30">Barra
+de conexi&oacute;n: </dt>
+
+
+
+  <dd>Zona para introducir los datos de conexi&oacute;n.
+Incluye bot&oacute;n para detener las operaciones en curso.<br>
+
+
+
+&nbsp;</dd>
+
+
+
+  <dt><img src="imagenes/c.png" height="30" hspace="5" width="30">Vista
+Local: </dt>
+
+
+
+  <dd>En la zona superior se muestra la ruta del directorio en el
+que nos encontramos y en la zona inferior el listado de directorios y
+archivos incluidos en el mismo. <br>
+
+
+
+&nbsp;</dd>
+
+
+
+  <dt><img src="imagenes/d.png" height="30" hspace="5" width="30">Vista
+Remota:</dt>
+
+
+
+  <dd>Muestra todos los archivos y carpetas accesibles en el
+sitio remoto. Al igual que en la vista local, cada vez que accedemos a
+una carpeta comprobaremos que el listado de sus contenidos se inicia
+con una carpeta rotulada como "<strong>..</strong>" La
+pulsaci&oacute;n sobre esta carpeta nos permite subir hasta el
+nivel anterior del &aacute;rbol de directorios,
+mostr&aacute;ndose en la caja de la zona superior el punto en el
+que nos encontramos en cada momento. <br>
+
+
+
+&nbsp; </dd>
+
+
+
+  <dt><img src="imagenes/e.png" height="30" hspace="5" width="30">Botones
+de transferencia: </dt>
+
+
+
+  <dd>Indican el sentido en el que se transferir&aacute;n los
+archivos seleccionados. Cuando transferimos archivos individuales no
+ser&iacute;a necesario utilizarlos ya que el doble clic se
+interpreta autom&aacute;ticamente como la orden de transferencia
+hacia el otro equipo.<br>
+
+
+
+&nbsp;</dd>
+
+
+
+  <dt><img src="imagenes/f.png" height="30" hspace="5" width="30">Cola
+de transferencias: </dt>
+
+
+
+  <dd>Muestra el listado de archivos que se tienen que transferir
+en uno u otro sentido y el progreso de cada uno de ellos cuando se
+produce la transferencia. <br>
+
+
+
+&nbsp;</dd>
+
+
+
+  <dt><img src="imagenes/g.png" height="30" hspace="5" width="30">Registro
+de mensajes:</dt>
+
+
+
+  <dd>Aqu&iacute; se registra todo el intercambio de mensajes
+que se produce entre gFTP y el sitio remoto. &nbsp;</dd>
+
+
+
+</dl>
+
+
+
+<div class="practicas">
+<p><img style="width: 29px; height: 29px;" alt="Actividad 103" title="Actividad 103" src="../imagenes/numeracion/cientotres.gif"> </p>
+
+
+
+<ul>
+
+
+
+  <li>Con&eacute;ctate a tu espacio web.</li>
+
+
+
+  <li>Comprueba si existe la carpeta public_html y
+&aacute;brela.(Recuerda que esta es la carpeta por defecto en los
+servidores del CNICE pero podr&iacute;a no ser necesaria o llamarse
+de otra forma si est&aacute;s alojando tu web en otro servidor)</li>
+
+
+
+  <li>Transfiere los archivos que componen tu sitio WEB.</li>
+
+
+
+  <li>Comprueba que las p&aacute;ginas se ven correctamente
+visitando la ubicaci&oacute;n en la red. En el caso del CNICE
+responder&aacute; al esquema: <b>http://ordenador.pntic.mec.es/nombreusuario/</b>
+o <b>http://ordenador.cnice.mecd.es/~nombreusuario/</b>
+pero podr&iacute;a ser diferente si lo alojas en otros proveedores.</li>
+
+
+
+  <li>Si hay alg&uacute;n archivo que hayas olvidado (suele
+ocurrir en la mayor&iacute;a de las ocasiones) vuelve a realizar
+una conexi&oacute;n ftp y env&iacute;alo al servidor.</li>
+
+
+
+  <li>Comprueba que todas las p&aacute;ginas se ven
+correctamente igual que se ve&iacute;an en modo local.</li>
+
+
+
+</ul>
+
+
+
+</div>
+
+
+
+<p></p>
+
+
+</div>
+</body>
+</html>

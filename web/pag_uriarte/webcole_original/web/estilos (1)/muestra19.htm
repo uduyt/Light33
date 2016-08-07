@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+  <title>Recortes</title>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <link href="muestrasdeestilos.css" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+<!--
+-->
+  </style>
+  <script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_showHideLayers() { //v6.0
+var i,p,v,obj,args=MM_showHideLayers.arguments;
+for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+obj.visibility=v; }
+}
+//-->
+  </script>
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+
+
+<body>
+
+<p><img src="../imagenes/farola.jpg" style="position: absolute; clip: rect(100px, 300px, 400px, 100px);" height="581" width="720">
+Este texto est&aacute; situado en el espacio que
+corresponder&iacute;a a la imagen, puesto que &eacute;sta se ha
+recortado
+aplic&aacute;ndole un estilo en linea con los siguientes
+par&aacute;metros:</p>
+
+<p><code>style="position:absolute; clip:rect(100px, 300px,
+400px, 100px);"</code></p>
+
+<p>Si alg&uacute;n texto se superpone a la zona visible de la
+imagen quedar&aacute; oculto por &eacute;sta, como ocurre con
+el siguiente p&aacute;rrafo.</p>
+
+<p>Esto va a ocultarse</p>
+
+<p>Ha ocurrido un eclipse de texto l </p>
+
+</body>
+</html>

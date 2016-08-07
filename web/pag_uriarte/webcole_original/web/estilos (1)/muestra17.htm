@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Mostrar y ocultar capas</title>
+<link href="muestrasdeestilos.css" rel="stylesheet" type="text/css">
+
+<script language="Javascript">
+function mostrar(nombreCapa){
+document.getElementById(nombreCapa).style.visibility="visible";
+}
+function ocultar(nombreCapa){
+document.getElementById(nombreCapa).style.visibility="hidden";
+}
+</script>
+</head>
+<body>
+<ul>
+  <li><a href="#" onClick="mostrar('capa1')">Mostrar la capa haciendo clic</a></li>
+  <li><a href="#" onClick="ocultar('capa1')">Ocultar  la capa 1 haciendo clic</a></li>
+  <li><a href="#" onMouseOver="mostrar('capa2')" onMouseOut="ocultar('capa2')">Mostrar y ocultar la capa 2 al pasar sobre el enlace</a>
+        
+</li>
+</ul>
+<div id="capa1" style="position:absolute;width:100;height:100;top:100;left:100;background-color:blue; visibility:hidden; color:white; font-weight:bold; ">Capa 1</div>
+<div id="capa2" style="position:absolute;width:100;height:100;top:100;left:200;background-color:red;visibility:hidden; font-weight:bold;">Capa 2</div>
+</body>
+</html> 

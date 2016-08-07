@@ -1,0 +1,907 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Errores de N|VU</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <link rel="stylesheet" href="errores.css" type="text/css">
+
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Errores</p>
+
+</div>
+
+
+<div id="flechaizq">
+<a href="../accesibilidad/pautas.htm" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+<h2>Algunos
+errores conocidos de N|VU 1.0</h2>
+
+Como programa en desarrollo que es, N|VU presenta algunos errores o
+comportamientos no previsibles que pueden hacernos perder mucho tiempo
+si no sabemos de su existencia. Vamos a aprovechar el trabajo de
+recopilaci&oacute;n realizado por Charles Cooke, publicado en
+ingl&eacute;s en su p&aacute;gina <a href="http://web.onetel.net.uk/%7Echarlescooke/nvubugs10.htm" target="_blank">http://web.onetel.net.uk/%7Echarlescooke/nvubugs10.htm</a>,
+en el que me he basado para elaborar las siguientes notas, que son en
+gran parte una traducci&oacute;n del original con algunos
+a&ntilde;adidos que he podido ir descubriendo con el uso del programa.
+Dado que su trabajo
+de soporte pretende conseguir repercutir en las futuras mejoras de NVU
+vamos a omitir sus valoraciones de los errores, que &eacute;l mismo
+indica que son personales. Sin embargo s&iacute; que
+incluir&eacute; alguna valoraci&oacute;n de los mismos basada
+en mi propia experiencia, ya que toda esta documentaci&oacute;n
+est&aacute; elaborada utilizando el N|VU, por lo que
+podr&iacute;a perfectamente colocarse el icono <img style="width: 80px; height: 15px;" alt="Hecho con N|VU" title="Hecho con N|VU" src="../imagenes/madewithNvu80x15clear.png">
+<div class="indentado50">
+<ol id="mozToc">
+<!--mozToc h3 1 h4 4 h5 5 h6 6--><li><a href="#mozTocId917388">Hojas
+de estilo externas</a></li>
+  <li><a href="#mozTocId938461">Declaraci&oacute;n
+del tipo de documento incompleta</a></li>
+  <li><a href="#mozTocId607266">Especificaci&oacute;n
+del tipo de documento en las
+preferencias</a></li>
+  <li><a href="#mozTocId338911">Creaci&oacute;n
+de c&oacute;digos no acordes con el
+tipo de DTD</a></li>
+  <li><a href="#mozTocId546780">Manejo
+de capas</a></li>
+  <li><a href="#mozTocId273941">Modificaciones
+ortogr&aacute;ficas no disparan el
+guardado al cerrar</a></li>
+  <li><a href="#mozTocId63492">Subrayado
+autom&aacute;tico de errores no se mantiene al abrir
+p&aacute;ginas guardadas</a></li>
+  <li><a href="#mozTocId205130">Funcionamiento
+irregular de las sugerencias ortogr&aacute;ficas</a></li>
+  <li><a href="#mozTocId93648">Listas
+anidadas</a></li>
+  <li><a href="#mozTocId824262">Aplicaci&oacute;n
+de ID</a></li>
+  <li><a href="#mozTocId683738">Inactivaci&oacute;n
+de barra de formato</a></li>
+  <li><a href="#mozTocId603191">Numeraci&oacute;n
+de l&iacute;neas</a></li>
+  <li><a href="#mozTocId869574">P&eacute;rdida
+del foco de la pesta&ntilde;a activa</a></li>
+  <li><a href="#mozTocId994843">Tablas</a></li>
+  <li><a href="#mozTocId607055">Tablas
+de contenido (TOC)</a></li>
+  <li><a href="#mozTocId228445">Formularios.
+Teclas de&nbsp;accesibilidad en campos de texto</a></li>
+  <li><a href="#mozTocId361504">Formularios.
+Propiedades de botones de opci&oacute;n y casillas de
+verificaci&oacute;n</a></li>
+  <li><a href="#mozTocId88626">Formularios.
+Propiedades de listas y cuadros de selecci&oacute;n</a></li>
+  <li><a href="#mozTocId618617">Limpiador
+de c&oacute;digo</a></li>
+  <li><a href="#mozTocId641744">Cerrar
+sin salvar estilos en l&iacute;nea</a></li>
+  <li><a href="#mozTocId16141">Administrador
+de sitios</a></li>
+  <li><a href="#mozTocId214804">Editor
+CSS</a></li>
+  <li><a href="#mozTocId479435">Tabla
+de c&oacute;digos generados por N|VU seg&uacute;n las
+circunstancias</a></li>
+</ol>
+
+<span class="indentado50"></span></div>
+
+<br>
+
+<h3><a class="mozTocH3" name="mozTocId917388"></a>Hojas
+de estilo externas</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>El enlace al archivo CSS
+aparece siempre como ruta absoluta. Una vez que una p&aacute;gina
+se mueva a una&nbsp;localizaci&oacute;n distinta, por
+ejemplo&nbsp; desde una m&aacute;quina local a un servidor no
+se podr&aacute; localizar el archivo de hoja de estilos, salvo que
+esta transferencia se realice con el gestor de sitios de N|VU que
+enviar&aacute; el archivo CSS, junto con el resto de archivos
+complementarios a la carpeta que indiquemos modificando la ruta para
+que se convierta en relativa.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>
+    <ol>
+
+      <li>Publicar la p&aacute;gina utilizando el
+administrador
+de sitios de N|VU (menos recomendable)</li>
+
+      <li>Modificar manualmente la ruta desde la
+pesta&ntilde;a <img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png">
+para convertirla
+en relativa (m&aacute;s recomendable)</li>
+
+    </ol>
+
+  </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Los usuarios principiantes pueden encontrarse con que sus
+p&aacute;ginas no se muestran como esperan, desaprovechando una de
+las funciones m&aacute;s potentes y recomendables del
+programa.&nbsp;</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error importante</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId938461"></a>Declaraci&oacute;n
+del tipo de documento incompleta</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>La declaraci&oacute;n de tipo de documento cuando se
+opta por
+documentos HTML (opci&oacute;n por defecto) es incompleta porque
+omite
+el URL del DTD. Los tipos permitidos est&aacute;n enumerados en el
+p&aacute;rrafo 7.2 de las especificaciones&nbsp;HTML 4.01 del
+W3C.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>
+    <ol>
+
+      <li>Modificar con&nbsp;un editor de texto externo la
+p&aacute;gina base y guardarla como plantilla (no puede hacerse
+desde
+N|VU porque no guarda las modificaciones en la DTD</li>
+
+      <li>Crear las nuevas p&aacute;ginas
+bas&aacute;ndose en esa plantilla.</li>
+
+    </ol>
+
+  </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Algunos navegadores pueden reaccionar de modo caprichoso,
+por lo
+que pueden mostrar tama&ntilde;os incorrectos de letra y deteriorar
+la
+compatibilidad para diversos navegadores que se hubiera
+perseguido.&nbsp;</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error de importancia media.</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId607266"></a>Especificaci&oacute;n
+del tipo de documento en las
+preferencias</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>A pesar de que se indique un tipo de documento
+predeterminado en
+las preferencias generales (herramientas preferencias) dicha
+opci&oacute;n solo persiste hasta que&nbsp;se crea un documento
+de un
+tipo diferente,momento en el que&nbsp;esta elecci&oacute;n
+sobreescribe
+las preferencias generales.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd> Aunque se establezca&nbsp;un tipo de documento
+predeterminado no confiar en esta condici&oacute;n y estar atentos
+en
+cada nuevo documento a que el tipo sea el que realmente pretendemos. </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Puede ocurrir, por ejemplo, que establezcamos como tipo
+predeterminado HTML 4.01 strict, pero una vez que creemos un documento
+de tipo HTML 4.01 transitional todos los dem&aacute;s se
+crear&aacute;n
+con este tipo.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error importante que puede resultar dif&iacute;cil de
+detectar
+para quienes no validen o hagan poco uso de la revisi&oacute;n de
+c&oacute;digo.</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId338911"></a>Creaci&oacute;n
+de c&oacute;digos no acordes con el
+tipo de DTD</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>La aplicaci&oacute;n de formato a zonas o elementos del
+documento puede producir: <br>
+
+    <ol type="a">
+
+      <li>que se aplique un formato que no es compatible con el
+tipo de DTD especificado&nbsp;</li>
+
+      <li>que se genere c&oacute;digo que no tiene efecto
+sobre el formato&nbsp;</li>
+
+      <li>que opciones que deber&iacute;an poder utilizarse
+seg&uacute;n el DTD especificado no est&eacute;n accesibles. </li>
+
+    </ol>
+
+Todas estas situaciones se producen seg&uacute;n se encuentre
+marcada o no en las preferencias la opci&oacute;n para <span class="refmenu">"usar css..."</span> y en
+funci&oacute;n del tipo de DTD especificado.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Para los expertos, si todo el formato se realiza
+utilizando&nbsp;CSS no habr&aacute; problemas.<br>
+
+Para el resto, si se elige&nbsp;<span class="refmenu">usar
+estilos css en lugar de elementos y atributos html</span> en las
+preferencias y se utiliza un DTD transitional no habr&aacute;
+problemas de validaci&oacute;n.<br>
+
+Para quienes quieran usar DTD strict y seguir utilizando los botones o
+las opciones de men&uacute; consultar la tabla para evitar errores.
+  </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Se producir&aacute;n errores de validaci&oacute;n.
+Puede requerir tiempo para las correcciones manuales.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error importante, especialmente para principiantes, ya que
+puede desconcertar mucho la inactivaci&oacute;n de opciones.</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId546780"></a>Manejo
+de capas</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>Cada capa puede moverse de posici&oacute;n
+f&aacute;cilmente si
+arrastramos el tirador de posici&oacute;n que aparece en la zona
+superior izquierda. Si se han creado varias capas y, al
+moverlas,&nbsp;el contorno de una de ellas oculta completamente el
+tirador de posici&oacute;n de otra ser&aacute; imposible volver
+a
+acceder a &eacute;l para mover esa capa. Incluso, aunque el valor
+z-index de la capa que tiene el tirador oculto sea mayor
+seguir&aacute;
+produci&eacute;ndose esa situaci&oacute;n.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>
+    <ol type="a">
+
+      <li>Activar la cuadr&iacute;cula de fijaci&oacute;n
+(<span class="refmenu">formato </span><img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"><span class="refmenu">
+rejilla de posicionamiento</span>)
+con una medida de 20 p&iacute;xeles facilita la vuelta de cada capa
+a su
+posici&oacute;n original y deja suficiente libertad de
+posicionamiento.</li>
+
+      <li>Modificar temporalmente la posici&oacute;n de la
+capa
+que oculta
+el tirador para hacerlo accesible y situar la capa donde se desee.
+Restaurar luego la posici&oacute;n de la capa que movimos para
+acceder
+al tirador.</li>
+
+    </ol>
+
+  </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Puede ser muy molesto al obligar a realizar varias
+operaciones para obtener un resultado que deber&iacute;a ser muy
+simple.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error ligero salvo que se utilicen muchas capas
+posicionadas absolutamente.&nbsp;</dd>
+
+</dl>
+
+<dl>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId273941"></a>Modificaciones
+ortogr&aacute;ficas no disparan el
+guardado al cerrar</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>Si se ha activado el subrayado de palabras mal escritas y
+modificamos alguna palabra con la opci&oacute;n sugerida al pulsar
+con
+el bot&oacute;n derecho se muestra el cambio en pantalla pero no
+cambia
+el&nbsp;estado del documento a modificado.&nbsp;</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Cuando se hagan correcciones ortogr&aacute;ficas por
+sugerencias
+en el men&uacute; contextual no guardar sin haber realizado una
+modificaci&oacute;n tal como a&ntilde;adir y borrar un
+espacio.&nbsp; </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Si se cierra el
+documento no
+preguntar&aacute; si se quieren guardar los cambios y&nbsp;se
+perder&aacute;n las modificaciones, guard&aacute;ndose la
+p&aacute;gina con los errores ortogr&aacute;ficos.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error importante que puede provocar errores involuntarios
+al
+hacer que se publiquen con errores p&aacute;ginas que los autores
+consideran corregidas.</dd>
+
+</dl>
+
+<dl>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId63492"></a>Subrayado
+autom&aacute;tico de errores no se mantiene al abrir
+p&aacute;ginas guardadas</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>Si se abre una p&aacute;gina ya guardada en
+vista&nbsp;<img style="width: 65px; height: 20px;" alt="Normal" src="../imagenes/pestananormal.png"> no
+se subrayan las palabras mal escritas a pesar de que est&eacute;
+especificado as&iacute; en las preferencias.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Pulsar la pesta&ntilde;a <img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png"> y volver a la
+pesta&ntilde;a <img style="width: 65px; height: 20px;" alt="Normal" src="../imagenes/pestananormal.png">
+activa el subrayado de los errores ortogr&aacute;ficos. </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Puede provocar errores involuntarios al hacer
+que se publiquen con errores ortogr&aacute;ficos p&aacute;ginas
+que los autores consideran correctas.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error importante.&nbsp;</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId205130"></a>Funcionamiento
+irregular de las sugerencias ortogr&aacute;ficas</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>Cuando&nbsp; <span class="refmenu">subrayar
+las palabras mal escritas </span>
+est&aacute; activado suele presentarse la opci&oacute;n de
+sugerencias
+ortogr&aacute;ficas en el men&uacute; contextual, pero no
+siempre es
+as&iacute;. En ocasiones desaparece la opci&oacute;n de las
+sugerencias.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Desactivar en las preferencias <span class="refmenu">subrayar
+las palabras mal escritas </span>y volver a reactivarlo. </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Provoca acciones innecesarias</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error moderado que provoca molestias al usuario. Dados los
+errores que presenta esta funci&oacute;n parece poco aconsejable
+mantenerla activa, siendo preferible recurrir a la
+correcci&oacute;n
+ortogr&aacute;fica de todo el documento al finalizarlo.</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId93648"></a>Listas
+anidadas</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>Las actuales especificaciones consideran incorrecta la
+anidaci&oacute;n de una lista dentro de otra si se ha cerrado el
+elemento&nbsp;<code>&lt;li&gt;</code>
+precedente. Cuando dentro de una lista
+pulsamos el bot&oacute;n de sangrar texto de la barra de formato se
+anida una lista para crear los elementos de segundo nivel pero se
+cierra el elemento con su etiqueta <code>&lt;/li&gt;</code></dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Utilizar la opci&oacute;n de men&uacute;&nbsp;<span style="font-weight: bold;"></span><span class="refmenu"> herramientas </span><img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"> <span class="refmenu">limpiador
+de c&oacute;digo </span>y
+volver a reactivarlo. </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Se producir&aacute;n errores de validaci&oacute;n,
+lo cual puede suponer que alg&uacute;n navegador muestre de forma
+err&oacute;nea la anidaci&oacute;n.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error moderado. Aunque la mayor&iacute;a de los
+navegadores presentar&aacute;n correctamente los diferentes niveles
+del listado puede no ocurrir as&iacute; en el futuro. La
+soluci&oacute;n es sencilla y, de paso, podemos localizar otros
+elementos innecesarios en el c&oacute;digo.</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId824262"></a>Aplicaci&oacute;n
+de ID</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>Puede aplicarse el mismo <code>ID</code> a
+varios elementos.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Revisar manualmente el c&oacute;digo para evitarlo </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Si se utiliza inadvertidamente podr&iacute;an
+producirse
+aplicaciones incorrectas de estilos o enlaces
+err&oacute;neos.&nbsp;
+Provoca errores de validaci&oacute;n del c&oacute;digo.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error
+moderado. Posiblemente los principiantes no utilizar&aacute;n esta
+posibilidad y es de esperar que los expertos no cometan este error.</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId683738"></a>Inactivaci&oacute;n
+de barra de formato</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>De vez en cuando las dos barras de formato quedan
+inactivas.
+Cuando esto ocurre tambi&eacute;n algunos elementos de los
+men&uacute;s
+se vuelven inactivos y desaparece la identificaci&oacute;n del
+archivo
+de la barra de t&iacute;tulo de la aplicaci&oacute;n.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Cerrar y reiniciar el programa </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>P&eacute;rdida de tiempo.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error
+moderado. Es molesto por la p&eacute;rdida de tiempo pero no
+provoca errores irrecuperables.</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId603191"></a>Numeraci&oacute;n
+de l&iacute;neas</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>Cuando se valida un documento que contiene errores la
+numeraci&oacute;n de las l&iacute;neas que se devuelve no
+coincide con
+la que muestra N|VU en la pesta&ntilde;a <img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png">.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Buscar la l&iacute;nea correcta utilizando la
+referencia de c&oacute;digo que muestra el validador.</dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>P&eacute;rdida de tiempo.&nbsp;</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error
+molesto por la incomodidad provocada. Adem&aacute;s tiene una
+relativa importancia porque introduce en el archivo c&oacute;digos
+invisibles, que no afectan a la visualizaci&oacute;n del documento,
+pero que incrementan su tama&ntilde;o innecesariamente.&nbsp;</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId869574"></a>P&eacute;rdida
+del foco de la pesta&ntilde;a activa</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>En ocasiones, cuando tenemos&nbsp;documentos abiertos
+en varias
+pesta&ntilde;as se pierde el foco de la pesta&ntilde;a que
+est&aacute;
+a la vista: cuando queremos pegar un fragmento que hemos copiado de la
+misma o de otra pesta&ntilde;a no sucede nada aparentemente. El
+foco se
+ha trasladado a la primera pesta&ntilde;a y es all&iacute;
+donde se van
+pegando los fragmentos en lugar de la pesta&ntilde;a en la que
+deseamos
+hacerlo.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Cerrar y reiniciar el programa. </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>P&eacute;rdida de tiempo.&nbsp;Posibles errores al
+guardar cambios que no deber&iacute;an guardarse en el
+documento que ha recibido err&oacute;neamente los fragmentos pegados</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error moderado. Puede provocar la
+publicaci&oacute;n&nbsp;de documentos con fragmentos que no les
+corresponden.</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId994843"></a>Tablas</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>Originalmente las tablas se insertan con una anchura por
+defecto del 100% de la ventana. Al cabo de un tiempo se cambia el tipo
+de unidad en las preferencias pasando de porcentaje a
+p&iacute;xeles, cre&aacute;ndose las nuevas tablas con una
+anchura de 100 p&iacute;xeles.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Modificar la opci&oacute;n de anchura en el
+men&uacute; <span class="refmenu">tabla&nbsp;</span><img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"><span class="refmenu">
+insertar&nbsp;</span><img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"><span class="refmenu">
+pesta&ntilde;a preciso</span>
+para volver a porcentaje </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>P&eacute;rdida de tiempo. Intervenci&oacute;n
+innecesaria del usuario</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error leve.&nbsp;</dd>
+
+</dl>
+
+
+<h3><a class="mozTocH3" name="mozTocId607055"></a>Tablas
+de contenido (TOC)</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>La ayuda indica que si se marca <span class="refmenu">hacer
+que
+la tabla de contenidos sea de
+s&oacute;lo lectura</span> provocar&aacute; que la lista
+sea
+de texto simple sin
+enlaces. En la actual versi&oacute;n esta opci&oacute;n no
+tiene efecto y la lista sigue saliendo con enlaces.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>No hay soluci&oacute;n, salvo que se eliminaran
+manualmente los enlaces </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Funci&oacute;n in&uacute;til en la actual versi&oacute;n</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error leve.&nbsp;</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId228445"></a>Formularios.
+Teclas de&nbsp;accesibilidad en campos de texto</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd style="">Cuando se adjudica una tecla de acceso
+r&aacute;pido (<code>accesskey</code>) en un campo de
+texto de una l&iacute;nea su valor no se almacena<span class="refmenu"></span></dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Insertar manualmente el
+c&oacute;digo <code>accesskey="letra"</code> </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Repetir innecesariamente una tarea y de forma
+m&aacute;s inc&oacute;moda que la prevista.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error moderado: puede provocar la creaci&oacute;n de
+documentos con accesibilidad reducida en contra de la
+intenci&oacute;n del autor. Molesto.&nbsp;</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId361504"></a>Formularios.
+Propiedades de botones de opci&oacute;n y casillas de
+verificaci&oacute;n</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd style="">Al intentar modificar las propiedades de un
+bot&oacute;n de opci&oacute;n o una casilla de
+verificaci&oacute;n ya creados accediendo con el bot&oacute;n
+derecho al&nbsp;men&uacute; contextual <span class="refmenu">propiedades
+del campo de formulario</span> o intentando lanzar el panel de creaci&oacute;n/edici&oacute;n con un doble clic no se obtiene respuesta del programa.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd><span style="font-weight: bold;"></span><code></code>
+Utilizar el bot&oacute;n derecho sobre la etiqueta <code>&lt;input&gt;</code>
+de la barra de estado y elegir <span class="refmenu">propiedades
+avanzadas</span> lanza el panel para editar las
+propiedades pero habr&aacute; que conocer&nbsp;cu&aacute;l es el atributo que deseamos modificar.</dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Desconcierta puesto que en otros tipos de campos se puede
+realizar la edici&oacute;n sin problemas.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error moderado: aunque la
+soluci&oacute;n es relativamente c&oacute;moda desconcierta por
+lo an&oacute;malo del comportamiento y, adem&aacute;s, obliga a
+trabajar haciendo referencia a los atributos en lugar de utilizar la
+traducci&oacute;n de los mismos para que un usuario poco experto pueda
+comprender r&aacute;pidamente el sentido.</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId88626"></a>Formularios.
+Propiedades de listas y cuadros de selecci&oacute;n</h3>
+
+<dl>
+  <dt>Descripci&oacute;n:</dt>
+  <dd style="">Situaci&oacute;n similar a la anterior: no se obtiene
+respuesta del programa al&nbsp;intentar modificar las propiedades de un
+cuadro men&uacute; o lista de selecci&oacute;n ya creados accediendo
+con el bot&oacute;n
+derecho al&nbsp;men&uacute; contextual <span class="refmenu">propiedades
+del campo de formulario</span> o&nbsp;con un doble clic.</dd>
+  <dt>Soluci&oacute;n provisional:</dt>
+  <dd><span style="font-weight: bold;"></span><code></code>Editar manualmente la lista de opciones desde la pesta&ntilde;a&nbsp;<img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png">&nbsp;</dd>
+  <dt>Repercusi&oacute;n:</dt>
+  <dd>Obliga a introducir el c&oacute;digo manualmente.</dd>
+  <dt>Valoraci&oacute;n:</dt>
+  <dd>Error moderado: aunque a&ntilde;adir o borrar opciones no es una
+tarea complicada resulta inc&oacute;modo para usuarios noveles. En
+muchos casos es preferible eliminar el campo creado y recurrir al
+asistente gr&aacute;fico para crearlo de nuevo.</dd>
+</dl>
+<h3><a class="mozTocH3" name="mozTocId618617"></a>Limpiador
+de c&oacute;digo</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd>No todos los bloques vac&iacute;os se limpian. Listas
+ordenadas y desordenadas vac&iacute;as permanecen, as&iacute;
+como bloques &lt;span&gt;&lt;/span&gt; sin contenido en
+su interior.</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Eliminar manualmente los c&oacute;digos sobrantes </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Se mantiene c&oacute;digo innecesario</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error leve, pero frustrante si se pretende obtener un
+c&oacute;digo ligero ya que se pod&iacute;a esperar que la
+limpieza fuera completa y no exigiera revisi&oacute;n manual.</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId641744"></a>Cerrar
+sin salvar estilos en l&iacute;nea</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd style="">Si se selecciona una etiqueta en la barra
+de estado y se le aplica un estilo incrustado el bot&oacute;n de <span class="refmenu">guardar</span> permanece
+inactivo y el programa no invita a guardar los cambios si cerramos la
+pesta&ntilde;a sin hacer otros cambios</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Realizar un cambio trivial: a&ntilde;adir un espacio y
+borrarlo para activar el estado de documento modificado. </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Se puede perder c&oacute;digo al pensar que el
+documento ya est&aacute; guardado.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error moderado.&nbsp;</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId16141"></a>Administrador
+de sitios</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd style="">No existe opci&oacute;n
+espec&iacute;fica para ver s&oacute;lo los documentos xhtml o
+css, que quedan ocultos si se selecciona <span class="refmenu">ver
+documentos html&nbsp;</span></dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Utilizar la opci&oacute;n <span class="refmenu">ver
+todos los documentos</span>. </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>Obliga a localizar visualmente.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error leve.&nbsp;</dd>
+
+</dl>
+
+<h3><a class="mozTocH3" name="mozTocId214804"></a>Editor
+CSS</h3>
+
+<dl>
+
+  <dt>Descripci&oacute;n:</dt>
+
+  <dd style="">El bot&oacute;n <span class="refmenu">bajar</span> no funciona</dd>
+
+  <dt>Soluci&oacute;n provisional:</dt>
+
+  <dd>Seleccionar elementos que se encuentren por debajo y
+utilizar el bot&oacute;n <span class="refmenu">subir</span>
+para reorganizar las reglas de estilo. </dd>
+
+  <dt>Repercusi&oacute;n:</dt>
+
+  <dd>M&aacute;s pulsaciones de las necesarias.</dd>
+
+  <dt>Valoraci&oacute;n:</dt>
+
+  <dd>Error leve.&nbsp;</dd>
+
+</dl>
+
+<a href="errorestabla.htm" target="_blank">Ver tabla
+de c&oacute;digos generados por N|VU seg&uacute;n las
+circunstancias</a>
+
+<br>
+<br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+
+<html>
+
+<head>
+
+<title>Crear estilos</title>
+
+<link href="../estilo.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" language="JavaScript">
+
+<!-- 
+
+  function cargalogo(nombre) {
+
+   parent.arriba.location.href=nombre;
+
+}
+
+function Abreejemplo (){
+
+	fp=window.open("ejemploestilo.htm","","top=0,left=0;width=450,height=300,scrolling=no");
+
+return true;
+
+}
+
+// -->
+
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<style type="text/css">
+<!--
+th {background-color: #aabc35}
+-->
+</style>
+</head>
+
+<body onload="cargalogo('t24h.htm');" bgcolor="#FFFFFF">
+
+<p> Ya comentamos al ver la creaci&oacute;n del c&oacute;digo HTML para los marcos que ha sido
+  uno de los temas controvertidos a la hora de desarrollar contenidos para la
+web. Desde el punto de vista positivo podemos aportan algunos elementos destacables:</p>
+<ul>
+  <li>responden a un sistema de  presentaci&oacute;n de contenidos que
+      puede resultar muy &uacute;til pues permite tener una visi&oacute;n simult&aacute;nea de todos
+    los apartados del conjunto.</li>
+  <li>puede suponer un ahorro de tiempo en la descarga si las zonas fijas son
+    muy pesadas, aunque estar&iacute;a por ver si es conveniente que haya zonas muy
+    pesadas.</li>
+</ul>
+<p>Pero tambi&eacute;n podemos se&ntilde;alar unos algunos elementos negativos:</p>
+<ul>
+  <li>la estructuraci&oacute;n e indexaci&oacute;n del contenido se hace muy dif&iacute;cil ya que
+    s&oacute;lo disponemos de una p&aacute;gina con un t&iacute;tulo constante.</li>
+  <li>la navegaci&oacute;n por el historial puede resultar bastante complicada cuando
+    nos encontramos con estructuras de tres marcos.</li>
+</ul>
+<p>Habr&iacute;a much&iacute;simos m&aacute;s argumentos a favor y en contra de los marcos y, mientras
+  que los partidarios de los mismos dir&iacute;an que la gran mayor&iacute;a de los problemas
+  se solucionar&iacute;an con javascript, los detractores podr&iacute;an apuntar que parece
+  ser que la l&iacute;nea de trabajo de las instituciones de estandarizaci&oacute;n va por
+  desaprobar los frames. Es pues absurdo meterse en esta discusi&oacute;n, pero s&iacute; podemos
+  aportar alguna alternativa mediante CSS para que pueda estudiarse y utilizarse
+  si nos interesa.</p>
+<p>Dos marcos verticales</p>
+<p>La idea es sencilla: creamos dos capas y las posicionamos dentro de la p&aacute;gina.
+  Una de ellas contendr&aacute; una capa con el men&uacute; y la otra una capa con el contenido.
+  El motivo para crear las capas de men&uacute; y contenido y anidarlas dentro de izquierda
+  y derecha respectivamente es evitar que haya problemas al cambiar de navegador
+  con los m&aacute;rgenes y el posicionamiento. Cada p&aacute;gina repetir&aacute; la capa de men&uacute;
+  e ir&aacute; variando la capa que desarrolla el contenido.</p>
+<p>El navegador Internet Explorer no soporta correctamente la posici&oacute;n
+  fixed, sin embargo con este c&oacute;digo se consigue que  mantenga fija la
+  capa  de la izquierda a costa de que, en ocasiones, a&ntilde;ada 
+  una segunda barra de desplazamiento para la capa de la derecha. </p>
+<div class="codigo2">
+  <p>&lt;style type=&quot;text/css&quot;&gt;<br>
+  &lt;!-- <br>
+    body{margin:0; height:100%;} <br>
+    div#izquierda { position:fixed; top:0; left:0; width:25%; height:100%; overflow:auto;
+    background-color:#3399FF}<br>
+    div#derecha { position:absolute; top:0; left:25%; width:75%; height:100%; overflow:auto;
+    background-color:#D9F2F2 }<br>
+    #menu{margin-left:10px; margin-right:10px;}<br>
+    #contenido{margin-left:10px; margin-right:10px;} <br>
+    --&gt;<br>
+&lt;/style&gt;</p>
+</div>
+<p><a href="javascript:void(0)" onClick=window.open('muestra24.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=350')>Ver
+ejemplo </a></p>
+<p>Tres marcos </p>
+<p>La otra estructura habitual de presentaci&oacute;n es un marco superior que
+  abarca toda la anchura y dos marcos verticales. Tambi&eacute;n se puede crear
+  una estructura de este tipo utilizando CSS, pero, como siempre, el problema
+  aparece con el insuficiente soporte que da Internet Explorer a algunas propiedades,
+  entre ellas position:fixed, lo cual nos obliga a introducir algunas propiedades
+  extras, como el indicador de profundidad z-index para la franja superior. </p>
+<p>A continuaci&oacute;n se muestra el c&oacute;digo en el que se basa el ejemplo
+  que se presenta.<br>
+<div class="codigo2">
+  <p>&lt;style type=&quot;text/css&quot;&gt;<br>
+    &lt;!-- <br>
+    body{margin:0; height:100%;} <br>
+    div#Superior { position:fixed; top:0; left:0; width:100%; height:35px; overflow:auto;
+        background-color:#BBC7F7; z-index:100}<br>
+      div#Izquierda { position:fixed; top:35px; left:0; width:25%; height:100%;
+    overflow:auto; background-color:#3399FF}<br>
+      div#Derecha { position:absolute; top:35px; overflow:auto; margin-left:25%;
+      height:100%; width:75%; background-color:#D9F2F2;}<br>
+      --&gt;<br>
+&lt;/style&gt;<br>
+  </p>
+</div>
+<p><a href="javascript:void(0)" onClick=window.open('muestra25-1.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=600,height=250')>Ver
+ejemplo </a></p>
+
+<p>&nbsp;</p>
+<div class="practicas"> 
+
+  <p><img src="../imagenes/cincuentaynueve.gif" width="29" height="29" align="left"> </p>
+
+<ul>
+
+  <li>Una vez que has visto las posibilidades que brinda la presentaci&oacute;n con
+    zonas diferentes utilizando CSS queda en tu mano decidir qu&eacute; procedimiento
+    te parece m&aacute;s recomendable.</li>
+
+  <li>Vamos con una propuesta de investigaci&oacute;n: &iquest;te atrever&iacute;as a intentar crear
+    una estructura de columnas para mostrar el contenido de una p&aacute;gina?. Para
+    hacerlo tendr&aacute;s que aplicar el procedimiento b&aacute;sico que se desprende de la
+    creaci&oacute;n de marcos y combinarlo con las opciones de dise&ntilde;o visual para darle
+    un aspecto suficientemente acabado.</li>
+  </ul>
+
+</div>
+
+
+</body>
+
+
+
+</html>
+

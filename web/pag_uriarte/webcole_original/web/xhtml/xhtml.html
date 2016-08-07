@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+
+ 
+  
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+
+  
+ 
+  
+  
+  
+  <title>XHTML</title>
+  <meta content="Ra&uacute;l Luna" name="author">
+
+
+ 
+  
+  
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>XHTML</p>
+
+</div>
+
+<div id="flechadcha">
+<a href="../estilos/css1.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="../marcos/marcos5.htm" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<h2>XHTML</h2>
+
+
+
+<h3>&iquest;Qu&eacute; es?</h3>
+
+
+<p>Esta es
+la&nbsp;primera pregunta que surge cuando escuchamos este nuevo
+acr&oacute;nimo. El lenguaje extensible de marcado de hipertexto,
+que ser&iacute;a la traducci&oacute;n del acr&oacute;nimo <acronym title="eXtensible HyperText Markup Language">XHTML</acronym>
+y nace con la intenci&oacute;n de sustituir al lenguaje <acronym title="HyperText Markup Language">HTML</acronym> para
+superar las limitaciones de &eacute;ste y adaptarse a la creciente
+cantidad de aplicaciones capaces de hacer uso del lenguaje <acronym title="eXtensible Markup Language">XML</acronym>. La
+idea base es combinar la sintaxis del lenguaje <acronym title="HyperText Markup Language">HTML</acronym>,
+dise&ntilde;ado para mostrar los datos con la &nbsp;de <acronym title="eXtensible Markup Language">XML</acronym>,
+encargado de describir dichos datos.&nbsp;</p>
+
+
+<p>El
+objetivo perseguido es que la informaci&oacute;n pueda ser
+interpretada correctamente independientemente del dispositivo desde el
+que se accede a ella. Para conseguir este fin, la
+especificaci&oacute;n <acronym title="eXtensible HyperText Markup Language">XHTML</acronym>&nbsp;establece
+unas normas m&aacute;s estrictas que las del <acronym title="HyperText Markup Language">HTML</acronym>&nbsp;para
+el etiquetado de los documentos.</p>
+
+
+<h3>&iquest;C&uacute;ales
+son los requisitos que debe cumplir?</h3>
+
+
+<p>El esquema b&aacute;sico del documento, para considerarse conforme a
+la especificaci&oacute;n deber&aacute; cumplir las siguientes
+condiciones:</p>
+
+
+
+<ol>
+
+
+  <li>
+    
+    
+    <p>El elemento ra&iacute;z del documento debe ser<code>
+&lt;html&gt;</code>.</p>
+
+
+
+  </li>
+
+
+  <li>
+    
+    
+    <p>El elemento ra&iacute;z del documento
+debe indicar el espacio nominal XHTML usando el atributo <code>xmlns</code>.
+El
+espacio nominal para XHTML es <code>http://www.w3.org/1999/xhtml</code><br>
+
+
+    <br>
+
+
+
+    </p>
+
+
+  </li>
+
+
+  <li>
+    
+    
+    <p>Debe haber una declaraci&oacute;n DOCTYPE en el documento
+antes del elemento ra&iacute;z. El identificador p&uacute;blico
+incluido en la declaraci&oacute;n DOCTYPE debe hacer referencia a
+alguna de las tres DTD definidas por el W3C usando el Identificador Formal P&uacute;blico
+correspondiente.&nbsp;</p>
+
+
+
+    <code>&lt;!DOCTYPE html &nbsp;PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"<br>
+
+
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</code><br>
+
+
+    <br>
+
+
+    <br>
+
+
+    <code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br>
+
+
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br>
+
+
+    </code><br>
+
+
+    <br>
+
+
+    <code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"<br>
+
+
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</code><br>
+
+
+    <br class="avisos">
+
+
+  </li>
+
+
+</ol>
+
+
+<p class="avisos"><acronym title="HyperText Markup Language"></acronym>
+N|VU es capaz de cumplir estos requisitos y crear la base de documentos
+conformes con la especificaci&oacute;n para los dos primeros tipos, ya
+que, igual que ocurr&iacute;a en HTML, no admite documentos basados en
+la DTD de marcos.</p>
+
+
+<p>Adem&aacute;s de lo anterior, y aunque&nbsp;las etiquetas ser&aacute;n las que ya conocemos puesto que proceden
+del <acronym title="HyperText Markup Language">HTML</acronym>,
+habr&aacute; que cumplir algunas normas espec&iacute;ficas para que el
+documento se pueda validar como "gramaticalmente correcto". Algunos de
+los m&aacute;s importantes ser&aacute;n:</p>
+
+
+<ol>
+
+
+  <li>Las etiquetas no podr&aacute;n solaparse. <br>
+
+
+El c&oacute;digo <code>&lt;p&gt;un fragmento &lt;em&gt;enfatizado&lt;/p&gt;&lt;/em&gt;</code>
+que validar&iacute;a correctamente en HTML 4 ser&aacute; incorrecto y
+tendr&aacute; que escribirse con las etiquetas correctamente anidadas: <code>&lt;p&gt;un fragmento &lt;em&gt;enfatizado&lt;/em&gt;&lt;/p&gt;</code></li>
+
+
+  <li><code></code>Los nombres de elementos y atributos deben escribirse siempre en min&uacute;sculas.<br>
+
+
+Aunque&nbsp;desde el principio recomendamos que se escribieran siempre
+en min&uacute;sculas, podr&iacute;amos haberlo hecho en tambi&eacute;n
+en may&uacute;sculas, pero&nbsp;<acronym title="eXtensible Markup Language">XML</acronym> es sensible a may&uacute;sculas y por eso se adopta esta norma.</li>
+
+
+  <li>Con HTML 4.0, basado en SGML, en algunos elementos pod&iacute;a omitirse la etiqueta 
+
+de cierre, de tal manera que la apertura de los elementos que les suced&iacute;an 
+
+implicaba dicho cierre. Esta omisi&oacute;n no est&aacute; permitida en XHTML, basado en XML. 
+
+Todos los elementos que no est&eacute;n declarados en la DTD como <code>EMPTY</code> 
+
+deben tener una etiqueta de cierre.<br>
+
+
+Por ejemplo: <code>&lt;p&gt;esto es un p&aacute;rrafo&lt;p&gt;y esto otro</code> ser&iacute;a correcto en HTML, pero tendr&iacute;a que convertirse en <code>&lt;p&gt;esto es un p&aacute;rrafo&lt;/p&gt; &lt;p&gt;y esto otro&lt;/p&gt; </code>para validar correctamente en XHTML.</li>
+
+
+  <li>Todos los valores de atributos deben ir entrecomillados, incluso aquellos 
+
+que son num&eacute;ricos. Ya no valdr&aacute; <code>&lt;table rows=3&gt;</code> sino que habr&aacute; que escribirlo <code>&lt;table rows="3"&gt;</code></li>
+
+
+  <li><code></code>XML no soporta la minimizaci&oacute;n de atributos.
+Los pares atributo-valor deben escribirse en toda su extensi&oacute;n,
+por lo que no podr&iacute;amos hacer que un elemento de formulario
+apareciera marcado con el c&oacute;digo <code>&lt;input type="radio" name="verde" checked&gt;, </code>sino que habr&iacute;a que escribirlo<code> </code><code>&lt;input type="radio" name="verde" checked="checked"&gt;</code></li>
+
+
+  <li><code></code>Los elementos vac&iacute;os, que no necesitaban una
+etiqueta de cierre en HTML, como &lt;br&gt; &lt;hr&gt; o &lt;img&gt;
+deben llevarla para validar correctamente en XHTML o bien terminar su
+etiqueta de apertura con <code>/&gt;</code>. Para garantizar la
+compatibilidad es conveniente que este cierre de la etiqueta de
+apertura vaya precedido por un espacio con lo que las etiquetas
+mencionadas quedar&iacute;an as&iacute;: <code>&lt;br&nbsp;/&gt; &lt;hr&nbsp;atributos&nbsp;/&gt; &lt;img&nbsp;atributos&nbsp;/&gt;</code></li>
+
+
+  <li><code></code>En HTML se pod&iacute;a identificar fragmentos del documento utilizando tanto el atributo <code>name</code> como el atributo <code>id</code>. En XHTML se utilizar&aacute; siempre&nbsp;<code>id</code> incluso en aquellos casos en los que se hab&iacute;a utilizado siempre <code>name</code>, pudiendo cada atributo <code>id</code> aplicarse a un &uacute;nico fragmento del documento.</li>
+
+
+</ol>
+
+
+<p class="avisos">Aunque en un principio pueda haberte parecido
+complicado, el objetivo de este ep&iacute;grafe es sencillamente
+presentarte algunas normas espec&iacute;ficas para que las conozcas,
+pero&nbsp;no deber&iacute;as preocuparte por su aplicaci&oacute;n, ya
+que N|VU se ajusta a las especificaciones y se encarga de crear el
+c&oacute;digo acorde con las normas para que sea un documento bien
+formado y gramaticalmente correcto. </p>
+
+<h2>Crear un documento XHTML con N|VU</h2>
+
+<p>Podemos decidirnos a escribir crear&nbsp;documentos&nbsp;<acronym title="eXtensible HyperText Markup Language">XHTML</acronym> como opci&oacute;n por defecto, para lo cual bastar&aacute; con que lo indiquemos en el men&uacute; <span class="refmenu">herramientas&nbsp;</span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> preferencias&nbsp;</span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> avanzado</span>
+donde marcaremos como lenguaje preferido XHTML 1 y optaremos por
+utilizar un DTD transitional o strict. A partir de este momento, cada
+vez que pulsemos el icono <img style="width: 58px; height: 40px;" alt="Nuevo" src="../imagenes/botonnuevo.png"> sin indicar ning&uacute;n cambio el documento se crear&aacute; de acuerdo a lo especificado.</p>
+
+<p>Por otra parte, si desplegamos las opciones, elegimos<span class="refmenu"> archivo </span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> nuevo</span> o pulsamos <img style="width: 36px; height: 26px;" alt="Tecla CTRL" src="../imagenes/teclactrl.png"> + <img style="width: 26px; height: 27px;" alt="Tecla N" src="../imagenes/teclan.png">
+dispondremos de dos casillas de verificaci&oacute;n para indicar para
+indicar si queremos que el nuevo documento sea en lenguaje XHTML y con
+DTD strict.</p>
+
+<p>Ten en cuenta que existe un error en el programa por el que, cuando
+al crear un documento nuevo especifiquemos un lenguaje y una DTD esta
+elecci&oacute;n sobreescribir&aacute; las que hubi&eacute;ramos marcado
+en las preferencias generales.</p>
+
+<p>Convertir documentos HTML a XHTML</p>
+
+<p>Podr&iacute;amos convertir manualmente documentos creados
+originalmente en lenguaje HTML aplicando las normas que hemos
+comentado, pero puede ser una tarea muy tediosa.</p>
+
+<p>El W3C desarroll&oacute; inicialmente una herramienta entre cuyas
+funcionalidades, adem&aacute;s de la de analizar y validar documentos
+estaba la de corregir y convertir el c&oacute;digo de HTML 4 a XHTML 1,
+siempre que el documento original no contuviera un n&uacute;mero
+excesivo de errores. Dicha herramienta se denomina TidyHTML pero tiene
+el problema de tratarse de una aplicaci&oacute;n en l&iacute;nea de
+comandos. Para facilitar el uso se ha desarrollado un interfaz grafico
+de usuario (GUI) que recibe el nombre de HTML-Kit que podr&aacute;s
+descargar desde <a href="http://www.chami.com/html-kit/download/" target="_blank">http://www.chami.com/html-kit/download/</a></p>
+
+<p><img class="flotder" style="width: 194px; height: 90px;" alt="Opci&oacute;n de men&uacute; para instalar traducci&oacute;n de HTMLKit" title="Opci&oacute;n de men&uacute; para instalar traducci&oacute;n de HTMLKit" src="imagenes/instalarparche.gif">Una
+vez instalado el programa original en ingl&eacute;s tendr&aacute;s que
+descargar el parche de traducci&oacute;n al castellano desde <br>
+<a href="http://www.chami.com/html-kit/plugins/info/irtranslationspanish/" target="_blank">http://www.chami.com/html-kit/plugins/info/irtranslationspanish/</a> &nbsp;</p>
+
+<p>Se trata de un archivo comprimido pero no ser&aacute; necesario que
+lo instalemos manualmente, ya que el propio HTMLKit se encargar&aacute;
+de instalarlo. Para ello arrancamos el programa y vamos al men&uacute; <span class="refmenu">tools </span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> </span><span class="refmenu">install&nbsp;</span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> install data file</span>, elegiremos el archivo que acabamos de bajar y pulsaremos <span class="refmenu">ok</span>, contestando afirmativamente si se nos hace alguna pregunta m&aacute;s durante el proceso de instalaci&oacute;n.</p>
+
+<p>Aunque comprobar&aacute;s que el programa cuenta con multitud de
+posibilidades vamos a concentrarnos en la que nos ha llevado hasta
+&eacute;l. Para ello vamos primero a modificar un par de opciones en
+las preferencias y luego veremos el procedimiento para convertir un
+archivo a XHTML.</p>
+
+<h3>Modificaci&oacute;n de dos preferencias b&aacute;sicas de HTML-Kit</h3>
+
+<p>Si no se aplica inmediatamente la traducci&oacute;n reiniciamos el
+programa y, ya con &eacute;l en castellano, vamos al men&uacute; <span class="refmenu">editar </span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> preferencias</span>.
+Veremos aparecer un panel con multitud de pesta&ntilde;as y opciones
+(que siguen en ingl&eacute;s porque esta parte no est&aacute;
+traducida).</p>
+
+<p class="centrado"><img style="width: 598px; height: 430px;" alt="Panel de preferencias de configuraci&oacute;n" title="Panel de preferencias de configuraci&oacute;n" src="imagenes/preferencias.png"></p>
+
+<p>Como ves en la imagen hemos seleccionado la pesta&ntilde;a <span class="refmenu">tidy</span> y hemos modificado dos caracter&iacute;sticas:</p>
+
+<ul>
+
+  <li>En <span class="refmenu">character encoding</span> hemos utilizado el desplegable para seleccionar <span class="refmenu">ISO Latin-1</span>
+(que es otra forma de denominar al conjunto de caracteres ISO-8859-1
+que estamos usando habitualmente). Si no lo hacemos as&iacute; el
+programa tomar&aacute; por defecto el conjunto <acronym title="United States American Standard Code for Information Interchange">US ASCII</acronym> con lo que nos encontraremos con problemas con los caracteres acentuados que no est&aacute;n incluidos en este conjunto.</li>
+
+  <li>La segunda opci&oacute;n que viene desmarcada por defecto pero que aqu&iacute; hemos activado es <span class="refmenu">indent code</span>
+que hace que el programa tabule el contenido para facilitar su lectura
+cuando vemos el c&oacute;digo. Si la activamos aumentar&aacute;
+ligeramente el tama&ntilde;o de los archivos pero, a cambio
+resultar&aacute; mucho m&aacute;s f&aacute;cil consultarlos cuando
+veamos el c&oacute;digo. Queda pues a tu elecci&oacute;n activarla o
+no.
+ </li>
+
+</ul>
+
+<p>Cuando pulsemos <span class="refmenu">ok</span> el programa quedar&aacute; preparado para realizar el trabajo que le vamos a pedir.</p>
+
+<h3>Convertir documentos de HTML a XHTML con HTM-Kit</h3>
+
+<p>El procedimiento a seguir es:</p>
+
+<ol>
+
+  <li>Abrimos el documento original con la opci&oacute;n habitual <span class="refmenu">archivo&nbsp;</span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> abrir archivo</span>&nbsp;</li>
+
+  <li>Acudimos al men&uacute; acciones <img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"> tools <img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"> html tidy&nbsp;<img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"> convert to xhtml</li>
+
+  <li>Veremos dividirse la pantalla en dos zonas: en la izquierda el
+documento original y en la derecha la conversi&oacute;n&nbsp;propuesta.
+Es conveniente que comprobemos que aparece el conjunto de
+car&aacute;cteres ISO-8859-1 que hab&iacute;amos establecido en las
+preferencias. Por cierto, puedes comprobar en la imagen que una de las
+correcciones que ha realizado el programa ha sido la supresi&oacute;n
+de los espacios en blanco que err&oacute;neamente introduce N|VU en el
+c&oacute;digo.&nbsp;</li>
+
+</ol>
+
+<p class="centrado"><img style="width: 700px; height: 381px;" alt="Ventana con original y propuesta de conversi&oacute;n" title="Ventana con original y propuesta de conversi&oacute;n" src="imagenes/resultado.png"></p>
+
+<ol start="4">
+
+  <li>Si estamos de acuerdo con las modificaciones propuestas
+pulsaremos sobre la zona del resultado con el bot&oacute;n derecho y
+elegiremos la opci&oacute;n <img style="width: 246px; height: 22px;" alt="Copiar resultado al editor" src="imagenes/copiarresultado.png"> que trasladar&aacute; el contenido de la zona derecha a la izquierda.&nbsp;</li>
+
+  <li>Por &uacute;ltimo salvaremos el archivo, bien con el mismo nombre o bien con otro diferente con las opciones habituales <span class="refmenu">archivo&nbsp;</span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> salvar</span> o <span class="refmenu">archivo&nbsp;</span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> salvar como</span></li>
+
+</ol>
+Puedes encontrar un manual en castellano bastante&nbsp;amplio en <a href="http://www.ignside.net/man/html-kit/index.php" target="_blank">http://www.ignside.net/man/html-kit/index.php</a>
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 75" title="Actividad 75" src="../imagenes/numeracion/setentaycinco.gif">
+<ul>
+
+  <li>Como es posible que te inquiete someter tus archivos a un
+programa que modificar&aacute; autom&aacute;ticamente el c&oacute;digo
+vamos a empezar a hacer "experimentos con gaseosa". Utilizaremos
+archivos ajenos, como puede ser &eacute;ste que est&aacute;s leyendo en
+este momento.</li>
+  <li>Abre este archivo en N|VU y gu&aacute;rdalo en una carpeta en tu
+disco duro. La raz&oacute;n para hacer esto es evitar problemas con las
+rutas hacia las im&aacute;genes cuando modifiquemos el archivo
+original: al encontrarse en el CD-ROM no podr&iacute;amos escribir en
+la ruta original y podr&iacute;a ocurrir que perdi&eacute;ramos alguna
+referencia al guardarlo en el disco duro, mientras que
+haci&eacute;ndolo as&iacute; todos los archivos necesarios
+deber&iacute;an guardarseen la misma carpeta que&nbsp;el c&oacute;digo de la p&aacute;gina. </li>
+
+  <li>Abre el archivo que acabas de guardar en tu disco duro con HTML-Kit.</li>
+  <li>Convi&eacute;rtelo a XHTML tal como se ha indicado y
+gu&aacute;rdalo con un nombre diferente. Puedes utilizar el propio
+HTML-Kit para abrir ambos archivos y comparar las diferencias de
+c&oacute;digo.</li>
+  <li>Abre ambos archivos con el navegador y comp&aacute;ralos para ver
+si encuentras alguna diferencia en la presentaci&oacute;n. (No
+deber&iacute;a ocurrir y, gracias a la conversi&oacute;n tendr&aacute;s
+un archivo escrito de acuerdo a las recomendaciones m&aacute;s
+actualizadas del W3C)</li>
+  <li>Sigue practicando con otros archivos hasta que tengas suficiente seguridad para atreverte a convertir tu propio trabajo.</li>
+</ul>
+
+
+
+</div>
+</div>
+
+</body>
+</html>

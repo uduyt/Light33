@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>CSS: fondos</title>
+
+
+  <meta name="author" content="Ra&uacute;l Luna">
+
+  <link href="../nvu2005.css" type="text/css" rel="stylesheet">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <style type="text/css">
+th { background-color: rgb(170, 188, 53);
+}
+  </style>
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;Fondos</p>
+
+</div>
+
+<div id="flechadcha">
+<a href="css7.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="css5.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<h2>Fondos</h2>
+
+<p> Con la propiedad fondo podemos controlar el color de fondo un
+elemento de la p&aacute;gina, establecer im&aacute;genes como
+fondo y decidir su posici&oacute;n dentro de la p&aacute;gina y
+si se repetir&aacute;n o no.&nbsp;En el editor
+de CSS de N|VU podr&aacute;s acceder a estas propiedades dentro de
+la
+pesta&ntilde;a <span class="refmenu">fondo</span>.</p>
+
+<h3>Color de fondo</h3>
+
+<p><b>Propiedad:</b> <code>background-color</code></p>
+
+<p>Como todas las propiedades de los fondos podemos aplicarla a
+toda la p&aacute;gina o s&oacute;lo a un determinado elemento,
+elgiendo una etiqueta de html como selector para aplicarlo de forma
+gen&eacute;rica o bien mediante la utilizaci&oacute;n de clases
+o selectores id. </p>
+
+<p><b>Valores:</b> podemos utilizar el nombre o la
+referencia RGB de un color . </p>
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b> </p>
+
+<p style="background-color: orange;">En este
+p&aacute;rrafo se ha aplicado un fondo utilizando la etiqueta <b>background-color:orange</b></p>
+
+<div class="codigo">
+<table border="1" width="50%">
+
+  <tbody>
+
+    <tr>
+
+      <th>Cabecera</th>
+
+      <th>
+      <div align="left">Cabecera</div>
+
+      </th>
+
+    </tr>
+
+    <tr>
+
+      <td>celda 1 </td>
+
+      <td>
+      <div align="left">celda 2 </div>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<p>Esta tabla toma su color de un estilo definido en una hoja
+interna para el elemento th </p>
+
+<p><code>&lt;style type="text/css"&gt;<br>
+
+&lt;!--<br>
+
+th {background-color: #aabc35}<br>
+
+--&gt;<br>
+
+&lt;/style&gt;</code></p>
+
+</div>
+
+</div>
+
+<h3>Imagen de fondo</h3>
+
+<p><b>Propiedad:</b> <code>background-image</code></p>
+
+<p><b>Valores:</b> podemos utilizar la referencia
+relativa a una imagen de nuestro propio sitio o bien una referencia
+absoluta. Con ello podemos hacer que los fondos se apliquen solamente a
+una determinada porci&oacute;n del documento, en lugar de hacerlo a
+toda la p&aacute;gina. Aunque no deber&iacute;amos hacerlo,
+incluso aunque tuvi&eacute;ramos control sobre la url a la que
+apuntamos, si usamos referencias absolutas de im&aacute;genes en la
+red solo podremos comprobar el efecto cuando dispongamos de
+conexi&oacute;n a internet.</p>
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b> </p>
+
+<p style="background-image: url(../imagenes/claro09.jpg);">Ahora
+se
+ha utilizado una imagen como fondo y la forma de expresarlo ha sido <code>background-image:URL(../imagenes/claro09.jpg)</code></p>
+
+</div>
+
+<p>La inclusi&oacute;n de una imagen como fondo lleva
+asociadas tres propiedades que nos permitir&aacute;n especificar si
+la imagen se repite, la posici&oacute;n en caso de no repetirse y
+el desplazamiento vertical si la p&aacute;gina ocupa m&aacute;s
+de una pantalla. </p>
+
+<h4>Posici&oacute;n de la imagen </h4>
+
+<p><strong>Propiedad:</strong> <code>background-position</code></p>
+
+<p><strong>Valores: </strong>Existen varias
+posibilidades para establecer la posici&oacute;n:</p>
+
+<ul>
+
+  <li>Posicionamiento absoluto en el que indicar&iacute;amos
+un valor en p&iacute;xeles para se&ntilde;alar las coordenadas
+en las que se
+situar&aacute; el v&eacute;rtice superior izquierdo respecto al
+v&eacute;rtice superior izquierdo de la ventana. <a href="javascript:void(0)" onclick="window.open('muestra7.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=280')">Ver
+ejemplo </a><br>
+
+&nbsp; </li>
+
+  <li>Posicionamiento relativo porcentual: en este caso indicamos
+la posici&oacute;n en forma de porcentaje respecto a la altura y la
+anchura ocupadas por el bloque al que se aplica. <a href="javascript:void(0)" onclick="window.open('muestra8.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=280')">Ver
+ejemplo </a><br>
+
+&nbsp; </li>
+
+  <li>Posicionamiento relativo mediante palabras reservadas: para
+ello utilizamos tres t&eacute;rminos referidos a la
+posici&oacute;n vertical que son <code>top</code>, <code>center</code>
+y <code>bottom</code>
+(para arriba, centro y abajo respectivamente) y <code>left</code>,
+    <code>center</code> y <code>right</code>
+para indicar la posici&oacute;n horizontal. (izquierda, centro y
+derecha). En caso de utilizar un &uacute;nico t&eacute;rmino no
+habr&aacute; duda ya que son diferentes salvo en el caso de center
+que provocar&aacute; que el navegador lo interprete como center
+center y sit&uacute;e la imagen en el medio absoluto de la
+p&aacute;gina. <a href="javascript:void(0)" onclick="window.open('muestra9.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=300')">Ver
+ejemplo</a></li>
+
+</ul>
+
+<p class="avisos">N|VU no dispone de una opci&oacute;n
+para especificar
+esta propiedad en el editor de CSS, por lo que habr&aacute; que
+incorporarla manualmente en el c&oacute;digo de la
+p&aacute;gina o en
+el archivo de hoja de estilos.</p>
+
+<h4>Repeticiones</h4>
+
+<p><strong>Propiedad:</strong> <code>background-repeat</code></p>
+
+<p><strong>Valores: </strong>Si no especificamos
+esta propiedad se adoptar&aacute; el valor por defecto <code>repeat</code>.
+Podemos tambi&eacute;n optar por indicar que no se repita con el
+valor <code>no-repeat</code><strong> </strong>(en
+los ejemplos de
+posicionamiento se ha utilizado ya esta propiedad) o bien indicar que
+queremos que se repita en horizontal <code>repeat-x</code><strong>
+</strong>
+o en vertical <code>repeat-y</code><strong>. </strong><a href="javascript:void(0)" onclick="window.open('muestra10.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=300')">Ver
+ejemplo </a></p>
+
+<h4>Desplazamiento</h4>
+
+<p>Podemos indicar si deseamos que la imagen de fondo se desplace
+con el resto de la p&aacute;gina cuando esta ocupe m&aacute;s
+de una pantalla o si deseamos que permanezca fija, a modo de "marca de
+agua", mientras se desplaza el resto del contenido. </p>
+
+<p><strong>Propiedad:</strong> <code>background-attachment</code></p>
+
+<p><strong>Valores: </strong>el valor por defecto es
+<code>scroll</code>, mientras que si utilizamos <code>fixed</code><strong>
+</strong>la imagen permanecer&aacute; fija. <a href="javascript:void(0)" onclick="window.open('muestra11.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=300')">Ver
+ejemplo </a></p>
+
+
+<div class="ejercicio practicas">
+<img style="width: 29px; height: 29px; float: left;" alt="Actividad 88" title="Actividad 88" src="../imagenes/numeracion/ochentayocho.gif"> 
+<ul>
+
+  <li>Experimenta con diversas posibilidades de color e
+im&aacute;genes de fondo mediante su incorporaci&oacute;n a tu
+hoja de estilos. </li>
+
+  <li>A&ntilde;ade finalmente aquellos valores que resulten
+adecuados para tu sitio web.</li>
+
+</ul>
+
+</div>
+</div>
+</body>
+</html>

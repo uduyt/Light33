@@ -1,0 +1,25 @@
+.form{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	background: #ffffff;
+    border-radius: 20px;
+    padding-left: 10px;
+	padding-right: 30px;
+}
+
+#submit{
+	margin-top: -28px;
+    top: 50%;
+    position: absolute;
+	background:#01579B;
+	float: right;
+    bottom: 0px;
+    right: -28px;
+}
+
+hr{
+	margin:0;
+}

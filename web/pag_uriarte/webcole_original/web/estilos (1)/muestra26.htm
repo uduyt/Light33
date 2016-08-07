@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Documento sin t&iacute;tulo</title>
+<style type="text/css">
+<!--
+/* Definimos las reglas de estilo de la forma habitual.*/
+body {
+	background-color: #000099;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #FFFFFF;
+}
+
+/*Y ahora indicamos las características para  imprimir*/ 
+
+@media print {
+body {
+	background-color: #000099;
+	color: #FFFFFF;
+}
+p {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10pt;
+	color: #000000;
+}
+}
+/*Podríamos seguir especificando otros selectores o clases de aplicación general*/ 
+
+-->
+</style>
+
+</head>
+
+<body>
+
+<p>As&iacute; se ve en pantalla el texto al que se le ha aplicado el estilo descrito:
+  letra de tipo  sans-serif, tama&ntilde;o 14 puntos, color blanco sobre
+fondo azul marino.</p>
+<p>Si lo imprimes o, si utilizas la opci&oacute;n <strong>Archivo
+    / Vista preliminar</strong>, comprobar&aacute;s que se muestra con una apariencia
+    diferente: letra de tipo serif, tama&ntilde;o
+  10 puntos y color negro sobre fondo blanco</p>
+</body>
+</html>

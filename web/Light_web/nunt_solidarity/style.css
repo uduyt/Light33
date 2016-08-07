@@ -1,0 +1,210 @@
+p{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	user-select:none;
+	-o-user-select:none;
+	
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#wrapper{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	/*min-width: 1400px;
+    min-height: 500px;*/
+}
+#image_logo{
+    text-align: left;
+    background-image: url("images/nunt.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+}
+div.title{
+	float:left;
+	margin-top:20px;
+	height:100px;
+}
+p.title{
+	position: relative;
+	top: 30%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#canvas {
+    text-align: center;
+    margin: 20px;
+    background: #efefef;
+    border: 3px solid #000000;
+    position: absolute;
+    left: 50%;
+	top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	background-size: contain;
+    background-repeat: no-repeat;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	user-select:none;
+	-o-user-select:none;
+}
+#file_upload{
+	background-image: url("images/importar.png");
+	background-size: contain;
+    background-repeat: no-repeat;
+	height: 50px;
+    width: 100px;
+	cursor:pointer;
+}
+#p_file_upload{
+	margin-left: 20px;
+}
+#l_tools{
+	position: absolute;
+	top: 180px;
+	margin-left:110px;
+	width:250px;
+}
+
+div.redes_sociales{
+	margin-top:80px;
+	display:flex;
+}
+div.enlaces div{
+	width:40px;
+	height:40px;
+	background-size: contain; 
+	background-repeat: no-repeat;
+}
+.flex-center{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.redes_sociales p{
+    margin: 0;
+    margin-left: 46px;
+    vertical-align: text-top;
+}
+#r_tools{
+	position: absolute;
+    right: 0;
+    top: 30px;
+    margin-right: 40px;
+    width: 280px;
+}
+#r_tools3{
+	position: absolute;
+    right: 0;
+    top: 60px;
+    margin-right: 40px;
+    width: 280px;
+}
+div.dimensiona, div.desplaza, div.b_w{
+	display:flex;
+	padding:3px;
+}
+div.desplaza{
+	margin-top:40px;
+}
+.imagen{
+	background-size: contain;
+    background-repeat: no-repeat;
+	min-width:60px;
+	min-height:60px;
+}
+.dimensiona .imagen{
+	background-image: url("images/dimensionar.png");
+}
+.desplaza .imagen{
+	background-image: url("images/desplazar.png");
+}
+
+.dimensiona p, .desplaza p, .b_w p{
+	margin: 0;
+    padding: 8px;
+    margin-left: 15px;
+}
+.b_w p{
+	padding: 16px;
+}
+.arrow .imagen{
+	background-image: url("images/siguiente.png");
+	cursor:pointer;
+}
+.arrow2 .imagen{
+	background-image: url("images/anterior.png");
+	cursor:pointer;
+}
+.arrow p{
+	text-align:center;
+}
+.arrow, .arrow2{	
+	position: absolute;
+    bottom:80px;
+}
+.arrow2{
+	left:120px;
+}
+.arrow{
+	right:150px;
+}
+.b_w .imagen{
+	background-image: url("images/BN.png");
+	cursor:pointer;
+}
+div.b_w{
+	margin-top: 40px;
+}
+#opacity{
+	text-align: center;
+    margin: 20px;
+    position: absolute;
+	bottom:10px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	user-select:none;
+	-o-user-select:none;		
+}
+#op_text{
+	position: absolute;
+    bottom: 60px;
+    left: 50%;
+}
+div.redes_sociales2{
+	width:180px;
+	margin-left:60px;
+}
+div.flex-center2{
+}
+div.email{
+	width: 180px;
+    margin-left: 60px;
+	margin-top: 60px;
+}
+.email .imagen{
+	background-image: url("images/mail.png");
+	cursor:pointer;
+	margin: 0 auto;
+    width: 40px;
+}
+.file_download .imagen{
+	background-image: url("images/descarga.png");
+	cursor:pointer;
+}

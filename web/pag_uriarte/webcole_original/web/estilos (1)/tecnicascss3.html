@@ -1,0 +1,406 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="es-es">
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+  
+
+
+  
+  <title>Centrando textos, im&aacute;genes y bloques</title>
+  <meta content="Ra&uacute;l Luna" name="author">
+
+
+  <link rel="stylesheet" type="text/css" href="../multi3.css">
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+
+
+  
+  <style type="text/css">
+.centro { text-align: center;
+}
+.poema { padding: 0.5em 1em 1em;
+width: 25em;
+margin-left: auto;
+margin-right: auto;
+background-color: rgb(236, 225, 187);
+margin-bottom: 2ex;
+}
+.imagenbloque { display: block;
+margin-left: auto;
+margin-right: auto;
+}
+.centrarvertical { border: 1px solid rgb(153, 102, 51);
+min-height: 100px;
+width: 400px;
+display: table-cell;
+vertical-align: middle;
+float: left;
+margin-right: 1em;
+color: rgb(255, 255, 204);
+background-color: rgb(192, 192, 192);
+font-size: x-large;
+font-weight: bold;
+}
+  </style>
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;T&eacute;cnicas</p>
+
+</div>
+<div id="flechadcha">
+<a href="tecnicascss5deslizatextofigura.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="tecnicascssbordesredondeados.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+<div class="solapas">
+ <ul>
+
+        <li><a href="tecnicascss2.html">Pies
+de foto</a></li>
+
+        <li><a href="tecnicascss4imagenesdesustitucion.html">Im&aacute;genes
+de sustituci&oacute;n</a></li>
+
+        <li><a href="tecnicascssbordesredondeados.html">Bordes
+redondeados</a></li>
+
+        <li class="activo"><a href="tecnicascss3.html">Centrados</a></li>
+
+        <li><a href="tecnicascss5deslizatextofigura.html">Ajuste a
+perfil de imagen</a></li>
+
+        <li><a href="tecnicascss6enclolumnarlistas.html">Encolumnar
+listas</a></li>
+
+        <li><a href="tecnicasandoenredando.html">Sustituci&oacute;n
+de im&aacute;genes</a></li>
+
+        <li><a href="tecnicascolumnas.html">Columnas</a></li>
+
+<li><a href="menus.html">Men&uacute;s</a></li>
+      
+      </ul>
+	</div>  
+
+<div class="principal">
+<h2>Centrando textos</h2>
+
+
+<p>Est&aacute; claro que la
+utilizaci&oacute;n&nbsp;m&aacute;s inmediata del centrado
+es la de fragmentos de texto, creando reglas para que se aplique esta
+alineaci&oacute;n a todos los elementos de un tipo, a una clase
+determinada o creando un estilo en l&iacute;nea para aplicarla a un
+&uacute;nico elemento en un momento puntual.</p>
+
+
+<div class="ejemplo">
+<p>Ejemplos:</p>
+
+
+<h5 style="text-align: center;">Este fragmento de titulo
+h5 est&aacute; centrado porque lo hemos especificado en un estilo
+incrustado</h5>
+
+
+<p><code>&lt;h5 style="text-align: center;"&gt;Este
+fragmento
+de titulo h5 est&amp;aacute; centrado porque lo hemos especificado
+en un estilo incrustado&lt;/h5&gt;</code></p>
+
+
+<p class="centro">A este fragmento se le aplic&oacute;
+clase "centro"
+definida como estilo en l&iacute;nea en la
+cabecera del documento</p>
+
+
+<p class="centro"><code>&lt;style
+type="text/css"&gt; .centro {
+text-align: center;} &lt;/style&gt;</code></p>
+
+
+<p class="centro"><code>...</code></p>
+
+
+<p class="centro"><code>&lt;p
+class="centro"&gt;A este fragmento se le
+aplic&amp;oacute; clase "centro" definida como estilo en
+l&amp;iacute;nea en la cabecera del documento&lt;/p&gt;<br>
+
+
+<br>
+
+
+</code></p>
+
+
+</div>
+
+
+<p class="centro"><code></code></p>
+
+
+<h2>Centrando bloques o im&aacute;genes</h2>
+
+
+<p>En ocasiones lo que necesitamos centrar no es el texto, sino
+el bloque que lo contiene. La forma de hacerlo es establecer los
+m&aacute;rgenes izquierdo y derecho como "auto", de forma que el
+visor calcule el espacio sobrante y lo divida a&nbsp;partes iguales
+entre ambas zonas. L&oacute;gicamente, como lo
+habitual&nbsp;ser&aacute; que el bloque tenga suficiente
+contenido como para ocupar la totalidad de la anchura disponible,
+habr&aacute; que aplicar esta t&eacute;cnica a bloques con una
+anchura fija.</p>
+
+
+<div class="poema">
+<h5>Soneto a una nariz (Francisco de Quevedo)</h5>
+
+
+&Eacute;rase un hombre a una
+nariz pegado,<br>
+
+
+&eacute;rase una nariz superlativa,<br>
+
+
+&eacute;rase una nariz say&oacute;n y escriba,<br>
+
+
+&eacute;rase un peje espada muy barbado<br>
+
+
+era un reloj de sol mal encarado,<br>
+
+
+&eacute;rase una alquitara pensativa,<br>
+
+
+&eacute;rase un elefante boca arriba,<br>
+
+
+era Ovidio Nas&oacute;n m&aacute;s narizado.<br>
+
+
+&Eacute;rase el espol&oacute;n de una galera,<br>
+
+
+&eacute;rase una pir&aacute;mide de Egipto,<br>
+
+
+las doce tribus de narices era;<br>
+
+
+&eacute;rase un naricismo infinito,<br>
+
+
+much&iacute;simo nariz, nariz tan fiera<br>
+
+
+que en la cara de An&aacute;s fuera delito.<br>
+
+
+</div>
+
+
+<div class="codigo">Para mostrar el poema hemos creado una
+clase para el&nbsp;estilo interno de&nbsp;la
+cabecera que luego le aplicamos al contenedor gen&eacute;rico en el
+que hemos encerrado el soneto.<br>
+
+
+<br>
+
+
+<code>.poema { padding: 0.5em 1em 1em;<br>
+
+
+<span class="indentado25"> width: 25em;</span><br class="indentado25">
+
+
+<span class="indentado25"> margin-left: auto;</span><br class="indentado25">
+
+
+<span class="indentado25"> margin-right: auto;</span><br class="indentado25">
+
+
+<span class="indentado25"> background-color: rgb(236, 225,
+187);</span><br class="indentado25">
+
+
+<span class="indentado25"> }<br>
+
+
+</span></code>
+<p>Aunque habr&aacute;s visto el bloque del soneto centrado,
+tanto con Internet Explorer como con Mozlla, Firefox u
+&Oacute;pera, ha sido porque todas las p&aacute;ginas de este
+manual llevan aplicado un parche gen&eacute;rico que corrige la
+mayor&iacute;a de los errores de interpretaci&oacute;n de CSS2
+que tiene Internet Explorer.</p>
+
+
+<p>Si no queremos aplicar el parche completo
+tendr&iacute;amos que aplicar la soluci&oacute;n provisional
+que consiste en encerrar el bloque que deseamos centrar dentro de otro
+contenedor gen&eacute;rico al que le aplicamos una regla de estilo
+para que alinee el texto centrado: con ello se consigue que el bloque
+se sit&uacute;e en el centro. Puedes ver el mismo<a href="javascript:void(0)" onclick="window.open('poemacentradoparaie.html','','scrollbars=yes,resizable=no,menubar=no,status=no,toolbar=no,titlebar=no,top=0,left=0')"> ejemplo&nbsp;adaptado</a> 
+y revisar el c&oacute;digo para comprobar lo que estamos comentando.<code><span class="indentado25"></span></code></p>
+
+
+<p><code><span class="indentado25"></span></code></p>
+
+
+</div>
+
+
+<p>Aprovechando la idea del centrado de bloques podemos
+aplicarla tambi&eacute;n para centrar im&aacute;genes, aunque
+en este caso hay que tener en cuenta una matizaci&oacute;n: las
+im&aacute;genes son elementos "en l&iacute;nea" y como
+tales&nbsp;no generan un salto anterior y posterior. Ya hemos visto
+en otros momentos que podemos considerarlas como una "letra"
+m&aacute;s dentro de la cadena de caracteres que componen un texto.
+Eso quiere decir que, para poder hacer que se centren tenemos que
+convertirlas en elementos de tipo "bloque".</p>
+
+
+<p>En este caso no necesitamos hacer ninguna maniobra especial
+para que se sit&uacute;en correctamente en Internet Explorer.
+&nbsp;<code><span class="indentado25"></span></code><br>
+
+
+</p>
+
+
+<p>La siguiente imagen salta y se centra
+autom&aacute;ticamente aunque est&aacute; incluida en la
+p&aacute;gina inmediatamete despu&eacute;s del punto con el que
+finaliza esta frase.<img class="imagenbloque" style="width: 24px; height: 24px;" alt="" src="../imagenes/smile.png"></p>
+
+
+<div class="codigo">
+<p>El c&oacute;digo que hemos utilizado se ha limitado a
+crear una clase con las
+condiciones que hab&iacute;amos rese&ntilde;ado previamente y
+aplicarla luego a la etiqueta <code>img</code>.</p>
+
+
+<code>.imagenbloque
+{
+display: block;<br>
+
+
+<span class="indentado25">margin-left: auto;</span><br class="indentado25">
+
+
+<span class="indentado25">margin-right: auto;</span><br class="indentado25">
+
+
+<span class="indentado25">}</span></code></div>
+
+
+<div class="avisos"><strong>Importante</strong>:
+si intentas aplicar la t&eacute;cnica anterior en un documento HTML
+creado por N|VU sin corregir el error que introduce en la
+generaci&oacute;n de los pr&oacute;logos pasar&aacute;s un
+mal rato copiando y pegando c&oacute;digos y viendo que Internet
+Explorer no te hace ni caso. Es uno de los ejemplos de funcionamiento
+err&aacute;tico de un navegador cuando el c&oacute;digo es
+incorrecto. Puedes consultar el <a href="../bugs/errores.html">error</a>
+y localizar las <a href="../plantillas/plantillas.html#plantillasprologos">plantillas</a>
+que lo solucionan.</div>
+
+
+<h2>Centrar verticalmente</h2>
+
+
+<p>No disponemos en CSS2 de una propiedad para centrar
+verticalmente pero, a pesar de ello, podemos combinar algunas
+propiedades existentes para lograrlo.</p>
+
+
+<p>La idea en la que nos vamos a basar es que el contenido de las
+celdas de las tablas s&iacute; que admite el centrado vertical.
+Aprovechando esta particularidad crearemos un contenedor
+externo&nbsp;que se muestre
+como si fuera una tabla de celda y le aplicaremos el centrado vertical.</p>
+
+
+<div class="centrarvertical">
+<p>este es el texto que se deber&iacute;a centrar
+en &nbsp;vertical&nbsp;</p>
+
+
+</div>
+
+
+<p>El ejemplo que se muestra en la zona izquierda, a pesar de ser
+una aplicaci&oacute;n de una sugerencia propuesta desde el <acronym title="World Wide Web Consortium">W3C</acronym>,&nbsp;s&oacute;lo
+se reproduce correctamente cuando la p&aacute;gina se visualiza con
+navegadores basados en el motor Gecko (Mozilla, Firefox,
+Gale&oacute;n, Safari, etc) pero no se respetan las propiedades si
+se visualiza con Internet Explorer u Opera.</p>
+
+
+<div class="codigo">Las propiedades que se han utilizado
+para construir la clase "centrarvertical" son las siguientes:<br>
+
+
+<code>.centrarvertical { border: 1px solid rgb(153, 102, 51);<br>
+
+
+<span class="indentado25">min-height: 100px;</span><br class="indentado25">
+
+
+<span class="indentado25">width: 400px;</span><br class="indentado25">
+
+
+<span class="indentado25">display: table-cell;</span><br class="indentado25">
+
+
+<span class="indentado25">vertical-align: middle;</span><br class="indentado25">
+
+
+<span class="indentado25">float: left;</span><br class="indentado25">
+
+
+<span class="indentado25">margin-right: 1em;</span><br class="indentado25">
+
+
+<span class="indentado25">color: rgb(255, 255, 204);</span><br class="indentado25">
+
+
+<span class="indentado25">background-color: rgb(192, 192,
+192);</span><br class="indentado25">
+
+
+<span class="indentado25">font-size: x-large;</span><br class="indentado25">
+
+
+<span class="indentado25">font-weight: bold;</span><br>
+
+
+<span class="indentado25">}</span><br>
+
+
+</code>
+</div>
+
+</div>
+</body>
+</html>

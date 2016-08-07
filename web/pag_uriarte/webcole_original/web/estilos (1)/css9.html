@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>CSS: listas</title>
+
+
+  <meta name="author" content="Ra&uacute;l Luna">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft -->
+<!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+  <link href="../nvu2005.css" type="text/css" rel="stylesheet">
+
+  <style type="text/css">
+th { background-color: rgb(170, 188, 53); text-align:center;
+}
+#centrada {width:450px; margin:auto; border: thin solid;padding:10px;}
+#Contenedora { width:100%; text-align:center;}
+#CentradaIE { width:450px; margin:auto; text-align:justify; border: thin solid;padding:10px;} .enlinea li {list-style-type: none; display: inline; margin-right: 3em;}
+  </style>
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;Listas</p>
+
+</div>
+
+<div id="flechadcha">
+<a href="css10.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="css8.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<h2>Formateo de listas con CSS</h2>
+
+<p> Respecto a las listas son tres las propiedades que podemos
+modificar: el tipo de marcador utilizado, su posici&oacute;n
+respecto al texto y la posibilidad de utilizar una imagen como
+marcador.&nbsp;En el editor
+de CSS de N|VU podr&aacute;s acceder a estas propiedades dentro de
+la
+pesta&ntilde;a <span class="refmenu">lista</span>.&nbsp;</p>
+
+<p>Adem&aacute;s de ello vamos a considerar una
+cuesti&oacute;n muy importante para la elaboraci&oacute;n de
+men&uacute;s: la forma de presentarlas. Baste avanzar que las
+listas son, por naturaleza, un elemento en bloque, pero podremos
+modificar esa construcci&oacute;n por defecto para conseguir
+algunos efectos interesantes.</p>
+
+<h3>Tipos de indicadores de elementos</h3>
+
+<p><strong>Propiedad:</strong> <code>list-style-type</code></p>
+
+<p><strong>Valores:</strong> Son todos los
+establecidos por la especificaci&oacute;n
+HTML 4.01 tal como se muestra en el ejemplo. A todos ellos
+habr&iacute;a que a&ntilde;adirle <code>none</code>
+que elimina la marca de la lista, aunque no se ha incluido en el
+ejemplo en la zona de listas numeradas porque no parece tener mucho
+sentido poner una lista ordenada sin que se vean los indicadores de
+orden. Adem&aacute;s de
+estos&nbsp;hay tambi&eacute;n
+definida una lista de posibilidades en otros idiomas para las listas
+ordenadas. </p>
+
+<div class="ejemplo">
+<table width="50%">
+
+  <tbody>
+
+    <tr>
+
+      <th scope="col">listas desordenadas</th>
+
+      <th scope="col">listas ordenadas</th>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <ul>
+
+        <li style="list-style-type: disc;"><code>disc
+          </code></li>
+
+        <li style="list-style-type: circle;"><code>circle
+          </code></li>
+
+        <li style="list-style-type: square;"><code>square</code></li>
+
+        <li style="list-style-type: none;"><code>none</code></li>
+
+      </ul>
+
+      </td>
+
+      <td>
+      <ol>
+
+        <li style="list-style-type: decimal;"><code>decimal
+          </code></li>
+
+        <li style="list-style-type: decimal-leading-zero;"><code>decimal-leading-zero
+          </code></li>
+
+        <li style="list-style-type: lower-roman;"><code>lower-roman
+          </code></li>
+
+        <li style="list-style-type: upper-roman;"><code>upper-roman
+          </code></li>
+
+        <li style="list-style-type: lower-alpha;"><code>lower-alpha
+          </code></li>
+
+        <li style="list-style-type: upper-alpha;"><code>upper-alpha</code>
+        </li>
+
+      </ol>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+<h3>Posici&oacute;n</h3>
+
+<p><b>Propiedad:</b> <code>list-type-position</code></p>
+
+<p><b>Valores:</b> Con el valor <code>outside</code>,
+que es el que se aplica por defecto,<code></code><strong>
+</strong> el indicador de la lista se colocar&aacute; tal
+como
+hemos visto en los ejemplos previos fuera del bloque formado por el
+texto del
+elemento, mientras que con <code>inside</code> se
+integrar&aacute; en el primer rengl&oacute;n del elemento </p>
+
+<div class="ejemplo avisos avisos">
+<p><b>Ejemplos:</b> </p>
+
+<ol style="list-style-position: inside;">
+
+  <li style="list-style-type: decimal; background-color: rgb(255, 204, 153); list-style-position: outside;">Este
+&iacute;tem de la lista tiene definida la posici&oacute;n
+del marcador como outside, por lo que se muestra fuera del cuadro
+creado por el contenido textual del mismo. Es la posici&oacute;n a
+la que estamos m&aacute;s habituados.</li>
+
+  <li style="list-style-type: decimal-leading-zero; list-style-position: inside; background-color: rgb(0, 200, 250);">Sin
+embargo, este &iacute;tem tiene definida la posici&oacute;n
+del marcador como inside, por lo que se integra en el primer
+rengl&oacute;n del texto formando parte del mismo cuadro </li>
+
+</ol>
+
+<p>Se ha utilizado tambi&eacute;n un color de fondo para
+mostrar c&oacute;mo la posici&oacute;n <code>inside</code><strong>
+</strong>se integra dentro del cuadro formado por el elemento,
+mientras que si
+el marcador tiene el valor <code>outside</code> queda
+fuera del mismo.</p>
+
+<br>
+
+</div>
+
+<h3>Imagen como marcador </h3>
+
+<p><b>Propiedad:</b> <code>list-style-image</code></p>
+
+<p><b>Valores:</b> habr&aacute; que indicar la
+situaci&oacute;n de la imagen con la sintaxis
+url(ruta_hacia_la_imagen)</p>
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b> </p>
+
+<ul style="list-style-image: url(imagenes/Rd_pin.gif);">
+
+  <li> En la etiqueta <code>&lt;ul&gt;</code>
+se ha incluido un estilo
+en l&iacute;nea que incluye la ruta hacia esta imagen. (Recuerda
+que habr&iacute;a sido preferible ponerlo en una hoja interna o,
+mejor a&uacute;n, externa utilizando un selector de tipo id para
+cada lista si tenemos varias y queremos individualizar las
+im&aacute;genes para cada una de ellas. Como no se ha especificado
+ninguna otra propiedad la posici&oacute;n por defecto es <code>outside</code>.
+  </li>
+
+  <li>Un segundo &iacute;tem marcado con la misma imagen.</li>
+
+</ul>
+
+<p>&nbsp;</p>
+
+</div>
+
+<p class="avisos"><img src="../imagenes/atencion.gif" align="left" height="25" width="28">Cualquiera
+de las tres propiedades puede aplicarse a un &iacute;tem en
+particular <code>&lt;li&gt;</code> o a toda la
+lista <code>&lt;ul&gt;</code> u
+<code>&lt;ol&gt;</code> seg&uacute;n
+corresponda. La
+aplicaci&oacute;n como propiedad de la lista, bien sea en una hoja
+externa o interna, resulta siempre mucho m&aacute;s
+c&oacute;moda puesto que garantiza la herencia y nos evita tener
+que repetir las propiedades en cada uno de los elementos. </p>
+
+<h2>Listas inline</h2>
+
+<p>Ya hemos comentado al inicio que las listas son, por
+naturaleza, un elemento en bloque, ya que generan un salto de
+l&iacute;nea previo y otro posterior, creando su propia caja.</p>
+
+<p>Sin embargo puede haber muchos momentos en los que no nos
+interese que la lista aparezca en vertical, sino que
+preferir&iacute;amos que sus &iacute;tems aparecieran en
+horizontal, como en el siguiente ejemplo:</p>
+
+<ul class="enlinea">
+
+  <li>Mercurio</li>
+
+  <li>Venus</li>
+
+  <li>Tierra</li>
+
+  <li>Marte</li>
+
+  <li>J&uacute;piter</li>
+
+  <li>Saturno</li>
+
+  <li>Urano</li>
+
+  <li>Neptuno</li>
+
+  <li>Plut&oacute;n</li>
+
+</ul>
+
+Para obtener este efecto hemos tenido que crear tres propiedades:<br>
+
+<ol>
+
+  <li>Eliminar los indicadores mediante list-style-type:none</li>
+
+  <li>Hacer que todos los elementos se muestren en
+l&iacute;nea, uno a continuaci&oacute;n del otro</li>
+
+  <li>Establecer una separaci&oacute;n entre los
+&iacute;tems de la lista para que no formen una sucesi&oacute;n
+continua de caracteres.</li>
+
+</ol>
+
+<div class="codigo">
+<p>Podr&iacute;amos haber aplicado
+primera regla a la lista completa, y las otras dos a cada item, pero
+como tambi&eacute;n la primera se puede aplicar a cada uno de ellos
+lo hemos solucionado creando la siguiente regla y
+aplic&aacute;ndole la clase <code>enlinea</code> solo
+una vez a la lista <code>&lt;ul&gt;</code></p>
+
+<p><code>.enlinea li {list-style-type: none; display:
+inline;
+margin-right:
+3em;}</code></p>
+
+<p>De esta forma, cada elemento <code>li</code>
+"hijo" de la
+clase <code>enlinea</code> recoger&aacute; las tres
+reglas y s&oacute;lo habremos puesto el selector de la clase en una
+etiqueta.</p>
+
+</div>
+
+Cuando veas las t&eacute;cnicas CSS ver&aacute;s que el
+formateo de
+listas tiene una gran aplicaci&oacute;n para la creaci&oacute;n
+de
+men&uacute;s que, si lo pensamos detenidamente, no son
+m&aacute;s que
+listas de opciones.<br>
+
+<div class="practicas">
+<img style="width: 29px; height: 29px; float: left;" alt="Actividad 91" title="Actividad 91" src="../imagenes/numeracion/noventayuno.gif">
+<ul>
+
+  <li>Investiga las posibilidades de las&nbsp;listas e
+incorp&oacute;ralas a tu hoja de estilo si lo consideras
+conveniente. En las t&eacute;cnicas encontrar&aacute;s que es
+uno de
+los elementos que m&aacute;s se utiliza para crear men&uacute;s
+con la
+apariencia m&aacute;s insospechada.</li>
+
+</ul>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+  
+
+
+  
+  <title>Estructura general</title>
+  <link rel="stylesheet" href="../nvu2005.css" type="text/css">
+</head>
+
+
+<body>
+
+
+<p>Cuando visitamos una p&aacute;gina WEB vemos textos,
+im&aacute;genes, colores de fondo, en algunos casos elementos que
+se desplazan por la pantalla, en fin, todo el conjunto de elementos que
+hacen de dicha p&aacute;gina un espacio multimedia e interactivo. </p>
+
+
+<p>Aunque podr&iacute;amos pensar que todos esos elementos
+est&aacute;n incluidos en la p&aacute;gina no es
+as&iacute;. Realmente el &uacute;nico de todos ellos que
+pertenece al c&oacute;digo de la propia p&aacute;gina es el
+texto. Y, entonces,
+&iquest;c&oacute;mo se ve lo que aparece en la
+p&aacute;gina? La respuesta es que una p&aacute;gina WEB no es
+m&aacute;s que un documento de texto acompa&ntilde;ado de una
+colecci&oacute;n de etiquetas que sirven para que el navegador </p>
+
+
+<ul>
+
+
+  <li>interprete de qu&eacute; forma tiene que presentar el
+texto</li>
+
+
+  <li>sepa de d&oacute;nde tiene que obtener las
+im&aacute;genes y sonidos y c&oacute;mo mostrarlos</li>
+
+
+  <li>distribuya todos los contenidos de una forma determinada
+dentro de la pantalla</li>
+
+
+</ul>
+
+
+<p> Podr&iacute;amos decir que es el gui&oacute;n de la
+pel&iacute;cula.</p>
+
+
+<p>Al tratarse de documentos de texto podemos afirmar que nos
+bastar&iacute;a con cualquier programa genere texto plano para
+crear nuestras p&aacute;ginas <acronym title="Hypertext Markup Language">HTML</acronym>.&nbsp;Aunque
+este
+procedimiento resultar&iacute;a bastante inc&oacute;modo para
+su uso habitual, ya que nos obligar&iacute;a a conocer todas las
+etiquetas del <acronym title="Hypertext Markup Language">HTML</acronym>,
+puede ser interesante para que comprendamos la
+estructura de una p&aacute;gina WEB y ser&aacute; lo primero
+que hagamos.</p>
+
+
+<h2>Familiariz&aacute;ndonos con el entorno de trabajo</h2>
+
+
+<p>Nuestra herramienta de trabajo durante este curso va a ser el
+editor N|VU y lo primero que nos conviene hacer es familiarizarnos con
+las principales caracter&iacute;sticas de su entorno para lo cual
+disponemos del siguiente v&iacute;deo.</p>
+
+
+<p><span style="color: rgb(255, 0, 0); font-weight: bold;">Insertar
+v&iacute;deo del entorno general de nvu</span></p>
+
+
+<p>La configuraci&oacute;n por defecto de N|VU opta por la
+utilizaci&oacute;n de estilos&nbsp;<acronym title="Cascading Style Sheets">CSS</acronym> para
+formatear los diferentes
+elementos de la p&aacute;gina. Es una opci&oacute;n acertada,
+ya que la utilizaci&oacute;n de&nbsp;<acronym title="Cascading Style Sheets">CSS</acronym> es un
+m&eacute;todo mucho
+m&aacute;s vers&aacute;til y potente que ser&aacute; muy
+interesante estudiar con detalle cuando se consoliden los conocimientos
+b&aacute;sicos pero, para el nivel inicial,puede suponer una
+dificultad porque no nos presentar&aacute; algunas etiquetas
+propias del lenguaje <acronym title="Hypertext Markup Language">HTML</acronym>.
+Una de las formas m&aacute;s eficientes
+de aprender el lenguaje <acronym title="Hypertext Markup Language">HTML</acronym>
+es viendo c&oacute;mo est&aacute;n
+construidas otras p&aacute;ginas y, como muchas de ellas aun no
+utilizan <acronym title="Cascading Style Sheets">CSS</acronym>,
+nos interesa ir conociendo las diferentes etiquetas
+propias del <acronym title="Hypertext Markup Language">HTML</acronym>
+y por eso es preferible, para el nivel de
+iniciaci&oacute;n, desactivar el empleo de&nbsp;<acronym title="Cascading Style Sheets">CSS</acronym>.&nbsp;</p>
+
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px;" alt="Actividad 1" title="Actividad 1" src="../imagenes/numeracion/uno.gif">
+<ul>
+
+
+  <li>Abre
+N|VU</li>
+
+
+  <li>Accede al men&uacute; <span class="refmenu">Herramientas
+    </span>&nbsp;o<span style="font-weight: bold;">
+    <span class="refmenu">Preferencias</span></span><span class="refmenu">&nbsp;</span><img class="imgcentr refmenu" style="width: 14px; height: 13px;" alt="submen&uacute;" title="submen&uacute;" src="../estilos/flechamenu.png"><span class="refmenu" style="font-weight: bold;"> General</span></li>
+
+
+  <li>Encontrar&aacute;s
+marcada&nbsp;la casilla que indica que se utilicen estilos&nbsp;<acronym title="Cascading Style Sheets">CSS</acronym><acronym title="Cascading Style Sheets"> </acronym>en
+lugar de elementos y atributos <acronym title="Hypertext Markup Language">HTML</acronym>.
+Desm&aacute;rcala si vas a
+trabajar en el nivel de iniciaci&oacute;n. <img style="width: 398px; height: 44px;" alt="Desmarcar la utilizaci&oacute;n de CSS" title="Desmarcar la utilizaci&oacute;n de CSS" src="img/desmarcarcss.png"></li>
+
+
+</ul>
+
+
+</div>
+
+
+<div class="avisos">
+<p>Si dejas activada la casilla de verificaci&oacute;n para
+la utilizaci&oacute;n de&nbsp;<acronym title="Cascading Style Sheets">CSS</acronym> es
+posible
+que algunas referencias que
+aparezcan en la documentaci&oacute;n no coincidan con lo que puedas
+comprobar al ir realizando las pr&aacute;cticas propuestas. </p>
+
+
+</div>
+
+
+<h2>El formato de las etiquetas <acronym title="Hypertext Markup Language">HTML</acronym></h2>
+
+
+<p>Las etiquetas <acronym title="Hypertext Markup Language">HTML</acronym>
+se escriben encerradas entre
+&aacute;ngulos. Normalmente se utilizan dos etiquetas: una de
+inicio y otra de fin para indicar que ha terminado el efecto que
+quer&iacute;amos presentar. La &uacute;nica diferencia entre
+ambas es que la de cierre lleva una barra inclinada "/" antes del
+c&oacute;digo.&nbsp; </p>
+
+
+<p>&lt;etiqueta&gt;texto que
+presentar&aacute; el efecto&lt;/etiqueta&gt;<br>
+
+
+Por ejemplo:<code>&lt;b&gt;Esto va en
+negrita&lt;/b&gt;</code> lo
+veremos as&iacute;: <b>Esto va en negrita</b></p>
+
+
+<div>Es probable que una de las
+primeras preguntas que te hagas sea si es obligatorio escribir las
+etiquetas en min&uacute;sculas o en may&uacute;sculas.<br>
+
+
+<br>
+
+
+Hoy por hoy es indiferente escribirlas de una u otra manera: salvo
+raras excepciones los navegadores las interpretan correctamente en
+ambos casos. <br>
+
+
+<br>
+
+
+Sin embargo, las &uacute;ltimas especificaciones emitidas por el <span><acronym title="World Wide Web Consortium">W3C</acronym></span><sup>(*)</sup>
+indican la necesidad de que vayan escritas <b>siempre </b>en
+min&uacute;sculas para considerar que el documento est&aacute;
+correctamente creado si intentamos que cumpla con las normas del
+m&aacute;s avanzado y estricto lenguaje <acronym title="Extended Hypertext Markup Language">XHTML</acronym>.
+As&iacute; pues
+ya que
+es algo que no nos
+cuesta trabajo acataremos la norma emitida por el&nbsp;<span><acronym title="World Wide Web Consortium">W3C</acronym></span>.<br>
+
+
+<br>
+
+
+<span>(*)El <acronym title="World Wide Web Consortium">W3C
+</acronym>(World Wide Web
+Consortium)
+es el f&oacute;rum internacional que se encarga desarrollar nuevas
+tecnolog&iacute;as relacionadas con la WEB dictando las normas que
+constituyen el est&aacute;ndar com&uacute;nmente aceptado para
+la
+creaci&oacute;n de documentos web.</span></div>
+
+
+<h2>La estructura b&aacute;sica de
+una p&aacute;gina WEB</h2>
+
+
+<p>Para que un navegador reconozca que lo que est&aacute;
+viendo es una p&aacute;gina WEB se utiliza la siguiente estructura:</p>
+
+
+<div class="codigo">
+<p><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML
+4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</code><code></code>&nbsp;(Etiqueta
+que indica le indica al navegador el tipo de documento que se
+va a iniciar y le permite interpretarlo correctamente.</p>
+
+
+<p><code>&lt;HTML&gt;
+</code>(Etiqueta que indica que lo que viene a
+continuaci&oacute;n es un
+documento <acronym title="Hypertext Markup Language">HTML</acronym>)<br>
+
+
+<br>
+
+
+<code>&lt;head&gt;</code>
+(Etiqueta de apertura de la T&iacute;tulo)<br>
+
+
+Aqu&iacute; va la informaci&oacute;n sobre el t&iacute;tulo
+de la p&aacute;gina, el autor, palabras clave, etc. que no se
+presentar&aacute;n en la ventana del navegador, salvo el
+t&iacute;tulo que aparecer&aacute; en la barra de
+t&iacute;tulo de la parte superior&nbsp; <br>
+
+
+<code>&lt;/head&gt;</code>
+(Etiqueta de cierre de la T&iacute;tulo)<br>
+
+
+<br>
+
+
+<code>&lt;body&gt;</code>
+(Etiqueta de apertura del cuerpo)&nbsp; <br>
+
+
+Aqu&iacute; va el contenido de la p&aacute;gina que
+ser&aacute; lo que se presente en pantalla.&nbsp; <br>
+
+
+<code>&lt;/body&gt;</code>
+(Etiqueta de cierre del cuerpo)<br>
+
+
+<br>
+
+
+<code>&lt;/HTML&gt;</code>
+(Etiqueta de cierre del documento)</p>
+
+
+</div>
+
+
+<p>No te preocupes por la aparente complejidad de la etiqueta
+inicial,
+ya que pr&aacute;cticamente todos los editores se
+encargar&aacute;n de
+escribirla por ti. </p>
+
+
+<p>Antes de comenzar los ejercicios pr&aacute;cticos
+comprueba que ya tienes creada&nbsp;una
+carpeta con el nombre "CursoHTML" para poder almacenar en ella el
+resultado de tu trabajo.&nbsp;</p>
+
+
+<div class="practicas"><img class="numact" style="width: 29px; height: 29px;" alt="Actividad 2" title="Actividad 2" src="../imagenes/numeracion/dos.gif">
+<ul>
+
+
+  <li>Arranca N|VU y abre el archivo empezando.htm que
+encontrar&aacute;s en la carpeta archivos del CD-ROM&nbsp;</li>
+
+
+  <li>No ver&aacute;s nada en la pesta&ntilde;a normal,
+as&iacute; que vamos a utilizar la pesta&ntilde;a
+C&oacute;digo fuente.</li>
+
+
+  <li>Localiza las etiquetas que hemos mencionado antes y haz
+clic con
+el rat&oacute;n para situarte en la zona correspondiente al cuerpo
+de la
+p&aacute;gina (entre <code>&lt;body&gt;</code>
+y <code>&lt;/body&gt;</code>)</li>
+
+
+  <li>Dale contenido al cuerpo escribiendo un rengl&oacute;n
+y pulsando la tecla&nbsp;<img style="width: 22px; height: 24px;" alt="Intro" title="Intro" src="../imagenes/teclaintro.png"> para saltar al siguiente
+p&aacute;rrafo.&nbsp;</li>
+
+
+  <li>Escribe otro rengl&oacute;n y pulsar dos veces la
+tecla&nbsp;<img style="width: 22px; height: 24px;" alt="Intro" title="Intro" src="../imagenes/teclaintro.png">.&nbsp;</li>
+
+
+  <li>Escribe un tercer rengl&oacute;n .</li>
+
+
+  <li>Si pulsas el icono&nbsp;<img src="img/icoguardar.png" title="Icono guardar" alt="Icono guardar" style="width: 36px; height: 37px;">
+&nbsp;obtendr&aacute;s un mensaje de error &nbsp;<img src="img/fallo.png" title="Mensaje de error" alt="Mensaje de error" style="width: 316px; height: 109px;">
+puesto
+que el archivo con el que trabajas procede del CD-ROM y no puedes
+escribir en &eacute;l.&nbsp;</li>
+
+
+  <li>Tendr&aacute;s que utilizar&nbsp;el men&uacute;
+Archivo / guardar como y salvar el fichero en la carpeta CursoHTML con
+el nombre <strong>actividad2.html</strong> <strong></strong><br>
+
+
+  </li>
+
+
+  <li>Utiliza la pesta&ntilde;a de Vista preliminar o bien el
+bot&oacute;n&nbsp;<img style="width: 41px; height: 39px;" alt="Icono de Bot&oacute;n Navegar" title="Icono de Bot&oacute;n Navegar" src="img/iconavegar.png"> para cargar en el navegador el
+documento que acabamos de salvar
+y comprobar los resultados.</li>
+
+
+</ul>
+
+
+</div>
+
+
+La primera vez que utilices el bot&oacute;n navegar el programa
+solicitar&aacute; permiso para lanzar una aplicaci&oacute;n
+externa. Ser&iacute;a conveniente que marcaras la casilla para que
+recordara esta decisi&oacute;n de forma que no te lo pregunte cada
+vez que vuelvas a pulsarlo.<br>
+
+
+<br>
+
+
+<div style="text-align: center;"><img class="imgcentr" style="width: 547px; height: 198px;" alt="Petici&oacute;n de autorizaci&oacute;n para lanzar aplicaci&oacute;n externa" title="Petici&oacute;n de autorizaci&oacute;n para lanzar aplicaci&oacute;n externa" src="img/ejecutaraplicacion.png"><br>
+
+
+</div>
+
+
+<h2>&iexcl;Vaya desastre!</h2>
+
+
+<p>Supongo que coincidiremos en que lo que hemos visto al
+comprobar c&oacute;mo hab&iacute;a quedado nuestra primera
+creaci&oacute;n no ha sido muy alentador.&nbsp; </p>
+
+
+<p>La explicaci&oacute;n del desaguisado es sencilla: en <acronym title="Hypertext Markup Language">HTML</acronym>
+hacen falta unas etiquetas especiales para indicar los saltos de
+l&iacute;nea y p&aacute;rrafo y no las hab&iacute;amos
+escrito.&nbsp;&iexcl;Las cosas no son tan sencillas como en un
+procesador de texto! </p>
+
+
+<div class="codigo"><code>&lt;br&gt;</code>
+es la
+etiqueta que sirve para indicarle al navegador que debe hacer un salto
+de l&iacute;nea y, dada su funci&oacute;n, no necesita etiqueta
+de cierre siempre que nos movamos en el tipo de documento determinado
+por las especificaciones de <acronym title="Hypertext Markup Language">HTML</acronym> 4.01.<br>
+
+
+<code>&lt;p&gt;
+&lt;/p&gt;</code> es la que nos sirve para
+indicar que lo que est&aacute; comprendido entra la etiqueta de
+inicio y la de final forman un p&aacute;rrafo que se separa de lo
+anterior y lo posterior mediante el espacio que corresponde a un doble
+salto de l&iacute;nea. </div>
+
+
+Vamos a intentar solucionar este l&iacute;o y para ello volveremos
+a
+N|VU y crearemos un nuevo documento que aparecer&aacute; en una
+nueva
+pesta&ntilde;a. Una vez que dispongamos de esta nueva
+pesta&ntilde;a
+usaremos el icono abrir para abrir de nuevo nuestro primer trabajo (con
+esto conseguiremos tener dos copias del mismo y podremos comparar las
+diferencias que se producen al introducir alguna
+modificaci&oacute;n.)
+<div class="practicas"><img class="numact" style="width: 29px; height: 29px;" alt="Actividad 3" title="Actividad 3" src="../imagenes/numeracion/tres.gif">
+<ul>
+
+
+  <li> Volvemos a N|VU y vamos a abrir un&nbsp; abrir el el
+editor de textos si lo
+hab&iacute;amos cerrado.&nbsp;</li>
+
+
+  <li> Cargamos nuestra anterior creaci&oacute;n (<strong>actividad2.html</strong>).</li>
+
+
+  <li> introducimos la etiqueta <code>&lt;br&gt;</code>
+donde
+hab&iacute;amos pulsado una vez la tecla INTRO.</li>
+
+
+  <li> Ponemos <code>&lt;p&gt;</code> donde
+inicialmente hab&iacute;amos pulsado dos veces la tecla INTRO y
+cerramos el p&aacute;rrafo de texto con <code>&lt;/p&gt;</code>.&nbsp;</li>
+
+
+  <li> Guardamos el archivo como&nbsp;<strong>actividad3.html</strong></li>
+
+
+  <li> Pasamos al navegador y cargamos esta nueva
+p&aacute;gina para comprobar el resultado.</li>
+
+
+</ul>
+
+
+</div>
+
+
+<br>
+
+
+<div class="estilo">Puede que te haya llamado la
+atenci&oacute;n que los nombres de los archivos no lleven la tilde,
+a pesar de que parece claro que su sentido es el que corresponde al
+sustantivo "pr&aacute;ctica" y no a la forma verbal "practica".<br>
+
+
+<br>
+
+
+La explicaci&oacute;n de esta situaci&oacute;n tiene que ver
+con la forma en que los servidores van a tratar posteriormente los
+nombres de los archivos que almacenan y las peticiones que les realicen
+los navegadores: los caracteres no anglosajones (entre los que se
+cuentan nuestras vocales con tilde y la "e&ntilde;e")
+as&iacute; como los espacios en los nombres van a provocar errores
+y el servidor va a contestar que no encuentra la p&aacute;gina. <br>
+
+
+<br>
+
+
+La recomendaci&oacute;n es que no utilices estos caracteres en los
+nombres de las p&aacute;ginas o en sus archivos asociados. Si
+quieres utilizar nombres largos y que las palabras queden separadas
+hazlo sustituyendo el espacio por un gui&oacute;n bajo "<b>_</b>"<br>
+
+
+</div>
+
+
+<div class="avisos"> &nbsp;&iexcl;Cuidado! Cuando
+veas las p&aacute;ginas en tu ordenador
+no notar&aacute;s ning&uacute;n problema aunque utilices estos
+caracteres al nombrar el archivo. Ten en cuenta que te las
+est&aacute; sirviendo tu propio ordenador, que tiene configurado el
+teclado en castellano y con un sistema operativo que admite los
+espacios.</div>
+
+
+<p>Aunque pueda haber resultado algo duro para empezar puedes
+respirar
+con tranquilidad porque estos son los &uacute;ltimos trabajos que
+realizamos directamente escribiendo los c&oacute;digos. A partir de
+aqu&iacute; empezaremos a utilizar el&nbsp;editor
+gr&aacute;fico desde
+la pesta&ntilde;a normal
+que, b&aacute;sicamente, se encarga de escribir por nosotros las
+etiquetas necesarias, pero es de suponer que gracias a esta
+introducci&oacute;n hayamos podido comprender c&oacute;mo se
+escribe una p&aacute;gina <acronym title="Hypertext Markup Language">HTML</acronym>.&nbsp;</p>
+
+
+<p>La importancia de asimilar la estructura b&aacute;sica
+reside en que una de las mejores formas de aprender a crear
+p&aacute;ginas <acronym title="Hypertext Markup Language">HTML</acronym>
+es viendo p&aacute;ginas creadas por otros
+autores. Si tenemos claro el sistema utilizado podremos reconocer los
+elementos que nos parezcan interesantes e irlos incorporando a nuestras
+p&aacute;ginas.&nbsp;</p>
+<p></p>
+
+
+<br>
+
+
+</body>
+</html>

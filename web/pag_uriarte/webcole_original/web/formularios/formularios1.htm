@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="es-es">
+<head>
+  <TITLE></TITLE>
+
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- compliance patch for microsoft browsers --><!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+
+<STYLE>
+	<!--
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		P.western { font-size: 10pt; so-language: es-ES }
+	-->
+	</STYLE>
+</head>
+
+
+
+<div id="localizador">
+<p>Formularios&gt;&gt;El contenedor principal</p>
+
+</div>
+<div id="flechadcha">
+<a href="formularios2.htm" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="../Plantillas/plantillas.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<h2>&iquest;Qu&eacute; es un
+formulario? </h2>
+
+<p>Una de las v&iacute;as de comunicaci&oacute;n que
+podemos ofrecerle a los visitantes es el enlace de correo
+electr&oacute;nico para que se puedan poner en contacto con quien
+corresponda. Es una posibilidad que deber&iacute;a existir en
+cualquier p&aacute;gina WEB, siempre que exista alguna persona que
+se responsabilice de consultar el buz&oacute;n, tal como ya hemos
+comentado.</p>
+
+<p>Pero habr&aacute; ocasiones en las que el correo
+electr&oacute;nico ser&aacute; demasiado abierto y necesitemos
+especificar una serie de campos para que se rellenen y la
+informaci&oacute;n que nos llegue sea ajuste a lo que necesitamos.
+En ese caso recurriremos a los formularios.</p>
+
+<p>Habr&iacute;a mucho que hablar sobre los formularios, y lo
+primero ser&iacute;a decir que, para que un formulario ofrezca su
+pleno rendimiento tiene que estar complementado por una
+aplicaci&oacute;n que se ejecute en el servidor y que permita, en
+su forma m&aacute;s simple, organizar los datos recibidos y
+enviarlos al destinatario que se haya establecido al crear el
+formulario. </p>
+
+<p>Ahora bien, si lo pensamos un poco, podemos darnos cuenta de
+que existen unos ciertos riesgos al llevar a cabo el procedimiento que
+acabamos de comentar. Al fin y al cabo, se est&aacute; permitiendo
+que un usuario an&oacute;nimo provoque la ejecuci&oacute;n de
+un programa en un ordenador en el que te&oacute;ricamente
+s&oacute;lo tiene permiso para ver un determinado tipo de archivos,
+pero no para ejecutar ning&uacute;n programa.
+&iquest;Qui&eacute;n garantiza que el programa que se ejecuta
+no tiene alg&uacute;n agujero de seguridad que permita una
+intervenci&oacute;n malintencionada? Ese es el problema por el que
+no todos los servidores nos van a permitir alojar programas para
+manejar los formularios.</p>
+
+<p>As&iacute; pues, al no poder adivinar las condiciones en
+las que cada alumno de este curso publicar&aacute; sus
+p&aacute;ginas, no entraremos en descripciones detalladas de
+procesos que, por otra parte exceden el marco de contenidos.
+Utilizaremos la forma m&aacute;s sencilla de procesamiento de un
+formulario que ser&aacute; accesible a todos ya que no exige la
+ejecuci&oacute;n de programas en el servidor.</p>
+
+<h3>El contenedor principal</h3>
+
+<p> Para que los diferentes campos que utilicemos&nbsp;sean
+operativos tienen que estar integrados dentro de un contenedor que los
+englobe. Esa ser&aacute; la funci&oacute;n que
+desempe&ntilde;e la etiqueta <code>&lt;form&gt;</code>
+y su correspondiente cierre <code>&lt;/form&gt;</code>.
+Ser&aacute; entre ellas donde se sit&uacute;en los diferentes
+campos y tambi&eacute;n servir&aacute; para indicar el tipo de
+operaci&oacute;n que se realizar&aacute; con los datos.</p>
+
+<p><img class="flotder" style="width: 312px; height: 241px;" alt="Panel de creaci&oacute;n de formulario" title="Panel de creaci&oacute;n de formulario" src="imagenes/formulario.png">Para iniciar la
+creaci&oacute;n del formulario
+utilizaremos la opci&oacute;n de men&uacute; <span class="refmenu">insertar <img src="../imagenes/flechamenu.png" height="13" width="14">
+formulario</span><span class="refmenu"> <img src="../imagenes/flechamenu.png" height="13" width="14">
+</span><span class="refmenu"> definir formulario</span>
+o bien pulsando directamente el icono&nbsp;<img style="width: 73px; height: 41px;" alt="Formulario" title="Formulario" src="imagenes/icoformulario.png">
+sin necesidad de desplegar las opciones. Con cualquiera de las opciones
+se abrir&aacute; un panel para introducir los datos esenciales del
+formulario.</p>
+
+<p>El <span class="refmenu">nombre del formulario</span>
+servir&aacute;
+para identificarlo en caso de querer realizar alguna
+operaci&oacute;n
+mediante alg&uacute;n lenguaje de programaci&oacute;n, por lo
+que no
+ser&iacute;a imprescindible cumplimentarlo. Lo que s&iacute; es
+importante es cumplimentar la <span class="refmenu">URL
+de la acci&oacute;n</span> que se realizar&aacute;,
+puesto que si no lo hacemos, al intentar guardar el programa nos
+avisar&aacute; con un mensaje.</p>
+
+<p class="centrado"><img style="width: 374px; height: 88px;" longdesc="aviso.html" alt="Aviso de que no se ha especificado acci&oacute;n" title="Aviso de que no se ha especificado acci&oacute;n" src="imagenes/aviso.png"></p>
+
+<p>Si volvemos a intentar guardar el formulario sin corregir esta
+situaci&oacute;n ya no aparecer&aacute; nuevamente
+el&nbsp;mensaje de
+advertencia. En nuetro caso vamos a utilizar la acci&oacute;n
+m&aacute;s sencilla que es la de enviar por correo sin recurrir a
+programas o acciones en el servidor para lo que ponemos como URL de la
+acci&oacute;n un enlace del tipo
+mailto:direcci&oacute;n.de.correo</p>
+
+<p>En cuanto al <span class="refmenu">m&eacute;todo</span>,
+dados los
+procedimientos que utilizaremos para el env&iacute;o y la
+funci&oacute;n que le daremos al propio formulario en este curso
+utilizaremos siempre <code>post</code> que es el
+m&aacute;s adecuado para el env&iacute;o b&aacute;sico de
+datos sin interaccionar con otras aplicaciones.</p>
+
+<p><img class="flotizq" style="width: 404px; height: 168px;" alt="M&aacute;s propiedades: indicar la codificaci&oacute;n" title="M&aacute;s propiedades: indicar la codificaci&oacute;n" src="imagenes/formulario2.png">Antes
+de continuar es importante considerar una cuesti&oacute;n: dado que
+nuestro idioma utiliza caracteres que no forman parte del conjunto
+ASCII b&aacute;sico nos interesa pulsar el bot&oacute;n <img style="width: 128px; height: 24px;" alt="M&aacute;s propiedades" title="M&aacute;s propiedades" src="../imagenes/botonmaspropiedades.png">
+para indicar el tipo de codificaci&oacute;n que se debe utilizar
+para
+codificar los datos. Si no especificamos otra cosa, el tipo de
+codificaci&oacute;n que se usa por defecto es el denominado <code>application/x-www-form-urlencoded</code>
+que es el menos adecuado para representar de una forma inteligible los
+caracteres acentuados, las e&ntilde;es o los signos de apertura de
+interrogaci&oacute;n o admiraci&oacute;n. Por ello nos conviene
+seleccionar cualquiera de los otros dos: <code>multipart/form-data</code>
+o <code>text/plain</code>.
+Cuando avancemos en la elaboraci&oacute;n de formularios
+ver&aacute;s
+que el m&aacute;s adecuado puesto que es el que mejor representa
+los
+saltos de l&iacute;nea es el primero, pero dado que empaqueta todos
+los
+datos en un archivo con extensi&oacute;n att tal vez sea
+m&aacute;s
+conveniente utilizar el &uacute;ltimo tipo para que el contenido
+aparezca en claro en el cuerpo del mensaje.</p>
+
+<p>Cuando hemos completado la adjudicaci&oacute;n de los
+valores veremos que en las pesta&ntilde;as <img style="width: 65px; height: 20px;" alt="Normal" title="Normal" src="../imagenes/pestananormal.png"> y
+<img style="width: 105px; height: 20px;" alt="Etiquetas HTML" title="Etiquetas HTML" src="../imagenes/pestanaetiquetashtml.png"> el programa
+se&ntilde;ala la posici&oacute;n del formulario mediante un
+cuadro bordeado con guiones en color azul, lo cual nos
+facilitar&aacute; la introducci&oacute;n de los controles del
+formulario dentro del mismo.</p>
+<p class="avisos">&iquest;Cuantos contenedores hay que crear en
+  un formulario? Generalmente s&oacute;lo uno, ya que lo habitual es que una
+  p&aacute;gina web concreta tenga un &uacute;nico formulario. No siempre tiene
+  que ser as&iacute;, pero es lo m&aacute;s com&uacute;n. Lo importante es tener
+  en cuenta que no debemos crear un nuevo contenedor para cada nuevo elemento
+  (bot&oacute;n, cuadro de texto, etc.) que vayamos a insertar en un formulario.</p>
+<div class="codigo">
+<p>Con las selecciones que hemos realizado en las
+im&aacute;genes que
+se han mostrado, el c&oacute;digo b&aacute;sico para nuestro
+formulario
+quedar&iacute;a de la siguiente forma:</p>
+
+<p><code>&lt;form enctype=&quot;text/plain&quot; method=&quot;post&quot;
+action=&quot;mailto:secret@insti.es&quot; name=&quot;Optativas&quot;&gt;</code></p>
+
+<p><code>&lt;br&gt;</code></p>
+
+<p><code>&lt;/form&gt;</code><br>
+
+</p>
+
+</div>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 61" title="Actividad 61" src="../imagenes/numeracion/sesentayuno.gif">
+<ul>
+  <li>Crea un formulario que env&iacute;e los datos que
+incluiremos
+posteriormente a tu direcci&oacute;n de correo
+electr&oacute;nico.
+Utiliza como codificaci&oacute;n&nbsp;<code>multipart/form-data
+    </code>o <code>text/plain</code></li>
+  <li>Acude a la pesta&ntilde;a &nbsp;para comprobar
+c&oacute;mo se ha construido el c&oacute;digo.</li>
+  <li>Guarda el trabajo con el nombre&nbsp;<strong>actividad61.html</strong></li>
+</ul>
+
+
+
+</div>
+
+<br>
+
+<br>
+</div>
+</body>
+</html>

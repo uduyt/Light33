@@ -1,0 +1,1383 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+  <!--
+
+.rdbox { BACKGROUND-COLOR: #cc0000; }
+.grbox { BACKGROUND-COLOR: #00CC00; }
+.blbox { BACKGROUND-COLOR: #0000cc; }
+
+//p {
+}
+p {
+	text-align: justify;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+--></style>
+  <script language="javascript"><!--
+
+//initialize colors
+bgcolor_r = 255; text_r = 0;   link_r = 0;   vlink_r = 102; alink_r = 255;
+bgcolor_g = 255; text_g = 0;   link_g = 0;   vlink_g = 51;  alink_g = 0;
+bgcolor_b = 255; text_b = 0;   link_b = 255; vlink_b = 153; alink_b = 0;
+
+//initialize attributes
+bold_flag = "xb";
+italic_flag = "xi";
+current_font = "times new roman";
+current_fontsize = "3";
+
+//initialize background variables
+driveLetter = "";
+imageFileName = "";
+imageFilePath2 = "";
+current_back = "";
+
+//initialize current radio button checked
+current_radio_flag = "bgcolor";
+
+//preload button images
+arrows = new Image(28,22);        arrows.src = "arrows.gif";
+arrows_dimmed = new Image(28,22); arrows_dimmed.src = "arrows_dimmed.gif";
+arrows_noup = new Image(28,22);   arrows_noup.src = "arrows_noup.gif";
+arrows_nodn = new Image(28,22);   arrows_nodn.src = "arrows_nodn.gif";
+
+
+
+
+
+function toHex(decimal_number)
+//feed it a decimal number and it spits back a 2 digit hex number
+{
+   var prefix = (decimal_number < 16) ? '0' : '';
+   hex_number = decimal_number.toString(16);
+   hex_number = hex_number.toUpperCase();
+   return prefix + hex_number;
+}
+
+
+function toDecimalr(hexcode) { hexr = hexcode.substring(0,2); return parseInt(hexr,16); }
+function toDecimalg(hexcode) { hexg = hexcode.substring(2,4); return parseInt(hexg,16); }
+function toDecimalb(hexcode) { hexb = hexcode.substring(6,4); return parseInt(hexb,16); }
+
+
+function changeColorset()
+{
+   //dim all
+   window.document.images["img_bgcolor_r"].src = arrows_dimmed.src;
+   window.document.images["img_bgcolor_g"].src = arrows_dimmed.src;
+   window.document.images["img_bgcolor_b"].src = arrows_dimmed.src;
+
+   window.document.images["img_text_r"].src = arrows_dimmed.src;
+   window.document.images["img_text_g"].src = arrows_dimmed.src;
+   window.document.images["img_text_b"].src = arrows_dimmed.src;
+
+   window.document.images["img_link_r"].src = arrows_dimmed.src;
+   window.document.images["img_link_g"].src = arrows_dimmed.src;
+   window.document.images["img_link_b"].src = arrows_dimmed.src;
+
+   window.document.images["img_vlink_r"].src = arrows_dimmed.src;
+   window.document.images["img_vlink_g"].src = arrows_dimmed.src;
+   window.document.images["img_vlink_b"].src = arrows_dimmed.src;
+
+   window.document.images["img_alink_r"].src = arrows_dimmed.src;
+   window.document.images["img_alink_g"].src = arrows_dimmed.src;
+   window.document.images["img_alink_b"].src = arrows_dimmed.src;
+
+   //relight one
+   if (window.document.cpform.flag[0].checked == true) { current_color_r = bgcolor_r; current_color_g = bgcolor_g; current_color_b = bgcolor_b; current_image_r = "img_bgcolor_r"; current_image_g = "img_bgcolor_g"; current_image_b = "img_bgcolor_b"; current_radio_flag = "bgcolor"; }
+   if (window.document.cpform.flag[1].checked == true) { current_color_r = text_r; current_color_g = text_g;       current_color_b = text_b;    current_image_r = "img_text_r";    current_image_g = "img_text_g";    current_image_b = "img_text_b";    current_radio_flag = "text"; }
+   if (window.document.cpform.flag[2].checked == true) { current_color_r = link_r; current_color_g = link_g;       current_color_b = link_b;    current_image_r = "img_link_r";    current_image_g = "img_link_g";    current_image_b = "img_link_b";    current_radio_flag = "link"; }
+   if (window.document.cpform.flag[3].checked == true) { current_color_r = vlink_r; current_color_g = vlink_g;     current_color_b = vlink_b;   current_image_r = "img_vlink_r";   current_image_g = "img_vlink_g";   current_image_b = "img_vlink_b";   current_radio_flag = "vlink"; }
+   if (window.document.cpform.flag[4].checked == true) { current_color_r = alink_r; current_color_g = alink_g;     current_color_b = alink_b;   current_image_r = "img_alink_r";   current_image_g = "img_alink_g";   current_image_b = "img_alink_b";   current_radio_flag = "alink"; }
+
+   if(current_color_r == 0)        { window.document.images[current_image_r].src = arrows_nodn.src; }
+   else if(current_color_r == 255) { window.document.images[current_image_r].src = arrows_noup.src; }
+   else                            { window.document.images[current_image_r].src = arrows.src; }
+
+   if(current_color_g == 0)        { window.document.images[current_image_g].src = arrows_nodn.src; }
+   else if(current_color_g == 255) { window.document.images[current_image_g].src = arrows_noup.src; }
+   else                            { window.document.images[current_image_g].src = arrows.src; }
+
+   if(current_color_b == 0)        { window.document.images[current_image_b].src = arrows_nodn.src; }
+   else if(current_color_b == 255) { window.document.images[current_image_b].src = arrows_noup.src; }
+   else                            { window.document.images[current_image_b].src = arrows.src; }
+
+}
+
+function hitArrow(img_name, increment, flag)
+{
+   if(flag == current_radio_flag)
+   {
+      if     (img_name == "img_bgcolor_r") { current_img_value = bgcolor_r; current_textbox = "bgcolor_r_value"}
+      else if(img_name == "img_bgcolor_g") { current_img_value = bgcolor_g; current_textbox = "bgcolor_g_value"}
+      else if(img_name == "img_bgcolor_b") { current_img_value = bgcolor_b; current_textbox = "bgcolor_b_value"}
+      else if(img_name == "img_text_r") { current_img_value = text_r; current_textbox = "text_r_value"}
+      else if(img_name == "img_text_g") { current_img_value = text_g; current_textbox = "text_g_value"}
+      else if(img_name == "img_text_b") { current_img_value = text_b; current_textbox = "text_b_value"}
+      else if(img_name == "img_link_r") { current_img_value = link_r; current_textbox = "link_r_value"}
+      else if(img_name == "img_link_g") { current_img_value = link_g; current_textbox = "link_g_value"}
+      else if(img_name == "img_link_b") { current_img_value = link_b; current_textbox = "link_b_value"}
+      else if(img_name == "img_vlink_r") { current_img_value = vlink_r; current_textbox = "vlink_r_value"}
+      else if(img_name == "img_vlink_g") { current_img_value = vlink_g; current_textbox = "vlink_g_value"}
+      else if(img_name == "img_vlink_b") { current_img_value = vlink_b; current_textbox = "vlink_b_value"}
+      else if(img_name == "img_alink_r") { current_img_value = alink_r; current_textbox = "alink_r_value"}
+      else if(img_name == "img_alink_g") { current_img_value = alink_g; current_textbox = "alink_g_value"}
+      else if(img_name == "img_alink_b") { current_img_value = alink_b; current_textbox = "alink_b_value"}
+
+      if(increment == "upa")
+      {
+         current_img_value = current_img_value + 1;
+         if(current_img_value == 255)
+         {
+            window.document.images[img_name].src = arrows_noup.src;
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+         }
+         else if(current_img_value == 256)
+         {
+            current_img_value = 255;
+         }
+         else if((current_img_value < 255)&&(current_img_value != 1))
+         {
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+         }
+         else if(current_img_value == 1)
+         {
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+            window.document.images[img_name].src = arrows.src;
+         }
+      }
+      else if(increment == "upb")
+      {
+         current_img_value = current_img_value + 8;
+         if(current_img_value >= 255)
+         {
+            current_img_value = 255;
+            window.document.images[img_name].src = arrows_noup.src;
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+         }
+         else if((current_img_value < 255)&&(current_img_value != 8))
+         {
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+         }
+         else if(current_img_value == 8)
+         {
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+            window.document.images[img_name].src = arrows.src;
+         }
+      }
+      else if(increment == "dna")
+      {
+         current_img_value = current_img_value - 1;
+         if(current_img_value == 0)
+         {
+            window.document.images[img_name].src = arrows_nodn.src;
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+         }
+         else if(current_img_value == -1)
+         {
+            current_img_value = 0;
+         }
+         else if((current_img_value > 0)&&(current_img_value != 254))
+         {
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+         }
+         else if(current_img_value == 254)
+         {
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+            window.document.images[img_name].src = arrows.src;
+         }
+      }
+      else if(increment == "dnb")
+      {
+         current_img_value = current_img_value - 8;
+         if(current_img_value <= 0)
+         {
+            current_img_value = 0;
+            window.document.images[img_name].src = arrows_nodn.src;
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+         }
+         else if((current_img_value > 0)&&(current_img_value != 247))
+         {
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+         }
+         else if(current_img_value == 247)
+         {
+            window.document.cpform[current_textbox].value = toHex(current_img_value);
+            window.document.images[img_name].src = arrows.src;
+         }
+      }
+
+      if     (img_name == "img_bgcolor_r") { bgcolor_r = current_img_value ;}
+      else if(img_name == "img_bgcolor_g") { bgcolor_g = current_img_value ;}
+      else if(img_name == "img_bgcolor_b") { bgcolor_b = current_img_value ;}
+      else if(img_name == "img_text_r") { text_r = current_img_value ;}
+      else if(img_name == "img_text_g") { text_g = current_img_value ;}
+      else if(img_name == "img_text_b") { text_b = current_img_value ;}
+      else if(img_name == "img_link_r") { link_r = current_img_value ;}
+      else if(img_name == "img_link_g") { link_g = current_img_value ;}
+      else if(img_name == "img_link_b") { link_b = current_img_value ;}
+      else if(img_name == "img_vlink_r") { vlink_r = current_img_value ;}
+      else if(img_name == "img_vlink_g") { vlink_g = current_img_value ;}
+      else if(img_name == "img_vlink_b") { vlink_b = current_img_value ;}
+      else if(img_name == "img_alink_r") { alink_r = current_img_value ;}
+      else if(img_name == "img_alink_g") { alink_g = current_img_value ;}
+      else if(img_name == "img_alink_b") { alink_b = current_img_value ;}
+
+      alterPage(flag);
+   }
+}
+
+
+function fillHexes()
+{
+   window.document.cpform.bgcolor_r_value.value = toHex(bgcolor_r);
+   window.document.cpform.bgcolor_g_value.value = toHex(bgcolor_g);
+   window.document.cpform.bgcolor_b_value.value = toHex(bgcolor_b);
+
+   window.document.cpform.text_r_value.value = toHex(text_r);
+   window.document.cpform.text_g_value.value = toHex(text_g);
+   window.document.cpform.text_b_value.value = toHex(text_b);
+
+   window.document.cpform.link_r_value.value = toHex(link_r);
+   window.document.cpform.link_g_value.value = toHex(link_g);
+   window.document.cpform.link_b_value.value = toHex(link_b);
+
+   window.document.cpform.vlink_r_value.value = toHex(vlink_r);
+   window.document.cpform.vlink_g_value.value = toHex(vlink_g);
+   window.document.cpform.vlink_b_value.value = toHex(vlink_b);
+
+   window.document.cpform.alink_r_value.value = toHex(alink_r);
+   window.document.cpform.alink_g_value.value = toHex(alink_g);
+   window.document.cpform.alink_b_value.value = toHex(alink_b);
+}
+
+
+function alterPage(flag)
+{
+   if(flag == "xbgcolor")
+   {
+      hexcode = toHex(bgcolor_r) + toHex(bgcolor_g) + toHex(bgcolor_b);
+      top.cpright.document.bgColor = hexcode;
+   }
+   else
+   {
+      writePage();
+   }
+}
+
+
+
+function SendColor(sentcolor)
+{
+   if(current_radio_flag == "bgcolor")
+   {
+      bgcolor_r = toDecimalr(sentcolor);
+      bgcolor_g = toDecimalg(sentcolor);
+      bgcolor_b = toDecimalb(sentcolor);
+      window.document.cpform.bgcolor_r_value.value = toHex(bgcolor_r);
+      window.document.cpform.bgcolor_g_value.value = toHex(bgcolor_g);
+      window.document.cpform.bgcolor_b_value.value = toHex(bgcolor_b);
+      if(bgcolor_r == 0)        { window.document.images["img_bgcolor_r"].src = arrows_nodn.src; }
+      else if(bgcolor_r == 255) { window.document.images["img_bgcolor_r"].src = arrows_noup.src; }
+      else                      { window.document.images["img_bgcolor_r"].src = arrows.src; }
+      if(bgcolor_g == 0)        { window.document.images["img_bgcolor_g"].src = arrows_nodn.src; }
+      else if(bgcolor_g == 255) { window.document.images["img_bgcolor_g"].src = arrows_noup.src; }
+      else                      { window.document.images["img_bgcolor_g"].src = arrows.src; }
+      if(bgcolor_b == 0)        { window.document.images["img_bgcolor_b"].src = arrows_nodn.src; }
+      else if(bgcolor_b == 255) { window.document.images["img_bgcolor_b"].src = arrows_noup.src; }
+      else                      { window.document.images["img_bgcolor_b"].src = arrows.src; }
+      writePage();
+   }
+   else if(current_radio_flag == "text")
+   {
+      text_r = toDecimalr(sentcolor);
+      text_g = toDecimalg(sentcolor);
+      text_b = toDecimalb(sentcolor);
+      window.document.cpform.text_r_value.value = toHex(text_r);
+      window.document.cpform.text_g_value.value = toHex(text_g);
+      window.document.cpform.text_b_value.value = toHex(text_b);
+      if(text_r == 0)        { window.document.images["img_text_r"].src = arrows_nodn.src; }
+      else if(text_r == 255) { window.document.images["img_text_r"].src = arrows_noup.src; }
+      else                      { window.document.images["img_text_r"].src = arrows.src; }
+      if(text_g == 0)        { window.document.images["img_text_g"].src = arrows_nodn.src; }
+      else if(text_g == 255) { window.document.images["img_text_g"].src = arrows_noup.src; }
+      else                      { window.document.images["img_text_g"].src = arrows.src; }
+      if(text_b == 0)        { window.document.images["img_text_b"].src = arrows_nodn.src; }
+      else if(text_b == 255) { window.document.images["img_text_b"].src = arrows_noup.src; }
+      else                      { window.document.images["img_text_b"].src = arrows.src; }
+      writePage();
+   }
+   else if(current_radio_flag == "link")
+   {
+      link_r = toDecimalr(sentcolor);
+      link_g = toDecimalg(sentcolor);
+      link_b = toDecimalb(sentcolor);
+      window.document.cpform.link_r_value.value = toHex(link_r);
+      window.document.cpform.link_g_value.value = toHex(link_g);
+      window.document.cpform.link_b_value.value = toHex(link_b);
+      if(link_r == 0)        { window.document.images["img_link_r"].src = arrows_nodn.src; }
+      else if(link_r == 255) { window.document.images["img_link_r"].src = arrows_noup.src; }
+      else                      { window.document.images["img_link_r"].src = arrows.src; }
+      if(link_g == 0)        { window.document.images["img_link_g"].src = arrows_nodn.src; }
+      else if(link_g == 255) { window.document.images["img_link_g"].src = arrows_noup.src; }
+      else                      { window.document.images["img_link_g"].src = arrows.src; }
+      if(link_b == 0)        { window.document.images["img_link_b"].src = arrows_nodn.src; }
+      else if(link_b == 255) { window.document.images["img_link_b"].src = arrows_noup.src; }
+      else                      { window.document.images["img_link_b"].src = arrows.src; }
+      writePage();
+   }
+   else if(current_radio_flag == "vlink")
+   {
+      vlink_r = toDecimalr(sentcolor);
+      vlink_g = toDecimalg(sentcolor);
+      vlink_b = toDecimalb(sentcolor);
+      window.document.cpform.vlink_r_value.value = toHex(vlink_r);
+      window.document.cpform.vlink_g_value.value = toHex(vlink_g);
+      window.document.cpform.vlink_b_value.value = toHex(vlink_b);
+      if(vlink_r == 0)        { window.document.images["img_vlink_r"].src = arrows_nodn.src; }
+      else if(vlink_r == 255) { window.document.images["img_vlink_r"].src = arrows_noup.src; }
+      else                      { window.document.images["img_vlink_r"].src = arrows.src; }
+      if(vlink_g == 0)        { window.document.images["img_vlink_g"].src = arrows_nodn.src; }
+      else if(vlink_g == 255) { window.document.images["img_vlink_g"].src = arrows_noup.src; }
+      else                      { window.document.images["img_vlink_g"].src = arrows.src; }
+      if(vlink_b == 0)        { window.document.images["img_vlink_b"].src = arrows_nodn.src; }
+      else if(vlink_b == 255) { window.document.images["img_vlink_b"].src = arrows_noup.src; }
+      else                      { window.document.images["img_vlink_b"].src = arrows.src; }
+      writePage();
+   }
+   else if(current_radio_flag == "alink")
+   {
+      alink_r = toDecimalr(sentcolor);
+      alink_g = toDecimalg(sentcolor);
+      alink_b = toDecimalb(sentcolor);
+      window.document.cpform.alink_r_value.value = toHex(alink_r);
+      window.document.cpform.alink_g_value.value = toHex(alink_g);
+      window.document.cpform.alink_b_value.value = toHex(alink_b);
+      if(alink_r == 0)        { window.document.images["img_alink_r"].src = arrows_nodn.src; }
+      else if(alink_r == 255) { window.document.images["img_alink_r"].src = arrows_noup.src; }
+      else                      { window.document.images["img_alink_r"].src = arrows.src; }
+      if(alink_g == 0)        { window.document.images["img_alink_g"].src = arrows_nodn.src; }
+      else if(alink_g == 255) { window.document.images["img_alink_g"].src = arrows_noup.src; }
+      else                      { window.document.images["img_alink_g"].src = arrows.src; }
+      if(alink_b == 0)        { window.document.images["img_alink_b"].src = arrows_nodn.src; }
+      else if(alink_b == 255) { window.document.images["img_alink_b"].src = arrows_noup.src; }
+      else                      { window.document.images["img_alink_b"].src = arrows.src; }
+      writePage();
+   }
+}
+
+
+function writePage()
+{
+   hexcode_bgcolor = toHex(bgcolor_r) + toHex(bgcolor_g) + toHex(bgcolor_b);
+   hexcode_text = toHex(text_r) + toHex(text_g) + toHex(text_b);
+   hexcode_link = toHex(link_r) + toHex(link_g) + toHex(link_b);
+   hexcode_vlink = toHex(vlink_r) + toHex(vlink_g) + toHex(vlink_b);
+   hexcode_alink = toHex(alink_r) + toHex(alink_g) + toHex(alink_b);
+
+   if(parent.cpleft.document.cpform.boldflag.checked == true) { bold_flag = "b"; } else { bold_flag = "xb"; }
+   if(parent.cpleft.document.cpform.italicflag.checked == true) { italic_flag = "i"; } else { italic_flag = "xi"; }
+
+   current_font = parent.cpleft.document.cpform.fontlist[parent.cpleft.document.cpform.fontlist.selectedIndex].value;
+   current_fontsize = parent.cpleft.document.cpform.fontsize[parent.cpleft.document.cpform.fontsize.selectedIndex].value;
+
+   parent.cpright.document.clear();
+   parent.cpright.document.open();
+   parent.cpright.document.write("<HTML><HEAD><TITLE>Color Picker II - by PageTutor.com</TITLE></HEAD>");
+   parent.cpright.document.write("<BODY BGCOLOR=\"#" + hexcode_bgcolor + "\" TEXT=\"#" + hexcode_text + "\" LINK=\"#" + hexcode_link + "\" VLINK=\"#" + hexcode_vlink + "\" ALINK=\"#" + hexcode_alink + "\" BACKGROUND=\"file:///" + driveLetter + "|/" + imageFilePath2 + "/" + imageFileName + "\">");
+   parent.cpright.document.write("<P><FONT face=\"trebuchet ms,arial\" color=\"#" + hexcode_text + "\" size=\"5\"><B>Visor de pruebas\:</B></FONT><HR>");
+   parent.cpright.document.write("<FONT face=\"" + current_font + "\" size=\"" + current_fontsize + "\" color=\"#" + hexcode_text + "\"><" + italic_flag + "><" + bold_flag + ">Texto normal<BR>As&Iacute; se presentar&iacute;a el texto con los valores elegidos.</" + bold_flag + "></" + italic_flag + "></FONT>");
+   parent.cpright.document.write("<P><FONT face=\"" + current_font + "\" size=\"" + current_fontsize + "\" color=\"#" + hexcode_link + "\"><" + italic_flag + "><" + bold_flag + "><U>As&iacute; se ver&iacute;an los enlaces</U></" + bold_flag + "></" + italic_flag + "></FONT>");
+   parent.cpright.document.write("<P><FONT face=\"" + current_font + "\" size=\"" + current_fontsize + "\" color=\"#" + hexcode_vlink + "\"><" + italic_flag + "><" + bold_flag + "><U>Esta ser&iacute;a la apariencia de los enlaces visitados.</U></" + bold_flag + "></" + italic_flag + "></FONT>");
+   parent.cpright.document.write("<P><FONT face=\"" + current_font + "\" size=\"" + current_fontsize + "\" color=\"#" + hexcode_alink + "\"><" + italic_flag + "><" + bold_flag + "><U>Y esta la de los enlaces activos</U></" + bold_flag + "></" + italic_flag + "></FONT>");
+   parent.cpright.document.write("<P><TABLE BORDER=\"4\" CELLPADDING=\"5\" CELLSPACING=\"6\">");
+   parent.cpright.document.write("<TR><TD ALIGN=\"center\" COLSPAN=\"3\"><FONT COLOR=\"#" + hexcode_text + "\">As&iacute; vemos una <TT>&lt\;TABLE&gt\;</TT></FONT></TD></TR>");
+   parent.cpright.document.write("<TR><TD width=\"33\%\">&nbsp\;</TD><TD width=\"34\%\">&nbsp\;</TD><TD width=\"33\%\">&nbsp\;</TD></TR>");
+   parent.cpright.document.write("</TABLE><HR>");
+
+   parent.cpright.document.write("<I><B>Contenido de la etiqueta body:</B></I><BR><FONT COLOR=\"#" + hexcode_text + "\"><TT>\&lt\;BODY<BR>");
+   parent.cpright.document.write("\&nbsp\;BGCOLOR=\"#" + hexcode_bgcolor + "\"<BR>");
+   parent.cpright.document.write(current_back);
+   parent.cpright.document.write("\&nbsp\;TEXT=\"#" + hexcode_text + "\"<BR>");
+   parent.cpright.document.write("\&nbsp\;LINK=\"#" + hexcode_link + "\"<BR>");
+   parent.cpright.document.write("\&nbsp\;VLINK=\"#" + hexcode_vlink + "\"<BR>");
+   parent.cpright.document.write("\&nbsp\;ALINK=\"#" + hexcode_alink + "\"\&gt\;</TT></FONT>");
+
+   parent.cpright.document.write("<HR><DIV ALIGN=\"right\"><A HREF=\"http\://www.pagetutor.com/\" STYLE=\"text-decoration\:none\" TARGET=\"_top\"><B><FONT SIZE=\"4\" FACE=\"courier new\" COLOR=\"#40A838\">pagetutor</FONT><FONT SIZE=\"4\" FACE=\"courier new\" COLOR=\"#082173\">.com</FONT></B></A></DIV></BODY></HTML>");
+   parent.cpright.document.close();
+}
+
+
+function grabFilename()
+{
+   // Small workaround because of a JavaScript bug in Netscape's File
+   // upload. (File upload value not imediately recognized in Netscape3.0)
+   top.cpleft.document.cpform.fileUp.focus();
+   top.cpleft.document.cpform.fileUp.blur();
+
+   // get background file name (if any)
+   if (top.cpleft.document.cpform.fileUp.value.length > 3)
+   {
+      fileName = top.cpleft.document.cpform.fileUp.value;
+
+      //get drive letter
+      driveLetter = fileName.charAt(0);
+
+      // get image file name (no path)
+      position = fileName.length;
+      while (fileName.charAt(position-1) != "\\")
+      {
+         position = position -1;
+      }
+      imageFileName = fileName.substring(fileName.length,position)
+
+      imageFilePath = fileName.substring(position-1,3)
+
+      // swap backward slashes for forward slashes
+      imageFilePath2 = SearchAndReplace(imageFilePath, "\\", "/");
+
+      //write BACKGROUND attribute
+      current_back = "\&nbsp\;BACKGROUND=\"" + imageFileName + "\"<BR>";
+   }
+   else
+   {
+      driveLetter = "";
+      imageFileName = "";
+      imageFilePath2 = "";
+      current_back = "";
+   }
+   writePage();
+}
+
+
+
+/*  SearchAndReplace - by Joe Barta
+Send it a string(item), character to remove(currentChar) and character
+to put in it's place(newChar) and the reworked string is returned.
+===================================================================*/
+function SearchAndReplace(item, currentChar, newChar)
+{
+   reworkedString = "";
+   for (x = 0; x < item.length + 1; x++)
+   {
+      xchar = item.substring(x, x+1);
+      if(xchar == currentChar) { xchar = newChar; }
+      reworkedString = reworkedString + xchar;
+   }
+   return reworkedString;
+}
+
+function aboutHexWindow()
+{
+   aboutHex = window.open('about_hex.html', 'About', 'width=560,height=460,resizable=yes,scrollbars=yes');
+}
+
+
+//--></script>
+</head>
+<body>
+<map name="webpal">
+<!--- Row 1 ---><area coords="2,2,18,18"
+ href="javascript:{SendColor('330000')}"
+ onclick="SendColor('330000');return false">
+<area coords="18,2,34,18" href="javascript:{SendColor('333300')}"
+ onclick="SendColor('333300');return false">
+<area coords="34,2,50,18" href="javascript:{SendColor('336600')}"
+ onclick="SendColor('336600');return false">
+
+<area coords="50,2,66,18" href="javascript:{SendColor('339900')}"
+ onclick="SendColor('339900');return false">
+<area coords="66,2,82,18" href="javascript:{SendColor('33CC00')}"
+ onclick="SendColor('33CC00');return false">
+<area coords="82,2,98,18" href="javascript:{SendColor('33FF00')}"
+ onclick="SendColor('33FF00');return false">
+<area coords="98,2,114,18" href="javascript:{SendColor('66FF00')}"
+ onclick="SendColor('66FF00');return false">
+<area coords="114,2,130,18" href="javascript:{SendColor('66CC00')}"
+ onclick="SendColor('66CC00');return false">
+<area coords="130,2,146,18" href="javascript:{SendColor('669900')}"
+ onclick="SendColor('669900');return false">
+<area coords="146,2,162,18" href="javascript:{SendColor('666600')}"
+ onclick="SendColor('666600');return false">
+<area coords="162,2,178,18" href="javascript:{SendColor('663300')}"
+ onclick="SendColor('663300');return false">
+<area coords="178,2,194,18" href="javascript:{SendColor('660000')}"
+ onclick="SendColor('660000');return false">
+<area coords="194,2,210,18" href="javascript:{SendColor('FF0000')}"
+ onclick="SendColor('FF0000');return false">
+<area coords="210,2,226,18" href="javascript:{SendColor('FF3300')}"
+ onclick="SendColor('FF3300');return false">
+<area coords="226,2,242,18" href="javascript:{SendColor('FF6600')}"
+ onclick="SendColor('FF6600');return false">
+<area coords="242,2,258,18" href="javascript:{SendColor('FF9900')}"
+ onclick="SendColor('FF9900');return false">
+<area coords="258,2,274,18" href="javascript:{SendColor('FFCC00')}"
+ onclick="SendColor('FFCC00');return false">
+<area coords="274,2,290,18" href="javascript:{SendColor('FFFF00')}"
+ onclick="SendColor('FFFF00');return false">
+<!--- Row 2 ---><area coords="2,18,18,34"
+ href="javascript:{SendColor('330033')}"
+ onclick="SendColor('330033');return false">
+<area coords="18,18,34,34" href="javascript:{SendColor('333333')}"
+ onclick="SendColor('333333');return false">
+
+<area coords="34,18,50,34" href="javascript:{SendColor('336633')}"
+ onclick="SendColor('336633');return false">
+<area coords="50,18,66,34" href="javascript:{SendColor('339933')}"
+ onclick="SendColor('339933');return false">
+<area coords="66,18,82,34" href="javascript:{SendColor('33CC33')}"
+ onclick="SendColor('33CC33');return false">
+<area coords="82,18,98,34" href="javascript:{SendColor('33FF33')}"
+ onclick="SendColor('33FF33');return false">
+<area coords="98,18,114,34" href="javascript:{SendColor('66FF33')}"
+ onclick="SendColor('66FF33');return false">
+<area coords="114,18,130,34" href="javascript:{SendColor('66CC33')}"
+ onclick="SendColor('66CC33');return false">
+<area coords="130,18,146,34" href="javascript:{SendColor('669933')}"
+ onclick="SendColor('669933');return false">
+<area coords="146,18,162,34" href="javascript:{SendColor('666633')}"
+ onclick="SendColor('666633');return false">
+<area coords="162,18,178,34" href="javascript:{SendColor('663333')}"
+ onclick="SendColor('663333');return false">
+<area coords="178,18,194,34" href="javascript:{SendColor('660033')}"
+ onclick="SendColor('660033');return false">
+<area coords="194,18,210,34" href="javascript:{SendColor('FF0033')}"
+ onclick="SendColor('FF0033');return false">
+<area coords="210,18,226,34" href="javascript:{SendColor('FF3333')}"
+ onclick="SendColor('FF3333');return false">
+<area coords="226,18,242,34" href="javascript:{SendColor('FF6633')}"
+ onclick="SendColor('FF6633');return false">
+<area coords="242,18,258,34" href="javascript:{SendColor('FF9933')}"
+ onclick="SendColor('FF9933');return false">
+<area coords="258,18,274,34" href="javascript:{SendColor('FFCC33')}"
+ onclick="SendColor('FFCC33');return false">
+<area coords="274,18,290,34" href="javascript:{SendColor('FFFF33')}"
+ onclick="SendColor('FFFF33');return false">
+<!--- Row 3 ---><area coords="2,34,18,50"
+ href="javascript:{SendColor('330066')}"
+ onclick="SendColor('330066');return false">
+
+<area coords="18,34,34,50" href="javascript:{SendColor('333366')}"
+ onclick="SendColor('333366');return false">
+<area coords="34,34,50,50" href="javascript:{SendColor('336666')}"
+ onclick="SendColor('336666');return false">
+<area coords="50,34,66,50" href="javascript:{SendColor('339966')}"
+ onclick="SendColor('339966');return false">
+<area coords="66,34,82,50" href="javascript:{SendColor('33CC66')}"
+ onclick="SendColor('33CC66');return false">
+<area coords="82,34,98,50" href="javascript:{SendColor('33FF66')}"
+ onclick="SendColor('33FF66');return false">
+<area coords="98,34,114,50" href="javascript:{SendColor('66FF66')}"
+ onclick="SendColor('66FF66');return false">
+<area coords="114,34,130,50" href="javascript:{SendColor('66CC66')}"
+ onclick="SendColor('66CC66');return false">
+<area coords="130,34,146,50" href="javascript:{SendColor('669966')}"
+ onclick="SendColor('669966');return false">
+<area coords="146,34,162,50" href="javascript:{SendColor('666666')}"
+ onclick="SendColor('666666');return false">
+<area coords="162,34,178,50" href="javascript:{SendColor('663366')}"
+ onclick="SendColor('663366');return false">
+<area coords="178,34,194,50" href="javascript:{SendColor('660066')}"
+ onclick="SendColor('660066');return false">
+<area coords="194,34,210,50" href="javascript:{SendColor('FF0066')}"
+ onclick="SendColor('FF0066');return false">
+<area coords="210,34,226,50" href="javascript:{SendColor('FF3366')}"
+ onclick="SendColor('FF3366');return false">
+<area coords="226,34,242,50" href="javascript:{SendColor('FF6666')}"
+ onclick="SendColor('FF6666');return false">
+<area coords="242,34,258,50" href="javascript:{SendColor('FF9966')}"
+ onclick="SendColor('FF9966');return false">
+<area coords="258,34,274,50" href="javascript:{SendColor('FFCC66')}"
+ onclick="SendColor('FFCC66');return false">
+<area coords="274,34,290,50" href="javascript:{SendColor('FFFF66')}"
+ onclick="SendColor('FFFF66');return false">
+
+<!--- Row 4 ---><area coords="2,50,18,66"
+ href="javascript:{SendColor('330099')}"
+ onclick="SendColor('330099');return false">
+<area coords="18,50,34,66" href="javascript:{SendColor('333399')}"
+ onclick="SendColor('333399');return false">
+<area coords="34,50,50,66" href="javascript:{SendColor('336699')}"
+ onclick="SendColor('336699');return false">
+<area coords="50,50,66,66" href="javascript:{SendColor('339999')}"
+ onclick="SendColor('339999');return false">
+<area coords="66,50,82,66" href="javascript:{SendColor('33CC99')}"
+ onclick="SendColor('33CC99');return false">
+<area coords="82,50,98,66" href="javascript:{SendColor('33FF99')}"
+ onclick="SendColor('33FF99');return false">
+<area coords="98,50,114,66" href="javascript:{SendColor('66FF99')}"
+ onclick="SendColor('66FF99');return false">
+<area coords="114,50,130,66" href="javascript:{SendColor('66CC99')}"
+ onclick="SendColor('66CC99');return false">
+<area coords="130,50,146,66" href="javascript:{SendColor('669999')}"
+ onclick="SendColor('669999');return false">
+<area coords="146,50,162,66" href="javascript:{SendColor('666699')}"
+ onclick="SendColor('666699');return false">
+<area coords="162,50,178,66" href="javascript:{SendColor('663399')}"
+ onclick="SendColor('663399');return false">
+<area coords="178,50,194,66" href="javascript:{SendColor('660099')}"
+ onclick="SendColor('660099');return false">
+<area coords="194,50,210,66" href="javascript:{SendColor('FF0099')}"
+ onclick="SendColor('FF0099');return false">
+<area coords="210,50,226,66" href="javascript:{SendColor('FF3399')}"
+ onclick="SendColor('FF3399');return false">
+<area coords="226,50,242,66" href="javascript:{SendColor('FF6699')}"
+ onclick="SendColor('FF6699');return false">
+<area coords="242,50,258,66" href="javascript:{SendColor('FF9999')}"
+ onclick="SendColor('FF9999');return false">
+<area coords="258,50,274,66" href="javascript:{SendColor('FFCC99')}"
+ onclick="SendColor('FFCC99');return false">
+
+<area coords="274,50,290,66" href="javascript:{SendColor('FFFF99')}"
+ onclick="SendColor('FFFF99');return false">
+<!--- Row 5 ---><area coords="2,66,18,82"
+ href="javascript:{SendColor('3300CC')}"
+ onclick="SendColor('3300CC');return false">
+<area coords="18,66,34,82" href="javascript:{SendColor('3333CC')}"
+ onclick="SendColor('3333CC');return false">
+<area coords="34,66,50,82" href="javascript:{SendColor('3366CC')}"
+ onclick="SendColor('3366CC');return false">
+<area coords="50,66,66,82" href="javascript:{SendColor('3399CC')}"
+ onclick="SendColor('3399CC');return false">
+<area coords="66,66,82,82" href="javascript:{SendColor('33CCCC')}"
+ onclick="SendColor('33CCCC');return false">
+<area coords="82,66,98,82" href="javascript:{SendColor('33FFCC')}"
+ onclick="SendColor('33FFCC');return false">
+<area coords="98,66,114,82" href="javascript:{SendColor('66FFCC')}"
+ onclick="SendColor('66FFCC');return false">
+<area coords="114,66,130,82" href="javascript:{SendColor('66CCCC')}"
+ onclick="SendColor('66CCCC');return false">
+<area coords="130,66,146,82" href="javascript:{SendColor('6699CC')}"
+ onclick="SendColor('6699CC');return false">
+<area coords="146,66,162,82" href="javascript:{SendColor('6666CC')}"
+ onclick="SendColor('6666CC');return false">
+<area coords="162,66,178,82" href="javascript:{SendColor('6633CC')}"
+ onclick="SendColor('6633CC');return false">
+<area coords="178,66,194,82" href="javascript:{SendColor('6600CC')}"
+ onclick="SendColor('6600CC');return false">
+<area coords="194,66,210,82" href="javascript:{SendColor('FF00CC')}"
+ onclick="SendColor('FF00CC');return false">
+<area coords="210,66,226,82" href="javascript:{SendColor('FF33CC')}"
+ onclick="SendColor('FF33CC');return false">
+<area coords="226,66,242,82" href="javascript:{SendColor('FF66CC')}"
+ onclick="SendColor('FF66CC');return false">
+<area coords="242,66,258,82" href="javascript:{SendColor('FF99CC')}"
+ onclick="SendColor('FF99CC');return false">
+
+<area coords="258,66,274,82" href="javascript:{SendColor('FFCCCC')}"
+ onclick="SendColor('FFCCCC');return false">
+<area coords="274,66,290,82" href="javascript:{SendColor('FFFFCC')}"
+ onclick="SendColor('FFFFCC');return false">
+<!--- Row 6 ---><area coords="2,82,18,98"
+ href="javascript:{SendColor('3300FF')}"
+ onclick="SendColor('3300FF');return false">
+<area coords="18,82,34,98" href="javascript:{SendColor('3333FF')}"
+ onclick="SendColor('3333FF');return false">
+<area coords="34,82,50,98" href="javascript:{SendColor('3366FF')}"
+ onclick="SendColor('3366FF');return false">
+<area coords="50,82,66,98" href="javascript:{SendColor('3399FF')}"
+ onclick="SendColor('3399FF');return false">
+<area coords="66,82,82,98" href="javascript:{SendColor('33CCFF')}"
+ onclick="SendColor('33CCFF');return false">
+<area coords="82,82,98,98" href="javascript:{SendColor('33FFFF')}"
+ onclick="SendColor('33FFFF');return false">
+<area coords="98,82,114,98" href="javascript:{SendColor('66FFFF')}"
+ onclick="SendColor('66FFFF');return false">
+<area coords="114,82,130,98" href="javascript:{SendColor('66CCFF')}"
+ onclick="SendColor('66CCFF');return false">
+<area coords="130,82,146,98" href="javascript:{SendColor('6699FF')}"
+ onclick="SendColor('6699FF');return false">
+<area coords="146,82,162,98" href="javascript:{SendColor('6666FF')}"
+ onclick="SendColor('6666FF');return false">
+<area coords="162,82,178,98" href="javascript:{SendColor('6633FF')}"
+ onclick="SendColor('6633FF');return false">
+<area coords="178,82,194,98" href="javascript:{SendColor('6600FF')}"
+ onclick="SendColor('6600FF');return false">
+<area coords="194,82,210,98" href="javascript:{SendColor('FF00FF')}"
+ onclick="SendColor('FF00FF');return false">
+<area coords="210,82,226,98" href="javascript:{SendColor('FF33FF')}"
+ onclick="SendColor('FF33FF');return false">
+<area coords="226,82,242,98" href="javascript:{SendColor('FF66FF')}"
+ onclick="SendColor('FF66FF');return false">
+
+<area coords="242,82,258,98" href="javascript:{SendColor('FF99FF')}"
+ onclick="SendColor('FF99FF');return false">
+<area coords="258,82,274,98" href="javascript:{SendColor('FFCCFF')}"
+ onclick="SendColor('FFCCFF');return false">
+<area coords="274,82,290,98" href="javascript:{SendColor('FFFFFF')}"
+ onclick="SendColor('FFFFFF');return false">
+<!--- Row 7 ---><area coords="2,98,18,114"
+ href="javascript:{SendColor('0000FF')}"
+ onclick="SendColor('0000FF');return false">
+<area coords="18,98,34,114" href="javascript:{SendColor('0033FF')}"
+ onclick="SendColor('0033FF');return false">
+<area coords="34,98,50,114" href="javascript:{SendColor('0066FF')}"
+ onclick="SendColor('0066FF');return false">
+<area coords="50,98,66,114" href="javascript:{SendColor('0099FF')}"
+ onclick="SendColor('0099FF');return false">
+<area coords="66,98,82,114" href="javascript:{SendColor('00CCFF')}"
+ onclick="SendColor('00CCFF');return false">
+<area coords="82,98,98,114" href="javascript:{SendColor('00FFFF')}"
+ onclick="SendColor('00FFFF');return false">
+<area coords="98,98,114,114" href="javascript:{SendColor('99FFFF')}"
+ onclick="SendColor('99FFFF');return false">
+<area coords="114,98,130,114" href="javascript:{SendColor('99CCFF')}"
+ onclick="SendColor('99CCFF');return false">
+<area coords="130,98,146,114" href="javascript:{SendColor('9999FF')}"
+ onclick="SendColor('9999FF');return false">
+<area coords="146,98,162,114" href="javascript:{SendColor('9966FF')}"
+ onclick="SendColor('9966FF');return false">
+<area coords="162,98,178,114" href="javascript:{SendColor('9933FF')}"
+ onclick="SendColor('9933FF');return false">
+<area coords="178,98,194,114" href="javascript:{SendColor('9900FF')}"
+ onclick="SendColor('9900FF');return false">
+<area coords="194,98,210,114" href="javascript:{SendColor('CC00FF')}"
+ onclick="SendColor('CC00FF');return false">
+<area coords="210,98,226,114" href="javascript:{SendColor('CC33FF')}"
+ onclick="SendColor('CC33FF');return false">
+
+<area coords="226,98,242,114" href="javascript:{SendColor('CC66FF')}"
+ onclick="SendColor('CC66FF');return false">
+<area coords="242,98,258,114" href="javascript:{SendColor('CC99FF')}"
+ onclick="SendColor('CC99FF');return false">
+<area coords="258,98,274,114" href="javascript:{SendColor('CCCCFF')}"
+ onclick="SendColor('CCCCFF');return false">
+<area coords="274,98,290,114" href="javascript:{SendColor('CCFFFF')}"
+ onclick="SendColor('CCFFFF');return false">
+<!--- Row 8 ---><area coords="2,114,18,130"
+ href="javascript:{SendColor('0000CC')}"
+ onclick="SendColor('0000CC');return false">
+<area coords="18,114,34,130" href="javascript:{SendColor('0033CC')}"
+ onclick="SendColor('0033CC');return false">
+<area coords="34,114,50,130" href="javascript:{SendColor('0066CC')}"
+ onclick="SendColor('0066CC');return false">
+<area coords="50,114,66,130" href="javascript:{SendColor('0099CC')}"
+ onclick="SendColor('0099CC');return false">
+<area coords="66,114,82,130" href="javascript:{SendColor('00CCCC')}"
+ onclick="SendColor('00CCCC');return false">
+<area coords="82,114,98,130" href="javascript:{SendColor('00FFCC')}"
+ onclick="SendColor('00FFCC');return false">
+<area coords="98,114,114,130" href="javascript:{SendColor('99FFCC')}"
+ onclick="SendColor('99FFCC');return false">
+<area coords="114,114,130,130" href="javascript:{SendColor('99CCCC')}"
+ onclick="SendColor('99CCCC');return false">
+<area coords="130,114,146,130" href="javascript:{SendColor('9999CC')}"
+ onclick="SendColor('9999CC');return false">
+<area coords="146,114,162,130" href="javascript:{SendColor('9966CC')}"
+ onclick="SendColor('9966CC');return false">
+<area coords="162,114,178,130" href="javascript:{SendColor('9933CC')}"
+ onclick="SendColor('9933CC');return false">
+<area coords="178,114,194,130" href="javascript:{SendColor('9900CC')}"
+ onclick="SendColor('9900CC');return false">
+<area coords="194,114,210,130" href="javascript:{SendColor('CC00CC')}"
+ onclick="SendColor('CC00CC');return false">
+
+<area coords="210,114,226,130" href="javascript:{SendColor('CC33CC')}"
+ onclick="SendColor('CC33CC');return false">
+<area coords="226,114,242,130" href="javascript:{SendColor('CC66CC')}"
+ onclick="SendColor('CC66CC');return false">
+<area coords="242,114,258,130" href="javascript:{SendColor('CC99CC')}"
+ onclick="SendColor('CC99CC');return false">
+<area coords="258,114,274,130" href="javascript:{SendColor('CCCCCC')}"
+ onclick="SendColor('CCCCCC');return false">
+<area coords="274,114,290,130" href="javascript:{SendColor('CCFFCC')}"
+ onclick="SendColor('CCFFCC');return false">
+<!--- Row 9 ---><area coords="2,130,18,146"
+ href="javascript:{SendColor('000099')}"
+ onclick="SendColor('000099');return false">
+<area coords="18,130,34,146" href="javascript:{SendColor('003399')}"
+ onclick="SendColor('003399');return false">
+<area coords="34,130,50,146" href="javascript:{SendColor('006699')}"
+ onclick="SendColor('006699');return false">
+<area coords="50,130,66,146" href="javascript:{SendColor('009999')}"
+ onclick="SendColor('009999');return false">
+<area coords="66,130,82,146" href="javascript:{SendColor('00CC99')}"
+ onclick="SendColor('00CC99');return false">
+<area coords="82,130,98,146" href="javascript:{SendColor('00FF99')}"
+ onclick="SendColor('00FF99');return false">
+<area coords="98,130,114,146" href="javascript:{SendColor('99FF99')}"
+ onclick="SendColor('99FF99');return false">
+<area coords="114,130,130,146" href="javascript:{SendColor('99CC99')}"
+ onclick="SendColor('99CC99');return false">
+<area coords="130,130,146,146" href="javascript:{SendColor('999999')}"
+ onclick="SendColor('999999');return false">
+<area coords="146,130,162,146" href="javascript:{SendColor('996699')}"
+ onclick="SendColor('996699');return false">
+<area coords="162,130,178,146" href="javascript:{SendColor('993399')}"
+ onclick="SendColor('993399');return false">
+<area coords="178,130,194,146" href="javascript:{SendColor('990099')}"
+ onclick="SendColor('990099');return false">
+
+<area coords="194,130,210,146" href="javascript:{SendColor('CC0099')}"
+ onclick="SendColor('CC0099');return false">
+<area coords="210,130,226,146" href="javascript:{SendColor('CC3399')}"
+ onclick="SendColor('CC3399');return false">
+<area coords="226,130,242,146" href="javascript:{SendColor('CC6699')}"
+ onclick="SendColor('CC6699');return false">
+<area coords="242,130,258,146" href="javascript:{SendColor('CC9999')}"
+ onclick="SendColor('CC9999');return false">
+<area coords="258,130,274,146" href="javascript:{SendColor('CCCC99')}"
+ onclick="SendColor('CCCC99');return false">
+<area coords="274,130,290,146" href="javascript:{SendColor('CCFF99')}"
+ onclick="SendColor('CCFF99');return false">
+<!--- Row 10 ---><area coords="2,146,18,162"
+ href="javascript:{SendColor('000066')}"
+ onclick="SendColor('000066');return false">
+<area coords="18,146,34,162" href="javascript:{SendColor('003366')}"
+ onclick="SendColor('003366');return false">
+<area coords="34,146,50,162" href="javascript:{SendColor('006666')}"
+ onclick="SendColor('006666');return false">
+<area coords="50,146,66,162" href="javascript:{SendColor('009966')}"
+ onclick="SendColor('009966');return false">
+<area coords="66,146,82,162" href="javascript:{SendColor('00CC66')}"
+ onclick="SendColor('00CC66');return false">
+<area coords="82,146,98,162" href="javascript:{SendColor('00FF66')}"
+ onclick="SendColor('00FF66');return false">
+<area coords="98,146,114,162" href="javascript:{SendColor('99FF66')}"
+ onclick="SendColor('99FF66');return false">
+<area coords="114,146,130,162" href="javascript:{SendColor('99CC66')}"
+ onclick="SendColor('99CC66');return false">
+<area coords="130,146,146,162" href="javascript:{SendColor('999966')}"
+ onclick="SendColor('999966');return false">
+<area coords="146,146,162,162" href="javascript:{SendColor('996666')}"
+ onclick="SendColor('996666');return false">
+<area coords="162,146,178,162" href="javascript:{SendColor('993366')}"
+ onclick="SendColor('993366');return false">
+
+<area coords="178,146,194,162" href="javascript:{SendColor('990066')}"
+ onclick="SendColor('990066');return false">
+<area coords="194,146,210,162" href="javascript:{SendColor('CC0066')}"
+ onclick="SendColor('CC0066');return false">
+<area coords="210,146,226,162" href="javascript:{SendColor('CC3366')}"
+ onclick="SendColor('CC3366');return false">
+<area coords="226,146,242,162" href="javascript:{SendColor('CC6666')}"
+ onclick="SendColor('CC6666');return false">
+<area coords="242,146,258,162" href="javascript:{SendColor('CC9966')}"
+ onclick="SendColor('CC9966');return false">
+<area coords="258,146,274,162" href="javascript:{SendColor('CCCC66')}"
+ onclick="SendColor('CCCC66');return false">
+<area coords="274,146,290,162" href="javascript:{SendColor('CCFF66')}"
+ onclick="SendColor('CCFF66');return false">
+<!--- Row 11 ---><area coords="2,162,18,178"
+ href="javascript:{SendColor('000033')}"
+ onclick="SendColor('000033');return false">
+<area coords="18,162,34,178" href="javascript:{SendColor('003333')}"
+ onclick="SendColor('003333');return false">
+<area coords="34,162,50,178" href="javascript:{SendColor('006633')}"
+ onclick="SendColor('006633');return false">
+<area coords="50,162,66,178" href="javascript:{SendColor('009933')}"
+ onclick="SendColor('009933');return false">
+<area coords="66,162,82,178" href="javascript:{SendColor('00CC33')}"
+ onclick="SendColor('00CC33');return false">
+<area coords="82,162,98,178" href="javascript:{SendColor('00FF33')}"
+ onclick="SendColor('00FF33');return false">
+<area coords="98,162,114,178" href="javascript:{SendColor('99FF33')}"
+ onclick="SendColor('99FF33');return false">
+<area coords="114,162,130,178" href="javascript:{SendColor('99CC33')}"
+ onclick="SendColor('99CC33');return false">
+<area coords="130,162,146,178" href="javascript:{SendColor('999933')}"
+ onclick="SendColor('999933');return false">
+<area coords="146,162,162,178" href="javascript:{SendColor('996633')}"
+ onclick="SendColor('996633');return false">
+
+<area coords="162,162,178,178" href="javascript:{SendColor('993333')}"
+ onclick="SendColor('993333');return false">
+<area coords="178,162,194,178" href="javascript:{SendColor('990033')}"
+ onclick="SendColor('990033');return false">
+<area coords="194,162,210,178" href="javascript:{SendColor('CC0033')}"
+ onclick="SendColor('CC0033');return false">
+<area coords="210,162,226,178" href="javascript:{SendColor('CC3333')}"
+ onclick="SendColor('CC3333');return false">
+<area coords="226,162,242,178" href="javascript:{SendColor('CC6633')}"
+ onclick="SendColor('CC6633');return false">
+<area coords="242,162,258,178" href="javascript:{SendColor('CC9933')}"
+ onclick="SendColor('CC9933');return false">
+<area coords="258,162,274,178" href="javascript:{SendColor('CCCC33')}"
+ onclick="SendColor('CCCC33');return false">
+<area coords="274,162,290,178" href="javascript:{SendColor('CCFF33')}"
+ onclick="SendColor('CCFF33');return false">
+<!--- Row 12 ---><area coords="2,178,18,194"
+ href="javascript:{SendColor('000000')}"
+ onclick="SendColor('000000');return false">
+<area coords="18,178,34,194" href="javascript:{SendColor('003300')}"
+ onclick="SendColor('003300');return false">
+<area coords="34,178,50,194" href="javascript:{SendColor('006600')}"
+ onclick="SendColor('006600');return false">
+<area coords="50,178,66,194" href="javascript:{SendColor('009900')}"
+ onclick="SendColor('009900');return false">
+<area coords="66,178,82,194" href="javascript:{SendColor('00CC00')}"
+ onclick="SendColor('00CC00');return false">
+<area coords="82,178,98,194" href="javascript:{SendColor('00FF00')}"
+ onclick="SendColor('00FF00');return false">
+<area coords="98,178,114,194" href="javascript:{SendColor('99FF00')}"
+ onclick="SendColor('99FF00');return false">
+<area coords="114,178,130,194" href="javascript:{SendColor('99CC00')}"
+ onclick="SendColor('99CC00');return false">
+<area coords="130,178,146,194" href="javascript:{SendColor('999900')}"
+ onclick="SendColor('999900');return false">
+
+<area coords="146,178,162,194" href="javascript:{SendColor('996600')}"
+ onclick="SendColor('996600');return false">
+<area coords="162,178,178,194" href="javascript:{SendColor('993300')}"
+ onclick="SendColor('993300');return false">
+<area coords="178,178,194,194" href="javascript:{SendColor('990000')}"
+ onclick="SendColor('990000');return false">
+<area coords="194,178,210,194" href="javascript:{SendColor('CC0000')}"
+ onclick="SendColor('CC0000');return false">
+<area coords="210,178,226,194" href="javascript:{SendColor('CC3300')}"
+ onclick="SendColor('CC3300');return false">
+<area coords="226,178,242,194" href="javascript:{SendColor('CC6600')}"
+ onclick="SendColor('CC6600');return false">
+<area coords="242,178,258,194" href="javascript:{SendColor('CC9900')}"
+ onclick="SendColor('CC9900');return false">
+<area coords="258,178,274,194" href="javascript:{SendColor('CCCC00')}"
+ onclick="SendColor('CCCC00');return false">
+<area coords="274,178,290,194" href="javascript:{SendColor('CCFF00')}"
+ onclick="SendColor('CCFF00');return false">
+</map>
+<!-- bgcolor -->
+<map name="bgcolor_r">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_r','upa','bgcolor');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_r','upb','bgcolor');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_r','dna','bgcolor');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_r','dnb','bgcolor');return false">
+</map>
+
+<map name="bgcolor_g">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_g','upa','bgcolor');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_g','upb','bgcolor');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_g','dna','bgcolor');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_g','dnb','bgcolor');return false">
+</map>
+<map name="bgcolor_b">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_b','upa','bgcolor');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_b','upb','bgcolor');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_b','dna','bgcolor');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_bgcolor_b','dnb','bgcolor');return false">
+</map>
+<!-- text -->
+<map name="text_r">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_text_r','upa','text');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_text_r','upb','text');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_text_r','dna','text');return false">
+
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_text_r','dnb','text');return false">
+</map>
+<map name="text_g">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_text_g','upa','text');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_text_g','upb','text');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_text_g','dna','text');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_text_g','dnb','text');return false">
+</map>
+<map name="text_b">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_text_b','upa','text');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_text_b','upb','text');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_text_b','dna','text');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_text_b','dnb','text');return false">
+</map>
+<!-- link -->
+<map name="link_r">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_link_r','upa','link');return false">
+
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_link_r','upb','link');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_link_r','dna','link');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_link_r','dnb','link');return false">
+</map>
+<map name="link_g">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_link_g','upa','link');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_link_g','upb','link');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_link_g','dna','link');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_link_g','dnb','link');return false">
+</map>
+<map name="link_b">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_link_b','upa','link');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_link_b','upb','link');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_link_b','dna','link');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_link_b','dnb','link');return false">
+</map>
+<!-- vlink -->
+
+<map name="vlink_r">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_r','upa','vlink');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_r','upb','vlink');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_r','dna','vlink');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_r','dnb','vlink');return false">
+</map>
+<map name="vlink_g">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_g','upa','vlink');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_g','upb','vlink');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_g','dna','vlink');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_g','dnb','vlink');return false">
+</map>
+<map name="vlink_b">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_b','upa','vlink');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_b','upb','vlink');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_b','dna','vlink');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_vlink_b','dnb','vlink');return false">
+
+</map>
+<!-- alink -->
+<map name="alink_r">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_alink_r','upa','alink');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_alink_r','upb','alink');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_alink_r','dna','alink');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_alink_r','dnb','alink');return false">
+</map>
+<map name="alink_g">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_alink_g','upa','alink');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_alink_g','upb','alink');return false">
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_alink_g','dna','alink');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_alink_g','dnb','alink');return false">
+</map>
+<map name="alink_b">
+<area coords="1,1,14,11" href="javascript:{;}"
+ onclick="hitArrow('img_alink_b','upa','alink');return false">
+<area coords="15,1,28,11" href="javascript:{;}"
+ onclick="hitArrow('img_alink_b','upb','alink');return false">
+
+<area coords="1,12,14,22" href="javascript:{;}"
+ onclick="hitArrow('img_alink_b','dna','alink');return false">
+<area coords="15,12,28,22" href="javascript:{;}"
+ onclick="hitArrow('img_alink_b','dnb','alink');return false">
+</map>
+<map name="header">
+<area coords="213,9,291,26" href="http://www.pagetutor.com/"
+ target="_top">
+</map>
+<form name="cpform">
+  <table align="center" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td colspan="6"><img src="pickerheader.gif" alt=""
+ usemap="#header" border="0" height="26" width="292"><br>
+        <img src="net216.gif" alt="" usemap="#webpal" border="0"
+ height="196" width="292"></td>
+
+      </tr>
+    </tbody>
+  </table>
+  <table align="center" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td colspan="11" align="center" bgcolor="#ffffff"><img
+ src="empty.gif" alt="" border="0" height="1" width="1"></td>
+      </tr>
+<!-- key --> <tr>
+
+        <td><font face="arial,helvetica" size="1">&nbsp;</font></td>
+        <td align="center"><img src="empty.gif" height="1" width="4"></td>
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="rdbox" align="center"><font face="arial,helvetica"
+ size="1">ROJO</font></td>
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><font face="arial,helvetica"
+ size="1">VERDE</font></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="blbox" align="center"><font face="arial,helvetica"
+ size="1">AZUL</font></td>
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+      </tr>
+      <tr>
+        <td colspan="11" align="center" bgcolor="#999999"><img
+ src="empty.gif" alt="" border="0" height="1" width="1"></td>
+      </tr>
+<!-- bgcolor --> <tr>
+
+        <td><input name="flag" onclick="changeColorset();"
+ checked="checked" type="radio"><font face="arial,helvetica" size="2">Fondo</font></td>
+        <td align="center"><img src="empty.gif" height="1" width="4"></td>
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="rdbox" align="center"><input name="bgcolor_r_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#bgcolor_r" name="img_bgcolor_r"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><input name="bgcolor_g_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#bgcolor_g" name="img_bgcolor_g"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="blbox" align="center"><input name="bgcolor_b_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#bgcolor_b" name="img_bgcolor_b"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+      </tr>
+      <tr>
+        <td colspan="11" align="center" bgcolor="#999999"><img
+ src="empty.gif" alt="" border="0" height="1" width="1"></td>
+      </tr>
+<!-- text --> <tr>
+        <td><input name="flag" onclick="changeColorset();" type="radio"><font
+ face="arial,helvetica" size="2">Texto</font></td>
+
+        <td align="center"><img src="empty.gif" height="1" width="4"></td>
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="rdbox" align="center"><input name="text_r_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#text_r" name="img_text_r"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><input name="text_g_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#text_g" name="img_text_g"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="blbox" align="center"><input name="text_b_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#text_b" name="img_text_b"
+ border="0" height="22" vspace="2" width="28"></td>
+
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+      </tr>
+      <tr>
+        <td colspan="11" align="center" bgcolor="#999999"><img
+ src="empty.gif" alt="" border="0" height="1" width="1"></td>
+      </tr>
+<!-- link --> <tr>
+        <td><input name="flag" onclick="changeColorset();" type="radio"><font
+ face="arial,helvetica" size="2">Enlace</font></td>
+        <td align="center"><img src="empty.gif" height="1" width="4"></td>
+
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="rdbox" align="center"><input name="link_r_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#link_r" name="img_link_r"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><input name="link_g_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#link_g" name="img_link_g"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="blbox" align="center"><input name="link_b_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#link_b" name="img_link_b"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+
+      </tr>
+      <tr>
+        <td colspan="11" align="center" bgcolor="#999999"><img
+ src="empty.gif" alt="" border="0" height="1" width="1"></td>
+      </tr>
+<!-- vlink --> <tr>
+        <td><input name="flag" onclick="changeColorset();" type="radio"><font
+ face="arial,helvetica" size="2">Enl. Visitado</font></td>
+        <td align="center"><img src="empty.gif" height="1" width="4"></td>
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+
+        <td class="rdbox" align="center"><input name="vlink_r_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#vlink_r" name="img_vlink_r"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><input name="vlink_g_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#vlink_g" name="img_vlink_g"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="blbox" align="center"><input name="vlink_b_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#vlink_b" name="img_vlink_b"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+      </tr>
+<!-- alink --> <tr>
+        <td><input name="flag" onclick="changeColorset();" type="radio"><font
+ face="arial,helvetica" size="2">Enl. activo</font></td>
+        <td align="center"><img src="empty.gif" height="1" width="4"></td>
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="rdbox" align="center"><input name="alink_r_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#alink_r" name="img_alink_r"
+ border="0" height="22" vspace="2" width="28"></td>
+
+        <td class="rdbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="grbox" align="center"><input name="alink_g_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#alink_g" name="img_alink_g"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="grbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+        <td class="blbox" align="center"><input name="alink_b_value"
+ size="2" maxlength="2" readonly="readonly" type="text"><img
+ src="arrows_dimmed.gif" usemap="#alink_b" name="img_alink_b"
+ border="0" height="22" vspace="2" width="28"></td>
+        <td class="blbox" align="center"><img src="empty.gif" height="1"
+ width="2"></td>
+      </tr>
+      <tr>
+        <td colspan="11" align="center"><font face="arial,helvetica"
+ size="2">Fuente:&nbsp;</font>
+        <select name="fontlist" onchange="writePage();">
+
+        <option value="andale mono">Andale Mono </option>
+        <option value="arial">Arial </option>
+        <option value="comic sans ms">Comic Sans MS </option>
+        <option value="courier new">Courier New </option>
+        <option value="georgia">Georgia </option>
+        <option value="impact">Impact </option>
+		
+        <option value="sans-serif" selected="selected">Sans-serif </option>
+
+        <option value="times new roman">Times New
+Roman </option>
+        <option value="trebuchet ms">Trebuchet MS </option>
+        <option value="verdana">Verdana </option>
+        </select>
+        <br>
+        <font face="arial,helvetica" size="2">Tama&ntilde;o:&nbsp;</font>&nbsp;
+
+        <select name="fontsize" onchange="writePage();">
+        <option value="1">1 </option>
+        <option value="2">2 </option>
+        <option value="3" selected="selected">3 </option>
+        <option value="4">4 </option>
+        <option value="5">5 </option>
+
+        <option value="6">6 </option>
+        <option value="7">7 </option>
+        </select>
+		<input name="boldflag"
+ onclick="writePage();" type="checkbox"><font face="arial,helvetica"
+ size="2"><b>Negrilla</b></font><input name="italicflag"
+ onclick="writePage();" type="checkbox"><font face="arial,helvetica"
+ size="2"><i>It&aacute;lica</i></font>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+  <img src="arrows.gif" alt="" border="0" height="1" width="1"> <img
+ src="arrows_dimmed.gif" alt="" border="0" height="1" width="1"><img
+ src="arrows_nodn.gif" alt="" border="0" height="1" width="1"> <img
+ src="arrows_noup.gif" alt="" border="0" height="1" width="1">
+</form>
+
+<script language="JavaScript"><!--
+fillHexes();
+changeColorset();
+writePage();
+//--></script>
+<hr>
+<p><font face="verdana,arial,helvetica" size="2"><b>Instrucciones:</b></font> </p>
+<p><font face="verdana,arial,helvetica" size="1">Elige el elemento cuyo color quieres modificar marcando el bot&oacute;n de radio situado a su izquierda. Luego selecciona un color de la paleta o utiliza las flechas que hay junto al valor de cada color b&aacute;sico.</font></p>
+<p><font face="verdana,arial,helvetica" size="1"> Las flechas peque&ntilde;as incrementar&aacute;n o disminuir&aacute;n el valor de unidad en unidad, mientras que las grandes lo modificar&aacute;n en saltos de 8 unidades. </font></p>
+<p><font face="verdana,arial,helvetica" size="1">Tambi&eacute;n dispones de un <a href="javascript:aboutHexWindow()">recordatorio</a> sobre la codificaci&oacute;n de colores en hexadecimal.</font> </p>
+<font face="trebuchet ms,arial,helvetica" size="3"><b>ColorPicker</b></font><font
+ face="verdana,arial,helvetica" size="1"> v 2.0 by Joe Barta</font><br>
+<a href="http://www.pagetutor.com/"
+ style="text-decoration: none;" target="_top"><b><font color="#40a838"
+ face="courier new" size="2">pagetutor</font><font color="#082173"
+ face="courier new" size="2">.com</font></b></a>
+</body>
+</html>

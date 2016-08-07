@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.diver.diver",
+    "sha256_cert_fingerprints":
+    ["90:1F:E8:F7:2C:F0:A7:6C:E6:D9:6C:18:E5:95:B8:4F:7D:32:BB:76:3B:16:ED:0B:D4:2C:56:EF:63:B0:53:6A"]
+  }
+}]

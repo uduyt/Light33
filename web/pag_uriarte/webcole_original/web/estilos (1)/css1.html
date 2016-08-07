@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Introducci&oacute;n a CSS</title>
+
+
+  <link rel="stylesheet" href="../nvu2005.css" type="text/css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft -->
+<!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;Introducci&oacute;n</p>
+
+</div>
+
+<div id="flechadcha">
+<a href="css2.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="../xhtml/xhtml.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+<h2>Cascading Style Sheets</h2>
+
+<p>O lo que es lo mismo: hojas de estilo en cascada.</p>
+
+<p>El motivo de haber puesto en primer lugar la
+denominaci&oacute;n en ingl&eacute;s es porque vas a encontrar
+en muchos momentos estas siglas para referirse al concepto que
+trabajaremos en este ep&iacute;grafe. Poco a poco iremos
+descifrando el significado real de esta denominaci&oacute;n que,
+por ahora, puede resultarnos un tanto cr&iacute;ptica.</p>
+
+<p>Lo primero en lo que coincidiremos es en que el lenguaje HTML
+es
+francamente antip&aacute;tico y poco flexible cuando se trata de
+incidir en la apariencia de una p&aacute;gina. El problema real
+est&aacute; en que la concepci&oacute;n original del mismo no
+pretend&iacute;a orientarlo hacia el aspecto gr&aacute;fico: la
+misi&oacute;n principal de las etiquetas HTML es proporcionar
+estructura l&oacute;gica y sem&aacute;ntica al
+contenido.&nbsp;Pensemos que el lenguaje HTML surgi&oacute; en
+un entorno, el universitario, y con un prop&oacute;sito, la
+publicaci&oacute;n de contenidos cient&iacute;ficos
+estructurados, eminentemente textuales. El problema es que la masiva
+difusi&oacute;n de Internet hizo que se rompiera el marco original
+y se hiciera necesario, especialmente desde la irrupci&oacute;n de
+un uso comercial, presentar p&aacute;ginas en las que el centro de
+gravedad se trasladaba del contenido y su estructura a la forma, ya que
+se trataba de crear "imagen de marca". Fue entonces cuando empezaron a
+aparecer los problemas, ya que el lenguaje HTML no est&aacute;
+pensado para trabajar con los elementos formales sino con los
+de tipo estructural.</p>
+
+<p>Si te paras a pensar un poco sobre lo que acabas de leer
+puedes darte cuenta por ejemplo de que, aunque hayamos podido utilizar
+las etiquetas &lt;h1&gt; para conseguir un texto de un
+determinado tama&ntilde;o que nos pudiera valer de titular lo
+l&oacute;gico habr&iacute;a sido emplearlas para organizar los
+contenidos indicando que su contenido es el
+t&iacute;tulo&nbsp;de un fragmento que tiene tiene una
+importancia superior, que aquellos que van encabezados por un
+&lt;h2&gt; </p>
+
+<p>El crecimiento exponencial de Internet hizo que la imagen que
+nos hemos hecho de lo que debe ser una p&aacute;gina WEB fuera
+acerc&aacute;ndose a lo que es hoy: un entorno multimedia en el que
+los aspectos formales han cobrado una gran importancia. Pero esta
+percepci&oacute;n sigue apoy&aacute;ndose en la
+utilizaci&oacute;n del mismo lenguaje que le hab&iacute;a
+servido de base en los primeros tiempos, lo cual ha hecho que los
+dise&ntilde;adores hayan tenido que recurrir a trucos y
+artima&ntilde;as para paliar las deficiencias del lenguaje HTML en
+lo referente a la presentaci&oacute;n visual.</p>
+
+<p>Al tratarse de a&ntilde;adidos a la finalidad original, y
+en muchos casos utilizaciones francamente contradictorias con la misma,
+podemos encontrarnos con situaciones muy problem&aacute;ticas
+cuando pretendemos introducir modificaciones globales en un sitio WEB.
+&iquest;Imaginas, por ejemplo, el trabajo
+que&nbsp;ser&iacute;a necesario para cambiar el tipo de letra
+de un sitio WEB compuesto por cincuenta p&aacute;ginas? </p>
+
+<p>La forma de solucionarlo ha sido la utilizaci&oacute;n de
+las hojas de estilo en cascada. Las hojas de estilo en cascada aportan,
+como caracter&iacute;stica esencial, la posibilidad de separar los
+elementos formales de los de contenido, de forma que con una
+peque&ntilde;a modificaci&oacute;n de la hoja de estilo se
+pueda cambiar el aspecto de todas las p&aacute;ginas en las que se
+aplica esa hoja. Volviendo al ejemplo anterior tal vez nos
+bastar&iacute;a con cambiar una vez la palabra sans-serif por serif
+para conseguir que las cincuenta p&aacute;ginas de nuestra web
+cambiaran autom&aacute;ticamente de apariencia.</p>
+
+<p>Antes de empezar es conveniente considerar una
+cuesti&oacute;n: el <acronym>W3C</acronym>,
+como organismo encargado de la estandarizaci&oacute;n, elabora un
+conjunto de especificaciones normativas, pero...&nbsp; cada
+navegador
+ofrece un soporte m&aacute;s o menos ajustado a las
+especificaciones.
+De hecho nos encontramos en un momento en el que la
+especificaci&oacute;n CSS3, que incluye una gran cantidad de
+posibilidades no contempladas en las versiones previas, no es soportada
+por ning&uacute;n navegador. Incluso, la implementaci&oacute;n
+de las
+especificaciones CSS2 presenta importantes&nbsp;deficiencias en
+Explorer 6 y anteriores, lo cual nos obligar&aacute; a buscar
+algunos
+trucos para lograr efectos similares en todos los navegadores. Es muy
+probable que las nuevas versiones de los navegadores que tal vez hayan
+aparecido cuando leas esta documentaci&oacute;n superen estos
+problemas
+y se ajusten a la normativa com&uacute;n. </p>
+
+<h2>&iquest;Por qu&eacute; se denominan hojas de estilo?</h2>
+
+<p>La denominaci&oacute;n de hojas de estilo hace referencia
+a que podemos, a partir de las etiquetas b&aacute;sicas de HTML,
+realizar modificaciones en las propiedades de las
+mismas,&nbsp;indic&aacute;ndole al navegador unas instrucciones
+muy precisas sobre la forma en la que tiene que presentar un
+determinado elemento, esto es, el estilo de la presentaci&oacute;n.
+</p>
+
+<p>Una ventaja a&ntilde;adida es que, al tratarse de una
+colecci&oacute;n de instrucciones escrita en formato de texto. Si
+recurrimos a&nbsp;su uso m&aacute;s aconsejable, dichas
+instrucciones
+estar&aacute;n separadas de la propia p&aacute;gina web y
+ser&aacute;n
+aplicables a m&uacute;ltiples p&aacute;ginas
+simult&aacute;neamente,
+por lo que&nbsp; conseguiremos que el c&oacute;digo
+de&nbsp;nuestra&nbsp;p&aacute;gina en s&iacute; resulte
+mucho
+m&aacute;s ligero. </p>
+
+<p>Por otra parte, al quedar un c&oacute;digo mucho
+m&aacute;s limpio gracias a la descarga de los elementos de
+formato, la estructura de la informaci&oacute;n quedar&aacute;
+mucho m&aacute;s clara ya que el c&oacute;digo
+tender&aacute; a ser muy simple. </p>
+
+<h2>&iquest;Por qu&eacute; se denominan "en cascada"?</h2>
+
+<p>A la hora de crear un estilo, las especificaciones que se
+realicen para un determinado elemento ser&aacute;n aplicables a
+todos aquellos elementos que se encuentren "por debajo" de
+&eacute;l atendiendo a un criterio de herencia. Por ejemplo, si
+especificamos un tipo de letra para el elemento &lt;body&gt;
+todos aquellos elementos que puedan heredar las
+caracter&iacute;sticas se presentar&aacute;n con el mismo tipo
+de fuente. As&iacute;, el elemento &lt;p&gt;
+heredar&aacute; el tipo de letra salvo que especifiquemos lo
+contrario y no necesitar&iacute;amos volver a indicar esta
+caracter&iacute;stica.&nbsp;</p>
+
+<p>Gracias a la organizaci&oacute;n en cascada podemos crear
+hojas de estilo muy compactas, ya que una sola norma en el primer
+elemento de la cadena de herencia permite que podamos aplicarla a todos
+los herederos.</p>
+
+<p>Adem&aacute;s de ello se establece un orden de prioridad
+para la aplicaci&oacute;n de las normas en caso de que resulten
+contradictorias. El orden de preferencia para aplicar una norma es el
+siguiente:</p>
+
+<ol>
+
+  <li>Estilo especificado dentro de la etiqueta. (estilo en
+l&iacute;nea) </li>
+
+  <li>Estilo especificado en la cabecera del documento. (hoja de
+estilos interna)</li>
+
+  <li>Estilo definido en un documento independiente al que se
+enlaza nuestra p&aacute;gina. (hoja de estilos externa) </li>
+
+</ol>
+
+<p>Teniendo en cuenta el orden mencionado, el procedimiento
+m&aacute;s c&oacute;modo es crear una hoja de estilo en un
+archivo independiente y vincular las p&aacute;ginas a este archivo.
+Si queremos realizar alguna modificaci&oacute;n en un elemento
+concreto podr&iacute;amos recurrir a uno de los dos primeros
+procedimientos que, al ser m&aacute;s espec&iacute;ficos,
+resultar&aacute;n preferentes.</p>
+
+<h2>&iquest;CSS1, CSS2 o CSS3?</h2>
+
+<p>Es posible que en cuanto intentes localizar alguna
+informaci&oacute;n sobre hojas de estilo te aparezca la referencia
+a
+uno de los tres niveles. Obviamente son m&aacute;s avanzadas las
+especificaciones del nivel 3, pero ya hemos comentado que en el momento
+actual no est&aacute;n soportadas por la mayor&iacute;a de los
+navegadores, por lo que haremos referencia a las de nivel 2.</p>
+</div>
+</div>
+</body>
+</html>

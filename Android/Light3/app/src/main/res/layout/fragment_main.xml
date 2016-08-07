@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        tools:context=".MainActivity$PlaceholderFragment"
+        android:background="@color/Background1">
+
+        <include
+            android:id="@+id/notifications_listview"
+            layout="@layout/list_item_card_notification"/>
+        </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/dimmer"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Black"
+        android:alpha="0.3"
+        >
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView2"
+            android:src="@mipmap/ic_blackbox"
+            android:background="@color/Black"
+            android:contentDescription="heyy"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/fabss"
+            layout="@layout/button_fab"/>
+    </FrameLayout>
+</FrameLayout>

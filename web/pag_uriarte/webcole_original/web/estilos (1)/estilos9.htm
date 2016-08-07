@@ -1,0 +1,406 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+
+<html>
+
+<head>
+<title>Crear estilos</title>
+<link href="../estilo.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+
+<!-- 
+
+  function cargalogo(nombre) {
+
+   parent.arriba.location.href=nombre;
+
+}
+
+function Abreejemplo (){
+
+	fp=window.open("ejemploestilo.htm","","top=0,left=0;width=450,height=300,scrolling=no");
+
+return true;
+
+}
+
+// -->
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+th {background-color: #aabc35}
+.Estilo2 {font-size: large}
+.Estilo3 {font-size: xx-large}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+</head>
+
+<body onload="cargalogo('t24g.htm');" bgcolor="#FFFFFF">
+
+<p> Bajo el ep&iacute;grafe de dise&ntilde;o visual se incluyen propiedades referidas
+  a la forma en que podemos controlar como se muestra un elemento, como aparecer&aacute;
+  una imagen en relaci&oacute;n a otro elemento, el posicionamiento de un elemento
+  respecto a su posici&oacute;n habitual o con una posici&oacute;n fija dentro
+  de la p&aacute;gina, la determinaci&oacute;n
+  de la visibilidad de un elemento y el orden en el que se mostrar&aacute;n las capas
+  si estas se superponen, la creaci&oacute;n de recortes para mostrar la informaci&oacute;n
+  y c&oacute;mo mostrarla cuando supera el espacio asignado.</p>
+
+<p >C&oacute;mo se muestran los elementos</p>
+<div style="background-color:rgba(0,0,255,0.5)">
+  <p>Ya hemos visto que hay elementos en bloque y en l&iacute;nea y que su forma de construir
+    el cuadro contenedor difiere bastante. Mediante el uso de CSS podemos indicarle
+    al navegador que debe mostrar un elemento creando un tipo de cuadro distinto
+    al que le corresponder&iacute;a por su naturaleza.</p>
+</div>
+<p><strong>Propiedad: </strong>display</p>
+<p><strong>Valores:</strong> aunque podr&iacute;amos considerar otros recogidos en la especificaci&oacute;n
+  vamos a tener en cuenta s&oacute;lo <strong>inline</strong> y <strong>block</strong> para
+  intercambiar la forma de presentaci&oacute;n de las dos principales disposiciones.</p>
+<div class="ejemplo">
+  <p> <strong>Ejemplo 1</strong></p>
+  <p>Si utilizo el selector span para marcar una palabra de una frase y aplicarle
+    un estilo lo normal es que ese estilo genere un cuadro de elemento en l&iacute;nea
+    ya que esa es la <span style="border:dotted 1px orange">presentaci&oacute;n</span> predeterminada
+    para los fragmentos de texto. A continuaci&oacute;n se repite este mismo texto
+  aplic&aacute;ndole la propiedad display:block a la palabra presentaci&oacute;n. </p>
+  <p><strong>Resultado</strong></p>
+  <p>Si utilizo el selector span para marcar una palabra de una frase y aplicarle
+    un estilo lo normal es que ese estilo genere un cuadro de elemento en l&iacute;nea
+    ya que esa es la <span style="display:block; border:dotted 1px orange">presentaci&oacute;n</span> predeterminada
+    para los fragmentos de texto. A continuaci&oacute;n se repite este mismo texto aplic&aacute;ndole  la
+    propiedad display:block a la palabra presentaci&oacute;n.</p>
+  <p><strong>Ejemplo 2 </strong></p>
+  <p>En el segundo ejemplo marcaremos los p&aacute;rrafos con display:inline</p>
+  <p>Este es el segundo p&aacute;rrafo. Ahora repetimos los dos p&aacute;rrafos
+    correspondientes a este ejemplo y aparecer&aacute;n
+    uno a continuaci&oacute;n de otro como si no hubiese salto de p&aacute;rrafo.</p>
+  <p><strong>Resultado</strong></p>
+  <p style="display:inline">En el segundo ejemplo marcaremos el segundo p&aacute;rrafo con display:inline</p>
+  <p style="display:inline">Este es el segundo p&aacute;rrafo.  Ahora repetimos los dos p&aacute;rrafos
+    correspondientes a este ejemplo y aparecer&aacute;n
+    uno a continuaci&oacute;n de otro como si no hubiese salto de p&aacute;rrafo.</p>
+</div>
+<p>&nbsp;</p>
+<p>Posici&oacute;n flotante</p>
+<p>Se trata de una propiedad que encuentra su principal aplicaci&oacute;n en las im&aacute;genes,
+  aunque tambi&eacute;n nos permitir&aacute; situar elementos textuales y conseguir interesantes
+  efectos de inclusi&oacute;n, especialmente si utilizamos como complemento los fondos. </p>
+<p><b>Propiedad:</b> float </p>
+<p><b>Valores:</b> <strong>left</strong> har&aacute; flotar el elemento afectado en
+  la zona izquierda, <strong>right </strong> en la derecha y <strong> none </strong> impedir&aacute;
+  la flotaci&oacute;n haciendo que el elemento se muestre en la posici&oacute;n que le corresponde
+  en el flujo de texto.</p>
+<div class="ejemplo">
+  <p><b>Ejemplos:</b> En el ejemplo que se muestra se han creado dos identificadores
+    a los que se les ha aplicado la propidedad  float y algunas m&aacute;s de fondos,
+    m&aacute;rgenes y rellenos para que su presentaci&oacute;n visual tenga &quot;aire&quot; entre las
+    diferentes zonas. <a href="javascript:void(0)" onclick="window.open('muestra12.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=400')">Ver ejemplo </a></p>
+</div>
+<p>Zonas de flotaci&oacute;n prohibidas</p>
+<p>Si no nos interesa que a un determinado elemento se le a&ntilde;adan zonas flotantes
+podemos indicarlo mediante una propiedad espec&iacute;fica </p>
+<p><b>Propiedad:</b> clear</p>
+<p><b>Valores: </b><strong>left </strong> impedir&aacute; la flotaci&oacute;n de un elemento
+  a la izquierda del que lleva la propiedad, <strong>right </strong> har&aacute; lo
+  propio a la derecha y <strong> both </strong> afectar&aacute; a ambos lados.</p>
+<div class="ejemplo">
+  <p><b>Ejemplos:</b> Se repite el ejemplo anterior pero se ha evitado la flotaci&oacute;n
+    de la zona a la que hab&iacute;amos llamado mancheta. <a href="javascript:void(0)" onclick="window.open('muestra13.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=400')">Ver
+    ejemplo </a></p>
+</div>
+<p>Antes de continuar recordemos cual es el proceso habitual de generaci&oacute;n de
+  p&aacute;ginas en una ventana de ordenador. Es lo que se denomina <strong>flujo
+  normal</strong>:</p>
+<ul>
+  <li>Los elementos de bloque generan cajas de bloque que se sit&uacute;an verticalmente,
+      una a continuaci&oacute;n de otra en su orden de aparici&oacute;n en la
+      p&aacute;gina, comenzando
+      por la parte superior de la ventana. El espaciado vertical entre un elemento
+      y el siguiente se calcula tomando el mayor valor de margen superior o
+  inferior de los elementos implicados.<br>
+  &nbsp;  </li>
+  <li>Los elementos en l&iacute;nea generan cajas de l&iacute;nea que se disponen horizontalmente
+      uno a continuaci&oacute;n de otro en su orden de aparici&oacute;n en la p&aacute;gina, desde
+    el inicio del bloque que las contiene. Si hay dos cajas de l&iacute;nea contiguas
+    sus espaciados horizontales se mantienen, sum&aacute;ndose sus anchuras.
+      Cuando una caja de l&iacute;nea ocupa m&aacute;s del espacio disponible se rompe autom&aacute;ticamente
+      generando una nueva caja en el rengl&oacute;n inferior. En ese caso, los bordes,
+    m&aacute;rgenes y rellenos no tienen aplicaci&oacute;n en el borde de ruputura ni en el
+    de inicio de la siguiente caja.</li>
+</ul>
+<div class="practicas">
+  <p><img src="../imagenes/cincuentayseis.gif" width="29" height="29" align="left"> Vamos a comprobar con un ejercicio práctico lo que acabamos de comentar.</p>
+  <ul>
+    <li>Crea una p&aacute;gina nueva con dos p&aacute;rrafos y apl&iacute;cales a cada uno de ellos
+      un estilo en l&iacute;nea que recoja las siguientes propiedades:
+      <ul>
+        <li>margin:50px y border:thin solid blue para el primero </li>
+        <li>margin:10px y border:thin dotted red para el segundo</li>
+        <li>tambi&eacute;n ser&iacute;a conveniente que al selector body le a&ntilde;adieras el estilo
+          margin:0px </li>
+      </ul>
+    </li>
+    <li>A&ntilde;ade un nuevo p&aacute;rrafo sin caracter&iacute;sticas especiales.</li>
+    <li>Modifica los valores de los m&aacute;rgenes en la pesta&ntilde;a <img src="../composer/pestanacodigofuente.png" width="129" height="21" align="absmiddle"> y
+      alterna con <img src="../composer/pestanavistapreliminar.png" width="125" height="21" align="absmiddle"> para
+      comparar los efectos visuales obtenidos.</li>
+    <li>Selecciona una palabra del primer p&aacute;rrafo encerr&aacute;ndola entra el delimitador
+      &lt;span&gt; y su cierre &lt;/span&gt;. Apl&iacute;cale al delimitador el estilo border:thin
+      solid red.</li>
+    <li>Haz exactamente lo mismo con la palabra anterior o posterior a la que
+      acabas de trabajar.</li>
+    <li>Como tienes a la vista el resultado selecciona un grupo de palabras que
+      incluyan un salto de l&iacute;nea y enci&eacute;rralas entre &lt;span&gt; y &lt;/span&gt; para aplicarles
+      el mismo estilo de antes y ve a la pesta&ntilde;a <img src="../composer/pestanavistapreliminar.png" width="125" height="21" align="absmiddle"> para
+      comprobar la ausencia de los bordes al final y al principio de
+      l&iacute;nea.</li>
+    <li>Si quieres puedes guardar la p&aacute;gina como <strong>practica55.htm</strong></li>
+  </ul>
+</div>
+<p>&nbsp;</p>
+<p>Para poder modificar la apariencia visual disponemos en CSS2 de la posibilidad
+  de alterar el flujo normal especificando la posici&oacute;n de los elementos.
+  Se trata de una propiedad muy potente y, aunque podemos aplicarla directamente
+  sobre cualquier elemento, la recomendaci&oacute;n ser&iacute;a que lo hicieras
+creando contenedores de bloque con la etiqueta &lt;div&gt; y especificando en
+ellos la posici&oacute;n. </p>
+<p><img src="../composer/imagendecapa.png" width="302" height="155" style="float:right">As&iacute; pues, antes de ver los valores y los efectos
+  de los mismos comentemos que Mozilla dispone de un icono que nos permite generar
+  una capa, que no es m&aacute;s que un contenedor en bloque, con una simple
+  pulsaci&oacute;n
+  sobre el icono <img src="../composer/icocapa.png" width="22" height="17" align="absmiddle"> que
+  crear&aacute; una capa vac&iacute;a que se ir&aacute; rellenando con el contenido que vayamos
+  tecleando. </p>
+<p>Si lo que pretendemos es crear una capa a partir de contenidos que
+  ya estaban incluidos en la p&aacute;gina basta con que los se&ntilde;alemos arrastrando y
+  pulsemos el mismo icono para que se genere el contenedor para englobarlos a
+  todos.</p>
+<p>Cuando nos situemos sobre una capa el programa lo indicar&aacute; haciendo
+  aparecer sus l&iacute;mites y modificando el icono de las capas que aparecer&aacute; como <img src="../composer/icocapaactiva.png" width="22" height="19" align="absmiddle">.
+  Podremos moverla de un sitio a otro si pulsamos sobre <img src="../composer/tiradordecapa.png" width="16" height="16" align="absmiddle"> y
+  arrastramos hasta la nueva posici&oacute;n o bien modificar su tama&ntilde;o utilizanod los
+  tiradores de los v&eacute;rtices y el centro de los lados. </p>
+<p>Para modificar los estilos que afectan a la capa bastar&aacute; con hacer doble clic
+  sobre su interior y modificar o a&ntilde;adir las propiedades que necesitemos.</p>
+<div class="practicas">
+  <p><img src="../imagenes/cincuentaysiete.gif" width="29" height="29" align="left"> </p>
+  <ul>
+    <li>Crea una p&aacute;gina nueva con dos p&aacute;rrafos y selecci&oacute;nalos </li>
+    <li>Pulsa <img src="../composer/icocapa.png" width="22" height="17" align="absmiddle"> para
+    crear una capa que los incluya.</li>
+    <li>Desplaza la capa hacia otra posici&oacute;n y haz clic para situar el cursor
+    fuera de la capa.</li>
+    <li>Pulsa nuevamente <img src="../composer/icocapa.png" width="22" height="17" align="absmiddle"> para
+    crear una capa vac&iacute;a y teclea un p&aacute;rrafo para darle contenido.    </li>
+    <li>Haz un doble clic en el interior de una de las capas  y utiliza
+      la propiedad background-color para adjudicarle un color de fondo.</li>
+    <li>Arrastra la nueva capa de forma que se superponga sobre la anterior. </li>
+    <li>Utiliza los iconos <img src="../composer/icoordendecapas.png" width="48" height="25" align="absmiddle"> para
+      modificar el orden en que se apilan. Puedes realizar todo el trabajo sobre
+      la pesta&ntilde;a <img src="../composer/pestanavistapreliminar.png" width="125" height="21" align="absmiddle">,
+      pero para ver el efecto deber&aacute;s pulsar sobre una zona fuera de las capas,
+      de forma que no est&eacute; se&ntilde;alada ninguna de ellas.</li>
+  </ul>
+</div>
+<p>Posici&oacute;n de un elemento</p>
+<p>Habr&aacute;s comprobado que al crear las capas Mozilla ha introducido unos
+  c&oacute;digos de estilo. Como las hemos movido hasta situarlas en un punto concreto
+  de la p&aacute;gina ha utilizado el valor <strong>absolute</strong> que es
+  uno de los posibles.</p>
+<p><strong>Propiedad</strong>: position</p>
+<p><strong>Valores:</strong> Esta propiedad indicar&aacute;  la forma de calcular
+  la posici&oacute;n del elemento utilizando los valores <strong>absolute</strong>, <strong>relative</strong> y
+  <strong>fixed</strong>, pero para completar el c&aacute;lculo ser&aacute; necesario
+  a&ntilde;adir
+  luego las propiedades <strong>left</strong>, <strong>top, bottom </strong> o
+  <strong>right</strong> indicando
+  las distancias en cualquiera de las unidades admitidas.</p>
+<div class="ejemplo">
+  <p><b>Ejemplos:</b> </p>
+  <p>Absolute.  <a href="javascript:void(0)" onclick="window.open('muestra14.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=400,resizable=yes')">Ver
+      ejemplo</a></p>
+<p>Relative. La posici&oacute;n relativa se calcula a partir de la posici&oacute;n que ocupar&iacute;a
+  un elemento si siguiera el flujo normal. El resto de los elementos no se ajustan
+  a la posici&oacute;n modificada por lo que puede ocurrir que el elemento se superponga
+  sobre otros.   <a href="javascript:void(0)" onclick="window.open('muestra15.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=760,height=350,scrollbars=auto,resizable=yes')">Ver
+  ejemplo</a></p>
+  <p>Fixed. Se trata de una variante de la posici&oacute;n absoluta cuyo efecto es similar
+    al de las im&aacute;genes de fondo que se mantienen en una posici&oacute;n fija independientemente
+    del desplazamiento de la p&aacute;gina. Cuando se aplican a un medio impreso, formando
+    algo similar a una cabecera, se repiten en todas las p&aacute;ginas. <a href="javascript:void(0)" onclick="window.open('muestra16.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=760,height=350')">Ver
+  ejemplo</a> </p>
+</div>
+<p>Visibilidad</p>
+<p>Como el nombre de la propiedad sugiere se refiere a la posibilidad de hacer
+  que un elemento resulte visible o invisible. Su utilidad reside en la combinaci&oacute;n
+  con scripts que permitan mostrar u ocultar capas al realizar determinadas acciones
+  con el rat&oacute;n, pero este tema excede los contenidos de este curso, aunque puedes
+  realizar alguna b&uacute;squeda sobre &quot;javascript para mostrar y ocultar capas&quot; para
+  encontrar referencias.</p>
+<p><strong>Propiedad:</strong> visibility </p>
+<p><strong>Valores: Visible </strong> que es el valor por defecto o <strong>hidden</strong> para
+  ocultarla</p>
+<p>Ejemplos:  Ver el c&oacute;digo del ejemplo</p>
+<ul>
+  <li><a href="javascript:void(0)" onclick="window.open('muestra17.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=450,height=250')">Ver
+    un ejemplo en funcionamiento </a><br>&nbsp;    </li>
+  <li><a href="javascript:void(0)" onclick="window.open('muestra18.htm','','statusbar=0,menubar=0,toolbar=0,scrollbar=1,top=0,left=0,width=800,height=600,resizable=yes')">Ver
+      el c&oacute;digo</a><br>&nbsp;    </li>
+</ul>
+<p>Recortes</p>
+<p>Tenemos la posibilidad de &quot;encerrar&quot; un elemento dentro de un recuadro con
+  unas dimensiones determinadas. El resto del contenido quedar&aacute; recortado y no
+se mostrar&aacute;. </p>
+<p><strong>Propiedad:</strong> clip </p>
+<p><strong>Valores: </strong>Para definir la zona de recorte estableceremos las
+  coordenadas de un rect&aacute;ngulo que har&aacute; de ventana visible del
+  documento. Los valores que se aplican indican la posición de los bordes superior,
+  derecho, inferior e izquierdo respecto al contenedor en el que se encuentra
+  la imagen, y se anotan en la forma <strong>rect (valor, valor, valor, valor) <a href="javascript:void(0)" onclick="window.open('muestra19.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=790,height=450')">Ver
+ejemplo</a></strong>
+<p>&nbsp;</p>
+<p>Desbordamiento</p>
+<p>&iquest;Qu&eacute; ocurre cuando definimos  unas dimensiones exactas para un elemento y
+  el contenido del  mismo desborda los l&iacute;mites establecidos? Depender&aacute; de los
+  valores que adopte la propiedad que controla el desbordamiento.</p>
+<p><strong>Propiedad:</strong> overflow </p>
+<p><strong>Valores: </strong>Si no se especifica valor de overflow los navegadores
+  utilizar&aacute;n <strong>visible</strong> como valor por defecto. Los valores
+  posibles son:</p>
+<ul>
+  <li><strong>Visible</strong>: Se desprecia la altura establecida,  ampli&aacute;ndola hasta el tama&ntilde;o
+    necesario para que se pueda mostrar todo el contenido. Hay una diferencia importante
+      en el modo de realizar este ajuste autom&aacute;tico de la altura: Internet Explorer
+      desplaza hacia abajo el resto de los elementos, mientras que Mozilla, Konqueror
+      o Gale&oacute;n hacen la ampliaci&oacute;n pero mantienen la referencia de la altura original
+      para mostrar los siguientes elementos, con lo que el resultado es que el
+    contenido del elemento que se autoamplia se superpone al de los siguientes.<br>
+  </li>
+  <li><strong>Hidden</strong>: Se recorta el contenido mostrando lo que cabe
+    en las dimensiones establecidas, pero no se muestran barras de desplazamiento
+    para poder acceder al resto del contenido <br>
+  </li>
+  <li><strong>Scroll:</strong> Se incorporan al bloque barras de desplazamiento
+    horizontal y vertical, incluso si no son necesarias porque el contenido ocupe
+    menos espacio que el establecido en las dimensiones del elemento. Igual que
+    en el caso anterior se recorta el contenido, pero <br>
+  </li>
+  <li><strong>Auto:</strong> Si el contenido no puede mostrarse completo en las
+    dimensiones marcadas se incorpora una barra de desplazamiento vertical para
+    poder acceder a lo que no queda visible. Si existe alg&uacute;n elemento que desborde
+    las dimensiones horizontales tambi&eacute;n se incluir&iacute;a una barra de desplazamiento
+    horizontal. </li>
+</ul>
+<p><a href="javascript:void(0)" onclick="window.open('muestra20.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=700')">Ver
+  ejemplo </a></p>
+<p> Alineamiento vertical </p>
+<p>Es una propiedad que tiene su principal aplicaci&oacute;n para las im&aacute;genes, cosa
+  que ya se pod&iacute;a hacer con HTML, pero puede aplicarse a cualquier elemento en
+  l&iacute;nea.</p>
+<p><strong>Propiedad:</strong> vertical-align</p>
+<p><strong>Valores y ejemplos: 
+
+
+</strong></p>
+<p>Se utiliza la imagen <img src="../multimedia/sonido/TutorialHelix/images/atencion.gif" width="28" height="25"> para
+mostrar el efecto de cada valor </p>
+<ul>
+  <li><strong>baseline </strong> el elemento afectado alinea su borde inferior con
+    el borde inferior del elemento padre. <strong><img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:baseline"></strong></li>
+  <li><strong>    sub </strong>el elemento afectado alinea su borde inferior
+    como si fuera un sub&iacute;ndice<strong><img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:sub"></strong></li>
+  <li><strong>    super </strong>el elemento afectado alinea su borde inferior
+    como si fuera un super&iacute;ndice <img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:super"></li>
+  <li><strong>    top </strong>el elemento afectado alinea su borde  superior
+    con el borde superior del elemento m&aacute;s alto de
+    la l&iacute;nea, independientemente de que sea <span class="Estilo2">texto</span> o
+    imagen<img src="../imagenes/flechaarriba.gif" width="29" height="29"> <strong><strong><img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:top"></strong></strong></li>
+  <li><strong>    text-top </strong>el elemento afectado alinea su borde  superior
+    con el borde superior de la fuente base  del
+    elemento padre<strong>  </strong>(n&oacute;tese
+    que no toma en cuenta las modificaciones del <span class="Estilo3">tama&ntilde;o</span> <strong><strong><img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:text-top"></strong></strong>de
+    la fuente) </li>
+  <li><strong>    middle </strong>el elemento afectado alinea su l&iacute;nea central con con
+    medio del elemento padre <strong><strong><img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:middle"></strong></strong></li>
+  <li><strong>bottom </strong>el elemento afectado alinea su borde inferior con
+    el elemento m&aacute;s <span class="Estilo2">bajo</span> de la l&iacute;nea<strong> <strong><img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:bottom"></strong></strong>(en
+    este caso se toma en cuenta la modificaci&oacute;n de tama&ntilde;o de la
+    fuente que ha desplazado el borde inferior de la letra j) </li>
+  <li><strong>    text-bottom</strong> el elemento afectado alinea su borde 
+    inferior con el borde inferior de la fuente base del
+    elemento padre  (n&oacute;tese
+    que no toma en cuenta el elemento m&aacute;s <span class="Estilo3">bajo</span>) <img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:text-bottom"></li>
+  <li><strong>    longitud</strong> expresada en cualquiera de las unidades v&aacute;lidas,
+    tomando como referencia el borde inferior del elemento afectado e indicadas
+    en positivo (.3cm)<img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:.3cm"> o
+    en negativo (-10px)<strong> <img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:-10px"></strong></li>
+  <li><strong>    porcentaje </strong> donde la posici&oacute;n 0% <strong><img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:0%"></strong>equivaldr&iacute;a
+    a baseline, pudiendo expresarlo en negativo (-50%)<strong><img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:-50%"></strong>o
+    positivo (100%)<strong><img src="../imagenes/atencion.gif" width="28" height="25" style="vertical-align:100%"></strong></li>
+</ul>
+<p>Apariencia del cursor</p>
+<p>El navegador modifica de forma autom&aacute;tica el rat&oacute;n en funci&oacute;n de la posici&oacute;n
+  sobre los elementos de la p&aacute;gina, pero tambi&eacute;n podemos especificarlo mediante
+  estilos-</p>
+<p><strong>Propiedad:</strong> cursor</p>
+<p><strong>Valores y ejemplos: </strong>Pasando el rat&oacute;n sobre cada uno
+  de los valores ver&aacute;s cambiar el cursor de acuerdo a cada uno de ellos: 
+<span style="cursor:crosshair; font-weight: bold;">crosshair,</span><strong> <span style="cursor:default">default</span>, <span style="cursor:pointer">pointer</span>, <span style="cursor:move">move</span>, <span style="cursor:e-resize">e-resize</span>, <span style="cursor:ne-resize;">ne-resize,</span> <span style="cursor:nw-resize">nw-resize</span>, <span style="cursor:n-resize">n-resize</span>, <span style="cursor:se-resize">se-resize</span>, <span style="cursor:sw-resize">sw-resize</span>, <span style="cursor:s-resize">s-resize</span>, <span style="cursor:w-resize">w-resize</span>, <span style="cursor:text">text</span>, <span style="cursor:wait">wait</span>, <span style="cursor:help">help</span></strong>. </p>
+<p>Apilar capas</p>
+<p>Adem&aacute;s de poder colocar las capas en la posici&oacute;n que se desee,
+  tambi&eacute;n se
+  puede decidir el orden en el que se ir&aacute;n apilando, de forma que unas
+  zonas se superpongan a otras. Esta propiedad s&oacute;lo puede aplicarse a capas que
+  tengan establecido el atributo position.</p>
+<p><strong>Propiedad:</strong> z-index</p>
+<p><strong>Valor:</strong> Se aplican valores num&eacute;ricos, de forma que un valor
+  m&aacute;s alto indica que el elemento est&aacute; por encima de los dem&aacute;s que tengan valor
+  m&aacute;s bajo o que no tengan establecida propiedad de profundidad</p>
+<div class="ejemplo">
+  <p><strong>Ejemplo:</strong></p>
+  <div id="azul" style="position:relative; background-color:#0066CC; border: thin solid #003366; width:220px; height:200px; z-index:1"> 
+    <div id="naranja" style="position:absolute; margin-left:40px; margin-top: 40px; background-color:#FFdd77; border: thin solid #ffaa66; width:340px; height:170px; z-index:2"></div>
+  </div>
+  <div class="codigo2" style="position:relative; top:-150px; z-index:3"> 
+    <p>&lt;div id=&quot;azul&quot; style=&quot;position:relative; background-color:#0066CC; 
+      border: thin solid #003366; width:220px; height:200px; z-index:1&quot;&gt;<br>
+      <br>
+      &lt;div id=&quot;naranja&quot; style=&quot;position:absolute; margin-left:40px; 
+      margin-top: 40px; background-color:#FFdd77; border: thin solid #ffaa66; 
+      width:340px; height:170px; z-index:2&quot;&gt;&lt;/div&gt;<br>
+      &lt;/div&gt; <br>
+    </p>
+  </div>
+</div>
+<p>&nbsp;</p>
+<div class="practicas"> 
+
+  <p><img src="../imagenes/cincuentayocho.gif" width="29" height="29" align="left"> </p>
+
+<ul>
+
+  <li>Experimenta con las propiedades para el dise&ntilde;o visual con CSS e incorpora
+    aquellas que necesites a tus documentos o a tu hoja de estilo.</li>
+  </ul>
+
+</div>
+
+
+</body>
+
+
+
+</html>
+

@@ -1,0 +1,790 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="es-es">
+<head>
+
+
+
+
+  
+  
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+
+
+  
+
+
+  
+  
+  
+  
+  
+  <title>Estructura general - Tipos y cuerpos</title>
+  <link rel="stylesheet" href="../nvu2005.css" type="text/css">
+<link rel="stylesheet" href="../multi2.css" type="text/css">
+<!-- compliance patch for microsoft browsers --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+<link href="../body.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+
+<div id="localizador">
+<p>La base&gt;&gt;Texto - Tipos y Cuerpos</p>
+
+</div>
+<div id="flechadcha">
+<a href="texto2.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="estructurabasica.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+
+
+<div class="solapas">
+<ul>
+
+
+  <li class="activo"><a href="texto1.html">Tipos
+y cuerpos</a></li>
+
+
+ <li><a href="texto2.html">Enfatizaci&oacute;n</a></li>
+
+
+
+  <li><a href="texto3.html">Marcado
+por contenido</a></li>
+
+  <li><a href="texto4.html">Justificaci&oacute;n</a></li>
+
+          <li><a href="texto5.html">T&iacute;tulos
+o cabeceras</a></li>
+
+          <li><a href="texto6.html">Listas</a></li>
+
+</ul>
+
+
+</div>
+
+
+<div class="principal">
+
+<h2>Unas cuestiones previas</h2>
+
+
+
+
+<p>N|VU nos va a facilitar much&iacute;simo el trabajo
+traduciendo nuestras selecciones en un entorno visual a etiquetas <acronym title="Hypertext Markup Language">HTML</acronym>.
+Adem&aacute;s puede hacerlo de dos formas diferentes: utilizando
+s&oacute;lo etiquetas HTML o utilizando tambi&eacute;n
+etiquetas <acronym title="Cascading Style Sheets">CSS</acronym>&nbsp;(Hojas
+de estilo en cascada). Recuerda que si
+&eacute;sta es tu primera toma de contacto con la
+creaci&oacute;n de p&aacute;ginas web ser&iacute;a
+preferible que desactivaras la utilizaci&oacute;n de&nbsp;<acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+
+
+
+
+<p>Por otra parte, ahora que ya sabes la diferencia entre un
+salto de rengl&oacute;n (<code>&lt;br&gt;</code>)
+y un salto de
+p&aacute;rrafo (<code>&lt;p&gt;</code>)
+tendr&aacute;s que tener en
+cuenta un peque&ntilde;o detalle: si est&aacute;s trabajando en
+cualquier modo que no sea el p&aacute;rrafo, N|VU
+interpretar&aacute; las pulsaciones de la tecla <img class="imgcentr" style="width: 22px; height: 24px;" alt="Intro" title="Intro" src="../imagenes/teclaintro.png"> como
+saltos de
+rengl&oacute;n. </p>
+
+
+
+
+<p><img alt="Caja de selecci&oacute;n de p&aacute;rrafo" title="Caja de selecci&oacute;n de p&aacute;rrafo" src="img/parrafo.png" align="left" height="29" hspace="10" width="276">Para
+que introduzca saltos de p&aacute;rrafo tendr&aacute;s que
+tener cuidado de que en la zona izquierda de la barra de herramientas
+aparezca marcado el <strong>p&aacute;rrafo</strong>
+como forma de inserci&oacute;n de texto. Siendo as&iacute;, el
+programa interpretar&aacute; la pulsaci&oacute;n simple de la
+tecla&nbsp;<img class="imgcentr" style="width: 22px; height: 24px;" alt="Intro" title="Intro" src="../imagenes/teclaintro.png"> como
+salto de
+p&aacute;rrafo. Si quieres que se produzca &uacute;nicamente un
+salto de rengl&oacute;n tendr&aacute;s que pulsar las teclas <img class="imgcentr" alt="May&uacute;sculas" title="May&uacute;sculas" src="../imagenes/teclamayusc.png" height="26" width="36">
++&nbsp; <img class="imgcentr" style="width: 22px; height: 24px;" alt="Intro" title="Intro" src="../imagenes/teclaintro.png"></p>
+
+<h2>Tipos y cuerpos</h2>
+
+
+
+
+<p>El trabajo con procesadores de texto nos ha hecho adquirir una
+cierta habilidad en la maquetaci&oacute;n o tratamiento del aspecto
+visual del texto. Esta situaci&oacute;n se ha extendido
+tambi&eacute;n a la creaci&oacute;n de documentos para la web.
+Si bien esto ha tenido una parte positiva, en tanto que ha ampliado el
+control sobre el aspecto visual de nuestras producciones
+tambi&eacute;n ha tenido una parte negativa: hemos perdido de vista
+una parte importante de la estructura de la informaci&oacute;n. Si
+te cuesta entender lo anterior puede que te resulte m&aacute;s
+f&aacute;cil si te haces una pregunta:
+&iquest;podr&iacute;a&nbsp;un ciego&nbsp;interpretar
+correctamente un texto en el que los elementos que deseamos resaltar
+est&aacute;n en un tama&ntilde;o m&aacute;s grande o en un
+color diferente?</p>
+
+
+
+
+<p>Est&aacute; claro que los elementos visuales son
+importantes, pero lo que no debemos perder nunca de vista es la
+organizaci&oacute;n de la informaci&oacute;n, de manera que
+siempre quede organizada de una forma clara, ordenada y comprensible,
+incluso si la despojamos de los atributos visuales.</p>
+
+
+
+
+<p>Una vez hecha la salvedad anterior vamos a comenzar un
+recorrido por los recursos de los que disponemos para modificar el
+aspecto de un documento <acronym title="Hypertext Markup Language">html</acronym>&nbsp;Las
+primeras operaciones sobre las que podr&iacute;amos practicar
+ser&iacute;an las referentes a la
+modificaci&oacute;n del tipo de letra y su tama&ntilde;o (al
+que se denomina cuerpo).</p>
+
+
+
+
+&nbsp;<img class="flotizq" alt="Desplegable de tipos de letra en la 2&ordf; barra de formato" title="Desplegable de tipos de letra en la 2&ordf; barra de formato" src="img/tiposdeletra2.png" height="393" width="348"><img class="flotizq" alt="Men&uacute; de selecci&oacute;n del tipo de letra" title="Men&uacute; de selecci&oacute;n del tipo de letra" src="img/tiposdeletra.png" height="362" width="448"><br clear="all">
+
+
+
+
+<p>Para acceder a los tipos de letra&nbsp;disponemos de las
+dos posibilidades que se muestran en las im&aacute;genes:</p>
+
+
+
+
+<ul>
+
+
+
+
+  <li>un desplegable en la 2&ordf;&nbsp;barra de
+formato&nbsp;</li>
+
+
+
+
+  <li>la opci&oacute;n de men&uacute; <span class="refmenu">formato&nbsp;</span><span class="refmenu"><img class="imgcentr" style="width: 14px; height: 13px;" alt="submen&uacute;" title="submen&uacute;" src="../estilos/flechamenu.png"></span><span class="refmenu"> tipo de letra</span><strong></strong>
+que nos da acceso a las fuentes instaladas.</li>
+
+
+
+
+</ul>
+
+
+
+
+<p>Tanto si est&aacute;s trabajando en Windows como si lo
+haces en Linux ver&aacute;s que los dos primeros grupos son
+id&eacute;nticos ya que se refieren a grandes categor&iacute;as
+el primero y a las principales familias de letras el segundo, pero en
+cuanto empezamos a desarrollar el listado vemos que las coincidencias
+desaparecen, ya que las fuentes empleadas en ambos sistemas son
+diferentes, por lo que no te recomiendo que utilices fuentes especiales
+de las que aparecen en el listado inferior. </p>
+
+
+
+
+<p>Si lees las siguientes anotaciones de estilo podr&aacute;s
+entender las razones de esta recomendaci&oacute;n.</p>
+
+
+
+
+<div class="estilo">
+<p>&iquest;Cu&aacute;ntos tipos de letra tienes
+instalados en tu ordenador? &iquest;Cincuenta?...
+&iquest;Ochenta?... &iquest;M&aacute;s de cien?...</p>
+
+
+
+
+<p>Seguramente estar&aacute;s pensando que tienes un
+mont&oacute;n de posibilidades a la hora de dise&ntilde;ar tus
+p&aacute;ginas... pero, &iquest;qu&eacute;
+ocurrir&aacute; cuando un visitante de tu p&aacute;gina no
+tenga en su ordenador esa fuente caligr&aacute;fica tan maravillosa
+con la que tu p&aacute;gina luc&iacute;a tan espectacular?</p>
+
+
+
+
+<p>Lo que suceder&aacute; es que el navegador del visitante
+volver&aacute; a darle formato a toda la p&aacute;gina
+utilizando la fuente por defecto, que habitualmente suele ser de la
+familia serif o Times New Roman, ... y adi&oacute;s a tu preciosa
+composici&oacute;n de la p&aacute;gina.</p>
+
+
+
+
+<p>Teniendo en cuenta lo anterior la recomendaci&oacute;n es
+que te ci&ntilde;as a las fuentes que est&aacute;n instaladas
+en la mayor&iacute;a de los equipos: Times y
+Arial-Helv&eacute;tica&gt;</p>
+
+
+
+
+<p>Tras esta recomendaci&oacute;n funcional vamos a entrar en
+una segunda anotaci&oacute;n de claro matiz est&eacute;tico:</p>
+
+
+
+
+<dl>
+
+
+
+
+  <dt><span style="font-family: Times New Roman,Times,serif;">Times
+New Roman</span>
+:</dt>
+
+
+
+
+  <dd>Se llama as&iacute; por haber sido popularizada por el
+diario "The Times". Pertenece a la familia de las fuentes de tipo serif
+o "con tac&oacute;n" (por las curvas que rematan los extremos).
+Suele dar un tono m&aacute;s formal a los escritos. Es de buena
+legibilidad en papel y algo menos en pantalla.</dd>
+
+
+
+
+  <dt><span style="font-family: Helvetica,Arial,sans-serif;">Arial</span>
+  </dt>
+
+
+
+
+  <dd>Es la fuente de mayor uso de la familia de las
+helv&eacute;ticas, sans-serif o "de palo seco". Su
+car&aacute;cter es algo m&aacute;s informal y moderno que el de
+la Times. Su legibilidad en pantalla es algo m&aacute;s alta que la
+de la Times, ya que es ligeramente mayor a igualdad de cuerpo.</dd>
+
+
+
+
+  <dt><span style="font-family: Comic Sans MS;">Comic
+Sans MS</span> :&nbsp;</dt>
+
+
+
+
+  <dd>No hab&iacute;amos mencionado esta fuente que pertenece
+al grupo de las fuentes de tipo caligr&aacute;fico aunque tiene la
+caracter&iacute;stica de que, al tratarse de una fuente sin
+ligaz&oacute;n entre los caracteres, es muy legible en pantalla.
+Es, entre las tres, la que aporta un car&aacute;cter m&aacute;s
+ligero e informal al texto, con un alto grado de legibilidad. Sin
+embargo no la hab&iacute;amos incluido en el listado de fuentes
+m&aacute;s comunes por una cuesti&oacute;n esencial: es
+exclusiva de los sistemas Windows, por lo que los navegadores que
+corren bajo Linux la sustituyen por una letra de la familia
+arial-helv&eacute;tica con una dimensi&oacute;n algo mayor. Ten
+en cuenta este dato si quieres garantizar la compatibilidad y la
+estabilidad del dise&ntilde;o interplataforma. &lt;br&gt; </dd>
+
+
+
+
+</dl>
+
+
+
+
+<p>Y ahora una pregunta: &iquest;has visto alguna vez una de
+esas cuartillas de publicidad de una imprenta que acaba de comprar un
+nuevo ordenador? Digo lo del ordenador porque es sorprendente la
+cantidad de
+fuentes diferentes que caben en tan poco papel,... al fin y al cabo lo
+importante es lo potente que es el ordenador, no que podamos enterarnos
+de lo que pone. As&iacute; que ya sabes, una de las formas de
+conseguir que tu p&aacute;gina resulte impresentable es mezclar
+diez o doce tipos de letra,... aunque puede que tengas la suerte de que
+el navegador del visitante las sustituya por la fuente por defecto ;-)</p>
+
+
+
+
+</div>
+
+
+
+
+<p><span class="flotizq"><img alt="Men&uacute; de tama&ntilde;o de texto" title="Men&uacute; de tama&ntilde;o de texto" src="img/tamaniotexto.png" height="148" width="118"></span>Adem&aacute;s
+del tipo de letra podemos jugar con el cuerpo de las mismas, esto es,
+su tama&ntilde;o. Antes de recurrir
+a los iconos <span class="imgcentr"><img alt="Iconos de tama&ntilde;o de texto en la barra de formato" title="Iconos de tama&ntilde;o de texto en la barra de formato" src="img/tamaniotexto2.png" height="29" width="49"></span>
+que aparecen en la barra de formato vamos a tomar en
+consideraci&oacute;n la opci&oacute;n de
+men&uacute; <span class="refmenu">formato&nbsp;<img class="imgcentr" style="width: 14px; height: 13px;" alt="submen&uacute;" title="submen&uacute;" src="../estilos/flechamenu.png"> tama&ntilde;o</span>.
+Cuando accedes a ella ver&aacute;s que hay una serie de
+tama&ntilde;os limitada y es importante que lo tengas en cuenta
+porque los navegadores antiguos pueden tener problemas con
+especificaciones de tama&ntilde;o diferentes a la que se consigue
+seleccion&aacute;ndolos desde aqu&iacute;.</p>
+
+
+
+
+<p>En el siguiente recuadro de c&oacute;digos puedes ver una
+explicaci&oacute;n sobre los tama&ntilde;os en las
+especificaciones iniciales del lenguaje HTML.&nbsp;
+</p>
+
+
+
+
+<div class="codigo">
+<p>En lenguaje HTML existen siete tama&ntilde;os de letra. El
+tama&ntilde;o mayor ser&iacute;a equivalente, aproximadamente,
+a los 36 puntos de un procesador de textos y el menor a un cuerpo de 8
+puntos.</p>
+
+
+
+
+<p>La forma de reflejarlo seg&uacute;n el programa con el que
+trabajemos es diferente. Mientras que algunos programas los numeran
+correlativamente de 1 a 7, N|VU toma como punto neutro el tercer nivel
+y numera como pasos negativos o positivos a partir de ese
+tama&ntilde;o. Encontraremos pues etiquetas de los siguientes tipos.</p>
+
+
+
+
+<p><code>&lt;font size="1"&gt;</code> y
+sucesivas</p>
+
+
+
+
+<p><code>&lt;font size="-2"&gt;</code> hasta <code>&lt;font
+size="+3"&gt;</code>que son las que crea&nbsp;N|VU.
+(Tambi&eacute;n podr&iacute;as adjudicar manualmente el
+tama&ntilde;o +4 para el que no hay una opci&oacute;n en el
+men&uacute;&nbsp;<span class="refmenu">Formato&nbsp;</span><span class="refmenu"><img class="imgcentr" style="width: 14px; height: 13px;" alt="submen&uacute;" title="submen&uacute;" src="../estilos/flechamenu.png"></span><span class="refmenu"> Tama&ntilde;o</span>)</p>
+
+
+
+
+<p> Cualquiera de los siguientes c&oacute;digos
+producir&iacute;a el mismo efecto: </p>
+
+
+
+
+<table style="text-align: left; width: 576px;" border="1" cellpadding="2" cellspacing="2" height="98" width="542">
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+      <th width="404">C&oacute;digo</th>
+
+
+
+
+      <th width="278">Resultado</th>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="1"&gt;ejemplo&lt;/font&gt;</code></td>
+
+
+
+
+      <td width="278"><font size="1">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="-2"&gt;ejemplo&lt;/font&gt;</code> </td>
+
+
+
+
+      <td width="278"><font size="1">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="2"&gt;ejemplo&lt;/font&gt;</code></td>
+
+
+
+
+      <td width="278"><font size="2">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="-1"&gt;ejemplo&lt;/font&gt;</code></td>
+
+
+
+
+      <td width="278"><font size="-1">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="3"&gt;ejemplo&lt;/font&gt;</code></td>
+
+
+
+
+      <td width="278"><font size="3">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="+0"&gt;ejemplo&lt;/font&gt;</code></td>
+
+
+
+
+      <td width="278"><font size="+0">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="4"&gt;ejemplo&lt;/font&gt;</code></td>
+
+
+
+
+      <td width="278"><font size="4">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="+1"&gt;ejemplo&lt;/font</code></td>
+
+
+
+
+      <td width="278"> <font size="+1">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="5"&gt;ejemplo&lt;/font&gt;</code></td>
+
+
+
+
+      <td width="278"><font size="5">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="+2"&gt;ejemplo&lt;/font</code></td>
+
+
+
+
+      <td width="278"><font size="+2">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="6"&gt;ejemplo&lt;/font&gt;</code></td>
+
+
+
+
+      <td width="278"><font size="6">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="+3"&gt;ejemplo&lt;/font&gt;</code></td>
+
+
+
+
+      <td width="278"><font size="+3">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="7"&gt;ejemplo&lt;/font&gt;</code></td>
+
+
+
+
+      <td width="278"><font size="7">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+
+
+      <td width="404"><code>&lt;font
+size="+4"&gt;ejemplo&lt;/font&gt;</code></td>
+
+
+
+
+      <td width="278"><font size="+4">ejemplo</font></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+<p>Cuando veamos los c&oacute;digos de p&aacute;ginas
+tambi&eacute;n podremos encontrar variaciones de tama&ntilde;o
+por aplicaci&oacute;n de las etiquetas <code>&lt;small&gt;</code>
+para reducir y <code>&lt;big&gt;</code> para
+ampliar. Dichas etiquetas pueden anidarse y con ellas
+podr&iacute;amos saltarnos la r&iacute;gida
+limitaci&oacute;n que suponen los tama&ntilde;os fijos que nos
+impone la selecci&oacute;n desde el men&uacute;.</p>
+
+
+
+
+</div>
+
+
+
+
+<p>Para obtener las modificaciones de tama&ntilde;o mediante
+anidaci&oacute;n de las etiquetas <code>&lt;small&gt;</code>
+y <code>&lt;big&gt;</code> utilizaremos los iconos
+de la
+barra de herramientas de formato&nbsp;<span class="imgcentr"><img alt="Iconos de tama&ntilde;o de texto en la barra de formato" title="Iconos de tama&ntilde;o de texto en la barra de formato" src="img/tamaniotexto2.png" height="29" width="49"></span></p>
+<div class="practicas"><img class="numact" style="width: 29px; height: 29px;" alt="Actividad 4" title="Actividad 4" src="../imagenes/numeracion/cuatro.gif">
+<ul>
+  <li>Crea un nuevo documento en la pesta&ntilde;a&nbsp;
+    <img style="width: 65px; height: 20px;" alt="Normal" src="../imagenes/pestananormal.png"> y escribe una frase.</li>
+  <li>Crea un p&aacute;rrafo indicando que lo que viene a
+continuaci&oacute;n son modificaciones de tama&ntilde;o utilizando las
+opciones de men&uacute;.</li>
+  <li>Escribe otro p&aacute;rrafo y ve seleccionando palabras y modific&aacute;ndolas mediante las posibilidades de <span class="refmenu">formato&nbsp;<img class="imgcentr" style="width: 14px; height: 13px;" alt="submen&uacute;" title="submen&uacute;" src="../estilos/flechamenu.png"> tama&ntilde;o</span></li>
+  <li>Crea otro p&aacute;rrafo para indicar que las modificaciones de
+tama&ntilde;o que aparecen a continuaci&oacute;n se consiguen mediante
+el uso del bot&oacute;n de cambio de tama&ntilde;o de la barra de
+herramientas.</li>
+  <li>A&ntilde;ade un nuevo p&aacute;rrafo, selecciona una
+palabra&nbsp;y modifica su tama&ntilde;o mediante una &uacute;nica
+pulsaci&oacute;n sobre aumentar o disminuir tama&ntilde;o <span class="imgcentr"><img alt="Iconos de tama&ntilde;o de texto en la barra de formato" title="Iconos de tama&ntilde;o de texto en la barra de formato" src="img/tamaniotexto2.png" height="29" width="49"></span>. Selecciona otras palabra y modifica su tama&ntilde;o con dos pulsaciones, tres, etc&nbsp;</li>
+  <li>Comprueba la forma en la que se visualiza y pasa
+a&nbsp;la pesta&ntilde;a <img class="imgcentr" style="width: 99px; height: 21px;" alt="Codigo fuente" title="Codigo fuente" src="../imagenes/pestanacodigofuente.png"> para comprobar el c&oacute;digo que se
+ha introducido. en ambos casos.</li>
+  <li>Guarda tu trabajo como <strong>actividad4.html</strong></li>
+</ul>
+
+
+
+</div>
+<p><span class="imgcentr"></span></p>
+
+
+<br>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="es-es">
+<head>
+
+
+  
+
+
+  
+  
+  
+  <TITLE></TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+<!-- compliance patch for microsoft browsers --><!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.9.130  (Win32)">
+<META NAME="AUTHOR" CONTENT="Ra&uacute;l Luna">
+<META NAME="CREATED" CONTENT="20051003;20592600">
+<META NAME="CHANGEDBY" CONTENT="Ra&uacute;l Luna">
+<META NAME="CHANGED" CONTENT="20051007;12084900">
+<STYLE>
+	<!--
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		P { margin-bottom: 0.3cm; text-align: justify }
+		P.western { font-size: 10pt }
+		P.avisos-western { margin-left: 0.26cm; margin-right: 0.26cm; margin-top: 0.13cm; margin-bottom: 0.13cm; border: 1px solid #ff4200; padding: 0.08cm 0.26cm; font-size: 10pt }
+		P.avisos-cjk { margin-left: 0.26cm; margin-right: 0.26cm; margin-top: 0.13cm; margin-bottom: 0.13cm; border: 1px solid #ff4200; padding: 0.08cm 0.26cm }
+		P.avisos-ctl { margin-left: 0.26cm; margin-right: 0.26cm; margin-top: 0.13cm; margin-bottom: 0.13cm; border: 1px solid #ff4200; padding: 0.08cm 0.26cm }
+	-->
+	</STYLE>
+</head>
+
+
+<body dir="LTR">
+<div id="localizador">
+<p>V&iacute;nculos&gt;&gt;Tablas de contenido</p>
+
+</div>
+<div id="flechadcha">
+<a href="vinculos2c.htm" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="vinculos2.htm" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+
+<h2>Las tablas de contenido</h2>
+
+
+
+<p>Ahora que ya hemos visto lo que son los v&iacute;nculos o enlaces
+internos vamos a ver una utilidad similar a algo que&nbsp;tal vez hayas
+utilizado a en un procesador de texto. Se trata de crear un
+&iacute;ndice paginado cuando tienes un documento muy
+extenso y pretendes facilitar el acceso a los diferentes
+apartados.&nbsp;</p>
+
+
+
+<p>En un documento <acronym title="HyperText Markup Language">HTML</acronym>
+podemos hacer algo similar, aunque al no representarse sobre un medio
+paginado como el papel no podremos numerar las p&aacute;ginas, ya
+que la pantalla de cada monitor puede contener una cantidad diferente
+de informaci&oacute;n seg&uacute;n su tama&ntilde;o y
+resoluci&oacute;n. En lugar de utilizar un n&uacute;mero de
+p&aacute;gina se crear&aacute; un listado de enlaces activos
+para que al pulsar sobre ellos se pueda acudir a cada
+ep&iacute;grafe.</p>
+
+
+
+<p>En la pr&aacute;ctica se trata de un caso especial de
+enlace interno que se crear&aacute; y se de forma
+autom&aacute;tica cuando lo solicitemos.</p>
+
+
+
+<p><img class="flotder" style="width: 316px; height: 326px;" alt="Panel para crear una Tabla de contenido con la cabeceras H1,H2,.. del documento" title="Panel para crear una Tabla de contenido con la cabeceras H1,H2,.. del documento" src="imagenes/creartoc.png">El &uacute;nico requisito
+importante es que tengamos estructurado el texto para que la rutina de
+creaci&oacute;n de tablas de contenido pueda ejecutarse. Para ello,
+lo m&aacute;s habitual es que tengamos etiquetadas los
+t&iacute;tulos de cada ep&iacute;grafe con&nbsp;cabeceras <code>h1</code>,
+<code>h2</code>, etc. Una vez cumplida esta
+condici&oacute;n el procedimiento es tan sencillo como&nbsp;</p>
+
+
+
+<ol>
+
+
+
+  <li>Hacer clic en la posici&oacute;n del documento en la
+que deseamos crear la tabla de contenidos.</li>
+
+
+
+  <li>Acudir a la opci&oacute;n de men&uacute; <span class="refmenu">insertar </span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> </span><span class="refmenu">tabla
+de contenidos... </span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu">
+    </span><span class="refmenu">insertar</span>&nbsp;</li>
+
+
+
+  <li>Modificar, en caso de que sea necesario, el tipo
+de&nbsp;cabecera que aparecer&aacute; en cada nivel del listado.</li>
+
+
+
+</ol>
+
+
+
+Si el etiquetado de los t&iacute;tulos no coincide, o no queremos
+que todos los niveles de cabecera aparezcan en la tabla de contenido
+podemos modificar las etiquetas correspondientes a cada nivel o
+dejarlas en blanco.<br>
+
+
+
+<br>
+
+
+
+La caja referida a clase se reserva para cuando utilizamos <acronym title="Cascading Style Sheets">CSS</acronym>: podemos
+etiquetar varios fragmentos con un tipo de cabecera, pero puede ocurrir
+que no deseemos que salgan todos en la tabla de contenidos, por lo que
+podemos aplicarle una clase a aquellos que queremos mostrar.
+As&iacute;, por ejemplo, podr&iacute;amos hacer que el nivel 3
+se generara a partir de las cabeceras <code>h3</code> a
+las que le hemos aplicado la clase titulillo pero que no se mostraran
+en la tabla de contenidos las&nbsp;<code>h3</code> que
+no llevaran esa clase.<br>
+
+<br>
+
+Por otra parte, como al desplegar las posibilidades para cada nivel encontramos tambi&eacute;n las etiquetas <code>&lt;p&gt;</code> y <code>&lt;div&gt;</code>
+podr&iacute;amos combinarlas con una clase espec&iacute;fica para ir
+creando la tabla de contenidos, aunque realmente es m&aacute;s
+trabajoso que utlizar las etiquetas de cabeceras <code>h1...h6</code> con las que no necesitamos crear clases especiales.<br clear="all">
+
+
+
+<br>
+
+
+
+<br>
+
+
+
+<div class="codigo">El c&oacute;digo que se genera
+tomando los par&aacute;metros por defecto es del siguiente tipo:<br>
+
+
+
+<br>
+
+
+
+<code>&lt;ol id="mozToc"&gt;<br>
+
+
+
+&lt;!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--&gt;<br>
+
+
+
+&lt;li&gt;&lt;a
+href="#mozTocId558864"&gt;T&iacute;tulo de apartado
+principal&lt;/a&gt;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &lt;ol&gt;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;li&gt;&lt;a
+href="#mozTocId437177"&gt;T&iacute;tulo de
+subapartado&lt;/a&gt;&lt;/li&gt;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;li&gt;&lt;a
+href="#mozTocId5443"&gt;T&iacute;tulo de subapartado
+&lt;/a&gt;&lt;/li&gt;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;li&gt;&lt;a
+href="#mozTocId75336"&gt;T&iacute;tulo de subapartado
+&lt;/a&gt;&lt;/li&gt;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol&gt;<br>
+
+
+
+&lt;li&gt;&lt;a
+href="#mozTocId68364"&gt;T&iacute;tulo de apartado
+principal&lt;/a&gt;<br>
+
+
+
+&lt;/ol&gt;
+</code>
+<p>Como ves ha iniciado una lista numerada, la ha identificado,
+pone un comentario para indicar que tipo de cabecera ocupar&aacute;
+cada nivel y, luego va insertando elementos de la lista y
+anid&aacute;ndolos seg&uacute;n el tipo de cabecera que lleven
+para que se sit&uacute;en en el nivel que les corresponde. </p>
+
+
+
+L&oacute;gicamente este proceso va acompa&ntilde;ado de la
+inserci&oacute;n delante de cada una de las cabeceras de un ancla
+con el nombre, generado aleatoriamente, que se utiliza en la tabla de
+contenidos. <code>&lt;a class="mozTocH2"
+name="mozTocId5443"&gt;&lt;/a&gt;</code><br>
+
+
+
+<code></code></div>
+
+
+
+<div class="avisos"><img class="flotizq" src="../imagenes/atencion.gif" height="25" hspace="5" width="28">Si
+  te preguntas para qu&eacute; sirve la
+opci&oacute;n&nbsp; <span class="refmenu">hacer
+la tabla de contenidos de solo lectura</span> que aparece en el
+panel de creaci&oacute;n ... coincides conmigo. Seg&uacute;n la ayuda deber&iacute;a
+hacer que los textos de la tabla no fueran v&iacute;nculos activos, pero un error
+del programa hace que no logre el efecto perseguido.</div>
+
+
+
+ 
+<div class="practicas"><a name="vuelta"></a><img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 51" title="Actividad 51" src="../imagenes/numeracion/cincuentayuno.gif">Vamos
+a utilizar el mismo texto que usamos para la pr&aacute;ctica de
+enlaces internos pero, en este caso, lo tienes algo m&aacute;s
+preparado y falta la lista inicial que utilizamos para crear los enlacesl.&nbsp;Para
+utilizarla puedes&nbsp;<a href="#vuelta" onclick="window.open('../estilos/prensa2.html','auxiliar','menubar=1,scrollbars=1,top=0,left=0,width=450,height=400')">abrir</a>
+el art&iacute;culo que ya conoces, guardarlo en la carpeta de
+pr&aacute;cticas&nbsp; y
+empezar la modificaci&oacute;n del mismo utilizando la
+opci&oacute;n de men&uacute; <span class="refmenu">archivo</span><b class="refmenu"> <img src="../imagenes/flechamenu.png" height="13" width="14"> abrir
+archivo</b>.
+<ul>
+
+
+
+  <li>Revisa el texto para ver el formato que se le ha dado.</li>
+
+
+
+  <li>Sit&uacute;ate en el punto que consideres
+m&aacute;s adecuado para crear la tabla de contenidos y
+gen&eacute;rala con los niveles que consideres necesarios.</li>
+
+
+
+  <li>Ahora queda completar la navegaci&oacute;n
+introduciendo una palabra o una imagen que te sirva para volver
+a la tabla de contenidos&nbsp;despu&eacute;s de cada
+ep&iacute;grafe.
+Puedes guardar con el bot&oacute;n derecho la siguiente <img alt="Flecha" title="Flecha" style="width: 19px; height: 13px;" src="imagenes/farriba.png"></li>
+
+
+
+  <li>Crea los enlaces de vuelta al &iacute;ndice.<br>
+
+
+
+    
+    
+    <div class="avisos"><img class="flotizq" src="../imagenes/atencion.gif" height="25" width="28">F&iacute;jate
+que no has tenido que crear un ancla de enlace interno, puesto que el
+atributo <code>id="mozToc"</code> que ha puesto el
+programa en la etiqueta de inicio de la tabla de contenidos es un
+identificador que sirve perfectamente para esa funci&oacute;n. Por
+otra parte recuerda que, dado todos
+los enlaces de vuelta atr&aacute;s apuntan al mismo lugar puedes
+crear el primero, copiarlo, e irlo pegando en cada uno de los sitios en
+los que deba aparecer.</div>
+
+
+
+  </li>
+
+
+
+</ul>
+
+
+
+<ul>
+
+
+
+  <li>Guarda el trabajo como <strong>actividad51.html
+    </strong>y comprueba que los enlaces funcionan correctamente.&nbsp;</li>
+
+
+
+</ul>
+
+
+
+<ul>
+
+
+
+</ul>
+
+
+
+</div>
+
+</div>
+</body>
+</html>

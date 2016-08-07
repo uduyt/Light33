@@ -1,0 +1,67 @@
+/* Style sheet for Nvu user Guide - Nvu version 0.9 - Guide version 0.6 - Updated 17 Mar-2005 */
+
+/* Global Tag styles */
+
+body { margin: 0px;  text-align: left; background: fixed url(images/paper.gif);   }
+p, h1, h2, h3, h4, td, li  { font-family: Arial,Helvetica,sans-serif; }
+p { font-size: small; margin-top: 0px; margin-bottom: 0.25em; margin-left: 3em; text-align: left; }
+h1, h2, h3, h4 { font-weight: bold; margin-bottom: 0em; padding-top: 0.5em; padding-bottom: 0px; margin-top: 0em; color: rgb(66, 137, 181); }
+h1 { text-align: center; font-size: x-large; margin-bottom: 1em; }
+h1was { text-align: center; font-size: x-large; margin-top: 1em; margin-bottom: 1em; }
+h2 { font-size: medium; text-align: left; }
+h3, h4 { font-size: small; text-align: left; }
+td { padding-left: 4px; padding-right: 4px; font-size: small; margin-bottom: 0.25em; margin-top: 0px; }
+ul { margin-top: 0px; margin-bottom: 0px; }
+li { font-size: small; margin-top: 0px; margin-bottom: 0px; margin-left: 3em; text-align: left; }
+hr { width: 80%; height: 2px; margin-left: 10% ; margin-top:1em; background-color: rgb(74, 148, 197);  color: rgb(74, 148, 197); }
+
+/* Anchor styles */
+a:link      { text-decoration: underline; font-weight: bold; color: rgb(66, 137, 181); }
+a:visited { font-weight: bold; color: rgb(66, 137, 181); }
+a:hover  { color: rgb(73, 149, 196); background-color: rgb(238, 238, 238); }
+a:focus  { color: white; background-color: rgb(73, 149, 196); }
+
+/* Classes */
+.cent { text-align: center; }
+.clear { clear: left;}
+.highlt { vertical-align: super; font-size: 80%; background-color: rgb(200, 203, 220); }
+.note { margin-left: 4em; margin-right: 1em; padding-left: 0.35em; padding-right: 0; background-color: rgb(255, 255, 204); }
+.left { float: left; }
+.right { float: right; }
+.logo { padding-left:44px;  height: 44px;  padding-top:10px; }
+.madewith {border: 0px solid ; width: 135px; height: 52px;}
+.madewith:link {text-decoration: none; font-weight:normal; margin-left: 0; }
+.tsp   {font-size: x-small ;}
+.key { background-color: rgb(186, 218, 255); }
+.warn { margin-left: 4em; margin-right: 1em; padding-left: 0.35em; padding-right: 0;  border-style: solid none;  border-color: rgb(0, 0, 0);  border-width: 1px;  background-color: rgb(255, 186, 144);   }
+.ie   {color: rgb(255, 255, 255);  font-size: 1px;}
+.offset  a                 { position:relative; top:-80px;}
+
+/* Pane styles */
+
+/* Main pane */
+.paneholder           { width: 770px; }
+.panemain             { position: absolute; top: 62px; left: 170px; max-width: 600px; }
+
+/* Menu pane */
+.panemenu                         { position: fixed; top: 0px; left: 10px; width: 160px; z-index: 3; }
+div.panemenu p                 { margin:0;  font-weight: bold;  font-size: small; color: rgb(66, 137, 181); }
+div.panemenu p a:link      { text-decoration: none; color: rgb(66, 137, 181); font-size: small; }
+div.panemenu p a:visited { text-decoration: none; color: rgb(66, 137, 181); font-size: small; }
+div.panemenu p a:hover   { color: rgb(73, 149, 196); background-color: rgb(238, 238, 238); }
+div.panemenu p a:focus   { color: rgb(73, 149, 196); background-color: rgb(238, 238, 238); }
+
+div.panemenu ul                { border-style: solid; border-color:  rgb(66, 137, 181); border-width: 1px; margin-left: 1em; padding-left: 0.25em; margin-right: 0.25em;  list-style-type: none;}
+div.panemenu ul li              { margin:0; padding:0; }
+div.panemenu ul a:link      { text-decoration: none; color: rgb(33, 80, 100); font-size: small; font-weight:normal;}
+div.panemenu ul a:visited { text-decoration: none; color: rgb(33, 80, 100); font-size: small; font-weight:normal; }
+div.panemenu ul a:hover   { color: rgb(73, 149, 196); background-color: rgb(238, 238, 238); }
+div.panemenu ul a:focus   { color: rgb(73, 149, 196); background-color: rgb(238, 238, 238); }
+
+/* Top pane */
+.panetop { width: 588px; height: 80px; position: fixed; top: 0px; left:10px; padding-left: 180px; z-index: 2; background-image: url(images/paper.gif); }
+div.panetop h1 {  text-align:left; margin-top: 0; margin-bottom:0; }
+div.panetop h2 {  text-align:left; margin-top: 0; }
+
+/* Div styles */
+.contents { margin-top: 0pt; margin-bottom: 0px;  line-height:80%; }

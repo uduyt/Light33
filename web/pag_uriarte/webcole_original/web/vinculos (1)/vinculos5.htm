@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+<meta name="Author" content="Ra&uacute;l Luna">
+<title>Evitar el spam</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" src="ocultacorreo.js"></script>
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+<!-- compliance patch for microsoft browsers --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+</head>
+<body>
+
+<div id="localizador">
+<p>V&iacute;nculos&gt;&gt;Enlaces antispam</p>
+
+</div>
+<div id="flechadcha">
+<a href="vinculos6.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="vinculos4.htm" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<h2>Protegernos del "spam"</h2>
+<p>Todos sufrimos la plaga del spam, el correo publicitario no
+solicitado, que invade nuestros buzones. Aunque no es el
+&uacute;nico, uno de los causantes de este problema es la
+actuaci&oacute;n de programas rastreadores que localizan los
+v&iacute;nculos de correo existentes en las p&aacute;ginas web
+y construyen inmensas bases de datos que sirven de soporte para
+realizar los env&iacute;os masivos. La p&aacute;gina de nuestro
+centro no se librar&aacute; de esta situaci&oacute;n, lo cual
+ya es bastante problem&aacute;tico, pero si adem&aacute;s
+pretendemos incluir las direcciones del profesorado tambi&eacute;n
+esas ser&aacute;n "cazadas" y, por tanto, v&iacute;ctimas del
+spam.</p>
+<p>El procedimiento que se explica a continuaci&oacute;n nos
+servir&aacute; para evitar (al menos por el momento) a los
+rastreadores, permitiendo sin embargo que cualquiera que visite nuestra
+p&aacute;gina disponga de la direcci&oacute;n del centro, o de
+cada profesor, para establecer contacto por correo
+electr&oacute;nico. Est&aacute; basado en la
+utilizaci&oacute;n de javascript, pero no te preocupes si no
+conoces nada de este lenguaje: basta con que sigas las instrucciones
+incluyendo los datos que correspondan a tu caso para que puedas
+aplicarlo.</p>
+<p>Necesitaremos los siguientes elementos:</p>
+<ol>
+<li>Un archivo externo en el que incluiremos las direcciones de
+correo descompuestas en nombre de usuario y servidor.</li>
+<li>Enlazar la p&aacute;gina con el archivo externo para
+que tome los valores que necesite.</li>
+<li>Construir las direcciones utilizando un peque&ntilde;o
+c&oacute;digo en Javascript.</li>
+</ol>
+<p>As&iacute; pues &iexcl;manos a la obra! </p>
+<p>Lo primero es construir ese archivo externo. Podemos guardarlo
+con cualquier extensi&oacute;n, incluso una inventada (en el
+ejemplo hemos utilizado la habitual js). La &uacute;nica
+condici&oacute;n es que lo hagamos en formato texto. El contenido
+de dicho archivo es una definici&oacute;n de las variables que se
+utilizar&aacute;n en el script, lo cual nos permitir&aacute;
+componer las direcciones de cada uno de los usuarios mencionados en la
+p&aacute;gina:</p>
+<p><strong>Contenido del archivo <a href="javascript:void(0)" onclick="window.open('ocultacorreo.js','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=410,height=190')">ocultacorreo.js</a>
+que se utiliza para el ejemplo</strong></p>
+<blockquote>
+  <p class="nota"><code> var nombre1 = "fran"; <br>
+var nombre2 = "maria"; <br>
+var nombre3 = "juana"; <br>
+var nombre4 = "pedro"; <br>
+var nombre5 = "luisa"; </code><br>
+<br>
+<code>var dominio1 = "platea.pntic.mec.es"; <br>
+var dominio2 = "otro.servidor";</code> </p>
+</blockquote>
+<p>Para poder llamar al archivo que acabamos de construir creamos
+un enlace en el encabezado, para lo que escribimos en la
+secci&oacute;n <code>&lt;head&gt;</code> la
+referencia</p>
+<div class="codigo"><code>&lt;script
+language="JavaScript"
+src="ocultacorreo.js"&gt;&lt;/script&gt;</code> </div>
+<p>Ahora que hemos cubierto los dos primeros pasos podremos
+incluir los v&iacute;nculos de correo en la p&aacute;gina
+eligiendo alguna de las siguientes opciones:
+</p>
+<p><strong>Opci&oacute;n
+1</strong>: Un texto (o una imagen) sirve de base
+para soportar el v&iacute;nculo de correo </p>
+
+<div class="codigo"><code>&lt;script
+language="JavaScript"&gt;
+<br>
+document.write("&lt;a href=" + "mail" + "to:" + nombre1 + "@" +
+dominio1 + "&gt;Contactar&lt;/a&gt;");
+<br>
+&lt;/script&gt;</code> </div>
+<br>
+<div class="cenrado">El resultado se ver&iacute;a asi:
+<script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre1 + "@" + dominio1 + ">Contactar</a>")
+</script></div>
+<p>Si queremos incluir una imagen el c&oacute;digo
+quedar&iacute;a: </p>
+<div class="codigo"><code>&lt;script
+language="JavaScript"&gt;
+<br>
+document.write("&lt;a href=" + "mail" + "to:" + nombre1 + "@" +
+dominio1 +"&gt;&lt;img
+src=" + "nombre_imagen
+border=0" + "&gt;&lt;/a&gt;");
+<br>
+&lt;/script&gt;</code> </div>
+<br>
+<div class="centrado"> Y ver&iacute;amos el resultado
+como:
+<script language="JavaScript">
+document.write("<a href="+"mail"+"to:"+nombre1+"@"+dominio1+"><img src="+"../imagenes/correo2.gif border=0 align=absmiddle"+"></a>")
+</script></div>
+<p>Como puedes comprobar en ambos casos la direcci&oacute;n
+se puede ver en la barra de estado del navegador, pero no
+ser&aacute; visible para los rastreadores porque no est&aacute;
+"escrita" literalmente en ning&uacute;n punto de la
+p&aacute;gina sino que la genera el script tomando los valores del
+archivo externo. Incluso podr&iacute;amos ocultar el propio signo @
+creando una nueva variable en el archivo ocultacorreo.js (var
+arroba="@";) y poniendo arroba donde ahora pone "@" en el script, de
+forma que nos quedar&iacute;an as&iacute;:</p>
+<div class="codigo"><code>&lt;script
+language="JavaScript"&gt;
+<br>
+document.write("&lt;a href=" + "mail" + "to:" + nombre1 + arroba +
+dominio1 + "&gt;Contactar&lt;/a&gt;");
+<br>
+&lt;/script&gt;</code></div>
+<br>
+<div class="codigo"><code>&lt;script
+language="JavaScript"&gt;<br>
+document.write("&lt;a href=" + "mail"
++ "to:" + nombre1 + arroba + dominio1 + "&gt;&lt;img
+src=" + "nombre_imagen border=0" + "&gt;&lt;/a&gt;");<br>
+&lt;/script&gt;</code> </div>
+<p><strong>Opci&oacute;n
+2:</strong> En este
+caso, en lugar de un texto o una imagen, nos vamos a permitir el lujo
+de mostrar la propia direcci&oacute;n de correo como texto de
+soporte del enlace, pero la construimos utilizando los valores del
+script para que no pueda ser cazada por los rastreadores. Como en el
+archivo con la lista de usuarios tenemos recogidos los valores de
+varios nombres de usuario y de dominios podemos construir las
+direcciones combin&aacute;ndolos como corresponda. El script para
+cada uno quedar&iacute;a como sigue, con los cambios en las
+variables nombre y dominio para adjudicar los valores correspondientes
+a cada caso:</p>
+<div class="codigo"><code>&lt;script
+language="JavaScript"&gt;
+<br>
+document.write("&lt;a href=" + "mail" + "to:" + nombre1 + "@" +
+dominio1 + "&gt;");
+document.write(nombre1 + "@" + dominio1 + "&lt;/a&gt;");<br>
+&lt;/script&gt;</code>
+</div>
+Los resultados quedar&iacute;an de la siguiente forma:
+<blockquote>
+  <table border="0" cellpadding="0" cellspacing="0" width="450">
+<tbody>
+  <tr>
+    <td width="28%">nombre1, dominio1 </td>
+    <td style="width: 77px;"><img src="../imagenes/flechaderecha.gif" hspace="10"></td>
+    <td style="width: 249px;">
+        
+        <script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre1 + "@" + dominio1 + ">")
+document.write(nombre1 + "@" + dominio1 + "</a>")
+        </script>
+        </td>
+  </tr>
+  <tr>
+    <td>nombre2, dominio2</td>
+    <td style="width: 77px;"><img src="../imagenes/flechaderecha.gif" hspace="10"></td>
+    <td style="width: 249px;">
+        
+        <script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre2 + "@" + dominio2 + ">")
+document.write(nombre2 + "@" + dominio2 + "</a>")
+        </script></td>
+  </tr>
+  <tr>
+    <td>nombre3, dominio1</td>
+    <td style="width: 77px;"><img src="../imagenes/flechaderecha.gif" hspace="10"></td>
+    <td style="width: 249px;">
+        
+        <script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre3 + "@" + dominio1 + ">")
+document.write(nombre3 + "@" + dominio1 + "</a>")
+        </script></td>
+  </tr>
+  <tr>
+    <td>nombre4, dominio1 </td>
+    <td style="width: 77px;"><img src="../imagenes/flechaderecha.gif" hspace="10"></td>
+    <td style="width: 249px;">
+        
+        <script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre4 + "@" + dominio1 + ">")
+document.write(nombre4 + "@" + dominio1 + "</a>")
+        </script></td>
+  </tr>
+  <tr>
+    <td>nombre5, dominio2</td>
+    <td style="width: 77px;"><img src="../imagenes/flechaderecha.gif" hspace="10"></td>
+    <td style="width: 249px;">
+        
+        <script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre5 + "@" + dominio2 + ">")
+document.write(nombre5 + "@" + dominio2 + "</a>")
+        </script></td>
+  </tr>
+    </tbody>
+  </table>
+</blockquote>
+<div class="practicas">
+<p><img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 57" title="Actividad 57" src="../imagenes/numeracion/cincuentaysiete.gif">Vamos a incluir la protecci&oacute;n antispam en nuestras p&aacute;ginas.</p>
+<ul>
+<li>Empezaremos por crear el archivo con las variables que
+utilizar&aacute; el script. Puedes hacerlo utilizando Notepad++ o
+cualquier otro editor de texto plano. Tambi&eacute;n puedes aprovechar
+el archivo<strong> <a href="javascript:void(0)" onclick="window.open('ocultacorreo.js','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=410,height=190')">ocultacorreo.js</a>&nbsp;</strong>sustituyendo
+en las variables nombre1 y dominio1 los datos correspondientes a tu
+direcci&oacute;n electr&oacute;nica. Sea cual sea la opci&oacute;n que
+hayas elegido gu&aacute;rdalo en la carpeta de trabajo.</li>
+<li>Abre en N|VU una p&aacute;gina en la que hayas incluido un enlace de correo (puede valerte la <strong>actividad53.html</strong>
+aunque ya no necesitaremos el "disfraz" que le hab&iacute;amos
+a&ntilde;adido para disimular la direcci&oacute;n). Tambi&eacute;n
+puedes optar por crear una p&aacute;gina nueva y crear un enlace de
+correo.</li>
+<li>Vete a la
+pesta&ntilde;a <img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" title="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png">
+e inserta en la cabecera la llamada al script tal como se indica en la explicaci&oacute;n anterior.</li>
+<li>Tambi&eacute;n en la pesta&ntilde;a&nbsp;<img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" title="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png">
+localiza el v&iacute;nculo&nbsp;de correo dentro del cuerpo de la
+p&aacute;gina y sustit&uacute;yelo por la llamada mediante javascript
+que se ha explicado para la opci&oacute;n 1.</li>
+<li>Guarda la p&aacute;gina como <strong>actividad57.html</strong> y pasa al navegador para comprobar que todo funciona correctamente.</li>
+<li>Cuando hayas conseguido que todo funcione correctamente puedes
+intentar&nbsp;incluir m&aacute;s direcciones en la p&aacute;gina o
+aplicar la opci&oacute;n 2. Si lo haces guarda la pr&aacute;ctica como <strong>actividad57b.html </strong>para diferenciarla de la anterior.<br>
+<img src="../imagenes/atencion.gif" align="left" height="25" width="28">En
+caso se que aparezcan errores lo m&aacute;s probable es que se deban a
+que te has comido alguna comilla. Ten en cuenta que su funci&oacute;n
+es la de encerrar los fragmentos de c&oacute;digo que se tienen que ir
+escribiendo para completar la instrucci&oacute;n y que no son variables
+que se extraen del archivo externo (si revisas atentamente los ejemplos
+ver&aacute;s que todas las variables se obtienen escribiendo su nombre
+sin encerrarlo entre comillas)</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

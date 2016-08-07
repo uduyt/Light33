@@ -1,0 +1,575 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Gestor de sitios de N|VU</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+    <link rel="stylesheet" href="filezilla.css" type="text/css">
+
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Publicaci&oacute;n&gt;&gt;gestor NVU</p>
+
+</div>
+<div id="flechadcha">
+<a href="filezilla.htm" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="../estilos/menus.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+<h2>El administrador de sitios de N|VU</h2>
+<h3>Datos hipot&eacute;ticos</h3>
+
+
+
+<p>Explicar el acceso v&iacute;a FTP a un servidor puede ser
+una tarea un tanto compleja si no recurrimos a un ejemplo concreto. Es
+por ello por lo que voy a utilizar unos datos para definir a un usuario
+hipot&eacute;tico de forma que contemos con ellos como referencia y
+puedas hacer un paralelismo con tu situaci&oacute;n real.</p>
+
+
+
+<p><br>
+
+
+
+</p>
+
+
+
+<div class="datos">
+<dl>
+
+
+
+  <dt>Nombre real:</dt>
+
+
+
+  <dd>Ra&uacute;l Luna</dd>
+
+
+
+  <dt>Direcci&oacute;n e-mail :&nbsp;</dt>
+
+
+
+  <dd>rluna@platea.pntic.mec.es</dd>
+
+
+
+  <dt>Servidor:</dt>
+
+
+
+  <dd>platea.pntic.mec.es</dd>
+
+
+
+  <dt>Nombre de usuario:&nbsp;</dt>
+
+
+
+  <dd>rluna&nbsp;</dd>
+
+
+
+  <dt>Contrase&ntilde;a:</dt>
+
+
+
+  <dd>jarb236</dd>
+
+
+
+</dl>
+
+
+
+</div>
+
+
+
+<h3>Configuraci&oacute;n de
+una
+conexi&oacute;n</h3>
+
+
+
+<p>Como ya comentamos en la introducci&oacute;n vamos a
+utilizar como modelo el servicio ofrecido por el CNICE que puede
+presentar caracter&iacute;sticas similares a las de muchos
+proveedores. Si tu proveedor de acceso es diferente podr&aacute;s
+tomarlo como referencia pero tendr&aacute;s que consultar la
+documentaci&oacute;n sobre disponibilidad e instrucciones
+espec&iacute;ficas de acceso en tu caso. </p>
+
+
+
+<p>Tomemos pues los datos del usuario cuya direcci&oacute;n
+de correo es <em>rluna@platea.pntic.mec.es </em>que, por
+lo que hemos visto hasta el momento, tendr&aacute; como nombre de
+usuario para el servicio de correo lo que aparece antes del signo @,
+esto es, <strong>rluna. </strong> En la
+mayor&iacute;a de los servidores tambi&eacute;n ser&aacute;
+este el nombre de usuario para acceder al servicio de ftp, y
+as&iacute; ocurre en el caso del CNICE. Si el nombre de usuario es
+el mismo que para el correo electr&oacute;nico es l&oacute;gico
+suponer que la contrase&ntilde;a ser&aacute; tambi&eacute;n
+la misma y as&iacute; ocurre tambi&eacute;n en este caso.</p>
+
+
+
+<p class="avisos">En algunos casos el nombre de usuario no
+es s&oacute;lo lo
+que precede al signo @ sino que puede ser toda la direcci&oacute;n
+de correo electr&oacute;nico u otro dato que te habr&aacute;
+suministrado tu proveedor.</p>
+
+
+
+<p>En cuanto al nombre del ordenador en el que tenemos reservado
+el espacio, en el caso de las cuentas del CNICE coincide con el
+ordenador en el que se almacena nuestro correo, por lo que en el
+ejemplo que estamos viendo ser&iacute;a <strong>platea.pntic.mec.es</strong>,
+aunque hay que tener en cuenta que este caso no es tan general como en
+lo referido al nombre de usuario y la contrase&ntilde;a: hay muchos
+servidores en los que el espacio de almacenamiento est&aacute;
+alojado en un servidor con un nombre diferente al del correo.</p>
+
+
+
+<p>Veamos pues un resumen de un par de situaciones que pueden
+cubrir una gran parte de la casu&iacute;stica.</p>
+
+
+
+<table style="width: 100%;" border="0" cellspacing="2">
+
+
+
+  <tbody>
+
+
+
+    <tr>
+
+
+
+      <th width="22%">
+      
+      
+      <div>e-mail</div>
+
+
+
+      </th>
+
+
+
+      <th width="29%">
+      
+      
+      <div>usuario</div>
+
+
+
+      </th>
+
+
+
+      <th width="12%">
+      
+      
+      <div>contrase&ntilde;a</div>
+
+
+
+      </th>
+
+
+
+      <th width="37%">
+      
+      
+      <div>ordenador remoto</div>
+
+
+
+      </th>
+
+
+
+    </tr>
+
+
+
+    <tr bgcolor="#f9ecb9">
+
+
+
+      <td>rluna@platea.pntic.mec.es</td>
+
+
+
+      <td>lo que precede a @ = rluna</td>
+
+
+
+      <td>la misma del correo</td>
+
+
+
+      <td>el mismo del correo =
+platea.pntic.mec.es</td>
+
+
+
+    </tr>
+
+
+
+    <tr bgcolor="#f9ecb9">
+
+
+
+      <td>mercedesgr@ya.com</td>
+
+
+
+      <td>todo el e-mail =
+mercedesgr@ya.com</td>
+
+
+
+      <td>la misma del correo</td>
+
+
+
+      <td>diferente al de correo =
+ftp.ya.com</td>
+
+
+
+    </tr>
+
+
+
+  
+  
+  </tbody>
+</table>
+
+
+
+<p>Una vez conocidos estos datos podremos empezar a trabajar
+  con el administrador de sitios de N|VU. </p>
+<h2>Trabajando con el administrador de sitios de N|VU</h2>
+<p>Se denomina administrador de sitios a una herramienta capaz de
+gestionar la transferencia de archivos entre un sitio local y uno
+remoto, con la particularidad de poder&nbsp;sincronizar ambos
+sitios,
+de forma que no sea necesario manejar los archivos individualmente,
+sino que se puedan comparar las fechas y actualizar todo el sitio en
+una sola operaci&oacute;n. En este sentido convendr&iacute;a
+se&ntilde;alar es que el gestor de sitios de N|VU es un componente
+del
+programa al que a&uacute;n le queda bastante para convertirse en
+un
+verdadero gestor de sitios, puesto que solo ser&iacute;a funcional
+para
+sitios muy sencillos. As&iacute; pues, podr&iacute;amos
+considerar que
+es poco m&aacute;s que un gestor de ftp con alguna particularidad
+en
+cuanto a la posibilidad de enviar las im&aacute;genes junto con la
+p&aacute;gina.</p>
+
+<p>Lo primero que vamos a hacer es configurar una
+conexi&oacute;n para
+poder establecer un sitio de publicaci&oacute;n. Para ello lo mejor
+es
+que veas el <a href=" javascript:void(0=" onclick="window.open('imagenes/gestordesitios.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=750,height=340')">v&iacute;deo
+explicativo</a>.</p>
+
+<p class="centrado"><img style="width: 701px; height: 300px;" alt="Resumen de configuraci&oacute;n de publicaci&oacute;n con N|VU" title="Resumen de configuraci&oacute;n de publicaci&oacute;n con N|VU" src="imagenes/configplatea.png"></p>
+
+<p>La imagen anterior muestra un resumen del proceso de
+creaci&oacute;n
+de un sitio remoto. Accedemos al mismo mediante la opci&oacute;n de
+men&uacute; <span class="refmenu">editar <img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"> configuraci&oacute;n
+de
+publicaci&oacute;n</span> tras lo que se abre el panel en el
+que:</p>
+
+<ol>
+
+  <li>Nombramos el sitio</li>
+
+  <li>Escribimos la direcci&oacute;n prefij&aacute;ndola con la
+indicaci&oacute;n
+de protocolo http:// (Se puede utilizar la virgulilla o bien indicar
+directamente el nombre de usuario)</li>
+
+  <li>Especificamos la direcci&oacute;n de
+conexi&oacute;n ftp que
+ser&aacute; la misma que la de acceso web pero precedida por la
+indicaci&oacute;n de protocolo ftp:// (En el caso de las cuentas
+del
+CNICE es conveniente especificar el directorio public_html para que
+lleguemos directamente a la carpeta de publicaci&oacute;n)</li>
+
+  <li>Introducimos nombre y contrase&ntilde;a. (Si no se
+guarda la
+contrase&ntilde;a el programa dar&aacute; un mensaje de error
+indicando
+que los datos son incorrectos) y aceptamos</li>
+
+</ol>
+
+<p class="avisos">Si hemos dejado sin guardar la
+contrase&ntilde;a el
+programa seguir&aacute; presentando el mensaje de error hasta que
+no lo
+reiniciemos aunque lo corrijamos en&nbsp;la
+configuraci&oacute;n de
+publicaci&oacute;n y la guardemos.</p>
+
+<p><img class="flotizq" style="width: 233px; height: 166px;" alt="Panel del administrador de sitios" title="Panel del administrador de sitios" src="imagenes/ventanaadminsitios.png">Cuando
+hemos completado el proceso previo veremos aparecer nuestro sitio en la
+zona reservada al administrador de sitios en la parte izquierda de la
+pantalla. Como lo habitual es que tengamos esta zona oculta basta con
+pulsar la tecla <img style="width: 26px; height: 27px;" alt="F9" src="../imagenes/teclaf9.png"> para que se
+pueda visualizar.</p>
+
+<p>Un doble clic sobre el nombre del sitio iniciar&aacute; la
+conexi&oacute;n y nos mostrar&aacute; el contenido del sitio
+remoto,
+activando los iconos de su propia barra de herramientas <img style="width: 226px; height: 26px;" alt="Herramientas del administrador de sitios" title="Herramientas del administrador de sitios" src="imagenes/botonesadminsitios.png">
+que nos permitir&aacute;n actualizar la vista, crear una carpeta,
+renombrar un archivo, borrarlo o parar la acci&oacute;n que se
+est&eacute; realizando respectivamente.</p>
+
+<br>
+
+<div class="practicas">
+<img style="width: 29px; height: 29px;" alt="Actividad 99" title="Actividad 99" src="../imagenes/numeracion/noventaynueve.gif">
+<p>Crea un sitio
+utilizando los datos que te haya suministrado tu
+proveedor</p>
+
+<p>Con&eacute;ctate al sitio y crea una carpeta llamada
+ejercicios</p>
+
+</div>
+
+<h3>Subir una p&aacute;gina al servidor</h3>
+
+<p class="centrado"><img style="width: 472px; height: 339px;" alt="Panel para indicar los detalles de publicaci&oacute;n de una p&aacute;gina" title="Panel para indicar los detalles de publicaci&oacute;n de una p&aacute;gina" src="imagenes/publicando.png"></p>
+
+<p>Como puedes comprobar en la imagen precedente, cuando pulsamos
+el icono <img style="width: 49px; height: 40px;" alt="Publicar" src="../imagenes/icopublicar.png">
+aparece un panel en el que podemos especificar varios datos:</p>
+
+<ul>
+
+  <li>Seleccionar el sitio de publicaci&oacute;n si tenemos
+varios creados</li>
+
+  <li>Incluir el t&iacute;tulo de la p&aacute;gina y el
+nombre con el que se publicar&aacute;, aunque estos datos se
+extraer&aacute;n de la propia p&aacute;gina.</li>
+
+  <li>Indicar en qu&eacute; subdirectorio del sitio se
+guardar&aacute; la p&aacute;gina si no lo va a hacer en el
+principal</li>
+
+  <li>Optar por incluir las im&aacute;genes y el resto de los
+archivos usando la misma direcci&oacute;n de la p&aacute;gina u
+otro subdirectorio.</li>
+
+</ul>
+
+<img class="flotder" style="width: 365px; height: 375px;" alt="Informaci&oacute;n del resultado de la publicaci&oacute;n" title="Informaci&oacute;n del resultado de la publicaci&oacute;n" src="imagenes/subidacorrecta.png">
+Si tenemos bien configurado el sitio de publicaci&oacute;n,
+los&nbsp;&uacute;nicos requisitos necesarios para que todo
+salga correctamente son:<br>
+
+<ol>
+
+  <li>Que los subdirectorios en los que vamos a almacenar los
+archivos existan previamente.</li>
+
+  <li>Que los nombres de los mismos y de los propios archivos no
+incluyan tildes, e&ntilde;es ni espacios.<br clear="all">
+
+  </li>
+
+</ol>
+
+<div class="practicas">
+<img style="width: 29px; height: 29px;" alt="Actividad 100" title="Actividad 100" src="../imagenes/numeracion/cien.gif">
+<ul>
+  <li>Con&eacute;ctate a
+tu sitio web y crea dentro de la
+carpeta <span class="refmenu">ejercicios</span> una
+carpeta llamada <span class="refmenu">imagenes</span>
+(sin tilde)</li>
+  <li>Abre la p&aacute;gina <em>practicasnvu.html</em>
+que se encuentra en la carpeta <em>publicacion </em>(sin
+tilde) de este CD&nbsp;</li>
+  <li>Pulsa el icono&nbsp;<img style="width: 49px; height: 40px;" alt="Publicar" src="../imagenes/icopublicar.png"> y elige en primer lugar
+la publicaci&oacute;n de la p&aacute;gina sin incluir las
+im&aacute;genes.</li>
+  <li>Accede con el navegador a la p&aacute;gina para ver el
+resultado y comprueba que nos falta la imagen. Ten en cuenta que,
+seg&uacute;n los datos que hemos utilizado su
+localizaci&oacute;n, si no le has cambiado el nombre a la
+p&aacute;gina ser&aacute;:&nbsp;<br>
+http://tu.servidor/tu.nombre.de.usuario/ejercicios/practicasnvu.html</li>
+</ul>
+
+
+
+
+
+</div>
+
+<p class="avisos">Una vez que una p&aacute;gina se ha
+publicado el
+bot&oacute;n de publicaci&oacute;n queda inactivo hasta que no
+se realice alguna modificaci&oacute;n en la p&aacute;gina.
+Puedes optar por introducir un espacio y borrarlo o bien por utilizar
+la opci&oacute;n de <span class="refmenu">men&uacute;
+archivo </span><img class="refmenu" style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"><span class="refmenu">
+publicar como</span>.</p>
+
+<div class="practicas">
+<p><img style="width: 29px; height: 29px;" alt="Actividad 101" title="Actividad 101" src="../imagenes/numeracion/cientouno.gif">Usando cualquiera de los dos m&eacute;todos que acabamos
+de indicar vuelve a publicar la p&aacute;gina pero incluyendo las
+im&aacute;genes dentro del subdirectorio <em>imagenes. </em>Como
+ese subdirectorio est&aacute; dentro del que hemos llamado
+ejercicios hay que indicarlo tal como aparec&iacute;a en la imagen
+que encabeza este ep&iacute;grafe.</p>
+
+<p>Carga la p&aacute;gina en el navegador y comprueba que la
+p&aacute;gina se ve
+ahora correctamente.</p>
+
+</div>
+
+<div class="practicas">
+<p><img style="width: 29px; height: 29px;" alt="Actividad 102" title="Actividad 102" src="../imagenes/numeracion/cientodos.gif">En ocasiones, el administrador de sitios nos confunde porque
+duplica
+el nombre de los archivos, as&iacute; que vamos a utilizar el icono
+<img style="width: 16px; height: 16px;" alt="Recargar" title="Recargar" src="imagenes/botonrecargar.png">para
+actualizar el listado y que no
+haya dudas.</p>
+
+<ul>
+  <li>Se&ntilde;ala la imagen <em>lg_forma.gif</em>
+que debe estar en la carpeta
+    <span class="refmenu">imagenes</span><em> </em>del
+servidor y utiliza
+el icono <img style="width: 13px; height: 13px;" alt="Borrar" title="Borrar" src="imagenes/botonborrar.png"> para
+eliminarla.</li>
+  <li>Abre la p&aacute;gina <em>practicasnvu2.html</em>
+que se encuentra en la carpeta <span class="refmenu">publicacion</span><em>
+    </em>(sin
+tilde) de este CD. Aunque es muy similar a la que hemos utilizado antes
+su propio contenido indica de d&oacute;nde procede ahora la imagen
+del
+logotipo.</li>
+  <li>Haz una primera publicaci&oacute;n sin incluir las
+im&aacute;genes. Comprueba que
+la carpeta <span class="refmenu">imagenes</span>
+del servidor sigue
+vac&iacute;a.</li>
+  <li>Comprueba visitando la p&aacute;gina publicada que, a
+pesar de no haber
+subido las im&aacute;genes, la p&aacute;gina se ve
+correctamente al cargarse mediante
+un v&iacute;nculo absoluto.</li>
+  <li>Haz una segunda publicaci&oacute;n de la p&aacute;gina
+incluyendo ahora la
+publicaci&oacute;n de im&aacute;genes. Comprueba
+c&oacute;mo el programa cambia la
+referencia absoluta por una relativa</li>
+</ul>
+
+
+
+
+
+</div>
+
+<p> Como has podido comprobar la funcionalidad de publicar una
+p&aacute;gina con sus im&aacute;genes asociadas es bastante
+interesante, ya que nos garantiza que todos los archivos que componen
+la misma se enviar&aacute;n al servidor.</p>
+
+<p>A pesar de ello, a&uacute;n superando a los programas de
+ftp puros,
+todav&iacute;a quedan algunas cuestiones que mejorar en este
+componente
+como, por ejemplo:&nbsp;</p>
+
+<ul>
+
+  <li>la posibilidad de que cree autom&aacute;ticamente las
+carpetas
+seg&uacute;n la estructura de los enlaces relativos de la
+p&aacute;gina
+en modo local, de forma que se puedan almacenar en varias carpetas y no
+en una &uacute;nica.</li>
+
+  <li>comparar la fecha y la hora de los archivos locales y
+remotos
+para poder sincronizar todo un sitio web sin tener que subirlo archivo
+por archivo.</li>
+  </ul>
+
+<div class="practicas">
+  <p><img style="width: 29px; height: 29px;" alt="Actividad 103" title="Actividad 103" src="../imagenes/numeracion/cientotres.gif"> Con&eacute;ctate
+    a tu espacio web.</p>
+  <ul><li>Comprueba si existe la carpeta public_html y &aacute;brela.(Recuerda
+      que esta es la carpeta por defecto en los servidores del CNICE pero podr&iacute;a
+      no ser necesaria o llamarse de otra forma si est&aacute;s alojando tu web
+      en otro servidor)</li>
+    <li>Transfiere los archivos que componen tu sitio WEB. Puedes hacerlo utilizando
+      el gestor de N|VU, <a href="filezilla.htm">Filezilla</a> o el explorador
+      tal como se indica en las explicaciones para <a href="ftp98.htm" title="Recordar procedimiento con el explorador de Windows 98">Windows
+      98</a> y <a href="ftpxp.htm" title="Recordar procedimiento con el explorador de Windows XP">Windows
+      XP</a> o con <a href="gftp.htm">gFTP</a> si est&aacute;s trabajando en
+      GNU/Linux</li>
+    <li>Comprueba que las p&aacute;ginas se ven correctamente visitando la ubicaci&oacute;n
+      en la red. En el caso del CNICE responder&aacute; al esquema:<br>
+      <b>http://ordenador.pntic.mec.es/nombreusuario/</b> o <b>http://ordenador.pntic.mec.es/~nombreusuario/</b> pero
+      podr&iacute;a ser diferente si lo alojas en otros proveedores.</li>
+    <li>Si hay alg&uacute;n archivo que hayas olvidado (suele ocurrir en la mayor&iacute;a
+      de las ocasiones) vuelve a realizar una conexi&oacute;n ftp y env&iacute;alo
+      al servidor.</li>
+    <li>Comprueba que todas las p&aacute;ginas se ven correctamente cuando las
+      consultas en la red,&nbsp;igual que se ve&iacute;an en modo local.</li>
+  </ul>
+</div>
+<p>&nbsp;</p>
+<p></p>
+</div>
+</body>
+</html>

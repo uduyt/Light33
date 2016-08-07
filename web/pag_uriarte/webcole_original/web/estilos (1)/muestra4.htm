@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+  <title>Muestra de estilos</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <link href="muestrasdeestilos.css" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+<!--
+li em {color: green}
+-->
+  </style>
+  <script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+  </script>
+</head>
+
+
+<body>
+
+<div class="zonaizq">
+  
+<div class="codigo"> 
+    
+<p><code>&lt;head&gt;<br>
+
+      ...
+      <br>
+
+      &lt;style type="text/css"&gt;<br>
+
+      li em {color: green}<br>
+
+      &lt;/style&gt;<br>
+
+      &lt;/head&gt;
+      <br>
+
+      &lt;body&gt;<br>
+
+      &lt;p&gt;La palabra &lt;em&gt;"atenci&oacute;n"&lt;/em&gt; est&aacute; 
+      enfatizada pero se presenta en su color normal porque:&lt;/p&gt;<br>
+
+&lt;ol&gt;<br>
+
+      &lt;li&gt;Est&aacute; enfatizada pero... &lt;/li&gt;<br>
+
+      &lt;li&gt;&lt;em&gt;No pertenece a una lista&lt;/em&gt;&lt;/li&gt;<br>
+
+&lt;/ol&gt;<br>
+
+      &lt;p&gt;La segunda condici&oacute;n tambi&eacute;n est&aacute; enfatizada, 
+      pero en este caso pertenece a una lista y se ve en verde &lt;/p&gt;&lt;/body&gt; 
+      </code><br>
+ 
+      </p>
+
+    </div>
+
+<div class="flotder"><a href="javascript:void(0)" onclick="MM_showHideLayers('derecha','','show')">Visualizar el formato resultante <img src="../imagenes/flechamenu.png" align="middle" border="0" height="13" width="14">
+</a> </div>
+
+</div>
+
+
+<div class="zonadcha" id="derecha">
+  
+<p>La palabra <em>"atenci&oacute;n"</em> est&aacute; enfatizada pero se presenta en su color normal porque:</p>
+
+  
+<ol>
+
+    <li>Est&aacute; enfatizada pero... </li>
+
+    <li><em>No pertenece a una lista</em></li>
+
+  
+</ol>
+
+  
+<p>La segunda condici&oacute;n tambi&amp;eactte;n est&aacute; enfatizada, pero en este caso pertenece a una lista y se ve en verde.</p>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+  
+
+
+  
+  <title>Redireccionamiento con etiquetas meta</title>
+  <meta content="Ra&uacute;l Luna" name="author">
+
+
+  
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+</head>
+
+
+<body>
+
+
+<h2>Redireccionamiento con etiquetas meta</h2>
+
+
+Seguramente te has encontrado en alguna ocasi&oacute;n con una
+p&aacute;gina en la que un mensaje te avisaba de que
+ser&iacute;as redireccionado hacia otra diferente en el plazo de
+unos segundos. El motivo suele ser que se ha migrado la web a otro
+servidor y mantenemos este aviso para que los visitantes que acudan a
+la p&aacute;gina antigua puedan volver a encontrarnos. Si tenemos
+la posibilidad de conservar un espacio m&iacute;nimo en el servidor
+antiguo puede ser una interesante t&eacute;cnica para prestar una
+ayuda a los navegantes que a&uacute;n no hayan actualizado sus
+marcadores o favoritos con la nueva direcci&oacute;n.<br>
+
+
+<br>
+
+
+<br>
+
+
+<div class="codigo">
+<p>La t&eacute;cnica para realizar esta mudanza es muy
+sencilla ya que&nbsp;basta con introducir en la secci&oacute;n
+<code>&lt;head&gt;</code> la siguiente etiqueta.</p>
+
+
+<p><code>&lt;meta http-equiv="refresh"
+&nbsp;content="n&uacute;mero de segundos de espera;
+url=direcci&oacute;n de la p&aacute;gina a la que
+saltaremos"&gt;</code></p>
+
+
+<p class="avisos">F&iacute;jate en la
+posici&oacute;n de las comillas, porque el atributo <code>content</code> incluye
+tanto el tiempo como la <acronym title="Uniform Resource Locator= Localizador Uniforme de Recurso">URL</acronym> de destino, separados por un punto y coma</p>
+
+
+<p>Este es el "motor" encargado de la acci&oacute;n, pero lo
+habitual es que incluyamos un peque&ntilde;o mensaje en el cuerpo
+del documento similar al que se muestra en el siguiente
+p&aacute;rrafo.</p>
+
+
+<p class="indentado25"><em>Esta p&aacute;gina ha
+cambiado
+de direcci&oacute;n. Su navegador ser&aacute; redirigido
+autom&aacute;ticamente en "X" segundos. Le rogamos que actualice
+sus marcadores /favoritos.</em></p>
+
+
+<p class="indentado25"><em>En caso de que no se
+produzca la
+redirecci&oacute;n autom&aacute;tica pulse <a title="Este enlace apuntar&iacute;a a la nueva direcci&oacute;n" href="javascript:void(0)">aqu&iacute;</a>.</em></p>
+
+
+<p class="avisos"><em></em>Por cuestiones de
+accesibilidad es
+importante que incluyas esta informaci&oacute;n.
+Algunas&nbsp;personas
+con dificultades perceptivas podr&iacute;an sentirse desorientadas
+ya
+que, dependiendo de los navegadores, puede ocurrir que la redirecci&oacute;n autom&aacute;tica no deje huella en
+el
+historial de navegaci&oacute;n (no podemos volver a la
+p&aacute;gina a
+la que pretend&iacute;amos ir originalmente usando las flechas de
+vuelta atr&aacute;s del navegador).</p>
+
+
+</div>
+
+
+</body>
+</html>

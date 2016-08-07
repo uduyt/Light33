@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+
+<html>
+
+<head>
+
+<title>Crear estilos</title>
+
+<link href="../estilo.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" language="JavaScript">
+
+<!-- 
+
+  function cargalogo(nombre) {
+
+   parent.arriba.location.href=nombre;
+
+}
+
+
+// -->
+
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<style type="text/css">
+<!--
+th {background-color: #000066;
+	color:#ffffff;}
+-->
+</style>
+</head>
+
+<body onload="cargalogo('t24f.htm');" bgcolor="#FFFFFF">
+
+<p> Respecto a las listas son tres las propiedades que podemos modificar: el
+  tipo de marcador utilizado, su posici&oacute;n respecto al texto y la posibilidad
+  de utilizar una imagen como marcador.</p>
+
+<p>Tipos de marcadores</p>
+<p><strong>Propiedad:</strong> list-style-type</p>
+<p><strong>Valores:</strong> Son todos los establecidos por la especificaci&oacute;n
+HTML 4.01 tal como se muestra en el ejemplo. Adem&aacute;s de estos podr&iacute;an hay tambi&eacute;n
+definida una lista de posibilidades en otros idiomas para las listas ordenadas </p>
+<div class="ejemplo"><table width="50%" >
+  <tr>
+    <th scope="col">listas desordenadas</th>
+    <th scope="col">listas ordenadas</th>
+  </tr>
+  <tr>
+    <td><ul>
+  <li style="list-style-type:disc"> disc    </li>
+  <li style="list-style-type:circle">circle </li>
+  <li style="list-style-type:square"> square </li></ul>
+</td>
+    <td><ol>
+  <li style="list-style-type:decimal"> decimal </li>
+  <li  style="list-style-type:decimal-leading-zero"> decimal-leading-zero </li>
+  <li style="list-style-type:lower-roman"> lower-roman </li>
+  <li style="list-style-type:upper-roman"> upper-roman </li>
+  <li style="list-style-type:lower-alpha"> lower-alpha </li>
+  <li style="list-style-type:upper-alpha"> upper-alpha  </li>
+  </ol></td>
+  </tr>
+</table>
+ 
+</div>
+<p>Posici&oacute;n</p>
+<p><b>Propiedad:</b> list-type-position</p>
+<p><b>Valores:</b> Con el valor <strong>outside </strong> el marcador de la lista
+  se colocar&aacute; tal como hemos visto en los ejemplos fuera del bloque formado por
+  el texto del elemento, mientras que con <strong>inside</strong> se integrar&aacute;
+  en el primer rengl&oacute;n del elemento </p>
+<div class="ejemplo">
+  <p><b>Ejemplos:</b> </p>
+<ol style="list-style-position:inside">
+  <li style="list-style-type:decimal; background-color:#FFCC99"> Este &iacute;tem
+    de la lista tiene definida la posici&oacute;n del marcador como outside,
+    por lo que se muestra fuera del cuadro creado por el contenido textual del
+    mismo. Es la posici&oacute;n a la que estamos
+    m&aacute;s habituados.</li>
+  <li  style="list-style-type:decimal-leading-zero; list-style-position:inside; background-color:#0099CC"> Sin
+    embargo, este &iacute;tem
+    tiene definida la posici&oacute;n del marcador como inside, por lo que se
+    integra en el primer rengl&oacute;n del texto formando parte del mismo cuadro
+    </li>
+  </ol>
+<p>Se ha utilizado tambi&eacute;n un color de fondo para mostrar c&oacute;mo la posici&oacute;n <strong>inside </strong> se
+  integra dentro del cuadro formado por el elemento, mientras que si el marcador
+  tiene el valor <strong>outside</strong> queda fuera del mismo. </p>
+</div>
+<p>Imagen como marcador </p>
+<p><b>Propiedad:</b> list-style-image</p>
+<p><b>Valores:</b> habr&aacute; que indicar la situaci&oacute;n de la imagen con la sintaxis
+  url(ruta_hacia_la_imagen)</p>
+<div class="ejemplo">
+  <p><b>Ejemplos:</b> <b>Ejemplos:</b> </p>
+  <ul style="list-style-image: url(../imagenes/Rd_pin.gif)">
+    <li> En la etiqueta &lt;ul&gt; se ha incluido un estilo en l&iacute;nea que incluye
+      la ruta hacia esta imagen. (Recuerda que habr&iacute;a sido preferible ponerlo
+      en una hoja interna o, mejor a&uacute;n, externa utilizando un selector de tipo
+      id para cada lista si tenemos varias y  queremos individualizar las
+      im&aacute;genes para cada una de ellas. Como no se ha especificado ninguna otra
+      propiedad la posici&oacute;n por defecto es outside. </li>
+    <li>Un segundo &iacute;tem marcado con la misma imagen.</li>
+  </ul>
+  <p>&nbsp;</p>
+</div>
+<p class="avisos"><img src="../imagenes/atencion.gif" width="28" height="25" align="left">Cualquiera de las tres propiedades puede aplicarse a un ítem en particular &lt;li> o
+  a toda la lista &lt;ul&gt; u &lt;ol&gt; seg&uacute;n corresponda. La aplicaci&oacute;n como propiedad
+  de la lista, bien sea en una hoja externa o interna, resulta siempre mucho
+  m&aacute;s c&oacute;moda puesto que garantiza la herencia y nos evita tener que repetir las
+  propiedades en cada uno de los elementos. </p>
+<div class="practicas"> 
+
+  <p><img src="../imagenes/cincuentaycinco.gif" width="29" height="29" align="left"> </p>
+
+<ul>
+
+  <li>Investiga las posibilidades de las propiedades de lista e incorp&oacute;ralas
+    a tu hoja de estilo si lo consideras conveniente.</li>
+  </ul>
+
+</div>
+
+
+</body>
+
+
+
+</html>
+

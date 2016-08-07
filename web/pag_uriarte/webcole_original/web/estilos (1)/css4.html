@@ -1,0 +1,463 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>CSS - Creando estilos para el texto</title>
+
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft -->
+<!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+  <link rel="stylesheet" href="../nvu2005.css" type="text/css">
+
+  <link rel="stylesheet" href="css3.css" type="text/css">
+
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;Estilos para el texto</p>
+
+</div>
+
+<div id="flechadcha">
+<a href="css5.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="css3.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+
+<p>Vamos a hacer un recorrido por las propiedades que afectan al
+texto y su forma
+de modificarlas mediante estilos.</p>
+
+<h2>Color</h2>
+
+<p>El atributo de color puede aplicarse al texto, pero
+tambi&eacute;n a otros elementos de la p&aacute;gina. Se puede
+acceder a esta propiedad desde la pesta&ntilde;a <span class="refmenu">texto</span> del editor de CSS. Cuando
+se aplique al color de fondo se encontrar&aacute; en la
+pesta&ntilde;a del mismo nombre.</p>
+
+<div id="listacolores">
+<ul>
+
+  <li class="black">black</li>
+
+  <li class="silver">silver</li>
+
+  <li class="gray">gray</li>
+
+  <li class="white">white</li>
+
+  <li class="maroon">maroon</li>
+
+  <li class="red">red</li>
+
+  <li class="purple">purple</li>
+
+  <li class="fuchsia">fuchsia</li>
+
+  <li class="green">green</li>
+
+  <li class="lime">lime</li>
+
+  <li class="olive">olive</li>
+
+  <li class="yellow">yellow</li>
+
+  <li class="navy">navy</li>
+
+  <li class="blue">blue</li>
+
+  <li class="teal">teal</li>
+
+  <li class="aqua">aqua</li>
+
+</ul>
+
+<br clear="all">
+
+</div>
+
+<p><strong>Propiedad:</strong> <code>color</code>
+</p>
+
+<p><b>Valores y ejemplos:</b> Para nombrar un color
+pueden utilizarse varios m&eacute;todos: </p>
+
+<ul>
+
+  <li>Los nombres reservados que aparecen en cada uno de los
+colores de la figura precedente utilizando <span style="color: maroon;">color:maroon</span> </li>
+
+  <li>Combinaci&oacute;n RGB (rojo, verde, azul) utilizando
+la notaci&oacute;n <span style="color: rgb(150, 23, 220);">color:rgb(150,23,220)
+    </span>donde indicamos los valores decimales de cada color.</li>
+
+  <li>Combinaci&oacute;n RGB (rojo, verde, azul) utilizando
+la notaci&oacute;n <span style="color: rgb(191, 0, 119);">color:rgb(75%,0%,47%)</span>
+donde indicamos los valores porcentuales de cada color.</li>
+
+  <li>Combinaci&oacute;n RGB (rojo, verde, azul) utilizando
+la notaci&oacute;n hexadecimal <span style="color: rgb(165, 55, 111);">color:#a5376f</span>
+donde los valores de cada color son representados por cada una de las
+tres parejas y precedidos por el signo #</li>
+
+  <li>Combinaci&oacute;n RGB (rojo, verde, azul) utilizando
+la notaci&oacute;n hexadecimal <span style="color: rgb(170, 85, 51);">color:#a53</span>
+donde los valores de cada color son representados por un
+&uacute;nico n&uacute;mero o letra y precedidos por el signo #
+(s&oacute;lo permite 4096 colores ya que completa los pares
+duplicando: el ejemplo anterior se mostrar&iacute;a como si
+hubi&eacute;ramos definido <span style="color: rgb(170, 85, 51);">color:#aa5533</span>)</li>
+
+  <li>Otra posibilidad que permite hacer que el entorno se ajuste
+a las preferencias habituales del usuario es utilizar alguna de las
+palabras reservadas siguientes:</li>
+
+  <dl>
+
+    <dt><code>Desktop</code></dt>
+
+    <dd>Color del escritorio</dd>
+
+    <dt><code>ActiveCaption</code></dt>
+
+    <dd>Color de la barra de men&uacute; de la ventana activa</dd>
+
+    <dt><code>CaptionText</code></dt>
+
+    <dd>Color del texto de la barra de t&iacute;tulo de la
+ventana activa Ej:<span style="color: captiontext; background-color: activecaption;">Texto
+color CaptionText, fondo color ActiveCaption</span></dd>
+
+    <dt><code>InActiveCaption</code></dt>
+
+    <dd>Color de la barra de men&uacute; de la ventana
+inactiva</dd>
+
+    <dt><code>InActiveCaptionText</code></dt>
+
+    <dd>Color del texto de la barra de t&iacute;tulo de la
+ventana inactiva Ej:<span style="color: inactivecaptiontext; background-color: inactivecaption;">Texto
+color InActiveCaptionText, fondo color InActiveCaption</span></dd>
+
+    <dt><code>InfoBackground</code></dt>
+
+    <dd>Color de los mensajes de ayuda emergentes</dd>
+
+    <dt><code>InfoText</code></dt>
+
+    <dd>Color del texto de los mensajes de ayuda emergentes Ej:<span style="color: infotext; background-color: infobackground;">Texto
+color InfoText, fondo color InfoBackground</span></dd>
+
+    <dt><code>Menu</code></dt>
+
+    <dd>Color de los men&uacute;s</dd>
+
+    <dt><code>MenuText</code></dt>
+
+    <dd>Color del texto de los men&uacute;s</dd>
+
+    <dt><code>Window</code></dt>
+
+    <dd>Color del contenido de una ventana vac&iacute;a.</dd>
+
+    <dt><code>WindowText</code></dt>
+
+    <dd>Color predeterminado del texto en una ventana.</dd>
+
+  </dl>
+
+</ul>
+
+<h2>Espaciado de letra</h2>
+
+<p>Podemos especificar una cantidad para aumentar o disminuir el
+espaciado
+entre las letras de un texto. Esta propiedad no est&aacute;
+disponible
+en el editor de CSS de N|VU por lo que habr&aacute; que
+introducirla
+manualmente</p>
+
+<p><strong>Propiedad: </strong><code>letter-spacing</code>
+</p>
+
+<p><strong>Valores:</strong> Se pueden expresar
+introduciendo un valor entero que indique la medida en pixels (px),
+puntos (pt), pulgadas (in), cent&iacute;metros (cm), anchura de la
+letra eme (em) o altura de la letra equis may&uacute;scula(ex). Se
+utiliza el punto como separador decimal en lugar de la coma. Para
+disminuir el espaciado se utilizan valores negativos</p>
+
+<div class="ejemplo">
+<p><strong>Ejemplos:</strong></p>
+
+<span style="letter-spacing: 15px;">Aumentado en 15
+p&iacute;xeles</span><br>
+
+<span style="letter-spacing: 2pt;">Aumentado en 2pt</span><br>
+
+<span style="letter-spacing: 0.1in;">Aumentado en 0.1in</span><br>
+
+<span style="letter-spacing: 0.3cm;">Aumentado en 0.3cm</span><br>
+
+<span style="letter-spacing: 1em;">Aumentado en 1em </span><br>
+
+<span style="letter-spacing: 1ex;">Aumentado en 1ex</span><br>
+
+<span style="letter-spacing: -1px;">Disminuido en 1px</span><br>
+
+</div>
+
+<h2>Espaciado de palabras </h2>
+
+<p>Podemos especificar una cantidad para aumentar o disminuir el
+espaciado entre las letras de un texto. Tampoco est&aacute;
+implementada en el editor de CSS lo cual nos obliga a introducirla
+manualmente si la necesitamos.</p>
+
+<p><strong>Propiedad: </strong><code>word-spacing</code>
+</p>
+
+<p><strong>Valores:</strong> Se pueden expresar
+introduciendo un valor entero que indique la medida en pixels (px),
+puntos (pt), pulgadas (in), cent&iacute;metros (cm), anchura de la
+letra eme (em) o altura de la letra equis (ex). Se utiliza el punto
+como separador decimal en lugar de la coma. Para disminuir el espaciado
+se utilizan valores negativos</p>
+
+<div class="ejemplo">
+<p><strong>Ejemplos:</strong></p>
+
+<span style="word-spacing: 15px;">Aumentado en 15
+p&iacute;xeles</span><br>
+
+<span style="word-spacing: 5pt;">Aumentado en 5pt</span><br>
+
+<span style="word-spacing: 1in;">Aumentado en 1in</span><br>
+
+<span style="word-spacing: 0.7cm;">Aumentado en 0.7cm</span><br>
+
+<span style="word-spacing: 2em;">Aumentado en 2em </span><br>
+
+<span style="word-spacing: 1ex;">Aumentado en 1ex</span><br>
+
+<span style="word-spacing: -2px;">Disminu&iacute;do en
+2px</span></div>
+
+<h2>Alineaci&oacute;n</h2>
+
+<p>Podemos encontrar esta propiedad en la pesta&ntilde;a <span class="refmenu">texto</span> del editor de CSS.</p>
+
+<p><b>Propiedad:</b> <code>text-align</code></p>
+
+<p><b>Valores:</b> Nos permite introducir todos los
+valores de alineaci&oacute;n soportados por el est&aacute;ndar
+HTML 4.01 mediante <b>left</b>, <b>center</b>
+<b>right
+</b>y <b>justify</b>.</p>
+
+<p class="ejemplo"><b>Ejemplos:</b> Todos los
+textos de este curso est&aacute;n dise&ntilde;ados con el
+atributo justify para evitar el efecto denominado de "banderas" o
+"gallardetes" provocado por la falta de ajuste del final o principio de
+rengl&oacute;n respecto al margen.</p>
+
+<h2>Decoraci&oacute;n</h2>
+
+<p>Podemos encontrar esta propiedad en la pesta&ntilde;a <span class="refmenu">texto</span> del editor de CSS.</p>
+
+<p><strong>Propiedad:</strong><code>text-decoration</code>
+</p>
+
+<p><strong>Valores y ejemplos:</strong> Se
+especifican mediante las palabras reservadas none (ninguno), <span style="text-decoration: underline;">underline</span>
+(subrayado), <span style="text-decoration: overline;">overline</span>
+(superrayado), <span style="text-decoration: line-through;">line-through</span>
+(tachado).
+Aunque parezca un contrasentido uno de los m&aacute;s
+&uacute;tiles puede ser
+el valor none al eliminar, por ejemplo, la decoraci&oacute;n
+subrayada de los v&iacute;nculos. Tambi&eacute;n se puede
+utilizar el valor <span style="text-decoration: blink;">blink</span>
+(parpadeante),
+pero pr&aacute;cticamente s&oacute;lo es soportado por Netscape
+y Mozilla mientras que Internet
+Explorer 6, Konkeror 3.1.3 o incluso Gale&oacute;n 1.3.9 que
+est&aacute; basado en el mismo
+motor que Mozilla no lo soportan. <br>
+
+</p>
+
+<h2>Sangr&iacute;a de primera
+l&iacute;nea </h2>
+
+<p>Tambi&eacute;n tendremos que teclearla si la necesitamos
+porque por
+el momento no&nbsp;est&aacute; implementada en el editor de CSS.</p>
+
+<p><b>Propiedad:</b> <code>text-indent</code></p>
+
+<p><b>Valores:</b> Se pueden expresar introduciendo
+un valor entero que indique su medida en puntos (pt), pulgadas (in),
+cent&iacute;metros (cm), p&iacute;xels (px) o porcentaje(%) </p>
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b> </p>
+
+<p style="text-indent: 45pt;">Este p&aacute;rrafo
+tiene aplicado un sangrado de 45 puntos y por eso su primera
+l&iacute;nea se inicia tras dejar un espacio en blanco al principio
+del rengl&oacute;n.</p>
+
+</div>
+
+<p>&nbsp;</p>
+
+<h2>Control de letra</h2>
+
+<p>Nos permite indicar si un elemento o fragmento se
+mostrar&aacute; tal como se escribe o con alguna
+variaci&oacute;n en las letras. Es otra de las propiedades no
+incluida en el editor de CSS.</p>
+
+<p><strong>Propiedad: </strong><code>text-transform</code>
+</p>
+
+<p><strong>Valores:</strong> Aparte de none que es el
+valor por defecto, podemos usar capitalize que escribe todas las
+primeras letras en may&uacute;sculas, uppercase
+que muestra todo el texto en may&uacute;sculas y lowercase que lo
+presenta en min&uacute;sculas independientemente de c&oacute;mo
+lo hayamos escrito</p>
+
+<div class="ejemplo">
+<p><strong>Ejemplos:</strong></p>
+
+<table cellpadding="0" cellspacing="10" width="630">
+
+  <tbody>
+
+    <tr>
+
+      <th bgcolor="#0099cc" width="32%"><span class="Estilo1">Este texto...</span></th>
+
+      <th width="8%">&nbsp;</th>
+
+      <th bgcolor="#0099cc" width="60%"><span class="Estilo1">...se ve as&iacute;</span></th>
+
+    </tr>
+
+    <tr>
+
+      <td>Aqu&iacute; aplicamos capitalize </td>
+
+      <td><img src="../imagenes/flechaderecha.gif" height="29" width="29"></td>
+
+      <td>
+      <p style="text-transform: capitalize;">Aqu&iacute;
+aplicamos capitalize </p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td width="32%">
+      <p>En
+este caso es uppercase</p>
+
+      </td>
+
+      <td width="8%">
+      <p><img src="../imagenes/flechaderecha.gif" height="29" width="29"></p>
+
+      </td>
+
+      <td width="60%">
+      <p style="text-transform: uppercase;">En este caso
+es uppercase</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>Y &eacute;ste es Lowercase </td>
+
+      <td><img src="../imagenes/flechaderecha.gif" height="29" width="29"></td>
+
+      <td>
+      <p style="text-transform: lowercase;">Y
+&eacute;ste es Lowercase</p>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+<p>&nbsp; </p>
+
+<h2>Interlineado</h2>
+
+<p>En el editor de CSS la encontrar&aacute;s como <span class="refmenu">altura de l&iacute;nea</span> en
+la pesta&ntilde;a <span class="refmenu">texto</span>.</p>
+
+<p><b>Propiedad:</b> line-height</p>
+
+<p><b>Valores:</b> Se pueden expresar introduciendo
+un valor entero que indique su medida en puntos (pt), pulgadas (in),
+cent&iacute;metros (cm), pixels (px) o porcentaje (%). </p>
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b> </p>
+
+<p><span style="line-height: 200%;">En esta
+l&iacute;nea se ha empleado un interlineado del 200%, de forma que
+presente una distancia doble a la habitual, respecto a la anterior y la
+posterior .</span> </p>
+
+<p><span style="line-height: 10pt;">En esta
+l&iacute;nea se ha empleado un interlineado de 10 puntos. Como el
+tama&ntilde;o de la letra es tambi&eacute;n de 10 puntos se
+puede comprobar que la parte superior de las letras llega hasta la base
+del rengl&oacute;n anterior.</span></p>
+
+</div>
+
+<h2>Pseudoelementos first-letter y
+first-line </h2>
+
+<p>Como ya hab&iacute;amos mencionado existen un par de
+pseudoelementos que tienen que ver con el texto porque permiten
+modificar la primera letra o el primer rengl&oacute;n de un
+texto.&nbsp;&nbsp; </p>
+
+<p>Su utilizaci&oacute;n sigue la sintaxis <strong>selector:pseudolemento
+{propiedad:valor} </strong> o bien <strong>selector.clase:pseudoelemento{propiedad:valor}</strong>
+o <strong>selector#id:pseudoelemento{propiedad:valor} </strong>si
+pretendemos aplicarlo a un selector con una clase o un identificador
+espec&iacute;fico. </p>
+
+<p><a href="javascript:void(0)" onclick="window.open('muestra23.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=350')">Ver
+ejemplo </a></p>
+</div>
+</body>
+</html>

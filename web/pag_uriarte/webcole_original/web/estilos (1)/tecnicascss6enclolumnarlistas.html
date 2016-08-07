@@ -1,0 +1,675 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Encolumnar listas</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+<link rel="stylesheet" type="text/css" href="../multi3.css">
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <style type="text/css">
+<!--
+.mancheta{
+width: 45em;
+background-color: #def;
+margin-left: auto;
+margin-right: auto;
+padding:0 0 0 1.5em;
+text-align:center;
+overflow: auto;
+}
+ul {
+width: 42em;
+margin: 0 1.5em;
+padding: 0;
+}
+ul li {
+float: left;
+width: 14em;
+margin: 0 ;
+padding: 0;
+}
+.mancheta2{
+width: 45em;
+background-color: #def;
+margin-left: auto;
+margin-right: auto;
+padding:0 0 0 1.5em;
+text-align:center;
+overflow: auto;
+}
+.bolos ul{
+width: 42em;
+margin: 0 1.5em;
+padding: 0;
+}
+.bolos li {
+float: left;
+width: 12em;
+margin: 0 ;
+list-style-type:none;
+background-image: url(imagenes/Rd_pin.gif);
+background-position: 0;
+background-repeat: no-repeat;
+padding: 0 0 0 2em;
+}
+ol {
+margin: 0;
+padding: 0;
+}
+.sinnumerar {
+list-style-type:none;}
+ol li {
+line-height:1.3em;}
+.col1 {margin-left: 1em;}
+.col2 {margin-left: 15em; }
+.col3 {margin-left: 31em;}
+.saltoarriba {margin-top: -6.5em;}
+-->
+  </style>
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;T&eacute;cnicas</p>
+
+</div>
+<div id="flechadcha">
+<a href="tecnicasandoenredando.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="tecnicascss5deslizatextofigura.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+<div class="solapas">
+ <ul>
+
+        <li><a href="tecnicascss2.html">Pies
+de foto</a></li>
+
+        <li><a href="tecnicascss4imagenesdesustitucion.html">Im&aacute;genes
+de sustituci&oacute;n</a></li>
+
+        <li><a href="tecnicascssbordesredondeados.html">Bordes
+redondeados</a></li>
+
+        <li><a href="tecnicascss3.html">Centrados</a></li>
+
+        <li><a href="tecnicascss5deslizatextofigura.html">Ajuste a
+perfil de imagen</a></li>
+
+        <li class="activo"><a href="tecnicascss6enclolumnarlistas.html">Encolumnar
+listas</a></li>
+
+        <li><a href="tecnicasandoenredando.html">Sustituci&oacute;n
+de im&aacute;genes</a></li>
+
+        <li><a href="tecnicascolumnas.html">Columnas</a></li>
+
+<li><a href="menus.html">Menús</a></li>
+      
+      </ul>
+	</div>  
+
+<div class="principal">	
+	
+<h2>Encolumnar listas</h2>
+
+<p>En ocasiones podemos encontrarnos con listas que contienen un
+considerable n&uacute;mero de &iacute;tems y que resulta poco
+apropiado presentar en una &uacute;nica columna.&nbsp;</p>
+
+<p>Hemos utilizado como ejemplo la lista de pueblos que componen
+la comarca de la cuenca del Taju&ntilde;a en la provincia de Madrid
+que son los quince que figuran a continuaci&oacute;n.</p>
+
+<div class="mancheta">
+<ul>
+
+  <li>Ambite</li>
+
+  <li>Arganda del Rey</li>
+
+  <li>Campo Real</li>
+
+  <li>Caraba&ntilde;a</li>
+
+  <li>Morata de Taju&ntilde;a</li>
+
+  <li>Nuevo
+Bazt&aacute;n</li>
+
+  <li>Olmeda de las Fuentes</li>
+
+  <li>Orusco</li>
+
+  <li>Perales de
+Taju&ntilde;a</li>
+
+  <li>Pozuelo del Rey</li>
+
+  <li>Rivas Vaciamadrid</li>
+
+  <li>San
+Mart&iacute;n de la Vega</li>
+
+  <li>Tielmes</li>
+
+  <li>Valdilecha</li>
+
+  <li>Villar de Olmo</li>
+
+</ul>
+
+</div>
+
+<p>Si nuestra intenci&oacute;n es utilizar esta lista como
+punto de partida para realizar una descripci&oacute;n
+geogr&aacute;fica de los pueblos de la comarca parece evidente que
+es necesario aprovechar el ancho de la ventana. Aparte de que pueda
+resultar est&eacute;ticamente m&aacute;s agradable se trata de
+favorecer al visitante, ya que le ahorraremos tener que recurrir a la
+barra de desplazamiento que ser&iacute;a casi inevitable con una
+lista de este tama&ntilde;o.</p>
+
+<p>Adem&aacute;s, tal vez ser&iacute;a interesante
+eliminar los indicadores de cada &iacute;tem. Si est&aacute;s
+viendo esta p&aacute;gina con Internet Explorer o con Opera es
+posible que te haya sorprendido lo de eliminar los indicadores de
+&iacute;tem... porque no los est&aacute;s viendo. Al parecer,
+cuando se utilizan anchuras para indicar el ancho de una lista estos
+navegadores prescinden de los indicadores, as&iacute; que vamos a
+hacer dos cosas: primero veremos c&oacute;mo hay que hacerlo para
+que desaparezcan los
+indicadores, esperando que los navegadores se ajusten en el futuro a
+los est&aacute;ndares y luego volvemos al mundo real e intentamos
+recuperar nuestros
+"bolos" para que se puedan ver en todos los navegadores.</p>
+
+<p>Pongamos manos a la obra:</p>
+
+<div>
+<p>Como tenemos quince &iacute;tems vamos a hacer que se
+agrupen de cinco en cinco, esto es en tres columnas. Para ello le
+adjudicaremos a la lista una anchura de 14em para cada &iacute;tem,
+con un total de 42em para la lista. (Este c&aacute;lculo es
+emp&iacute;rico: en funci&oacute;n de la longitud de los
+&iacute;tems estimamos la anchura necesaria y la corregimos si nos
+hemos desviado mucho). Si fijamos los m&aacute;rgenes y rellenos de
+los elementos de la lista a 0 nos vendr&aacute; muy bien para poder
+ajustar la estimaci&oacute;n de anchuras.</p>
+
+<p>Aunque&nbsp;parezca un detalle
+nimio es importante que se especifique el ancho en ambos selectores
+para que el navegador pueda calcular cu&aacute;ntos
+&iacute;tems le cabr&aacute;n en cada l&iacute;nea.</p>
+
+<p>El tercer factor a tener en cuenta es que los &iacute;tems
+floten a la izquierda, de forma que vayan dejando hueco a su derecha
+para que se pueda colocar el &iacute;tem siguiente.<br>
+
+</p>
+
+<div class="codigo">
+<p>Tras aplicar estos criterios nuestro c&oacute;digo CSS ha
+quedado as&iacute;:</p>
+
+<p><code>ul {width: 42em;<br>
+
+<span class="indentado25">margin: 0 1.5em;</span><br>
+
+<span class="indentado25">padding: 0;</span><br>
+
+<span class="indentado25">}</span><br>
+
+ul li { float: left;<br>
+
+<span class="indentado25">width: 14em;</span><br>
+
+<span class="indentado25">margin: 0 ;</span><br>
+
+<span class="indentado25">padding: 0;</span><br>
+
+<span class="indentado25">}</span></code>
+<br>
+
+</p>
+
+<div class="avisos">
+<p>Como se est&aacute; utilizando un estilo en
+l&iacute;nea y&nbsp;en esta p&aacute;gina va a aparecer
+tambi&eacute;n una lista ordenada no podemos definir sencillamente
+las priopiedades del selector li ya que se aplicar&iacute;an
+tambi&eacute;n a los &iacute;tems de la lista ordenada. Por ese
+motivo hemos definido la regla para los elementos li que sean hijos de
+un elemento ul.&nbsp;</p>
+
+</div>
+
+<p></p>
+
+</div>
+
+<br>
+
+<h3>Recuperar los indicadores de &iacute;tem</h3>
+
+<br>
+
+<br>
+
+<div class="mancheta2">
+<ul class="bolos">
+
+  <li>Ambite</li>
+
+  <li>Arganda del Rey</li>
+
+  <li>Campo Real</li>
+
+  <li>Caraba&ntilde;a</li>
+
+  <li>Morata de Taju&ntilde;a</li>
+
+  <li>Nuevo
+Bazt&aacute;n</li>
+
+  <li>Olmeda de las Fuentes</li>
+
+  <li>Orusco</li>
+
+  <li>Perales de
+Taju&ntilde;a</li>
+
+  <li>Pozuelo del Rey</li>
+
+  <li>Rivas Vaciamadrid</li>
+
+  <li>San
+Mart&iacute;n de la Vega</li>
+
+  <li>Tielmes</li>
+
+  <li>Valdilecha</li>
+
+  <li>Villar de Olmo</li>
+
+</ul>
+
+</div>
+
+<br>
+
+<br>
+
+Ya hemos comentado antes que Internet Explorer y Opera no mostraban los
+indicadores de item cuando la lista ten&iacute;a establecida una
+anchura. Esto incluye no s&oacute;lo los indicadores por defecto,
+sino&nbsp;tambi&eacute;n las im&aacute;genes
+gr&aacute;ficas. Es posible que hayas pensado que lo que
+hab&iacute;amos hecho era sustituir los indicadores por
+im&aacute;genes, pero no es as&iacute;: ha habido que complicar
+un poco la situaci&oacute;n buscando una imagen para ponerla como
+fondo de cada &iacute;tem y calcular los&nbsp;desplazamientos
+para que no se montara con el texto.<br>
+
+<br>
+
+La explicaci&oacute;n en real de esto se basa en que, cada elemento
+de lista hace que el navegador genere dos cajas: una para el indicador
+y otra par el texto del &iacute;tem. Internet Explorer y Opera solo
+generan la caja correspondiente al texto cuando se encuentran una lista
+con anchura especificada.&nbsp; Debido a esto, para obtener un
+efecto similar al que se muestra habr&iacute;a que trabajar
+adjudicando una imagen de fondo y separ&aacute;ndola del texto para
+que no este no se superpusiera. Adem&aacute;s no habr&iacute;a
+que olvidarse de quitar los indicadores para que no aparecieran en los
+navegadores basados en el motor Gecko de Mozilla que interpretan
+correctamente la situaci&oacute;n. Como ves todo bastante
+complicado. En el siguiente recuadro <br>
+
+<br>
+
+<div class="codigo"><code>li {float: left;</code><br>
+
+<code><span class="indentado25">width: 12em; /*
+habr&aacute; que ajustar la anchura descontando el relleno que
+antes no exist&iacute;a */</span></code><br class="indentado25">
+
+<code><span class="indentado25">margin: 0 ;</span></code><br class="indentado25">
+
+<code><span class="indentado25">list-style-type:none;
+/*eliminamos el indicador para que no se muestre en navegadores basados
+en Mozilla */</span></code><br class="indentado25">
+
+<code><span class="indentado25">background-image:
+url(imagenes/Rd_pin.gif);</span></code><br class="indentado25">
+
+<code><span class="indentado25">background-position:
+0;</span></code><br class="indentado25">
+
+<code><span class="indentado25">background-repeat:
+no-repeat;</span></code><br class="indentado25">
+
+<code><span class="indentado25">padding: 0 0 0 2em;
+/*a&ntilde;adimos un relleno en la zona izquierda para hacer hueco
+para la imagen */</span></code><br class="indentado25">
+
+<code><span class="indentado25">}</span></code><br>
+
+</div>
+
+</div>
+
+<h3>Encolumnar&nbsp;respetando el orden vertical</h3>
+
+<p>En los ejemplos anteriores hemos utilizado listas
+desordenadas. Al menos as&iacute; las hemos presentado, pero el
+contenido de las mismas estaba realmente ordenado
+alfab&eacute;ticamente.&nbsp;</p>
+
+<p>Al mostrarlas en columnas se ha seguido manteniendo el orden
+pero, probablemente,&nbsp;si los textos de cada &iacute;tem no
+hubieran sido tan largos, la tendencia natural de lectura
+habr&iacute;a sido agrupar visualmente las columnas y suponer que
+el orden de lectura es primero de arriba a abajo en una columna para
+luego saltar a la siguiente.</p>
+
+<p>Para acentuar este fen&oacute;meno perceptivo vamos a
+mostrar ahora el mismo contenido ordenado de esta manera.</p>
+
+<div class="mancheta">
+<ol>
+
+  <li class="col1">Ambite</li>
+
+  <li class="col1">Arganda del Rey</li>
+
+  <li class="col1">Campo Real</li>
+
+  <li class="col1">Caraba&ntilde;a</li>
+
+  <li class="col1">Morata de Taju&ntilde;a</li>
+
+  <li class="col2 saltoarriba">Nuevo Bazt&aacute;n</li>
+
+  <li class="col2">Olmeda de las Fuentes</li>
+
+  <li class="col2">Orusco</li>
+
+  <li class="col2">Perales de Taju&ntilde;a</li>
+
+  <li class="col2">Pozuelo del Rey</li>
+
+  <li class="col3 saltoarriba">Rivas Vaciamadrid</li>
+
+  <li class="col3">San Mart&iacute;n de la Vega</li>
+
+  <li class="col3">Tielmes</li>
+
+  <li class="col3">Valdilecha</li>
+
+  <li class="col3">Villar de Olmo</li>
+
+</ol>
+
+</div>
+
+<p>&iquest;Cu&aacute;l de las dos formas de ordenar te ha
+parecido m&aacute;s sencilla de leer? Est&aacute; claro que
+cada persona tiene un esquema perceptivo propio y es posible que a
+t&iacute; te resulte m&aacute;s f&aacute;cil leer con el
+orden alfab&eacute;tico en horizontal, pero lo m&aacute;s
+probable ser&aacute; que te haya resultado m&aacute;s
+c&oacute;moda la&nbsp;opci&oacute;n que acabamos de ver.
+Por si acaso piensas que influyen demasiado los n&uacute;meros,
+vamos a mostrarla sin numeraci&oacute;n pero respetando el orden
+alfab&eacute;tico para que te cerciores.</p>
+
+<div>
+<div class="mancheta">
+<ol class="sinnumerar">
+
+  <li class="col1">Ambite</li>
+
+  <li class="col1">Arganda del Rey</li>
+
+  <li class="col1">Campo Real</li>
+
+  <li class="col1">Caraba&ntilde;a</li>
+
+  <li class="col1">Morata de Taju&ntilde;a</li>
+
+  <li class="col2 saltoarriba">Nuevo Bazt&aacute;n</li>
+
+  <li class="col2">Olmeda de las Fuentes</li>
+
+  <li class="col2">Orusco</li>
+
+  <li class="col2">Perales de Taju&ntilde;a</li>
+
+  <li class="col2">Pozuelo del Rey</li>
+
+  <li class="col3 saltoarriba">Rivas Vaciamadrid</li>
+
+  <li class="col3">San Mart&iacute;n de la Vega</li>
+
+  <li class="col3">Tielmes</li>
+
+  <li class="col3">Valdilecha</li>
+
+  <li class="col3">Villar de Olmo</li>
+
+</ol>
+
+</div>
+
+<ol class="nueva">
+
+</ol>
+
+<p>En este caso los &iacute;tems de
+la lista no pueden
+flotar, porque eso provocar&iacute;a una ordenaci&oacute;n
+horizontal como ya hemos visto.&nbsp;</p>
+
+<p>Sin embargo necesitamos que se coloquen en columnas. Para
+ello&nbsp;crearemos tantas clases
+como columnas necesitemos y especificaremos en ellas el margen
+izquierdo de forma que al aplic&aacute;rselas a cada
+&iacute;tem hagamos que estos se sit&uacute;en
+escalonadamente.&nbsp;</p>
+
+<p>Tambi&eacute;n vamos a adjudicarle una altura a la
+l&iacute;nea. Enseguida veremos para qu&eacute; nos sirve.</p>
+
+<p>En estos momentos nuestro c&oacute;digo
+presentar&iacute;a el siguiente estado:</p>
+
+<div class="codigo"><code>ol { margin: 0; padding:
+0; }<br>
+
+<br>
+
+/*ahora especificamos ol li para que la regla afecte s&oacute;lo
+a&nbsp;los items de listas ordenadas */<br>
+
+ol li { margin: 0; padding: 0; line-height: 1.3em; }<br>
+
+<br>
+
+/*creamos las diferentes columnas. No son exactamente iguales debido a
+la anchura heterog&eacute;nea del contenido de los &iacute;tems
+*/<br>
+
+.col1 {margin-left: 1em;}<br>
+
+.col2 {margin-left: 15em;}<br>
+
+.col3 {margin-left: 31em;}</code>
+</div>
+
+<p>Y con eso conseguir&iacute;amos... este peque&ntilde;o
+desastre</p>
+
+<div class="mancheta">
+<ol>
+
+  <li class="col1">Ambite</li>
+
+  <li class="col1">Arganda del Rey</li>
+
+  <li class="col1">Campo Real</li>
+
+  <li class="col1">Caraba&ntilde;a</li>
+
+  <li class="col1">Morata de Taju&ntilde;a</li>
+
+  <li class="col2">Nuevo Bazt&aacute;n</li>
+
+  <li class="col2">Olmeda de las Fuentes</li>
+
+  <li class="col2">Orusco</li>
+
+  <li class="col2">Perales de Taju&ntilde;a</li>
+
+  <li class="col2">Pozuelo del Rey</li>
+
+  <li class="col3">Rivas Vaciamadrid</li>
+
+  <li class="col3">San Mart&iacute;n de la Vega</li>
+
+  <li class="col3">Tielmes</li>
+
+  <li class="col3">Valdilecha</li>
+
+  <li class="col3">Villar de Olmo</li>
+
+</ol>
+
+</div>
+
+<p>Es verdad que el texto parece encolumnado, pero lo que
+hab&iacute;amos dicho antes de que quer&iacute;amos que las
+columnas se situaran escalonadamente ha resultado
+prof&eacute;tico.&nbsp;</p>
+
+<p>Ahora bien, si lo pensamos un poco ha ocurrido lo que era de
+esperar: el item 6 se ha colocado donde pod&iacute;a esperar, esto
+es, debajo del &iacute;tem 5 pero respetando el margen que le hemos
+indicado. El 7, 8, 9 y 10 se han ido colocando cada uno debajo del
+anterior con su margen correctamente calculado. Del 11 al 16 se ha
+producido el mismo proceso acorde a lo que hab&iacute;amos indicado
+hasta ahora.</p>
+
+<p>Est&aacute; claro que nos falta introducir una
+peque&ntilde;a correcci&oacute;n y aqu&iacute; es donde
+aparece la utilidad de esa altura de l&iacute;nea que
+hab&iacute;amos indicado como propiedad de los selectores li. Como
+cada item ha ido ocupando 1.3 em quiere decir que cada columna ha
+consumido 1.3 x 5 = 6.5 em verticales. Si creamos una clase que tenga
+un margen superior negativo de esa cantidad y la aplicamos a los
+&iacute;tems en los que se produce el salto de columna
+conseguiremos que suban hasta situarse a la altura del primer
+&iacute;tem. Los que vayan a continuaci&oacute;n se
+ir&aacute;n alineando correctamente bajo &eacute;l hasta que
+llegue el siguiente salto de columna. Esto se traducir&iacute;a en
+la siguiente clase que a&ntilde;adimos a nuestros estilos:</p>
+
+<div class="codigo">&nbsp;<code>.saltoarriba
+{margin-top:
+-6.5em;}</code><br>
+
+<p>Con ello completar&iacute;amos las reglas necesarias y lo
+que har&iacute;amos dentro del c&oacute;digo HTML
+ser&iacute;a aplicar&nbsp;un
+par de clases al mismo elemento cuando lleg&aacute;ramos al primero
+de
+cada columna, con lo cual conseguimos el efecto que
+persegu&iacute;amos.</p>
+
+<p><code>&lt;ol&gt;<br>
+
+&nbsp; &lt;li class="col1"&gt;Ambite&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col1"&gt;Arganda del
+Rey&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col1"&gt;Campo Real&lt;/li&gt;<br>
+
+&nbsp; &lt;li
+class="col1"&gt;Caraba&amp;ntilde;a&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col1"&gt;Morata de
+Taju&amp;ntilde;a&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col2 saltoarriba"&gt;Nuevo
+Bazt&amp;aacute;n&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col2"&gt;Olmeda de las
+Fuentes&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col2"&gt;Orusco&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col2"&gt;Perales de
+Taju&amp;ntilde;a&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col2"&gt;Pozuelo del
+Rey&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col3 saltoarriba"&gt;Rivas
+Vaciamadrid&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col3"&gt;San Mart&amp;iacute;n de
+la Vega&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col3"&gt;Tielmes&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col3"&gt;Valdilecha&lt;/li&gt;<br>
+
+&nbsp; &lt;li class="col3"&gt;Villar de
+Olmo&lt;/li&gt;<br>
+
+&lt;/ol&gt;</code><br>
+
+</p>
+
+</div>
+
+<div class="practicas">
+<img style="width: 29px; height: 29px; float: left;" alt="Actividad 98" title="Actividad 98" src="../imagenes/numeracion/noventayocho.gif">
+<p>Una posible
+aplicaci&oacute;n de esta t&eacute;cnica ser&iacute;a la
+creaci&oacute;n de una p&aacute;gina &iacute;ndice que
+llevara a las
+p&aacute;ginas personales de cada uno de los profesores del centro
+o de
+los alumnos de una clase.</p>
+
+<p>Prueba a crear una lista ordenada alfab&eacute;ticamente
+con los
+alumnos de tu clase (puede ser numerada o bien sin indicadores
+seg&uacute;n prefieras).&nbsp;</p>
+
+<div class="avisos">La gran ventaja de esta forma de
+presentar las
+listas es que se aprovecha muy bien el espacio y se favorece el acceso
+a todos los elementos que queremos mostrar, al hacer que no sea
+necesario utilizar la barra de desplazamiento. Posiblemente te sobre
+media pantalla y a pesar de ello se ver&aacute;n todos los nombres
+de
+los alumnos o profesores sin dificultad.</div>
+
+</div>
+
+</div>
+</div>
+</body>
+</html>

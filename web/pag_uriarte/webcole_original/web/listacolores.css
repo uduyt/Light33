@@ -1,0 +1,62 @@
+#listacolores { list-style-type: none;
+    }
+
+  #listacolores li { border: 1px solid rgb(255, 102, 0);
+    margin: 5px;
+    padding: 5px;
+    width: 160px;
+    font-weight: bold;
+    display: block;
+    float: left;
+    }
+
+  .black { background-color: rgb(0, 0, 0);
+    }
+
+  .maroon { background-color: maroon;
+    }
+
+  .green { background-color: green;
+    }
+
+  .navy { background-color: navy;
+    }
+
+  .gray { background-color: gray;
+    }
+
+  .blue { background-color: blue;
+    }
+
+  .purple { background-color: purple;
+    }
+
+  .olive { background-color: olive;
+    }
+
+  .teal { background-color: teal;
+    }
+
+  .silver { background-color: silver;
+    }
+
+  .red { background-color: red;
+    }
+
+  .lime { background-color: lime;
+    }
+
+  .white { background-color: white;
+    }
+
+  .fuchsia { background-color: fuchsia;
+    }
+
+  .yellow { background-color: yellow;
+    }
+
+  .aqua { background-color: aqua;
+    }
+
+  .black, .maroon, .green, .navy, .gray, .blue, .purple, .olive, .teal { color: rgb(255, 255, 255);
+    }

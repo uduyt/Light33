@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Bordes redondeados (con im&aacute;genes)</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+  
+  <link rel="stylesheet" type="text/css" href="../multi3.css">
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <style type="text/css">
+<!--
+/* ancho y márgenes de la caja */
+.bordesredondos { width: 20em; margin: auto; }
+.bordesredondos { background: url(imagenes/fondo.gif) repeat; }
+/* imágenes de fondo para las esquinas */
+.arribaizq { background: url(imagenes/arriba_izq.gif) no-repeat top left; }
+.arribader { background: url(imagenes/arriba_der.gif) no-repeat top right; }
+.abajoizq { background: url(imagenes/abajo_izq.gif) no-repeat bottom left; }
+.abajoder { background: url(imagenes/abajo_der.gif) no-repeat bottom right; }
+/* ancho y alto de las esquinas */
+.arribaizq, .arribader, .abajoizq, .abajoder {
+width: 100%;
+height: 1em;
+}
+/* deplazamiento de las esquinas inferiores para disminuir la distancia al contenido */
+.abajoizq, .abajoder {
+margin-top:-1em;
+}
+/* detalles del contenido */
+.contenidocaja { margin: 0 1em; }
+  </style>
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;T&eacute;cnicas</p>
+
+</div>
+<div id="flechadcha">
+<a href="tecnicascss3.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="tecnicascss4imagenesdesustitucion.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+<div class="solapas">
+ <ul>
+
+        <li><a href="tecnicascss2.html">Pies
+de foto</a></li>
+
+        <li><a href="tecnicascss4imagenesdesustitucion.html">Im&aacute;genes
+de sustituci&oacute;n</a></li>
+
+        <li class="activo"><a href="tecnicascssbordesredondeados.html">Bordes
+redondeados</a></li>
+
+        <li><a href="tecnicascss3.html">Centrados</a></li>
+
+        <li><a href="tecnicascss5deslizatextofigura.html">Ajuste a
+perfil de imagen</a></li>
+
+        <li><a href="tecnicascss6enclolumnarlistas.html">Encolumnar
+listas</a></li>
+
+        <li><a href="tecnicasandoenredando.html">Sustituci&oacute;n
+de im&aacute;genes</a></li>
+
+        <li><a href="tecnicascolumnas.html">Columnas</a></li>
+
+<li><a href="menus.html">Menús</a></li>
+      
+	  </ul>
+	</div>  
+
+<div class="principal">
+<h2>Cajas con esquinas&nbsp;redondeadas</h2>
+
+<div class="bordesredondos">
+<div class="arribaizq">
+<div class="arribader"></div>
+
+</div>
+
+<div class="contenidocaja">
+<h4>Cuatro esquinas</h4>
+
+<p>Con ese termino nos referimos a los muros que forman una casa.</p>
+
+<p>Con cuatro "ladrillos" especiales podemos hacer que las
+uniones de los muros de la casa sean redondeadas.&nbsp;</p>
+
+</div>
+
+<div class="abajoizq">
+<div class="abajoder"></div>
+
+</div>
+
+</div>
+
+<p>El primer paso ser&iacute;a crear un contenedor general
+(en el
+ejemplo se ha denominado "bordesredondos") en el que situaremos los
+elementos que
+deseamos poner en el recuadro redondeado y asignarle las dimensiones,
+los m&aacute;rgenes y el color de fondo.</p>
+
+<p>Dentro del contenedor general situaremos tres "filas" de
+elementos:</p>
+
+<ol>
+
+  <li>El borde superior con las esquinas redondeadas: utilizamos
+un contenedor gen&eacute;rico div que lleva como fondo la esquina
+izquierda y anidamos dentro del mismo otro contenedor
+gen&eacute;rico
+div que tiene como fondo la esquina superior derecha. Si en lugar de
+anidar los contenedores gen&eacute;ricos los hubi&eacute;ramos
+puesto uno a continuaci&oacute;n de otro, cada uno de ellos
+ocupar&iacute;a el 100% de la anchura del contenedor general y se
+colocar&iacute;an uno bajo el otro.</li>
+
+  <li>El contenido del recuadro.</li>
+
+  <li>El borde inferior y sus esquinas redondeadas: seguimos el
+mismo procedimiento que para el borde superior.<br>
+
+  </li>
+
+</ol>
+
+La im&aacute;genes que hemos utilizado para las equinas son
+las&nbsp;siguientes: <img style="width: 12px; height: 12px;" alt="Esquina superior izquierda" title="Esquina superior izquierda" src="imagenes/arriba_izq.gif">
+<img style="width: 12px; height: 12px;" alt="Esquina superior derecha" title="Esquina superior derecha" src="imagenes/arriba_der.gif">&nbsp;<img style="width: 12px; height: 13px;" alt="Esquina inferior izquierda" title="Esquina inferior izquierda" src="imagenes/abajo_izq.gif">&nbsp;<img style="width: 12px; height: 13px;" alt="Esquina superior derecha" title="Esquina superior derecha" src="imagenes/abajo_der.gif">. Tambi&eacute;n se ha
+&nbsp;utilizado una imagen <img style="width: 12px; height: 12px;" alt="Imagen de fondo" title="Imagen de fondo" src="imagenes/fondo.gif">
+para el fondo general de la caja aunque, dado que se trata de un color
+plano,&nbsp;podr&iacute;amos haber optado por asignarle un
+color de fondo en lugar de utilizar una imagen.<br>
+
+<div class="bordesredondosb codigo">
+<p>El c&oacute;digo CSS en la cabecera o en un archivo externo.</p>
+
+<p><code>/* ancho y m&aacute;rgenes de la caja */<br>
+
+.bordesredondos { width: 20em; margin: auto; }<br>
+
+.bordesredondos { background: url(imagenes/fondo.gif) repeat; }<br>
+
+<br>
+
+/* im&aacute;genes de fondo para las esquinas */<br>
+
+.arribaizq { background: url(imagenes/arriba_izq.gif) no-repeat top
+left; }<br>
+
+.arribader { background: url(imagenes/arriba_der.gif) no-repeat top
+right; }<br>
+
+.abajoizq { background: url(imagenes/abajo_izq.gif) no-repeat bottom
+left; }<br>
+
+.abajoder { background: url(imagenes/abajo_der.gif) no-repeat bottom
+right; }<br>
+
+<br>
+
+/* ancho y alto de las esquinas */<br>
+
+.arribaizq, .arribader, .abajoizq, .abajoder { width: 100%; height:
+1em; }<br>
+
+<br>
+
+/* deplazamiento de las esquinas inferiores para disminuir la distancia
+al contenido */<br>
+
+.abajoizq, .abajoder { margin-top:-1em; }<br>
+
+<br>
+
+/* detalles del contenido */<br>
+
+.contenidocaja { margin: 0 1em; }</code>
+</p>
+
+<div class="avisos">En caso de que el c&oacute;digo css vaya en un
+archivo externo habr&aacute; que ajustar las rutas de las
+im&aacute;genes tomando como punto de partida el archivo css que es el
+que contiene la llamada.</div>
+
+<p>El c&oacute;digo HTML en el cuerpo de la p&aacute;gina.</p>
+
+<p><code>&lt;div class="bordesredondos"&gt;</code></p>
+
+<p class="indentado25"><code>&lt;div
+class="arribaizq"&gt;&lt;div
+class="arribader"&gt;&lt;/div&gt;&lt;/div&gt;</code></p>
+
+<p class="indentado25"><code>&lt;div
+class="contenidocaja"&gt;</code></p>
+
+<p class="indentado50"><code>Aqu&iacute; va el
+texto que aparece en la caja</code></p>
+
+<p class="indentado25"><code>&lt;/div&gt;</code></p>
+
+<p><code><span class="indentado25">&lt;div
+class="abajoizq"&gt;&lt;div
+class="abajoder"&gt;&lt;/div&gt;&lt;/div</span>&gt;</code></p>
+
+<p><code>&lt;/div&gt;</code><br>
+
+</p>
+
+
+</div>
+
+</div>
+</body>
+</html>

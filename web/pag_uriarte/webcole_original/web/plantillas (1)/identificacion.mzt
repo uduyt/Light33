@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html template="true" lang="es-es">
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+  
+  <title>Identificaci&oacute;n de hojas</title>
+</head>
+
+
+<body style="font-family: Arial,Helvetica,sans-serif; background-color: rgb(236, 224, 177);">
+
+
+<h1>Identificaci&oacute;n de hojas</h1>
+
+
+<p><strong>La foto se ha tomado en:</strong>&nbsp;<span editable="true" id="texto">texto</span></p>
+
+
+<p><strong>Fecha:</strong> <span editable="true" id="fecha">fecha</span></p>
+
+
+<hr style="width: 100%; height: 2px;">
+<div style="background-color: rgb(236, 210, 106);">
+<p><span style="border: 1px solid rgb(153, 102, 51); float: left; width: 240px; height: 180px; margin-right: 10px;" editable="true" id="foto">foto</span><strong>Caracter&iacute;sticas:</strong></p>
+
+
+<div editable="true" id="caracter&iacute;sticas">Describe
+aqu&iacute; las caracter&iacute;sticas que nos sirven para
+identificar esta hoja y diferenciarla de otras especies.</div>
+
+
+<p><strong>Identificaci&oacute;n:</strong></p>
+
+
+<div editable="true" id="identificaci&oacute;n">Escribe el
+nombre cient&iacute;fico y el nombre vulgar de la especie<br clear="all">
+
+
+</div>
+
+<p><strong>Especies similares:</strong></p>
+
+
+<div editable="true" id="similares">Indica
+aqu&iacute; otras especies similares se&ntilde;alando la
+caracter&iacute;stica que las diferencia<br clear="all">
+
+
+</div>
+
+
+</div>
+
+
+<br>
+
+
+<hr style="width: 100%; height: 2px;">
+<p><strong>Identificaci&oacute;n realizada por:</strong> <span editable="true" id="nombre">nombre</span></p>
+
+
+</body>
+</html>

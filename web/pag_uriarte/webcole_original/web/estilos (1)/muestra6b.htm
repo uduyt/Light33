@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+
+  
+
+
+  
+  
+  
+  <title>Muestra de estilos</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+  
+  
+  <link href="muestrasdeestilos.css" rel="stylesheet" type="text/css">
+
+
+
+  
+  
+  <style type="text/css">
+<!--
+p {color: #000066}
+-->
+  </style>
+  
+  
+  <script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_showHideLayers() { //v6.0
+var i,p,v,obj,args=MM_showHideLayers.arguments;
+for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+obj.visibility=v; }
+}
+//-->
+  </script>
+</head>
+
+
+<body>
+
+
+
+<div class="zonaizq">
+<div class="codigo">
+<p><code>&lt;head&gt;<br>
+
+
+
+... <br>
+
+
+
+&lt;style type="text/css"&gt;<br>
+
+
+
+p {color: #000066}<br>
+
+
+
+&lt;/style&gt;<br>
+
+
+
+&lt;/head&gt; <br>
+
+
+
+&lt;body&gt;<br>
+
+
+
+&lt;p&gt;Escribimos un p&aacute;rrafo&lt;/p&gt;</code></p>
+
+
+
+<p><code> &lt;p style="color:red; font-weight:bold"&gt;<br>
+
+
+
+Este p&aacute;rrafo se ha modificado con un estilo en
+l&iacute;nea y se muestra con una variaci&oacute;n de color y
+grosor.&lt;/p&gt;</code></p>
+
+
+
+<p><code>&lt;p&gt;Nuevamente nos ajustamos al color establecido
+en la hoja interna y este p&aacute;rrafo recupera los valores
+originales.&lt;/p&gt;<br>
+
+
+
+&lt;/body&gt;</code> </p>
+
+
+
+</div>
+
+
+
+<div class="flotder"><a href="javascript:void(0)" onclick="MM_showHideLayers('derecha','','show')">Visualizar
+el formato resultante <img src="../imagenes/flechamenu.png" border="0" height="13" width="14">
+</a> </div>
+
+
+
+</div>
+
+
+
+<div class="zonadcha" id="derecha">
+<p>Escribimos un p&aacute;rrafo.</p>
+
+
+
+<p style="color: red; font-weight: bold;">Este
+p&aacute;rrafo se ha modificado con un estilo en l&iacute;nea y
+se muestra con una variaci&oacute;n de color y grosor.</p>
+
+
+
+<p>Nuevamente nos ajustamos al color establecido en la hoja
+interna y este p&aacute;rrafo recupera los valores originales.</p>
+
+
+
+</div>
+
+
+
+</body>
+</html>

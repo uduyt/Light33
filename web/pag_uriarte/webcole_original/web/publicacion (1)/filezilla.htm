@@ -1,0 +1,695 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+
+
+  
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+
+  
+
+
+  
+  
+  
+  <title>Transferencia de archivos con Filezilla</title>
+  <meta content="Ra&uacute;l Luna" name="author">
+
+
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+
+
+
+  
+  
+  <link rel="stylesheet" href="filezilla.css" type="text/css">
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Publicaci&oacute;n&gt;&gt;Filezilla</p>
+
+</div>
+<div id="flechadcha">
+<a href="ftp98.htm" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="gestornvu.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<h2>Obtenci&oacute;n del programa </h2>
+
+
+
+<p>Se trata de una aplicaci&oacute;n de c&oacute;digo
+abierto muy interesante y fiable, cuyas instrucciones de descarga
+e
+instalaci&oacute;n encontrar&aacute;s en la
+secci&oacute;n correspondiente del ep&iacute;grafe herramientas.</p>
+
+
+
+<h3>Datos hipot&eacute;ticos</h3>
+
+
+
+<p>Explicar el acceso v&iacute;a FTP a un servidor puede ser
+una tarea un tanto compleja si no recurrimos a un ejemplo concreto. Es
+por ello por lo que voy a utilizar unos datos para definir a un usuario
+hipot&eacute;tico de forma que contemos con ellos como referencia y
+puedas hacer un paralelismo con tu situaci&oacute;n real.</p>
+
+
+
+<p><br>
+
+
+
+</p>
+
+
+
+<div class="datos">
+<dl>
+
+
+
+  <dt>Nombre real:</dt>
+
+
+
+  <dd>Ra&uacute;l Luna</dd>
+
+
+
+  <dt>Direcci&oacute;n e-mail :&nbsp;</dt>
+
+
+
+  <dd>rluna@platea.pntic.mec.es</dd>
+
+
+
+  <dt>Servidor:</dt>
+
+
+
+  <dd>platea.pntic.mec.es</dd>
+
+
+
+  <dt>Nombre de usuario:&nbsp;</dt>
+
+
+
+  <dd>rluna&nbsp;</dd>
+
+
+
+  <dt>Contrase&ntilde;a:</dt>
+
+
+
+  <dd>jarb236</dd>
+
+
+
+</dl>
+
+
+
+</div>
+
+
+
+<h3>Configuraci&oacute;n de
+una
+conexi&oacute;n</h3>
+
+
+
+<p>Como ya comentamos en la introducci&oacute;n vamos a
+utilizar como modelo el servicio ofrecido por el CNICE que puede
+presentar caracter&iacute;sticas similares a las de muchos
+proveedores. Si tu proveedor de acceso es diferente podr&aacute;s
+tomarlo como referencia pero tendr&aacute;s que consultar la
+documentaci&oacute;n sobre disponibilidad e instrucciones
+espec&iacute;ficas de acceso en tu caso. </p>
+
+
+
+<p>Tomemos pues los datos del usuario cuya direcci&oacute;n
+de correo es <em>rluna@platea.pntic.mec.es </em>que, por
+lo que hemos visto hasta el momento, tendr&aacute; como nombre de
+usuario para el servicio de correo lo que aparece antes del signo @,
+esto es, <strong>rluna. </strong> En la
+mayor&iacute;a de los servidores tambi&eacute;n ser&aacute;
+este el nombre de usuario para acceder al servicio de ftp, y
+as&iacute; ocurre en el caso del CNICE. Si el nombre de usuario es
+el mismo que para el correo electr&oacute;nico es l&oacute;gico
+suponer que la contrase&ntilde;a ser&aacute; tambi&eacute;n
+la misma y as&iacute; ocurre tambi&eacute;n en este caso.</p>
+
+
+
+<p class="avisos">En algunos casos el nombre de usuario no
+es s&oacute;lo lo
+que precede al signo @ sino que puede ser toda la direcci&oacute;n
+de correo electr&oacute;nico u otro dato que te habr&aacute;
+suministrado tu proveedor.</p>
+
+
+
+<p>En cuanto al nombre del ordenador en el que tenemos reservado
+el espacio, en el caso de las cuentas del CNICE coincide con el
+ordenador en el que se almacena nuestro correo, por lo que en el
+ejemplo que estamos viendo ser&iacute;a <strong>platea.pntic.mec.es</strong>,
+aunque hay que tener en cuenta que este caso no es tan general como en
+lo referido al nombre de usuario y la contrase&ntilde;a: hay muchos
+servidores en los que el espacio de almacenamiento est&aacute;
+alojado en un servidor con un nombre diferente al del correo.</p>
+
+
+
+<p>Veamos pues un resumen de un par de situaciones que pueden
+cubrir una gran parte de la casu&iacute;stica.</p>
+
+
+
+<table style="width: 100%;" border="0" cellspacing="2">
+
+
+
+  <tbody>
+
+
+
+    <tr>
+
+
+
+      <th width="22%">
+      
+      
+      <div>e-mail</div>
+
+
+
+      </th>
+
+
+
+      <th width="29%">
+      
+      
+      <div>usuario</div>
+
+
+
+      </th>
+
+
+
+      <th width="12%">
+      
+      
+      <div>contrase&ntilde;a</div>
+
+
+
+      </th>
+
+
+
+      <th width="37%">
+      
+      
+      <div>ordenador remoto</div>
+
+
+
+      </th>
+
+
+
+    </tr>
+
+
+
+    <tr bgcolor="#f9ecb9">
+
+
+
+      <td>rluna@platea.pntic.mec.es</td>
+
+
+
+      <td>lo que precede a @ = rluna</td>
+
+
+
+      <td>la misma del correo</td>
+
+
+
+      <td>el mismo del correo =
+platea.pntic.mec.es</td>
+
+
+
+    </tr>
+
+
+
+    <tr bgcolor="#f9ecb9">
+
+
+
+      <td>mercedesgr@ya.com</td>
+
+
+
+      <td>todo el e-mail =
+mercedesgr@ya.com</td>
+
+
+
+      <td>la misma del correo</td>
+
+
+
+      <td>diferente al de correo =
+ftp.ya.com</td>
+
+
+
+    </tr>
+
+
+
+  
+  
+  </tbody>
+</table>
+
+
+
+<p>Una vez conocidos estos datos los introduciremos en la zona
+destinada al efecto. Podr&iacute;amos usar el bot&oacute;n <img style="width: 23px; height: 23px;" alt="Administrador de sitios" title="Administrador de sitios" src="imagenes/icotool1b.png"> y <img style="width: 75px; height: 23px;" alt="Nuevo sitio" src="imagenes/iconuevositio.png"> en la
+ventana que se abre, pero lo m&aacute;s f&aacute;cil es
+utilizar la barra de conexi&oacute;n r&aacute;pida.</p>
+
+
+
+<p class="centrado"> <img title="Barra de conexi&oacute;n r&aacute;pida" style="width: 603px; height: 31px;" alt="Barra de conexi&oacute;n r&aacute;pida" src="imagenes/conexionrapida.png" class="recuadroimg"></p>
+
+
+
+<p>El puerto de comunicaciones utilizado de forma general para
+las transferencias ftp es el 21 y aunque lo dejes en blanco el programa
+lo completar&aacute; autom&aacute;ticamente. Una vez
+introducidos los datos s&oacute;lo queda pulsar el bot&oacute;n
+<img style="width: 107px; height: 23px;" alt="Conexi&oacute;n r&aacute;pida" src="imagenes/botonconexionrapida.png" class="recuadroimg"> para que se inicie la conexi&oacute;n al
+servidor. </p>
+
+
+
+<p><img style="width: 451px; height: 418px;" alt="Panel de administraci&oacute;n de sitios" title="Panel de administraci&oacute;n de sitios" src="imagenes/administraciondesitios.png" class="flotizq" hspace="10">El
+procedimiento anterior podr&iacute;a ser perfectamente
+v&aacute;lido sin necesidad de recurrir al admnistrador de sitios,
+ya que bastar&iacute;a con desplegar el men&uacute; para
+acceder a las conexiones r&aacute;pidas que hayamos ido definiendo,
+pero hay una cuesti&oacute;n que es importante: si compartimos el
+ordenador estamos dejando almacenadas todas las configuraciones con sus
+contrase&ntilde;as. Por ello ser&iacute;a preferible introducir
+los datos con el procedimiento que cit&aacute;bamos al inicio y
+marcar la opci&oacute;n de <span class="refmenu">no
+guardar la
+contrase&ntilde;a</span>.</p>
+
+
+
+<p>Adem&aacute;s de puede haber un problema
+a&ntilde;adido en algunos casos y es que la conexi&oacute;n
+r&aacute;pida utiliza el modo activo. En dicho modo es el programa
+cliente el que intenta dirigir el comportamiento del servidor y hay
+muchos servidores con los que esto puede dar problemas (los del CNICE
+entre ellos).&nbsp;</p>
+
+
+
+<p>&iquest;C&oacute;mo s&eacute; que estoy teniendo
+un problema en la conexi&oacute;n? Est&aacute; claro que cuando
+hay alg&uacute;n error por problemas de nombre de usuario o
+contrase&ntilde;as lo notamos inmediatamente porque el programa nos
+lo indica. Sin embargo hay un problema que puede ser m&aacute;s
+dif&iacute;cil de detectar, ya que parece que todo est&aacute;
+correcto, el cliente se conecta al servidor pero no aparece nada en la
+ventana correspondiente al servidor. Este es el t&iacute;pico
+problema provocado por el modo activo: el cliente se conecta pero no es
+capaz de recuperar la lista de archivos del servidor con lo cual no
+podemos hacer nada.</p>
+
+
+
+<p>Para solucionar este problema s&oacute;lo podremos hacerlo
+desde el administrador de sitios: selecciona la conexi&oacute;n que
+falla&nbsp;<img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png">
+pulsa el
+bot&oacute;n <span class="refmenu">advanced</span>
+<img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"> marca la opci&oacute;n
+<span class="refmenu">use
+passive mode.&nbsp;</span></p>
+
+
+
+<p>Si lo que nos hab&iacute;a fallado era una
+conexi&oacute;n r&aacute;pida (suele ser
+lo&nbsp;habitual)&nbsp;podemos utilizar la opci&oacute;n de
+men&uacute; <span class="refmenu">archivo <img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"> copiar
+al administrador de sitios</span>
+para realizar una exportaci&oacute;n r&aacute;pida de los datos
+que ya hab&iacute;amos introducido en la que lo &uacute;nico
+que tendremos que hacer ser&aacute; nombrar el sitio para
+localizarlo en el listado y marcar la casilla que hab&iacute;amos
+mencionado anteriormente para que no guarde las contrase&ntilde;as
+y realizar el cambio a modo pasivo tal como se ha indicado.</p>
+
+
+
+<p>Tambi&eacute;n podemos introducir alg&uacute;n
+comentario en la zona inferior que nos sirva como
+informaci&oacute;n complementaria sobre el mismo o para recordar
+alg&uacute;n dato espec&iacute;fico.</p>
+
+
+
+<p>De todas maneras seguimos teniendo el problema de las
+configuraciones introducidas en la <span class="refmenu">conexi&oacute;n
+r&aacute;pida</span> ya que siguen estando disponibles. Si
+quieres
+eliminarlas tendr&aacute;s que hacerlo manualmente puesto que esta
+versi&oacute;n no dispone de una opci&oacute;n de
+men&uacute; para hacerlo. As&iacute; pues, los pasos que
+habr&iacute;a que dar ser&iacute;an los siguientes:</p>
+
+
+
+<ol>
+
+
+
+  <li>
+    
+    
+    <div>Abrir la carpeta <strong>C:\Archivos
+de programa\Filezilla</strong>, salvo que hubieras modificado la
+ruta de instalaci&oacute;n. </div>
+
+
+
+  </li>
+
+
+
+  <li>
+    
+    
+    <div>Una vez en la carpeta
+tendr&aacute;s que abrir el archivo FileZilla.xml y localizar en
+&eacute;l una secci&oacute;n que se encuentra al final del
+archivo encerrada entre las&nbsp;la etiqueta <strong>&lt;RecentServers&gt;&nbsp;&nbsp;</strong><strong>&lt;/RecentServers&gt;</strong></div>
+
+
+
+  </li>
+
+
+
+  <li>
+    
+    
+    <div>Eliminar las referencias que
+aparecen all&iacute; que ser&aacute;n del tipo: <strong>&lt;Server
+Host="roble.pntic.mec.es" Port="21" User="html3553"
+Pass="045069007170091097707000" FirewallBypass="0" DontRememberPass="0"
+ServerType="256" Path="" PasvMode="0"
+TimeZoneOffset="0"/&gt;&nbsp;</strong></div>
+
+
+
+  </li>
+
+
+
+</ol>
+
+
+
+<h3>El entorno general</h3>
+
+
+
+<p>Cuando se establece una conexi&oacute;n con un sitio FTP
+se muestran en la zona izquierda de la pantalla los archivos y carpetas
+existentes en el propio PC y los del sitio FTP en la derecha. La
+ventana principal presenta el siguiente interfaz:</p>
+
+
+
+<p class="centrado"><img src="imagenes/interfazb.png" height="446" width="614"></p>
+
+
+
+<dl>
+
+
+
+  <dt> <img style="width: 30px; height: 30px;" alt="A" src="imagenes/a.png" hspace="5">Men&uacute;:
+  </dt>
+
+
+
+  <dd>Como en cualquier aplicaci&oacute;n da acceso a todas
+las funciones del programa.<br>
+
+
+
+&nbsp; </dd>
+
+
+
+  <dt><img style="width: 30px; height: 30px;" alt="B" src="imagenes/b.png" hspace="5">Barra
+de
+herramientas: </dt>
+
+
+
+  <dd>Acceso a las funciones de uso m&aacute;s habitual.<br>
+
+
+
+&nbsp;</dd>
+
+
+
+  <dt><img style="width: 30px; height: 30px;" alt="C" src="imagenes/c.png" hspace="5">Barra
+de
+conexi&oacute;n r&aacute;pida: </dt>
+
+
+
+  <dd>Permite la conexi&oacute;n a un sitio ftp sin necesidad
+de pasar por la creaci&oacute;n de un perfil del mismo.<br>
+
+
+
+&nbsp;</dd>
+
+
+
+  <dt><img style="width: 30px; height: 30px;" alt="D" src="imagenes/d.png" hspace="5">Registro
+de
+mensajes: </dt>
+
+
+
+  <dd>Aqu&iacute; se registra todo el intercambio de mensajes
+que se produce en tre Filezilla y el sitio FTP. La
+visualizaci&oacute;n se activa o desactiva con el bot&oacute;n <img style="width: 23px; height: 23px;" alt="Registro de mensajes" title="Registro de mensajes" src="imagenes/icotool5.png"><br>
+
+
+
+&nbsp; </dd>
+
+
+
+  <dt><img style="width: 30px; height: 30px;" alt="E" src="imagenes/e.png" hspace="5">Vista
+Local: </dt>
+
+
+
+  <dd>Inicialmente se encuentra dividida en una zona superior en
+la que se muestra el listado de carpetas y unidades disponibles y una
+inferior en la que se detalla el contenido de la carpeta activa.
+Pulsando sobre el icono <img style="width: 23px; height: 23px;" alt="Estructura de carpetas locales" title="Estructura de carpetas locales" src="imagenes/icotool2.png"> se
+activa o desactiva la visualizaci&oacute;n del arbol de directorios
+principal de la unidad.<br>
+
+
+
+&nbsp;</dd>
+
+
+
+  <dt><img style="width: 30px; height: 30px;" alt="F" src="imagenes/f.png" hspace="5">Vista
+Remota: </dt>
+
+
+
+  <dd>Muestra todos los archivos y carpetas accesibles en el
+sitio remoto. Al igual que en la vista local, cada vez que accedemos a
+una carpeta comprobaremos que el listado de sus contenidos se inicia
+con una carpeta rotulada como ".." La pulsaci&oacute;n sobre esta
+carpeta nos permite subir hasta el nivel anterior del &aacute;rbol
+de directorios, mostr&aacute;ndose en la caja de la zona superior
+el punto en el que nos encontramos en cada momento. Utilizando el
+bot&oacute;n <img style="width: 23px; height: 23px;" alt="&Aacute;rbol de directorios de sitio remoto" title="&Aacute;rbol de directorios de sitio remoto" src="imagenes/icotool3.png"> de la
+barra de herramientas podemos hacer que se muestre o se oculte el
+&aacute;rbol de directorios del sitio remoto igual que ocurre con
+el local.<br>
+
+
+
+&nbsp;</dd>
+
+
+
+  <dt><img style="width: 30px; height: 30px;" alt="G" src="imagenes/g.png" hspace="5">Cola
+de
+transferencias: </dt>
+
+
+
+  <dd>Muestra el listado de archivos que se tienen que transferir
+en uno u otro sentido y el progreso de cada uno de ellos cuando se
+produce la transferencia. Puede activarse o desactivarse la vista con
+el bot&oacute;n <img style="width: 23px; height: 23px;" alt="Cola de transferencias" title="Cola de transferencias" src="imagenes/icotool4.png"><br>
+
+
+
+&nbsp;</dd>
+
+
+
+  <dt><img style="width: 30px; height: 30px;" alt="H" src="imagenes/h.png" hspace="5">Barra
+de
+estado: </dt>
+
+
+
+  <dd>Muestra informaci&oacute;n sobre la cantidad de
+archivos en cola y la tasa de transferencia. Hay dos lucecitas en la
+zona inferior derecha: la verde indica que se est&aacute;n
+recibiendo datos y la roja que se est&aacute;n enviando al servidor.<br>
+
+
+
+&nbsp;</dd>
+
+
+
+</dl>
+
+
+
+<h3>Transfiriendo archivos</h3>
+
+
+
+<p>La siguiente <a href=" javascript:void(0=" onclick="window.open('imagenes/filezilla.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=675,height=570')">animaci&oacute;n
+</a>te muestra una secuencia
+completa en la que se selecciona una carpeta del servidor remoto y se
+transfiere un archivo hasta el ordenador local con un simple proceso de
+arrastrar y soltar. </p>
+
+
+<br>
+
+
+<div class="practicas">
+<p><img style="width: 29px; height: 29px;" alt="Actividad 103" title="Actividad 103" src="../imagenes/numeracion/cientotres.gif"> </p>
+
+
+
+<ul>
+
+
+
+  <li>Con&eacute;ctate a tu espacio web.</li>
+
+
+
+  <li>Comprueba si existe la carpeta public_html y
+&aacute;brela.(Recuerda que esta es la carpeta por defecto en los
+servidores del CNICE pero podr&iacute;a no ser necesaria o llamarse
+de otra forma si est&aacute;s alojando tu web en otro servidor)</li>
+
+
+
+  <li>Transfiere los archivos que componen tu sitio WEB. Puedes
+hacerlo utilizando Filezilla o el explorador tal como se indica en las
+explicaciones para <a href="ftp98.htm" title="Recordar procedimiento con el explorador de Windows 98">Windows
+98</a> y <a href="ftpxp.htm" title="Recordar procedimiento con el explorador de Windows XP">Windows
+XP</a> </li>
+
+
+
+  <li>Comprueba que las p&aacute;ginas se ven correctamente
+visitando la ubicaci&oacute;n en la red. En el caso del CNICE
+responder&aacute; al esquema:<br>
+
+
+
+    <b>http://ordenador.pntic.mec.es/nombreusuario/</b>
+o <b>http://ordenador.pntic.mec.es/~nombreusuario/</b> pero podr&iacute;a ser diferente si lo alojas en otros proveedores.</li>
+
+
+
+  <li>Si hay alg&uacute;n archivo que hayas olvidado (suele
+ocurrir en la mayor&iacute;a de las ocasiones) vuelve a realizar
+una conexi&oacute;n ftp y env&iacute;alo al servidor.</li>
+
+
+
+  <li>Comprueba que todas las p&aacute;ginas se ven
+correctamente cuando las consultas en la red,&nbsp;igual que se ve&iacute;an en modo local.</li>
+
+
+
+</ul>
+
+
+
+</div>
+
+
+
+<p></p>
+
+</div>
+
+</body>
+</html>

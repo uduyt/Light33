@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Men&uacute; con indicaci&oacute;n expresa de visitado</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <style type="text/css">
+<!--
+/* Código base tomado de http://www.cssplay.co.uk/menus/visitedmenu.html */
+#menu { width:8em; padding:0.5em; background:#ccc; float:left; margin-right:3em;
+}
+#menu a, #menu a:visited {
+display:block; width:7em; color:#000; text-align:center; background-color:#fff; text-decoration:none;
+margin:0.5em 0; border-left:0.5em solid #9ab; }
+#menu a:visited span {
+display:block; position:absolute; top:0; left:11em; width:5em;
+font-size:0.7em;
+color:#c00; border:1px solid #c00;
+text-align:center;
+z-index:50;
+}
+#menu a span {
+display:none;
+}
+#menu a:hover {
+color:#f00; border-left:0.5em solid #000; }
+.box {
+position:relative;
+} #localizadormenu{
+   position:fixed;
+     margin:0;
+	 padding:0;
+	    background-color:#D5C18D;
+		height: 1.6em;
+		width: 100%;
+		z-index:11;
+ }
+ 
+ #localizadormenu p{
+   margin-top: 0px;
+   margin-left:2%;
+   font-size:1.2em;
+   font-weight: bold;
+   color:#FFFFFF;
+   }
+  
+    #localizadormenu a{
+z-index:12;
+  color:#373F68;
+font-stretch: ultra-condensed;
+font-weight: bold;}
+
+#localizadormenu a:hover {color: #B5B19A}
+  </style>
+</head>
+
+
+<body>
+
+<div id="localizadormenu"><p>Men&uacute;vertical con indicacion de visto<a href="menus.html">&nbsp;&nbsp;&nbsp;&nbsp;(Volver)</a></p></div>
+<div id="contenido">
+<div>
+<div id="menu">
+<div class="box"><a href="http://www.cssplay.co.uk/menus/visitedmenu.html">Men&uacute;
+1<span>VISTO
+</span></a></div>
+
+<div class="box">
+<a href="#">Men&uacute; 2<span>VISTO
+</span></a></div>
+
+<div class="box">
+<a href="#">Men&uacute; 3<span>VISTO
+</span></a>
+</div>
+
+<div class="box">
+<a href="#">Men&uacute; 4<span>VISTO
+</span></a></div>
+
+<div class="box">
+<a href="#">Men&uacute; 5<span>VISTO
+</span></a></div>
+
+</div>
+
+<p>En este caso el efecto que se
+persigue es la aparici&oacute;n de un
+r&oacute;tulo que indica que ya se ha visitado el enlace. </p>
+
+<p>Para
+comprobarlo puedes pulsar el primer enlace y luego la flecha de vuelta
+atr&aacute;s de tu navegador.</p>
+
+<p>Como est&aacute;s viendo hemos dejado un importante margen
+en la zona derecha de los men&uacute;s porque es necesario para
+dejar espacio a los r&oacute;tulos que aparecer&aacute;n.
+Tambi&eacute;n habr&aacute; que tener en cuenta este detalle
+cuando este tipo de men&uacute;s se utilice en una estructura de
+marcos.</p>
+
+<p>En esta ocasi&oacute;n no hemos creado una lista, sino una
+serie de contenedores encerrados dentro de otro contenedor
+gen&eacute;rico que tiene fondo gris.&nbsp;La idea en la que se
+basa el men&uacute; es que cada uno de los contenedores tiene el
+enlace y un fragmento en l&iacute;nea tal como puedes ver a
+continuaci&oacute;n:&nbsp;</p>
+
+<div class="codigo"><code>&lt;div
+class="box"&gt;<br>
+
+&lt;a
+href="http://www.cssplay.co.uk/menus/visitedmenu.html"&gt;Men&amp;uacute;
+1<br>
+
+&lt;span&gt;VISTO&lt;/span&gt;<br>
+
+&lt;/a&gt; <br>
+
+&lt;/div&gt;</code></div>
+
+<p>Para hacer que el fragmento en l&iacute;nea aprovechamos
+las caracter&iacute;sticas de herencia y utilizamos las
+propiedad&nbsp;<acronym title="Cascading Style Sheets">CSS</acronym>
+<code>display:none</code> para que cualquier elemento <code>span</code>
+que sea descendiente
+de un enlace que, a su vez, sea descendiente&nbsp;del contenedor
+que hemos nombrado con el&nbsp; identificador <code>menu</code>,
+no se
+muestre.</p>
+
+<div class="codigo"><code>#menu a span {
+display:none;}</code><br>
+
+Bastante m&aacute;s simple de explicar con c&oacute;digo CSS
+que con lenguaje humano ;-)</div>
+
+<p>Lo &uacute;nico que nos queda es a&ntilde;adir la
+pseudo clase <code>:visited </code>a los enlaces para que
+los fragmentos en
+l&iacute;nea&nbsp;<code>span </code>que sean
+descendientes de un enlace visitado que, a su
+vez,&nbsp;sea descendiente&nbsp;del contenedor que hemos
+nombrado con el&nbsp; identificador&nbsp;<code>menu</code>,
+se muestren con la
+apariencia que indicamos con las reglas <acronym title="Cascading Style Sheets">CSS</acronym>.
+Adem&aacute;s
+especificaremos un &iacute;ndice de profundidad alto para que se
+superponga a otros elementos que pudieran quedar por debajo.</p>
+
+<div class="codigo"><code>#menu a:visited span {<br>
+
+display:block;&nbsp;<br>
+
+position:absolute; <br>
+
+top:0; <br>
+
+left:11em; <br>
+
+width:5em;<br>
+
+font-size:0.7em;<br>
+
+color:#c00; <br>
+
+border:1px solid #c00;<br>
+
+text-align:center;<br>
+
+z-index:50;<br>
+
+}</code><br>
+
+</div>
+
+<p>El resto de reglas&nbsp;<acronym title="Cascading Style Sheets">CSS</acronym> no
+merecen explicaci&oacute;n
+especial ya que su funci&oacute;n es la com&uacute;n de indicar
+el aspecto de los diversos elementos de la p&aacute;gina.</p>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>ando.enred.ando</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="stylesheet" type="text/css" href="../multi3.css">
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <style type="text/css">
+div#ej h2 { border-style: none;
+}
+#cabecera { background-image: url(imagenes/andoenredando.png);
+background-repeat: no-repeat;
+width: 685px;
+height: 62px;
+margin-left: auto;
+margin-right: auto;
+}
+#subcabecera { background-image: url(imagenes/andoenredando2.png);
+background-repeat: no-repeat;
+width: 375px;
+height: 20px;
+margin-left: auto;
+margin-right: auto;
+}
+span.oculta { position: relative;
+left: -5000px;
+}
+  </style>
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;T&eacute;cnicas</p>
+
+</div>
+<div id="flechadcha">
+<a href="tecnicascolumnas.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="tecnicascss6enclolumnarlistas.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+<div class="solapas">
+ <ul>
+
+        <li><a href="tecnicascss2.html">Pies
+de foto</a></li>
+
+        <li><a href="tecnicascss4imagenesdesustitucion.html">Im&aacute;genes
+de sustituci&oacute;n</a></li>
+
+        <li><a href="tecnicascssbordesredondeados.html">Bordes
+redondeados</a></li>
+
+        <li><a href="tecnicascss3.html">Centrados</a></li>
+
+        <li><a href="tecnicascss5deslizatextofigura.html">Ajuste a
+perfil de imagen</a></li>
+
+        <li><a href="tecnicascss6enclolumnarlistas.html">Encolumnar
+listas</a></li>
+
+        <li class="activo"><a href="tecnicasandoenredando.html">Sustituci&oacute;n
+de im&aacute;genes</a></li>
+
+        <li><a href="tecnicascolumnas.html">Columnas</a></li>
+
+<li><a href="menus.html">Menús</a></li>
+      
+      </ul>
+	</div>  
+	
+	<div class="principal">	
+	
+	
+<h2>Sustituci&oacute;n de im&aacute;genes</h2>
+
+<p>En alg&uacute;n momento a lo largo del curso hemos
+indicado la psibilidad de sustituir alg&uacute;n texto por
+im&aacute;genes. En una ocasi&oacute;n se sugiri&oacute;
+como forma de preservar el dise&ntilde;o que hab&iacute;amos
+creado para un t&iacute;tulo y en otra para ocultar una
+direcci&oacute;n de correo a los rastreadores pero hacerla visible
+a los visitantes.</p>
+
+<p>Si consideras este &uacute;ltimo motivo es posible que se
+te ocurra pensar que los lectores de p&aacute;ginas para personas
+con deficiencia visual hacen algo muy similar a lo&nbsp;que hacen
+los rastreadores de direcciones: ir leyendo el &nbsp;texto que
+aparece en el c&oacute;digo fuente. As&iacute; que, si en el
+c&oacute;digo fuente no hay ning&uacute;n texto...estaremos
+haciendo que ese fragmento de p&aacute;gina no exista para el
+lector y, por tanto, para el visitante con problemas de
+visi&oacute;n que est&aacute; visitando la p&aacute;gina.</p>
+
+<p>Este es el gran problema de la sustituci&oacute;n de
+im&aacute;genes: la accesibilidad. Hay multitud de
+t&eacute;cnicas de susituci&oacute;n de
+im&aacute;genes&nbsp;publicadas en la web para obtener un
+dise&ntilde;o visual rico&nbsp;(suelen recibir el nombre <acronym>IR</acronym>
+por
+el ingl&eacute;s Image Replacement). Nunguna de ellas es perfecta y
+todas adolecen de alguna dificultad. La que vamos a ver ahora, que
+utilizaremos para crear la cabecera de un peri&oacute;dico, es
+accesible pero puede provocar problemas con la indizaci&oacute;n en
+algunos buscadores.&nbsp;</p>
+
+<p>Empecemos por comprobar el efecto y luego vemos la idea y la
+forma de traducirla al c&oacute;digo CSS necesario.</p>
+
+<div id="ej">
+<h1 title="ando.enred.ando" id="cabecera"><span class="oculta">ando.enred.ando</span></h1>
+
+<h2 title="Peri&oacute;dico escolar del CEIP &quot;Colenet&quot;" id="subcabecera"><span class="oculta">Peri&oacute;dico
+escolar del CEIP "Colenet"</span></h2>
+
+</div>
+
+<p>El resultado&nbsp;se apoya en las siguientes ideas:</p>
+
+<ul>
+
+  <li>Crearemos un elemento en bloque (<code>p</code>,
+    <code>div</code>, <code>h1</code>, <code>h2</code>,
+...) y
+utilizaremos una imagen sin repetir que mostrar&aacute; el texto
+como fondo del elemento.</li>
+
+  <li>Para que la imagen de fondo con el texto se muestre
+completa tendremos que darle al elemento unas dimensiones iguales a las
+de dicha imagen</li>
+
+  <li>Para que los lectores de p&aacute;ginas tengan acceso
+al contenido textual del elemento&nbsp;crearemos una zona en
+l&iacute;nea <code>&lt;span&gt;</code> en la
+que aparecer&aacute; el
+contenido que hay que leer. Con esto conseguimos tambi&eacute;n que
+los usuarios puedan ver el texto incluso si desactivan los estilos.</li>
+
+  <li>Ocultamos el texto desplaz&aacute;ndolo fuera de la
+zona de visibilidad con una instrucci&oacute;n top o left que lo
+saquen de la pantalla. Esta es la pega de esta t&eacute;cnica, ya
+que algunos buscadores han penalizado a p&aacute;ginas que
+empleaban esta t&eacute;cnica para incluir palabras que el
+visitante no ve&iacute;a pero que el robot del buscador
+s&iacute; le&iacute;a, haciendo que la p&aacute;gina
+subiera de&nbsp;posici&oacute;n de forma fraudulenta.</li>
+
+</ul>
+
+<div class="estilo">Vistas las ideas vamos al
+c&oacute;digo CSS necesario.<br>
+
+<br>
+
+<code>
+&lt;style type="text/css"&gt;<br>
+
+<span class="indentado25">#cabecera {</span>&nbsp;<br>
+
+<span class="indentado50">background-image:
+url(imagenes/andoenredando.png);</span><br class="indentado50">
+
+<span class="indentado50">background-repeat: no-repeat;</span><br class="indentado50">
+
+<span class="indentado50">width: 685px;</span><br class="indentado50">
+
+<span class="indentado50">height: 62px;</span><br class="indentado50">
+
+<span class="indentado50">margin-left: auto;
+&nbsp;</span><br class="indentado50">
+
+<span class="indentado50">margin-right: auto;&nbsp;</span><br class="indentado50">
+
+<span class="indentado50">}<br>
+
+<br>
+
+&lt;!--</span></code><code> Recuerda
+que los m&aacute;rgenes autom&aacute;ticos para el
+centrado&nbsp;no funcionan en Internet
+Explorer sin un parche --&gt;<br>
+
+</code><br>
+
+<code><span class="indentado50"></span>
+<span class="indentado25">#subcabecera {</span><br>
+
+<span class="indentado50">background-image:
+url(imagenes/andoenredando2.png);</span><br class="indentado50">
+
+<span class="indentado50">background-repeat: no-repeat;</span><br class="indentado50">
+
+<span class="indentado50">width: 375px;</span><br class="indentado50">
+
+<span class="indentado50">height: 20px;</span><br class="indentado50">
+
+<span class="indentado50">margin-left: auto;</span><br class="indentado50">
+
+<span class="indentado50">margin-right: auto;</span><br class="indentado50">
+
+<span class="indentado50">}<br>
+
+</span><br>
+
+<span class="indentado25">/* Ahora el desplazamiento para
+sacar el texto de la pantalla */<br>
+
+</span><br class="indentado25">
+
+<span class="indentado25">span.oculta { </span><br>
+
+<span class="indentado50">position: relative;</span><br class="indentado50">
+
+<span class="indentado50">left: -5000px;</span><br class="indentado50">
+
+<span class="indentado50">}</span><br>
+
+&lt;/style&gt;</code>
+<br>
+
+<p>Y ahora el c&oacute;digo HTML</p>
+
+<code>&lt;h1 title="ando.enred.ando" id="cabecera"&gt;<br>
+
+<span class="indentado25">&lt;span
+class="oculta"&gt;ando.enred.ando&lt;/span&gt;</span><br>
+
+&lt;/h1&gt;<br>
+
+&lt;h2 id="subcabecera" title=title="Peri&amp;oacute;dico
+escolar del CEIP &amp;quot;Colenet&amp;quot;"&gt;<br>
+
+<span class="indentado25">&lt;span
+class="oculta"&gt;Peri&amp;oacute;dico escolar del CEIP
+"Colenet"&lt;/span&gt;</span><br>
+
+&lt;/h2&gt;<br>
+
+</code><code></code>
+<p>Para aumentar a&uacute;n m&aacute;s la accesibilidad
+se han
+a&ntilde;adido atributos <code>title</code>, de forma
+que un usuario que no
+tuviera
+desactivada la utilizaci&oacute;n de CSS pero s&iacute; la
+carga de
+im&aacute;genes, contara con una referencia de lo que hay en el
+hueco
+que deja el elemento que no est&aacute; viendo</p>
+
+</div>
+
+<br>
+</div>
+</body>
+</html>

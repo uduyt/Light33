@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+  
+
+
+  
+  <title>Tablas - Consideraciones previas</title>
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+<!-- compliance patch for microsoft browsers --><!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+
+
+<body>
+<div id="localizador">
+<p>Tablas>>Introducci&oacute;n</p>
+
+</div>
+<div id="flechadcha">
+<a href="tablas2.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="../introduccion/pag3.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<h2>Cuestiones previas sobre el uso de tablas</h2>
+<p>Cuando nos enfrentamos a la creaci&oacute;n de nuestra
+primera p&aacute;gina WEB es inevitable que pretendamos reproducir
+aquello a lo que estamos acostumbrados al trabajar con un procesador de
+textos. Sin embargo, las cosas no son tan sencillas en&nbsp;<acronym title="Hypertext Markup Language">HTML</acronym>. </p>
+
+
+<p>Si utilizamos HTML b&aacute;sico, y ese es el contenido
+central de este curso en su modalidad de iniciaci&oacute;n, la
+situaci&oacute;n de los elementos de la p&aacute;gina es una
+tarea que tiene un cierto grado de complicaci&oacute;n. Es posible
+que a estas alturas te hayas dado cuenta de que no resulta
+f&aacute;cil fijar tabulaciones o encolumnar el texto de una
+p&aacute;gina. El motivo es que, el lenguaje <acronym title="Hypertext Markup Language">HTML</acronym>
+no naci&oacute; con vocaci&oacute;n de servir para dar formato
+a la
+presentaci&oacute;n, sino para apoyar la estructuraci&oacute;n
+del
+contenido. Por ello, una primera aproximaci&oacute;n al formato
+pasa
+por la utilizaci&oacute;n de las tablas para una funci&oacute;n
+que no
+es la que originalmente ten&iacute;an adjudicada.&nbsp;</p>
+
+
+<p>Antes de continuar es importante se&ntilde;alar una
+cuesti&oacute;n:
+el posicionamiento utilizando tablas est&aacute; desaconsejado por
+las
+recomendaciones del organismo internacional encargado de dictar las
+especificaciones de estandarizaci&oacute;n de los lenguajes para la
+web, el&nbsp;<acronym title="World Wide Web Consortium">W3C</acronym>.
+A pesar de ello trataremos esta t&eacute;cnica como primera
+aproximaci&oacute;n al posicionamiento por una cuesti&oacute;n
+muy
+evidente: una gran mayor&iacute;a de los sitios web publicados
+siguen
+utilizando, en contra de las especificaciones mencionadas, el
+posicionamiento mediante tablas por lo que es muy probable que cuando
+intentes aprender mirando el c&oacute;digo de otras
+p&aacute;ginas
+encuentres esta t&eacute;cnica.</p>
+
+
+La alternativa estar&iacute;a en la utilizaci&oacute;n del
+posicionamiento mediante&nbsp;la utilizaci&oacute;n de hojas de
+estilo en cascada (<acronym title="Cascading Style Sheet">CSS</acronym>)
+e incluso la combinaci&oacute;n con lenguaje JavaScript. Aunque el
+lenguaje&nbsp;Javascript ser&iacute;a materia para un curso
+espec&iacute;fico, si que se tratar&aacute; en el nivel de
+profundizaci&oacute;n del&nbsp;trabajo con hojas de estilo que
+permitir&aacute; separar el contenido de las p&aacute;ginas de
+su dise&ntilde;o visual.&nbsp;
+<p>Una vez hechas las consideraciones previas vamos a hacernos
+una idea del m&eacute;todo&nbsp;utilizaremos para situar los
+elementos de una p&aacute;gina mediante tablas. Para
+ello&nbsp;podemos pensar en la tarea que realizaban los cajistas de
+las imprentas cuando trabajaban con tipos de plomo. Su primera tarea
+consist&iacute;a en recoger el dise&ntilde;o de la
+p&aacute;gina y repartir la plancha utilizando tablillas que
+delimitaban las diferentes zonas. Una vez hecha esta primera
+distribuci&oacute;n de "masas" iban introduciendo los tipos en cada
+una de las zonas que se hab&iacute;an creado para componer el texto
+de las noticias.</p>
+
+
+<p>Pues bien, la forma en la que vamos a repartir los diferentes
+contenidos dentro de nuestra p&aacute;gina va a ser la misma que si
+trabaj&aacute;ramos en una de estas viejas imprentas. En lugar de
+utilizar peque&ntilde;os listones de madera vamos a crear tablas
+cuyos l&iacute;mites entre celdas har&aacute;n la
+funci&oacute;n de separaci&oacute;n entre las zonas.</p>
+
+
+<p>Como idea general puede servirnos de orientaci&oacute;n
+para
+establecer un paralelismo, aunque hay un detalle que hace inconsistente
+la comparaci&oacute;n: la hoja del peri&oacute;dico tiene un
+tama&ntilde;o fijo, igual que los tipos de plomo que se utilizan
+para
+rellenar cada una de las zonas, mientras que una p&aacute;gina web
+tiene un tama&ntilde;o variable, igual que los tipos que solemos
+utilizar para escribir en ella, por lo que no podemos garantizar la
+estabilidad con la que contaban nuestros tip&oacute;grafos de
+referencia. Queda pues apuntada esta cuesti&oacute;n para que
+tengamos
+en cuenta que el paralelismo no es perfecto.</p>
+
+
+<p>Por otra parte no podemos olvidar que, independientemente de
+su
+inestimable colaboraci&oacute;n para dise&ntilde;ar una
+p&aacute;gina,
+las tablas tienen una funci&oacute;n consustancial a su propia
+estructura: presentar informaci&oacute;n susceptible de organizarse
+en
+unos ejes cartesianos en los que encontremos un dato como
+combinaci&oacute;n &uacute;nica de otros dos definidos en los
+ejes
+horizontal y vertical. Ser&aacute; esta funci&oacute;n la que
+tendr&aacute;n que adoptar finalmente cuando tengamos suficiente
+dominio de los mecanismos de posicionamiento del&nbsp;<acronym title="Hypertext Markup Language">HTML</acronym>. </p>
+
+
+Empezcemos pues a acercarnos a las tablas como elemento de
+posicionamiento considerando su evoluci&oacute;n desde el menor
+grado posible de complejidad:<br>
+
+
+<center>
+<table border="1" cellpadding="5">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td>
+      
+      <p>Partiendo de la forma m&aacute;s simple, la de una
+tabla con <b>una fila</b> y <b>una columna</b>,
+a la que podr&iacute;amos considerar como un marco alrededor del
+texto, podemos ir complicando la forma...</p>
+
+
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+</center>
+
+
+<p>&nbsp;<br>
+
+
+...mediante la adici&oacute;n de filas y columnas... </p>
+
+
+<center>
+<table border="1">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<p>&nbsp;<br>
+
+
+...o la fusi&oacute;n de las celdas que la constituyen
+seg&uacute;n lo requiera la informaci&oacute;n presentada. </p>
+
+
+</center>
+
+
+<p> </p>
+
+
+<center>
+<table border="1">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>&nbsp;</td>
+
+
+      <td>&nbsp;</td>
+
+
+      <td rowspan="2">&nbsp;</td>
+
+
+      <td>&nbsp;</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>&nbsp;</td>
+
+
+      <td>&nbsp;</td>
+
+
+      <td>&nbsp;</td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+</center>
+
+
+<p>&nbsp;</p>
+
+
+</body>
+
+</div>
+</html>

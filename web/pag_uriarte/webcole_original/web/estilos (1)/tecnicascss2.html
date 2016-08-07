@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Pies de im&aacute;genes</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+ <link rel="stylesheet" type="text/css" href="../multi3.css">
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+  <link rel="stylesheet" href="piesdeimagenes.css" type="text/css">
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;T&eacute;cnicas</p>
+
+</div>
+<div id="flechadcha">
+<a href="tecnicascss4imagenesdesustitucion.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="absolutamenterelativo.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div class="solapas">
+ <ul>
+
+        <li class="activo"><a href="tecnicascss2.html">Pies
+de foto</a></li>
+
+        <li><a href="tecnicascss4imagenesdesustitucion.html">Im&aacute;genes
+de sustituci&oacute;n</a></li>
+
+        <li><a href="tecnicascssbordesredondeados.html">Bordes
+redondeados</a></li>
+
+        <li><a href="tecnicascss3.html">Centrados</a></li>
+
+        <li><a href="tecnicascss5deslizatextofigura.html">Ajuste a
+perfil de imagen</a></li>
+
+        <li><a href="tecnicascss6enclolumnarlistas.html">Encolumnar
+listas</a></li>
+
+        <li><a href="tecnicasandoenredando.html">Sustituci&oacute;n
+de im&aacute;genes</a></li>
+
+        <li><a href="tecnicascolumnas.html">Columnas</a></li>
+
+<li><a href="menus.html">Menús</a></li>
+      
+      </ul>
+	</div>  
+
+
+<div class="principal">
+<h2>Pies de im&aacute;genes</h2>
+
+<div class="imagen">
+<p><img style="width: 240px; height: 179px;" alt="Foto de hoja de chopo" src="../plantillas/imagenes/hojachopo.jpg"></p>
+
+<p>Foto de hoja de chopo obtenida del banco de
+im&aacute;genes del CNICE</p>
+
+</div>
+
+<p>El lenguaje HTML no inncluye ninguna etiqueta que permita
+introducir
+pies o t&iacute;tulos explicativos de las im&aacute;genes.
+Aunque en
+su
+momento se propuso en la especificaci&oacute;n HTML3 finalmente no
+sali&oacute; adelante y no se incluy&oacute; en la
+especificaci&oacute;n HTML 4 vigente.</p>
+
+<p>A pesar de la anterior limitaci&oacute;n podemos conseguir
+introducir un t&iacute;tulo explicativo de la imagen y situarlo
+inmediatamente debajo de la misma utilizando CSS. El efecto
+ser&iacute;a similar al que se muestra en la zona de la derecha.</p>
+
+<p>Para obtenerlo hemos tenido que crear un par de reglas CSS que
+se explican a continuaci&oacute;n:</p>
+
+<p>Lo primero ha sido crear una clase a la que hemos denominado
+imagen que flote a la derecha, tenga un margen izquierdo de 10
+p&iacute;xeles, un borde s&oacute;lido de 1 p&iacute;xel y
+un relleno de 10 p&iacute;xeles y unas dimensiones para que el
+texto del pie que insertaremos posteriormente no desborde la anchura de
+la imagen.</p>
+
+<p>Realmente lo &uacute;nico imprescindible, si pretendemos
+que la imagen deje fluir el texto ser&iacute;a indicar la propiedad
+<code>float</code>y la especificaci&oacute;n de anchura
+por el motivo que se ha indicado en el p&aacute;rrafo anterior. El
+resto de los elementos tienen que ver m&aacute;s con
+cuestiones est&eacute;ticas.<br>
+
+</p>
+
+<div class="codigo">
+<p><code>.imagen { </code><code>float: right;<br>
+
+<span class="indentado25">width:260px;</span><br>
+
+</code><code><span class="indentado25">border:
+1px solid rgb(153, 153, 153);</span><br>
+
+<span class="indentado25">padding: 10px;</span>&nbsp;<br>
+
+<span class="indentado25">margin-left: 10px;</span><br>
+
+<span class="indentado25">}</span></code></p>
+
+</div>
+
+<p>Ahora que ya tenemos definido el estilo creamos un contenedor
+gen&eacute;rico <code>div</code> en el que situaremos
+la imagen y el texto que
+deseamos que figure como pie de la misma. A este contenedor
+gen&eacute;rico le aplicaremos la clase cuyas propiedades acabamos
+de definir.</p>
+
+<p>Si ahora insertamos dentro del contenedor un
+p&aacute;rrafo con&nbsp;el texto del pie, este
+asumir&aacute; las caracter&iacute;sticas que tengamos
+definidas por defecto, por lo que tendremos que crear un nuevo selector
+que afecte &uacute;nicamente a los p&aacute;rrafos que se
+encuentren dentro del contenedor de clase imagen para el que
+definiremos las caracter&iacute;sticas que necesitemos: en nuestro
+ejemplo letra cursiva, tama&ntilde;o 80% del definido por defecto y
+alineaci&oacute;n centrada.</p>
+
+<div class="codigo">
+<p><code>.imagen p { font-size: 80%;<br>
+
+<span class="indentado25">font-style: italic;</span><br class="indentado25">
+
+<span class="indentado25">text-align: center;</span><br class="indentado25">
+
+<span class="indentado25">}</span></code></p>
+
+</div>
+
+<br>
+
+<h2>Escalar autom&aacute;ticamente im&aacute;genes</h2>
+
+<div class="imagen"><img class="escalada" alt="foto de farola" src="../imagenes/farola.jpg">
+<p>Foto de farola</p>
+
+</div>
+
+<p>La t&eacute;cnica que acabamos de plantear puede ser un
+interesante
+recurso para crear un &aacute;lbum de fotos porque nos
+permitir&iacute;a crear una serie de miniaturas con
+t&iacute;tulo de
+todas las im&aacute;genes pero, tal como hemos planteado la
+t&eacute;cnica tendremos que realizar una tarea previa de
+redimensionado de todas las im&aacute;genes puesto que las que
+fueran
+mayores del tama&ntilde;o especificado desbordar&iacute;an los
+bordes
+del contenedor gen&eacute;rico.&nbsp;</p>
+
+<p>Antes de continuar es importante se&ntilde;alar un
+principio
+b&aacute;sico que ya hemos apuntado en otros momentos, salvo en
+casos
+excepcionales es esencial realizar las modificaciones de
+tama&ntilde;o
+para ajustar las miniaturas y ahorrar ancho de banda.</p>
+
+<p>Hecha la salvedad anterior veamos una forma de hacer que las
+im&aacute;genes se ajusten autom&aacute;ticamente al espacio
+definido
+para el contenedor gen&eacute;rico. La idea es tan simple como
+establecer una clase que fije la anchura al 100% y aplicarla a la
+imagen. Al estar la imagen dentro del contenedor &eacute;sta
+ser&aacute; la referencia que se tome para calcular el
+tama&ntilde;o.
+De hecho, la imagen del ejemplo tiene un tama&ntilde;o real de 720
+x
+540 p&iacute;xeles.</p>
+
+<p class="estilo"><code>.escalada {width: 100%;}</code></p>
+
+<p>Una cuesti&oacute;n importante es que, cuando insertamos
+una imagen
+en el documento, N|VU incluye el c&oacute;digo con sus dimensiones
+y no
+hay que perder de vista que el c&oacute;digo html o el estilo en
+l&iacute;nea tendr&aacute;n preferencia sobre las propiedades
+establecidas en el estilo interno o externo. Para evitarlo y conseguir
+que el
+tama&ntilde;o se ajuste autom&aacute;ticamente habr&aacute;
+que editar manualmente el c&oacute;digo para eliminar las
+dimensiones.</p>
+
+<div class="practicas">
+<img style="width: 29px; height: 29px; float: left;" alt="Actividad 95" title="Actividad 95" src="../imagenes/numeracion/noventaycinco.gif">
+<p>Una de los componentes que puede incluir una p&aacute;gina
+de centro es un &aacute;lbum de fotos con im&aacute;genes de
+las instalaciones o los reportajes de actividades escolares.</p>
+
+<p>Crea un &aacute;lbum para mostrar im&aacute;genes con
+su correspondiente pie de foto. Para crear las reglas de estilo
+tendr&aacute;s que considerar los siguientes aspectos:</p>
+
+<ul>
+
+  <li>Anchura y altura de los contenedores gen&eacute;ricos.</li>
+
+  <li>Fondo de los contenedores (ten en cuenta quesi le adjudicas
+un color diferente al del fondo de la p&aacute;gina puede funcionar
+visualmente como un passpartout)</li>
+
+  <li>Existencia o no de borde. </li>
+
+  <li>Tama&ntilde;o de la fuente.</li>
+
+  <li>Alineaci&oacute;n del texto de pie </li>
+
+</ul>
+
+<p>Por si quieres hacer la pr&aacute;ctica sin buscar ahora
+mismo im&aacute;genes puedes utilizar las fotos de estas siete
+setas: <a href="imagenes/amanita-muscaria.jpg">amanita
+muscaria</a>, <a href="imagenes/armillaria-ostoyae.jpg">armillaria
+ostoyae</a>, <a href="imagenes/coprinus-comatus.jpg">coprinus
+comatus</a>, <a href="imagenes/hypholoma-del-aliso.jpg">hypholoma
+del aliso</a>, <a href="imagenes/macrolepiota-procera.jpg">macrolepiota
+procera</a>, <a href="imagenes/pholiota-penetrans.jpg">pholiota
+penetrans</a> y <a href="imagenes/tricholomopsis-rutilans.jpg">tricholomopsis
+rutilans</a>.</p>
+
+<p>Como complemento puedes hacer que cada imagen apunte a un
+original en alta resoluci&oacute;n (puedes obtenerlos en el <a href="http://recursos.cnice.mec.es/bancoimagenes/" target="_blank">banco de im&aacute;genes</a> del
+CNICE) </p>
+
+</div>
+
+<div class="practicas">
+<img style="width: 29px; height: 29px; float: left;" alt="Actividad 96" title="Actividad 96" src="../imagenes/numeracion/noventayseis.gif">
+<p>Una propuesta complementaria para el &aacute;lbum de
+im&aacute;genes: &iquest;qu&eacute; tal quedar&iacute;a
+cada contenedor si tuviera un fondo que imitara el carrete
+fotogr&aacute;fico?. </p>
+
+<p> Gimp dispone de una utilidad que puede ayudarte para crear
+esta imagen. Puedes acceder a ella en el men&uacute; <span class="refmenu">script-fu <img class="refmenu" src="../imagenes/flechamenu.png" alt="a continuaci&oacute;n" height="13" width="14"> decoraci&oacute;n <img class="refmenu" src="../imagenes/flechamenu.png" alt="a continuaci&oacute;n" height="13" width="14">
+diapositiva </span></p>
+
+</div>
+
+<p>&nbsp;</p>
+</div>
+
+</body>
+</html>

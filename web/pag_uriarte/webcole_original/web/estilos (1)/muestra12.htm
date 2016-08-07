@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+  <title>Muestra de estilos</title>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <link href="muestrasdeestilos.css" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+<!--
+#mancheta {
+width:160px;
+background-color:#e0e0e0;
+margin-left:5px;
+padding:5px;
+float:right;
+}
+#lupa {
+float:left;
+padding-right:10px
+}
+-->
+  </style>
+  <script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_showHideLayers() { //v6.0
+var i,p,v,obj,args=MM_showHideLayers.arguments;
+for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+obj.visibility=v; }
+}
+//-->
+  </script>
+</head>
+
+
+<body>
+
+<div class="zonaizq">
+<div class="codigo">
+<p><code>&lt;style type="text/css"&gt;<br>
+
+&lt;!--<br>
+
+#mancheta <br>
+
+{<br>
+
+width:160px;<br>
+
+background-color:#e0e0e0;<br>
+
+margin-left:5px;<br>
+
+padding:5px;<br>
+
+float:right;<br>
+
+}<br>
+
+#lupa <br>
+
+{<br>
+
+float:left;<br>
+
+padding-right:10px<br>
+
+}<br>
+
+--&gt;<br>
+
+&lt;/style&gt; </code> <br>
+
+</p>
+
+</div>
+
+<div class="flotder"> <a href="javascript:void(0)" onclick="MM_showHideLayers('derecha','','show')">Visualizar
+el formato resultante <img src="../imagenes/flechamenu.png" border="0" height="13" width="14"></a>
+</div>
+
+</div>
+
+<div class="zonadcha" id="derecha"> <img id="lupa" src="../imagenes/buscar.gif" height="65" width="50">
+<p> Aqu&iacute; aparece el texto normal de la
+p&aacute;gina donde se explican las cuestiones generales. </p>
+
+<div id="mancheta"> esto es un texto que se considera
+importante y aparece en una mancheta </div>
+
+<p> Gracias a la aplicaci&oacute;n de los estilos tendremos
+una imagen flotando a la izquierda y un texto con fondo gris flotando a
+la derecha, mientras el texto normal fluye entre ambos. Para insertar
+el texto de la zona derecha lo hemos hecho aplicando el identificador
+<code>id="mancheta"</code> a un delimitador <code>div</code> que se ha colocado antes del segundo
+p&aacute;rrafo, mientras que para la imagen hemos aplicado el
+identificador <code>id="lupa"</code> cuyas caracter&iacute;sticas
+hab&iacute;amos definido en la hoja de estilos interna. </p>
+
+<p> Si ves el c&oacute;digo podr&aacute;s comprobar todos
+los detalles. </p>
+
+</div>
+
+</body>
+</html>

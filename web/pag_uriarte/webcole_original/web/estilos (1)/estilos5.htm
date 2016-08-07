@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+
+<html>
+
+<head>
+
+<title>Crear estilos</title>
+
+<link href="../estilo.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" language="JavaScript">
+
+<!-- 
+
+  function cargalogo(nombre) {
+
+   parent.arriba.location.href=nombre;
+
+}
+
+function Abreejemplo (){
+
+	fp=window.open("ejemploestilo.htm","","top=0,left=0;width=450,height=300,scrolling=no");
+
+return true;
+
+}
+
+// -->
+
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<style type="text/css">
+<!--
+th {background-color: #aabc35}
+-->
+</style>
+</head>
+
+<body onload="cargalogo('t24c.htm');" bgcolor="#FFFFFF">
+
+<p> Con la propiedad fondo podemos controlar el color de fondo un elemento de
+  la p&aacute;gina, establecer im&aacute;genes como fondo y decidir su posici&oacute;n
+  dentro de la p&aacute;gina y si se repetir&aacute;n o no.</p>
+
+<p>Color de fondo</p>
+<p><b>Propiedad:</b> background-color</p>
+<p>Como todas las propiedades de los fondos podemos aplicarla a toda la p&aacute;gina
+    o s&oacute;lo a un determinado elemento, elgiendo una etiqueta de html como
+    selector para aplicarlo de forma gen&eacute;rica o bien mediante la utilizaci&oacute;n
+  de clases o selectores id. </p>
+<p><b>Valores:</b> podemos utilizar el nombre o la referencia RGB de un color
+  . </p>
+<div class="ejemplo">
+  <p><b>Ejemplos:</b> </p>
+  <p style="background-color:orange">En este p&aacute;rrafo se ha aplicado un fondo   utilizando la etiqueta <b>background-color:orange</b></p>
+  <div class="codigo">
+	  <table width="50%" border="1">
+        <tr>
+          <th>Cabecera</th>
+          <th><div align="left">Cabecera</div></th>
+        </tr>
+        <tr>
+          <td>celda 1 </td>
+          <td><div align="left">celda 2 </div></td>
+        </tr>
+      </table>
+	  <p>Esta tabla toma su color de un estilo definido en una hoja interna para
+	    el elemento th </p>
+      <p>&lt;style
+    type=&quot;text/css&quot;&gt;<br>
+&lt;!--<br>
+th {background-color: #aabc35}<br>
+--&gt;<br>
+&lt;/style&gt;</p>
+</div></div>
+<p>Imagen  de fondo</p>
+<p><b>Propiedad:</b> background-image</p>
+<p><b>Valores:</b> podemos utilizar la referencia relativa a una imagen de nuestro
+  propio sitio o bien una referencia absoluta. Con ello podemos hacer que los
+  fondos se apliquen solamente a una determinada porci&oacute;n del documento,
+  en lugar de hacerlo a toda la p&aacute;gina. Aunque no deber&iacute;amos hacerlo,
+  incluso aunque tuvi&eacute;ramos control sobre la url a la que apuntamos, si
+  usamos referencias absolutas de im&aacute;genes en la red solo podremos comprobar
+  el efecto cuando dispongamos de conexi&oacute;n a internet.</p>
+<div class="ejemplo">
+  <p><b>Ejemplos:</b> </p>
+  <p style="background-image: url(../claro09.jpg)">Ahora
+    se ha utilizado una imagen como fondo y la forma de expresarlo ha sido <b>background-image:URL(claro09.jpg)</b></p>
+</div>
+<p>La inclusi&oacute;n de una imagen como fondo lleva asociadas tres propiedades que
+  nos permitir&aacute;n especificar si la imagen se repite, la posici&oacute;n en caso de no
+  repetirse y el desplazamiento vertical si la p&aacute;gina ocupa m&aacute;s de una pantalla. </p>
+<p>Posici&oacute;n de la imagen </p>
+<p><strong>Propiedad:</strong> background-position</p>
+<p><strong>Valores: </strong>Existen varias posibilidades para establecer la
+  posici&oacute;n:</p>
+<ul>
+  <li>Posicionamiento absoluto en el que indicar&iacute;amos un valor en p&iacute;xeles indicar
+    las coordenadas en las que se situar&aacute; el v&eacute;rtice superior izquierdo respecto
+    al v&eacute;rtice superior izquierdo de la ventana. <a href="javascript:void(0)" onclick=window.open('muestra7.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=250')>Ver ejemplo </a><br>&nbsp;    </li>
+  <li>Posicionamiento relativo porcentual: en este caso indicamos la posici&oacute;n
+    en forma de porcentaje respecto a la altura y la anchura ocupadas por el
+    bloque al que se aplica. <a href="javascript:void(0)" onclick=window.open('muestra8.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=250')>Ver ejemplo </a><br>&nbsp;    </li>
+  <li>Posicionamiento relativo mediante palabras reservadas: para
+    ello utilizamos tres t&eacute;rminos
+    referidos a la posici&oacute;n vertical que son <strong>top</strong>, <strong>center</strong> y <strong>bottom</strong> (para
+    arriba, centro y abajo respectivamente) y <strong>left</strong>, <strong>center</strong> y <strong>right</strong> para indicar
+    la posici&oacute;n horizontal.
+    (izquierda, centro y derecha). En caso de utilizar un &uacute;nico t&eacute;rmino
+    no habr&aacute;
+    duda ya que son diferentes salvo en el caso de center que provocar&aacute; que
+    el navegador lo interprete como center center y sit&uacute;e la imagen en
+    el medio absoluto de la p&aacute;gina. <a href="javascript:void(0)" onclick=window.open('muestra9.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=300')>Ver
+    ejemplo </a></li>
+</ul>
+<p>Repeticiones</p>
+<p><strong>Propiedad:</strong> background-repeat</p>
+<p><strong>Valores: </strong>Si no especificamos esta propiedad se adoptar&aacute; el
+  valor por defecto <strong>repeat</strong>. Podemos tambi&eacute;n optar por indicar
+  que no se repita con el valor <strong>no-repeat </strong>(en los ejemplos de
+  posicionamiento se ha utilizado ya esta propiedad) o bien indicar que queremos
+  que se repita en horizontal <strong>repeat-x </strong> o en vertical <strong>repeat-y. </strong><a href="javascript:void(0)" onclick=window.open('muestra10.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=300')>Ver ejemplo </a></p>
+<p>Desplazamiento</p>
+<p>Podemos indicar si deseamos que la imagen de fondo se desplace con el resto
+  de la p&aacute;gina cuando esta ocupe m&aacute;s de una pantalla o si deseamos que permanezca
+  fija, a modo de &quot;marca de agua&quot;, mientras se desplaza el resto del
+  contenido. </p>
+<p><strong>Propiedad:</strong> background-attachment</p>
+<p><strong>Valores: </strong>el valor por defecto es <strong>scroll</strong>,
+  mientras que si utilizamos <strong>fixed </strong>la imagen permanecer&aacute; fija. <a href="javascript:void(0)" onclick=window.open('muestra11.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=690,height=300')>Ver
+  ejemplo </a></p>
+<blockquote>&nbsp;</blockquote>
+
+<div class="practicas"> 
+
+  <p><img src="../imagenes/cincuentaydos.gif" width="29" height="29" align="left"> </p>
+
+<ul>
+
+  <li>Experimenta con diversas posibilidades de color e im&aacute;genes de fondo mediante
+    su incorporaci&oacute;n a tu hoja de estilos. </li>
+
+  <li>A&ntilde;ade finalmente aquellos valores que resulten adecuados para tu sitio
+    web.</li>
+  </ul>
+
+</div>
+
+
+</body>
+
+
+
+</html>
+

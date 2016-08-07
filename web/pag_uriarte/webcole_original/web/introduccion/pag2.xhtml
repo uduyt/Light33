@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es-es" xmlns="http://www.w3.org/1999/xhtml" xml:lang=
+"es-es">
+  <head>
+    <meta content="text/html; charset=iso-8859-1" http-equiv=
+    "content-type" />
+    <title>
+      Estructura general - Imágenes de fondo
+    </title>
+    <link rel="stylesheet" href="../nvu2005.css" type=
+    "text/css" /><!-- compliance patch for microsoft browsers -->
+    <!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+  </head>
+  <body>
+    <h2>
+      Imagen de fondo
+    </h2>
+    <p>
+      Además de los colores seguro que has visto alguna página
+      que tiene una textura como fondo. Aunque últimamente está
+      empezando a caer en desuso puede ser un recurso interesante
+      para la construcción estética de nuestro sitio WEB.
+    </p>
+    <p>
+      Lo que hacemos cuando elegimos una imagen para colocarla
+      como fondo de nuestra página es considerar la pantalla como
+      el suelo de una habitación que iremos rellenando desde la
+      esquina superior izquierda con baldosas. Las baldosas serán
+      tan grandes o pequeñas como la imagen que hayamos elegido.
+    </p>
+    <p>
+      <img class="flotizq" style="width: 419px; height: 395px;"
+      alt=
+      "Panel de &quot;Fondo y colores de la página&quot; con imagen de fondo"
+      title=
+      "Panel de &quot;Fondo y colores de la página&quot; con imagen de fondo"
+      src="img/imagenfondo.png" />Para elegir la imagen que
+      deseamos utilizar como fondo de la página accederemos al
+      panel que ya conocemos mediante la opción de
+      menú <span class="refmenu">formato </span><span class=
+      "refmenu"><img class="imgcentr" style=
+      "font-weight: bold; width: 14px; height: 13px;" alt=
+      "submenú" title="submenú" src=
+      "../estilos/flechamenu.png" /></span> <span class=
+      "refmenu">colores y fondo de la página</span>.
+    </p>
+    <p>
+      Si la imagen se encuentra fuera de la carpeta en la que
+      estamos trabajando podemos tener un problema cuando se
+      publique la página, por lo que se recomienda que, antes de
+      insertar una imagen, sea como fondo o como componente de la
+      página, se copie a la carpeta de trabajo o a una subcarpeta
+      que cuelgue de ella.
+    </p>
+    <p>
+      Si la imagen que deseamos poner de fondo se encuentra en la
+      carpeta o en una subcarpeta de la misma, será muy
+      conveniente marcar <img style="width: 240px; height: 25px;"
+      alt="Casilla: URL relativa a la ruta de la página" title=
+      "Casilla: URL relativa a la ruta de la página" src=
+      "img/urlrelativa.png" /> para que la referencia no sea la
+      <a href="#absoluta">ruta absoluta</a> hasta ella, sino su
+      <a href="#relativa">ruta relativa</a>
+    </p>
+    <p>
+      Si la página a la que le estamos aplicando el fondo no ha
+      sido guardada todavía verás que no se activa la casilla
+      para indicar que la URL es relativa a la página, ya que al
+      no conocer aún cuál será la ubicación de la misma es
+      imposible establecer rutas relativas hacia ella.<br clear=
+      "all" />
+    </p>
+    <div class="codigo">
+      <dl>
+        <dt>
+          <a name="absoluta" id="absoluta"></a>Ruta absoluta:
+        </dt>
+        <dd>
+          Llamamos de esta forma a la ruta que recoge la
+          ubicación de un determinado archivo sin tener en cuenta
+          el punto desde el que se solicita la referencia.<br />
+          Por ejemplo: <span style=
+          "font-style: italic;">http://platea.pntic.mec.es/~rluna/index.html</span><br />
+
+          También sería una ruta absoluta una referencia a un
+          archivo dentro de nuestro disco duro del tipo<br />
+          <span style=
+          "font-style: italic;">file:///F:/WEBs/HTML/imagenes/lateralespiral.gif</span>
+        </dd>
+        <dt>
+          <a name="relativa" id="relativa"></a>Ruta relativa: 
+        </dt>
+        <dd>
+          En este caso tenemos en cuenta el punto desde el que
+          damos la referencia del tipo <span style=
+          "font-style: italic;">imagenes/lateralespiral.gif</span>
+          donde hemos eliminado la referencia inicial e indicamos
+          que, desde el punto donde estamos, encontraremos una
+          subcarpeta en la que estará la imagen
+          lateralespiral.gif
+        </dd>
+      </dl>Cuando creamos un sitio WEB es importante que todas
+      las rutas sean relativas para que al hacer una réplica de
+      nuestro sitio en el servidor todas las referencias sigan
+      siendo válidas igual que en nuestro disco duro. Por cierto,
+      supongo que ya te habrás dado cuenta que todos los archivos
+      que formen parte del sitio WEB deben estar en la carpeta
+      principal o en subcarpetas de la misma. (Por utilizar la
+      metáfora de la casa: no podemos guardar trastos en el
+      cuarto del ascensor porque, a lo mejor, en el nuevo
+      edificio que sería el servidor WEB no hay ascensor o está
+      en otro sitio. Todo debe estar en habitaciones situadas de
+      la puerta de casa hacia adentro)<br />
+      <br />
+      Ni que decir tiene que si tenemos que enviar a alguien a la
+      "casa de un amigo" tendremos que darle la dirección
+      completa para que no se pierda, esto es, la ruta absoluta.
+    </div>
+    <p>
+      Para hacer la siguiente práctica puedes utilizar alguna de
+      las imágenes que encontrarás en la carpeta <b>imagenes (sin
+      tilde para garantizar la compatibilidad).</b> También
+      puedes recurrir a cualquiera de la multitud de páginas en
+      la red que ofrecen la posibilidad de obtener este tipo de
+      imágenes. Tendremos que "bajarlas" a nuestro ordenador,
+      para lo que pulsaremos con el botón derecho del ratón sobre
+      la imagen que queramos conseguir, y copiarlas en el
+      directorio de trabajo para poder incluirlas en nuestra
+      página. (Aunque se podrían guardar en cualquier directorio
+      resulta más cómodo hacerlo en el directorio en el que
+      estamos trabajando nuestras páginas, para no tener que
+      irlas buscando por todo el disco duro y, además, permitir
+      la creación de rutas relativas que funcionen
+      posteriormente). Puedes probar a bajar alguna imagen para
+      el próximo ejercicio desde <a href=
+      "http://www.areas.net/colorvivo.htm" target=
+      "_blank">ColorVivo</a>
+    </p>
+    <div class="practicas">
+      <img class="numact" style=
+      "width: 29px; height: 29px; float: left;" alt=
+      "Actividad 19" title="Actividad 19" src=
+      "../imagenes/numeracion/diecinueve.gif" />
+      <ul>
+        <li>Arranca N|VU para crear una nueva página.
+        </li>
+        <li>Copia en tu carpeta del curso, o en una subcarpeta de
+        ésta, una imagen para aplicarla como imagen de fondo a tu
+        página. (Puedes utilizar alguna de las que tienes en la
+        carpeta <a href="../imagenes/" target=
+        "_blank">imagenes</a> del CD-ROM o cualquier otra que
+        tuvieras previamente o hayas obtenido de Internet).
+        </li>
+        <li>Abre el panel de <span class="refmenu">colores y
+        fondo de la página</span> y elige una imagen para
+        aplicarla como fondo a tu página. (Puedes utilizar alguna
+        de las que tienes en la carpeta imágenes o cualquier otra
+        que tuvieras previamente o hayas obtenido de Internet).
+        </li>
+        <li>Antes de aceptar comprueba que está
+        desmarcada <img class="imgcentr" style=
+        "width: 240px; height: 25px;" alt=
+        "Casilla: URL relativa a la ruta de la página" title=
+        "Casilla: URL relativa a la ruta de la página" src=
+        "img/urlrelativa2.png" /> y observa que la referencia a
+        la imagen es una ruta absoluta. Déjalo así por el momento
+        </li>
+        <li>Utiliza la pestaña <b><img class="imgcentr" style=
+        "width: 99px; height: 21px;" alt="Código fuente" title=
+        "Código fuente" src=
+        "../imagenes/pestanacodigofuente.png" /></b> para
+        localizar la etiqueta <code><span class=
+        "">&lt;body&gt;</span></code> y comprobar que el atributo
+        de imagen de fondo de la página  tiene por ahora la
+        referencia a la imagen en forma de ruta absoluta.
+        </li>
+        <li>Guarda la página en tu carpeta de trabajo con el
+        nombre <strong>actividad19.html</strong>
+        </li>
+        <li>Vuelve a la pestaña <img class="imgcentr" style=
+        "width: 65px; height: 20px;" alt="Normal" title="Normal"
+          src="../imagenes/pestananormal.png" /> y recurre
+          nuevamente a <span class="refmenu">colores y fondo de
+          la página</span> para marcar la casilla <img class=
+          "imgcentr" style="width: 240px; height: 25px;" alt=
+          "Casilla: URL relativa a la ruta de la página" title=
+          "Casilla: URL relativa a la ruta de la página" src=
+          "img/urlrelativa.png" /> para indicar que <b><strong>la
+          URL de la imagen está relacionada con la dirección de
+          la página.</strong></b>
+        </li>
+        <li>Comprueba en la vista  <b><img class="imgcentr"
+          style="width: 99px; height: 21px;" alt="Código fuente"
+          title="Código fuente" src=
+          "../imagenes/pestanacodigofuente.png" /></b> que ha
+          desaparecido la ruta absoluta.<br />
+          <div class="avisos">
+            <img style="width: 28px; height: 25px; float: left;"
+            alt="Atención" src="../imagenes/atencion.gif" />Si la
+            imagen se encuentra en una unidad diferente a la que
+            alberga la página no tendrás posibilidad de indicar
+            que se trata de una ruta relativa
+          </div>
+        </li>
+        <li>Si tenías activada la utilización de estilos ve a
+        <span class="refmenu">edición</span><b class=
+        "refmenu"> </b><span class="refmenu"><img class=
+        "imgcentr" style=
+        "font-weight: bold; width: 14px; height: 13px;" alt=
+        "submenú" title="submenú" src=
+        "../estilos/flechamenu.png" /></span> <span class=
+        "refmenu">preferencias</span> y desactívala (o
+        viceversa). Si eliminas la imagen de fondo y vuelves
+        luego a incluirla podrás comprobar que la forma de
+        materializar el código es diferente, aunque el efecto es
+        el mismo.
+        </li>
+      </ul>
+    </div>
+    <div class="practicas">
+      <img class="numact" style=
+      "width: 29px; height: 29px; float: left;" alt=
+      "Actividad 20" title="Actividad 20" src=
+      "../imagenes/numeracion/veinte.gif" />
+      <ul>
+        <li>En esta práctica verás la importancia del tamaño
+        cuando pretendemos utilizar un fondo lateral.
+        </li>
+        <li>En la carpeta de "imagenes" del CD-ROM tienes tres
+        fondos back640.gif, back800.gif y back1200.gif que
+        simulan la espiral de un cuaderno y un margen. La única
+        diferencia entre las tres es su longitud.
+        </li>
+        <li>Crea una página y aplícale como fondo la imagen
+        back1200.gif. Guarda la página
+        como <strong>actividad20a.html</strong><strong>.</strong>
+        Suponiendo que tu pantalla esté configurada para mostrar
+        una resolución de800x600 o 1024x768 píxeles que son las
+        dos más habituales, o incluso si tienes hasta 1200
+        píxeles de ancho, no habrá ningún problema en la
+        visualización.
+        </li>
+        <li>Cambia el fondo y utiliza la imagen back800.gif.
+        Guarda la página
+        como <strong>actividad20b.html</strong><strong>.</strong>
+        Si tu pantalla está a 800x600 seguirá viéndose
+        correctamente, pero si tienes una resolución mayor
+        comprobarás que aparece un efecto de repetición muy
+        desagradable
+        </li>
+        <li>Prueba con último con la imagen back640.gif. Guarda
+        la página como <strong>actividad20c.html</strong><strong>
+          .</strong> Salvo que tu monitor sea muy pequeño y
+          utilice aún una resolución de 640x480 comprobarás que
+          nuestra "baldosa" se repite horizontalmente.
+        </li>
+      </ul>Ten en cuenta que ya empieza a haber monitores que
+      utilizan resoluciones bastante altas, por lo que cuando
+      quieras usar una imagen lateral será conveniente que la
+      modifiques para hacerla más larga y evitar las repeticiones
+      horizontales.
+    </div> 
+  </body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Deslizando el texto a lo largo de una figura</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+  <link rel="stylesheet" type="text/css" href="../multi3.css">
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<style type="text/css">
+<!--
+/* Primer método: con recorte manual de imágenes */
+/* definición de las características de las "lonchas" de imagen */
+.patina { margin: 0pt 1em 0pt 0pt;
+float: left;
+clear: left;
+}
+/* Corrección necesaria para que el texto quede siempre sobre la imagen en caso de superposición */
+p { position: relative;
+z-index: 9;
+}
+/* Segundo método: definición del contenedor general */
+.contenedor { margin: 0;
+padding: 0;
+background-repeat: no-repeat;
+background-image: url(imagenes/arquitectoder.png);
+background-position: right top;
+background-color: rgb(255, 255, 255);
+}
+/* características de cada "loncha" : altura, flotación, flotación prohibida, márgenes y rellenos */
+#a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m {
+/* border:1px solid red; */ /* edita y descomenta esta línea para ver dónde están los límites de cada zona */
+float: right;
+clear: right;
+margin: 0 0 0 1em;
+padding:0;
+height: 25px;
+font-size:0px; /* hay que ponerlo para evitar que las zonas redimensionen al cambiar el tamaño de la fuente con el navegador */
+}
+/* anchura de cada una de las zonas en función del contenido de la imagen */
+#a {width:90px}
+#b {width:100px}
+#c {width:190px}
+#d {width:190px}
+#e {width:160px}
+#f {width:140px}
+#g {width:110px}
+#h {width:100px}
+#i {width:130px}
+#j {width:70px}
+-->
+  </style>
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;T&eacute;cnicas</p>
+
+</div>
+<div id="flechadcha">
+<a href="tecnicascss6enclolumnarlistas.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="tecnicascss3.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+<div class="solapas">
+ <ul>
+
+        <li><a href="tecnicascss2.html">Pies
+de foto</a></li>
+
+        <li><a href="tecnicascss4imagenesdesustitucion.html">Im&aacute;genes
+de sustituci&oacute;n</a></li>
+
+        <li><a href="tecnicascssbordesredondeados.html">Bordes
+redondeados</a></li>
+
+        <li><a href="tecnicascss3.html">Centrados</a></li>
+
+        <li class="activo"><a href="tecnicascss5deslizatextofigura.html">Ajuste a
+perfil de imagen</a></li>
+
+        <li><a href="tecnicascss6enclolumnarlistas.html">Encolumnar
+listas</a></li>
+
+        <li><a href="tecnicasandoenredando.html">Sustituci&oacute;n
+de im&aacute;genes</a></li>
+
+        <li><a href="tecnicascolumnas.html">Columnas</a></li>
+
+<li><a href="menus.html">Menús</a></li>
+      
+      </ul>
+	</div>  
+
+
+<div class="principal">	
+<img class="patina" style="width: 190px; height: 15px;" alt=" " src="imagenes/patina1.png">
+<img class="patina" style="width: 190px; height: 15px;" alt=" " src="imagenes/patina2.png"><img class="patina" style="width: 195px; height: 15px;" alt=" " src="imagenes/patina3.png"><img class="patina" style="width: 195px; height: 75px;" alt=" " src="imagenes/patina4.png"><img class="patina" style="width: 190px; height: 15px;" alt=" " src="imagenes/patina5.png"><img class="patina" style="width: 170px; height: 30px;" alt=" " src="imagenes/patina6.png"><img class="patina" style="width: 175px; height: 15px;" alt=" " src="imagenes/patina7.png"><img class="patina" style="width: 185px; height: 15px;" alt=" " src="imagenes/patina8.png"><img class="patina" style="width: 200px; height: 15px;" alt=" " src="imagenes/patina9.png"><img class="patina" style="width: 215px; height: 15px;" alt=" " src="imagenes/patina10.png"><img class="patina" style="width: 255px; height: 15px;" alt=" " src="imagenes/patina11.png"><img class="patina" style="width: 260px; height: 15px;" alt=" " src="imagenes/patina12.png"><img class="patina" style="width: 270px; height: 30px;" alt=" " src="imagenes/patina13.png"><img class="patina" style="width: 210px; height: 30px;" alt=" " src="imagenes/patina14.png"><img class="patina" style="width: 225px; height: 15px;" alt=" " src="imagenes/patina15.png"><img class="patina" style="width: 230px; height: 30px;" alt=" " src="imagenes/patina16.png"><img class="patina" style="width: 220px; height: 15px;" alt=" " src="imagenes/patina17.png"><img class="patina" style="width: 240px; height: 15px;" alt=" " src="imagenes/patina18.png"><img class="patina" style="width: 250px; height: 58px;" alt=" " src="imagenes/patina19.png">
+<h2>Desliz&aacute;ndose ...</h2>
+
+<p>Bueno pues parece que vamos a empezar a hacer alguna cosa que
+cre&iacute;amos que no se pod&iacute;a hacer con las
+p&aacute;ginas HTML.</p>
+
+<p>Por lo que sab&iacute;amos hasta el momento, las
+im&aacute;genes forman un rect&aacute;ngulo que nos permite que
+el texto fluya por la izquierda o por la derecha del mismo.</p>
+
+<p>Esto parece bastante l&oacute;gico cuando se trata de
+fotograf&iacute;as, ya que estamos acostumbrados a percibirlas como
+un todo en el que la&nbsp;figura y el fondo componen un
+paralelogramo. Sin embargo la situaci&oacute;n var&iacute;a
+mucho cuando la imagen que vemos es un dibujo, denominado clipart en el
+lenguaje inform&aacute;tico en el que nos encontramos unos
+contornos que lo separan claramente del fondo y le hacen adquirir una
+personalidad propia. Este es el caso de nuestra valiente patinadora,
+que se ha venido deslizando por la red desde su origen en
+la&nbsp;librer&iacute;a <a title="http://www.openclipart.org/" href="http://www.openclipart.org/" target="_blank">Open
+Clipart</a> que es una
+galer&iacute;a de im&aacute;genes distribuidas bajo
+licencia Creative Commons y a la que puedes acceder para descargar
+trabajos de otros internautas o aportar el tuyo si tienes una buena
+mano.&nbsp;</p>
+
+<p>El caso es que, correspondiendo a sus esfuerzos
+tambi&eacute;n hemos hemos hecho lo posible para aprender a
+deslizarnos y para ello hemos contado con la inestimable ayuda de uno
+de los grandes expertos en aplicaci&oacute;n de CSS: Eric Meyer, en
+cuya <a href="http://www.meyerweb.com/" target="_blank">web</a>
+encontrar&aacute;s el art&iacute;culo "ragged float" que
+explica el principio que se ha aplicado para crear este ejemplo.</p>
+
+<p>&iexcl;Uf, menos mal! Aunque creo que han aparecido un
+para de referencias interesantes en los p&aacute;rrafos
+anteriores,&nbsp; ya estaba empezando a pensar que iba a ser
+incapaz de encontrar tema con el que ir rellenando el espacio para que
+pudieras comprobar el efecto de deslizamiento del texto siguiendo el
+perfil de una imagen. &nbsp;Como estoy escribiendo con una
+resoluci&oacute;n de 1024x768 y puede que esta p&aacute;gina se
+muestre dentro de una estructura de marcos, es seguro que ya habremos
+superado a nuestra amiga la patinadora, as&iacute; que vamos a ver
+un par de detalles sobre la t&eacute;cnica empleada.</p>
+
+<p>La idea en la que se apoya esta t&eacute;cnica es que la
+imagen flote y el texto fluya a su alrededor. Pero como lo que no
+queremos es que la imagen sea un rect&aacute;ngulo tenemos que
+hacer un par de trabajos para lograr el efecto deseado:</p>
+
+<ol>
+
+  <li>Empezamos por utilizar un programa de tratamiento de imagen
+para dividir la imagen en "lonchas" cuya
+anchura vaya ajust&aacute;ndose al contorno con lo que dispondremos
+de una colecci&oacute;n de im&aacute;genes de diferentes
+anchos: <img class="recuadroimg" style="width: 190px; height: 15px;" alt="Fragmento de 190 p&iacute;xeles de anchura" title="Fragmento de 190 p&iacute;xeles de anchura" src="imagenes/patina1.png"> <img class="recuadroimg" style="width: 260px; height: 15px;" alt="Fragmento de 260 p&iacute;xeles de anchura" title="Fragmento de 260 p&iacute;xeles de anchura" src="imagenes/patina12.png">. En el art&iacute;culo de
+Eric Meyer se hace con todas las im&aacute;genes tengan la misma
+altura, sin embargo en nuestra patinadora hemos utilizado alturas
+diferentes haciendo fragmentos m&aacute;s altos cuando el borde
+derecho se encontraba a la misma altura como ocurre con la cabeza.</li>
+
+  <li>Colocamos las im&aacute;genes una a
+continuaci&oacute;n de otra y hacemos, utilizando CSS que se
+coloquen alineadas una bajo otra y flotando a la izquierda.</li>
+
+</ol>
+
+<p>A partir de aqu&iacute; no hace falta m&aacute;s que
+empezar a
+escribir a continuaci&oacute;n de la &uacute;ltima imagen.
+Obviamente, si nuestra imagen estuviera insertada en otro punto de la
+p&aacute;gina podr&iacute;amos tener texto por encima, a su
+lado y por debajo seg&uacute;n dicha posici&oacute;n.</p>
+
+<div class="codigo">
+<p>As&iacute; pues, toda la t&eacute;cnica se basa en la
+siguiente regla CSS aplicada a los elementos <code>img</code>:</p>
+
+<p><code>.patina { margin: 0 1em 0 0;<br>
+
+<span class="indentado25">float: left;</span><br>
+
+<span class="indentado25">clear: left;</span><br>
+
+<span class="indentado25">}</span></code>
+</p>
+
+<p>El &uacute;nico margen es el de la derecha, la
+flotaci&oacute;n es a la izquierda y, para evitar que las
+im&aacute;genes aparezcan una a continuaci&oacute;n de otra se
+ha a&ntilde;adido la propiedad <code>clear:left</code>,
+de manera que nada pueda
+flotar a la izquierda de cada imagen.</p>
+
+<div class="avisos">
+<p>El art&iacute;culo original de Eric Meyer
+inclu&iacute;a la propiedad <code>height</code> con un
+valor en
+p&iacute;xeles ya que todas las im&aacute;genes
+ten&iacute;an la misma altura. Como en nuestro caso no era posible
+prob&eacute; primero a poner la altura con un valor "auto" y,
+finalmente opt&eacute; por suprimir la propiedad, dado que las
+im&aacute;genes llevan ya la indicaci&oacute;n de altura y ha
+funcionado correctamente en Internet Explorer 6, Mozilla 1.7.8, Firefox
+1.04 y Opera 7.54 para Windows que han sido los navegadores sobre los
+que he probado la p&aacute;gina.</p>
+
+Otro peque&ntilde;o truco ha sido a&ntilde;adir la regla <code>p{position:
+relative; z-index:50;}</code> al descubrir que, en Internet
+Explorer las
+im&aacute;genes pod&iacute;an superponerse al texto en algunos
+momentos. Al incluir un &iacute;ndice de profundidad para los
+p&aacute;rrafos que son los elementos que bordean las
+im&aacute;genes
+se consigue evitar esta situaci&oacute;n que no afectaba a los
+otros
+navegadores. <br>
+
+</div>
+
+</div>
+
+<h3>"Lonchear" im&aacute;genes con Gimp</h3>
+
+<p>Explicamos brevemente un m&eacute;todo de trabajo para
+fragmentar una imagen en tiras utilizando Gimp:</p>
+
+<ol>
+
+  <li>Con la imagen original abierta utiliza el men&uacute; <span class="refmenu">imagen </span><img class="refmenu" style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"><span class="refmenu">
+configurar la rejilla</span>. En la secci&oacute;n <span class="refmenu">espaciado</span> desliga el ancho y el
+alto pulsando sobre el icono <img style="width: 34px; height: 19px;" alt="eslabones" src="../gimp/enlazados2.png"> y
+adjud&iacute;cale los valores que consideres m&aacute;s
+adecuados a ambos par&aacute;metros. (15 p&iacute;xeles para el
+alto y 5 para el ancho pueden ser una buena opci&oacute;n)</li>
+
+  <li>Tras aceptar acude al men&uacute; <span class="refmenu">ver</span> y marca las opciones <span class="refmenu">ver rejilla</span> y <span class="refmenu">ajustar a la rejilla</span>: de esta
+forma tendr&aacute;s a la vista unos puntos que te
+permitir&aacute;n ir seleccionando las zonas m&aacute;s acordes
+a las caracter&iacute;sticas de la imagen sin tener que preocuparte
+de "casar" una zona con la siguiente gracias a la opci&oacute;n de <span class="refmenu">ajustar a la rejilla</span> que acabas
+de activar.</li>
+
+  <li>Selecciona la primera zona utilizando la herramienta de <span class="refmenu">selecci&oacute;n rectangular</span>.
+Es <strong>muy importante</strong> que compruebes que
+est&aacute;n <strong>desactivadas</strong> las
+opciones <span class="refmenu">alisado</span> y <span class="refmenu">difuminar los bordes</span>, ya que
+pretendemos que los cortes sean secos para que no se noten al volver a
+ensamblar las piezas.</li>
+
+  <li>Copia la primera selecci&oacute;n y utiliza <span class="refmenu">editar </span><img class="refmenu" style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"><span class="refmenu">
+pegar como nuevo</span> para crear la primera "loncha".
+Gu&aacute;rdala.</li>
+
+  <li>Vuelve a la imagen original y contin&uacute;a repitendo
+el procedimiento hasta que tengas todos los fragmentos.</li>
+
+  <li>No estar&iacute;a de m&aacute;s que desactivaras la
+opci&oacute;n <span class="refmenu">ajustar a la
+rejilla</span> porque si lo olvidas puede que en trabajos futuros
+pases un mal rato cuando intentes seleccionar una zona y el programa no
+te haga mucho caso hasta que no recuerdes que sigue activado. No he
+mencionado la de <span class="refmenu">ver rejilla</span>
+porque esa es evidente y en cuanto te moleste su presencia te
+acordar&aacute;s de quitarla.</li>
+
+</ol>
+<p><a href="javascript:void(0)" onclick="window.open('tecnicascss5deslizatextoaparte.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=800,height=600,scrollbars=yes')">Buscando alternativas</a></p>
+</div>
+<br>
+<br>
+</body>
+</html>

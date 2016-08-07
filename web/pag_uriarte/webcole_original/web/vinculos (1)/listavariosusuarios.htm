@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<script language="JavaScript" src="ocultacorreo.js"></script>
+<link href="../estilo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p>Además de construir las direcciones con un script el listado con los componentes 
+  de las mismas se encuentra en un archivo externo al que hemos enlazado en el 
+  encabezado. <br>
+  Podemos guardar el archivo con la extensión que nos dé la gana, incluso una 
+  inventada (en el ejemplo hemos utilizado la habitual js). La única condición 
+  es que lo hagamos en formato texto.<br>
+  El contenido de dicho archivo es una definici&oacute;n de las variables que 
+  se utilizar&aacute;n en el script, lo cual nos permitir&aacute; componer las 
+  direcciones de cada uno de los usuarios mencionados en la p&aacute;gina:</p>
+<p><strong>Contenido del archivo listacorreos.js</strong></p>
+<blockquote> 
+  <p> var nombre1 = "raul"; <br>
+    var nombre2 = "maria"; <br>
+    var nombre3 = "juana"; <br>
+    var nombre4 = "pedro"; <br>
+    var nombre5 = "luisa"; <br>
+    <br>
+    var dominio1 = "platea.cnice.mecd.es"; <br>
+    var dominio2 = "ya.com"; </p>
+</blockquote>
+<p><strong>Opción 1</strong>: Un texto (o una imagen) sirve de base para soportar 
+  el vínculo de correo </p>
+<p></p>
+<pre class="codigo">&lt;script language="JavaScript">
+document.write("&lt;a href=" + "mail" + "to:" + nombre1 + "@" + dominio1 + ">Contactar&lt;/a>")
+&lt;/script> 
+</pre><br>
+<div align="center">El resultado se ver&iacute;a asi: 
+  <script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre1 + "@" + dominio1 + ">Contactar</a>")
+
+</script>
+</div>
+<p>Si queremos incluir una imagen el códiogo quedaría: </p>
+<pre class="codigo">&lt;script language="JavaScript">
+document.write("&lt;a href="+"mail"+"to:"+nombre1+"@"+dominio1+">&lt;img src="+"nombre_imagen border=0"+">&lt;/a>")
+&lt;/script> </pre><br>
+<div align="center"> Y veríamos el resultado como: 
+  <script language="JavaScript">
+document.write("<a href="+"mail"+"to:"+nombre1+"@"+dominio1+"><img src="+"../imagenes/correo2.gif border=0 align=absmiddle"+"></a>")
+
+</script>
+</div>
+<p><strong>Opción 2: </strong>En este caso, en lugar de un texto, incluimos la 
+  propia dirección de correo como texto de soporte del enlace, pero la construimos 
+  utilizando los valores del script para que no pueda ser cazada por los rastreadores. 
+  Como en el archivo con la lista de usuarios tenemos recogidos los valores de 
+  varios nombres de usuario y de dominios podemos construir las direcciones combin&aacute;ndolos 
+  como corresponda. El script para cada uno quedar&iacute;a como sigue, con los 
+  cambios en las variables nombre y dominio para adjudicar los valores correspondientes 
+  a cada caso:</p>
+<pre class=codigo>&lt;script language="JavaScript">
+document.write("&lt;a href=" + "mail" + "to:" + nombre1 + "@" + dominio1 + ">")
+document.write(nombre1 + "@" + dominio1 + "&lt;/a>")
+&lt;/script>
+</pre>
+Los resultados quedarían de la siguiente forma:
+<blockquote>nombre1, dominio1<img src="../imagenes/flechaderecha.gif" hspace="10" align="absmiddle"> 
+  <script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre1 + "@" + dominio1 + ">")
+document.write(nombre1 + "@" + dominio1 + "</a>")
+</script>
+
+<p>nombre2, dominio2  <img src="../imagenes/flechaderecha.gif" hspace="10" align="absmiddle">
+  <script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre2 + "@" + dominio2 + ">")
+document.write(nombre2 + "@" + dominio2 + "</a>")
+</script>
+</p>
+<p>nombre3, dominio1  <img src="../imagenes/flechaderecha.gif" hspace="10" align="absmiddle">
+  <script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre3 + "@" + dominio1 + ">")
+document.write(nombre3 + "@" + dominio1 + "</a>")
+</script>
+</p>
+<p>nombre4, dominio1  <img src="../imagenes/flechaderecha.gif" hspace="10" align="absmiddle">
+  <script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre4 + "@" + dominio1 + ">")
+document.write(nombre4 + "@" + dominio1 + "</a>")
+</script>
+</p>
+<p>nombre5, dominio2  <img src="../imagenes/flechaderecha.gif" hspace="10" align="absmiddle">
+  <script language="JavaScript">
+document.write("<a href=" + "mail" + "to:" + nombre5 + "@" + dominio2 + ">")
+document.write(nombre5 + "@" + dominio2 + "</a>")
+</script>
+</p>
+</blockquote>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+  <title>Muestra de estilos</title>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+  <link href="muestrasdeestilos.css" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+<!--
+.zonaizq {
+top:40px;
+width:50%;
+}
+.zonadcha {
+position:absolute;
+top:40px;
+width:50%;
+}
+.cabecera {
+background-color:#e0e0e0;
+position:fixed;
+top:0px;
+left:0px;
+width:100%;
+height:40px;
+z-index:30;
+}
+-->
+  </style>
+  <script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_showHideLayers() { //v6.0
+var i,p,v,obj,args=MM_showHideLayers.arguments;
+for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+obj.visibility=v; }
+}
+//-->
+  </script>
+</head>
+
+
+<body>
+
+<div class="zonaizq">
+<div class="codigo">
+<p><code>&lt;style type="text/css"&gt;<br>
+
+&lt;!--<br>
+
+.cabecera<br>
+
+{<br>
+
+</code><code>position:fixed;<br>
+
+</code><code>top:0px;</code><code><br>
+
+left:0px;<br>
+
+height:40px;<br>
+
+width:100%;<br>
+
+background-color:#e0e0e0;</code><code><br>
+
+}<br>
+
+--&gt;<br>
+
+&lt;/style&gt; </code><br>
+
+</p>
+
+</div>
+
+<div class="flotder"> <a href="javascript:void(0)" onclick="MM_showHideLayers('derecha','','show')">Visualizar
+el formato resultante <img src="../imagenes/flechamenu.png" border="0" height="13" width="14"></a>
+</div>
+
+</div>
+
+<div class="cabecera">
+<p>Este ser&iacute;a el primer p&aacute;rrafo que se
+mantendr&iacute;a fijo sin desplazarse aunque hubiera que desplazar
+el resto del contenido de la p&aacute;gina </p>
+
+</div>
+
+<div class="zonadcha" id="derecha" style="overflow: auto;">
+<p>Gracias a la aplicaci&oacute;n del parche Internet
+Explorer se ha ajustado a las especificaciones y la p&aacute;gina
+se ver&aacute; correctamente.</p>
+
+<p>La zona superior debe estar correctamente posicionada y no
+desplazarse cuando deslicemos el resto del contenido</p>
+
+<p>A continuaci&oacute; aparecen unos p&aacute;rrafos
+generados con la extensi&oacute;n Lorem Ipsum para que haya un
+contenid que permita el desplazamiento.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+officia deserunt mollit anim id est laborum.</p>
+
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+voluptatem.</p>
+
+<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam
+corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
+velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum
+fugiat quo voluptas nulla pariatur?</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+
+
+
+  
+  
+  
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
+
+  
+
+
+  
+  
+  
+  
+  
+  <title>CSS: bordes</title>
+  <meta name="author" content="Ra&uacute;l Luna">
+
+
+
+
+  
+  
+  
+  <link href="../nvu2005.css" type="text/css" rel="stylesheet">
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+
+
+
+
+  
+  
+  
+  <style type="text/css">
+th { background-color: rgb(170, 188, 53);
+}
+  </style>
+</head>
+
+
+<body>
+
+
+<div id="localizador">
+<p>Estilos&gt;&gt;Bordes</p>
+
+</div>
+
+<div id="flechadcha">
+<a href="css8.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="css6.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<h2>Bordes</h2>
+
+
+
+
+<p> Para poder aplicar bordes utilizando HTML era imprescindible
+crear tablas. Aparte de los problemas de accesibilidad est&aacute;
+claro que lo que hacemos es utilizar un elemento cuya
+funci&oacute;n es darle estructura al contenido para conseguir un
+formato gr&aacute;fico en la presentaci&oacute;n.</p>
+
+
+
+
+<p>Gracias a las hojas de estilo podremos aplicarle bordes a
+cualquier elemento, incluso una <span class="borde">palabra</span>
+dentro de un p&aacute;rrafo y con variedad de efectos.</p>
+
+
+
+
+<h3>Propiedad abreviada </h3>
+
+
+
+
+<p>Aunque en ocasiones anteriores hemos colocado en
+&uacute;ltimo lugar la agrupaci&oacute;n de propiedades de
+forma simplificada, en este caso presentamos en primer lugar la
+propiedad base para tenerla en cuenta como referencia dada la gran
+cantidad de posibles combinaciones de valores y propiedades.&nbsp;En
+el editor
+de CSS de N|VU podr&aacute;s acceder a estas propiedades dentro de la
+pesta&ntilde;a <span class="refmenu">borde</span>. Aunque ver&aacute;s un poco m&aacute;s adelante
+lo que se considera el orden normativo seg&uacute;n las
+especificaciones ver&aacute;s que el editor de CSS de N|VU no se ajusta
+en este momento a ese orden y presenta las cajas para la
+introducci&oacute;n de valores en el orden superior, izquierdo, derecho
+e inferior en lugar del orden en sentido "horario". </p>
+
+
+
+
+<p>Utilizando el t&eacute;rmino <code>border</code>
+podemos especificar todas las caracter&iacute;sticas aplicables a
+los bordes sobre las que se puede incidir, que son el color, el grosor
+y el tipo de trazo.</p>
+
+
+
+
+<p>Antes de entrar a ver cada una de estas propiedades
+particulares es conveniente tener en cuenta una cuesti&oacute;n
+previa sobre la identificaci&oacute;n de los bordes, porque tenemos
+la posibilidad de indicar las propiedades de cada uno individualmente,
+mientras que si utiliz&aacute;ramos la propiedad
+gen&eacute;rica&nbsp;<code>border</code>
+aplicar&iacute;amos los mismos valores a todos ellos.</p>
+
+
+
+
+<h3>Identificaci&oacute;n de los bordes </h3>
+
+
+
+
+<p>Para referirnos a cada uno de los bordes del
+rect&aacute;ngulo que rodea a cada elemento utilizamos las palabras
+<code>top</code> , <code>right</code>, <code>bottom</code>
+y <code>left</code>. La enumeraci&oacute;n no ha sido
+al azar, sino que sigue el orden por defecto en sentido horario: borde
+superior, derecho, inferior e izquierdo.&nbsp; </p>
+
+
+
+
+<ul>
+
+
+
+
+  <li>Podr&iacute;amos ir pues definiendo las propiedades que
+veremos en los siguientes ep&iacute;grafes para <code>border-top</code>,
+    <code>border-right</code>, <code>border-bottom</code>
+y <code>border-left</code>. Ej. <code><span style="border-top: thin solid red;"> border-top:solid red
+thin</span></code> , <span style="border-right: thin dotted green; border-bottom: thin solid orange;"><code>
+border-right:dotted green thin</code>; border-bottom:solid orange
+thin; </span>, etc<br>
+
+
+
+
+&nbsp; </li>
+
+
+
+
+  <li>Tambi&eacute;n podr&iacute;amos utlizar el orden
+por defecto para indicar las propiedades como en el siguiente ejemplo
+en el que se usa la propiedad de color para indicar los colores de cada
+borde. <code><span style="border-style: dashed; border-color: red blue green yellow; border-width: thin;">border:dashed
+thin ; border-color:red blue green yellow</span></code> <br>
+
+
+
+
+&nbsp;</li>
+
+
+
+
+</ul>
+
+
+
+
+<p>Como norma general respecto al orden cuando aplicamos
+cualquiera de las propiedades que veremos a continuaci&oacute;n: </p>
+
+
+
+
+<ul>
+
+
+
+
+  <li style="border: thin solid red;">si solo
+especificamos un valor se aplicar&aacute; a todos los bordes ese
+valor. (<code>red</code> en este ejemplo)</li>
+
+
+
+
+  <br>
+
+
+
+
+&nbsp; <li style="border-style: solid; border-color: blue red; border-width: thin;">si
+especificamos dos el primer valor ser&aacute; para superior e
+inferior y el segundo para derecho e izquierdo (<code>blue</code>
+y <code>red</code> en este caso) </li>
+
+
+
+
+  <br>
+
+
+
+
+&nbsp; <li style="border-style: solid; border-color: orange lime maroon; border-width: thin;">si
+especificamos tres seguiremos un un orden de arriba a abajo: el primero
+ser&aacute; para el superior, el segundo para los laterales y el
+tercero para el inferior (<code>orange</code>, <code>lime</code>
+y <code>maroon</code>) </li>
+
+
+
+
+  <br>
+
+
+
+
+&nbsp; <li style="border-style: solid; border-color: fuchsia black navy silver; border-width: thin;">si
+especificamos los cuatro se seguir&aacute; el orden por defecto
+superior, derecho, inferior, izquierdo. (<code>fuchsia</code>,
+    <code>black</code>, <code>navy</code> y <code>silver</code>
+) </li>
+
+
+
+
+</ul>
+
+
+
+
+<h3>Color</h3>
+
+
+
+
+<p><b>Propiedad:</b> <code>border-color</code></p>
+
+
+
+
+<p><b>Valores:</b> podemos utilizar el nombre CSS o
+la referencia RGB de un color en cualquiera de sus notaciones tal como
+ya hemos visto.</p>
+
+
+
+
+<p>Recuerda lo que acabas de ver sobre la cantidad de valores
+especificados para esta propiedad y su orden de aplicaci&oacute;n. </p>
+
+
+
+
+<h3>Estilo del trazo </h3>
+
+
+
+
+<p><b>Propiedad:</b> <code>border-style</code></p>
+
+
+
+
+<p><b>Valores:</b> tenemos una serie de palabras
+reservadas cuyo efecto puedes ver en los ejemplos.</p>
+
+
+
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b> </p>
+
+
+
+
+<p style="border: thin solid navy;"><code>solid</code></p>
+
+
+
+
+<p style="border: thin dotted navy;"><code>dotted</code></p>
+
+
+
+
+<p style="border: thin dashed navy;"><code>dashed</code></p>
+
+
+
+
+<p style="border: medium double navy;"><code>double</code> <em>(si se
+indica el grosor fino se ve como el borde simple o no se v&eacute;
+seg&uacute;n el navegador) </em></p>
+
+
+
+
+<p style="border: medium ridge navy;"><code>ridge</code> (<em>el
+efecto es m&aacute;s perceptible con bordes medios o gruesos) </em></p>
+
+
+
+
+<p style="border: medium inset navy;"><code>inset</code>
+<em>(el efecto es m&aacute;s perceptible con bordes medios o
+gruesos)</em></p>
+
+
+
+
+<p style="border: medium outset navy;"><code>outset</code>
+<em>(el efecto es m&aacute;s perceptible con bordes medios o
+gruesos)</em></p>
+
+
+
+
+</div>
+
+
+
+
+
+<h3>Grosor</h3>
+
+
+
+
+<p><strong>Propiedad:</strong> <code>border-width</code></p>
+
+
+
+
+<p><strong>Valores: </strong>Podemos especificar el
+grosor indicando un valor en cualquiera de las unidades admitidas, o
+bien mediante las palabras reservadas que se muestran en el ejemplo.</p>
+
+
+
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b> </p>
+
+
+
+
+<p style="border: thin solid navy;"><code>thin</code></p>
+
+
+
+
+<p style="border: medium solid navy;"><code>medium</code></p>
+
+
+
+
+<p style="border: thick solid navy;"><code>thick</code></p>
+
+
+
+
+<p style="border: 0.25cm solid navy;">ejemplo
+fijando un valor: 0,25 cm <em></em></p>
+
+
+
+
+</div>
+
+
+
+
+<h3> Agrupando propiedades de los bordes </h3>
+
+
+
+
+<p>Como ya se coment&oacute; al inicio del apartado podemos
+agrupar las propiedades referentes al borde bajo una propiedad
+abreviada <code><abbr>border</abbr></code> a la que le
+adjudicar&iacute;amos los valores correspondientes a grosor,
+estilo, y color, pero teniendo en cuenta que al hacerlo as&iacute;
+solo podremos indicar un valor para cada propiedad que se
+aplicar&iacute;a a todos los bordes por igual.</p>
+
+
+
+
+<div class="practicas">
+<img style="width: 29px; height: 29px; float: left;" alt="Actividad 89" title="Actividad 89" src="../imagenes/numeracion/ochentaynueve.gif"> 
+
+
+
+<ul>
+
+
+
+
+  <li>Incorpora las propiedades de bordes a los selectores o
+clases de tu hoja de estilo que puedan necesitarlo. Dependiendo de los
+casos puedes utilizar la propiedad abreviada o bien las indicaciones
+individualizadas para cada borde si lo consideras conveniente.</li>
+
+
+
+
+</ul>
+
+
+
+
+</div>
+
+</div>
+
+
+</body>
+</html>

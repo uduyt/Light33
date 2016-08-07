@@ -1,0 +1,863 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="es-es">
+<head>
+  <title>Formularios. Tipos de campo</title>
+
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- compliance patch for microsoft browsers --><!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Formularios&gt;&gt;Tipos de campo</p>
+
+</div>
+<div id="flechadcha">
+<a href="formularios3.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="formularios1.htm" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+
+<h3>Tipos de controles</h3>
+
+<p>Ahora que ya tenemos el contenedor b&aacute;sico vamos
+pues a pasar revista a
+los diferentes tipos de controles con los que&nbsp;podremos incluir
+datos en
+el formulario.<br>
+
+<br>
+
+</p>
+
+<h4>Entradas de texto de una
+l&iacute;nea</h4>
+
+<p><img class="flotder" style="width: 303px; height: 416px;" alt="Panel de introducci&oacute;n de campos de formulario" title="Panel de introducci&oacute;n de campos de formulario" src="imagenes/campotexto.png">Utilizaremos este tipo de
+controles para recoger datos tales
+como
+los nombres, apellidos, direcciones, tel&eacute;fonos y, en
+general, todos aquellos de los que podamos esperar una
+extensi&oacute;n limitada. El principal problema lo tendremos,
+precisamente, al estimar cu&aacute;l debe ser la longitud adecuada
+para que puedan caber los datos que introduzca el visitante, ya que tan
+nombre es Ana como Mar&iacute;a de las Mercedes, y mientras el
+primero tiene suficiente con tres caracteres, el segundo necesita un
+total de veintiuno.</p>
+
+<p>Su presentaci&oacute;n en pantalla ser&aacute; de este
+tipo: </p>
+
+<form name="form1">
+  <p class="centro"><b>Apellidos</b>: <input name="apellidos" size="30" maxlength="50" type="text"> </p>
+
+</form>
+
+<p>Para insertar una entrada de texto de una l&iacute;nea
+escribiremos primero el texto que deseamos que se utilice como etiqueta
+para el control y luego utilizaremos la opci&oacute;n <span class="refmenu">insertar
+</span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> formulario </span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu">
+campo
+de
+formulario</span>, o bien&nbsp;la opci&oacute;n <span class="refmenu">campo
+de
+formulario</span> que aparece al desplegar el icono <img style="width: 73px; height: 41px;" alt="Formulario" title="Formulario" src="imagenes/icoformulario.png">
+de la barra de herramientas. En el panel que se presenta aparece
+como&nbsp;primer tipo de
+control el denominado texto que es el que pretendemos crear.</p>
+
+<p>En este caso no pondremos ning&uacute;n valor inicial.<img style="width: 128px; height: 24px;" alt="M&aacute;s propiedades" title="M&aacute;s propiedades" src="../imagenes/botonmaspropiedades.png"></p>
+
+<p>Desplegando el bot&oacute;n <img style="width: 128px; height: 24px;" alt="M&aacute;s propiedades" title="M&aacute;s propiedades" src="../imagenes/botonmaspropiedades.png">
+encontramos unas cuantas opciones, algunas de las cuales son
+espec&iacute;ficas de este tipo de control mientras que otras, como
+el <span class="refmenu">&iacute;ndice de
+tabulaci&oacute;n</span>
+que permite especificar el orden en el que se saltar&aacute; de uno
+a
+otro control del formulario y la tecla de acceso r&aacute;pido, que
+permitir&aacute; acceder de forma inmediata a ese campo pulsando la
+tecla <img style="width: 38px; height: 27px;" alt="Alt" title="Alt" src="../imagenes/teclaalt.png"> + la
+letra indicada en este apartado. Estas opciones aparecer&aacute;n
+para todos los campos y ser&iacute;a conveniente especificarlas
+para favorecer la accesibilidad.</p>
+
+<div class="avisos">En la versi&oacute;n disponible al
+redactar esta
+documentaci&oacute;n existen dos cuestiones que merecen comentarse
+en el tratamiento de este
+tipo de controles:<br>
+
+<ol>
+
+  <li>No se incluye el atributo <code>type</code>
+para indicar&nbsp;el tipo de control del que se trata, mientras que
+ver&aacute;s que s&iacute; se especifica en los otros controles
+    <code>input</code>.
+Esto se debe a que el valor <code>text</code> es el que se
+considera por defecto para el atributo <code>type</code>
+de los controles <code>input</code>, por lo que no es
+necesario incluirlo aunque puede que lo encuentres en formularios
+creados con otros programas. </li>
+
+  <li>No se almacena el
+valor de la <span class="refmenu">tecla de acceso
+r&aacute;pido</span> en los campos de texto de una
+l&iacute;nea, por lo que si se desea
+especificar este atributo habr&aacute; que insertar manualmente el
+c&oacute;digo <code>accesskey="letra"</code></li>
+
+</ol>
+
+</div>
+
+<div class="codigo">
+<p> El c&oacute;digo que se
+generar&aacute; con el ejemplo que se ha mostrado en las
+im&aacute;genes
+ser&aacute;:&nbsp; <b><br>
+
+<br>
+
+</b><code>&lt;input&nbsp;maxlength="50"
+size="25" tabindex="1" accesskey="a" name="apellidos"&gt;<br>
+
+</code><br>
+
+Independientemente del tama&ntilde;o en pantalla que viene fijado
+por el atributo <code>size</code>, el atributo&nbsp;<code>maxlength="n</code>",
+sirve para especificar el n&uacute;mero m&aacute;ximo de
+caracteres que se podr&aacute;n introducir en la caja de texto.</p>
+
+</div>
+
+<div class="avisos">
+<p><img src="../imagenes/atencion.gif" align="left" height="25" width="28">Aunque habitualmente el nombre
+que le damos al campo suele coincidir con el texto que ponemos a su
+lado no tiene por qu&eacute; ser necesariamente as&iacute;.
+Adem&aacute;s, si en alg&uacute;n momento tienes acceso a
+programas para procesar los formularios, comprobar&aacute;s que una
+simple variaci&oacute;n de min&uacute;scula por
+may&uacute;scula a la hora de referirnos a los nombres de los
+campos es suficiente para que no funcione.</p>
+
+</div>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 62" title="Actividad 62" src="../imagenes/numeracion/sesentaydos.gif">
+<ul>
+
+  <li>Abre el archivo <strong>actividad61.html</strong>
+y a&ntilde;ade un campo de texto para recoger el
+nombre,&nbsp;apellidos y direcci&oacute;n de quien cumplimenta
+el formulario.</li>
+
+  <li>Acude a la pesta&ntilde;a <img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" title="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png">
+o, m&aacute;s c&oacute;modamente, utiliza la opci&oacute;n
+de men&uacute; <span class="refmenu">insertar </span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu">
+html</span> para a&ntilde;adir el c&oacute;digo necesario
+para que se pueda acceder a ese campo con una tecla r&aacute;pida.</li>
+
+  <li>Puedes guardarlo&nbsp;con el mismo nombre, aunque si
+quieres conservar la secuencia es preferible que lo llames <strong>actividad62.html</strong>
+para mantener la correspondencia con la serie de actividades. Abre el
+archivo en
+el
+navegador o en la pesta&ntilde;a <img style="width: 103px; height: 20px;" alt="Vista preliminar" title="Vista preliminar" src="../imagenes/pestanavistapreliminar.png"> para comprobar
+que funciona la tecla de acceso r&aacute;pido que has especificado.<br>
+
+  </li>
+
+</ul>
+
+</div>
+
+<p></p>
+
+<h4>&Aacute;reas de texto de
+varias
+l&iacute;neas</h4>
+
+<br>
+
+<p><img class="flotder" style="width: 298px; height: 134px;" alt="Valores para &Aacute;rea de texto" title="Valores para &Aacute;rea de texto" src="imagenes/areadetexto.png">Estos controles se utilizan,
+no s&oacute;lo porque no
+podamos
+prever la extensi&oacute;n, sino, fundamentalmente, porque se trata
+de campos abiertos en los que dejamos al visitante que se exprese sin
+limitaciones. Para crear un control de este tipo seleccionaremos la
+opci&oacute;n de men&uacute; <span class="refmenu">insertar&nbsp;<img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"> formulario <img src="../imagenes/flechamenu.png" height="13" width="14">
+&aacute;rea
+de
+texto...</span> o elegiremos la opci&oacute;n <span class="refmenu">&aacute;rea de texto</span> del
+desplegable a partir del bot&oacute;n de
+men&uacute;.&nbsp;&nbsp;</p>
+
+<p>La apariencia que podr&iacute;amos encontrar cuando
+creemos
+un&nbsp;
+ser&iacute;a similar a la siguiente.<br clear="all">
+
+</p>
+
+<form name="form2">
+  <p>Esperamos tus aportaciones:</p>
+
+  <p> <textarea name="aportaciones" cols="75" rows="4" wrap="VIRTUAL"></textarea> </p>
+
+</form>
+
+<p class="codigo">En este caso, el c&oacute;digo es el
+siguiente (observa que, mientras en el campo de texto de una sola
+l&iacute;nea no hab&iacute;a etiqueta de cierre en
+&eacute;ste tipo s&iacute; que la hay)<br>
+
+<code><br>
+
+<span class="Estilo1">&lt;textarea wrap="virtual"
+cols="75" rows="4" tabindex="2" name="Aportaciones"&gt;<br>
+
+&lt;/textarea&gt;</span></code><br>
+
+<br>
+
+<code>Cols</code> y <code>rows</code> me
+sirven para
+especificar el ancho y el alto del cuadro de introducci&oacute;n de
+texto.<br>
+
+<br>
+
+El campo que se ha mostrado en el ejemplo lleva otro atributo
+m&aacute;s en la etiqueta: <code><span class="Estilo1">wrap="virtual"</span></code>.
+Con este atributo, que especificaremos en el apartado<span class="refmenu"> modo de ajuste</span> del panel de
+creaci&oacute;n&nbsp;del campo, se especifica la forma en la
+que se ir&aacute;n
+partiendo los renglones cuando alguien introduzca texto, aunque la
+implementaci&oacute;n del mismo en los diferentes navegadores es
+dispar, ya que te&oacute;ricamente este modo deber&iacute;a
+funcionar de forma diferente al ajuste f&iacute;sico. Parece que lo
+m&aacute;s prudente ser&iacute;a dejar este ajuste en el modo
+predeterminado.</p>
+
+<div class="avisos">
+<p><img src="../imagenes/atencion.gif" align="left" height="25" width="28">La especificaci&oacute;n
+de tecla de acceso r&aacute;pido ya funciona correctamente desde el
+panel de creaci&oacute;n del &aacute;rea de texto por lo que no
+necesitaremos introducir el c&oacute;digo manualmente.</p>
+
+</div>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 63" title="Actividad 63" src="../imagenes/numeracion/sesentaytres.gif">
+<ul>
+
+  <li>Abre el
+archivo <strong>actividad62.html </strong>y
+a&ntilde;ade un &aacute;rea de texto para recoger las
+observaciones que quiera realizar el usuario</li>
+
+  <li>Especifica que el ajuste sea virtual.</li>
+
+  <li>Indica una tecla de acceso r&aacute;pido desde el panel
+de creaci&oacute;n del campo (en esta ocasi&oacute;n
+s&iacute; deber&iacute;a almacenarse)</li>
+
+  <li>Gu&aacute;rdalo como&nbsp;<strong>actividad63.html</strong>.
+Abre el archivo en
+el
+navegador o en la pesta&ntilde;a <img style="width: 103px; height: 20px;" alt="Vista preliminar" title="Vista preliminar" src="../imagenes/pestanavistapreliminar.png"> para comprobar
+que funciona la tecla de acceso r&aacute;pido que has especificado.<br>
+
+  </li>
+
+</ul>
+
+</div>
+
+<p></p>
+
+<h4>Botones de
+opci&oacute;n</h4>
+
+<p><img class="flotder" style="width: 303px; height: 175px;" alt="Valores para bot&oacute;n de radio" title="Valores para bot&oacute;n de radio" src="imagenes/botonradial.png">Los botones de
+opci&oacute;n se utilizan para que el
+usuario escoja entre dos o m&aacute;s opciones
+excluyentes.&nbsp;</p>
+
+<p>Para crear un control de este tipo escribiremos el enunciado
+general del tema sobre el que solicitamos&nbsp;la opci&oacute;n
+y luego iremos escribiendo el texto de cada una de las opciones
+ofertadas. Finalmente elegiremos&nbsp;la
+opci&oacute;n de men&uacute;<span style="font-weight: bold;">&nbsp;</span><span class="refmenu">insertar&nbsp;<img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14">
+formulario <img src="../imagenes/flechamenu.png" height="13" width="14"> campo de formulario </span><span class="refmenu"><img style="width: 14px; height: 13px;" src="../imagenes/flechamenu.png"> </span><span class="refmenu">bot&oacute;n</span><span class="refmenu">&nbsp;</span><span class="refmenu">radial </span>&nbsp;o la misma
+opci&oacute;n en el deslegable desde el icono&nbsp;<img style="width: 73px; height: 41px;" alt="Formulario" title="Formulario" src="imagenes/icoformulario.png">
+de la barra de herramientas para proceder a la creaci&oacute;n del
+control propiamente dicho.&nbsp;</p>
+
+<p>El resultado final ser&iacute;a similar a lo siguiente:</p>
+
+<form name="form4">
+  <p>Horario preferido para entrevistas: Ma&ntilde;ana: <input name="entrevista" value="ma&ntilde;ana" type="radio">
+Tarde: <input name="entrevista" value="tarde" type="radio"> Indiferente: <input name="entrevista" value="Indiferente" type="radio"> </p>
+
+</form>
+
+<div class="codigo">
+<p>El c&oacute;digo que utilizaremos
+ser&aacute;<b> </b></p>
+
+<p><code>&lt;input type="radio"
+name="entrevista" value="ma&ntilde;ana"&gt;</code><b><br>
+
+<br>
+
+</b> donde el tipo <code>radio</code> indica que se
+trata de botones de
+opci&oacute;n.</p>
+
+<p>Lo importante de los botones de opci&oacute;n es que todos
+los
+pertenecientes al mismo grupo deben llevar el mismo atributo en <code>name</code>,
+variando el correspondiente a value para diferenciar la
+opci&oacute;n marcada. L&oacute;gicamente, para facilitar la
+interpretaci&oacute;n de los resultados recibidos,&nbsp;value
+tendr&aacute; como valor lo mismo que hemos incluido en el
+r&oacute;tulo que precede a cada opci&oacute;n<br>
+
+<br>
+
+Aunque no parece una opci&oacute;n demasiado respetuosa con la
+libertad de elecci&oacute;n, si quisi&eacute;ramos que una de
+las opciones apareciera marcada
+por defecto lo har&iacute;amos marcando en el panel de
+creaci&oacute;n la opci&oacute;n <span class="refmenu">seleccionado
+inicialmente</span> que, visto en el c&oacute;digo,
+generar&iacute;a un atributo complementario <code>checked="checked"&nbsp;</code></p>
+
+</div>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 64" title="Actividad 64" src="../imagenes/numeracion/sesentaycuatro.gif">
+<ul>
+
+  <li>Abre el archivo&nbsp;<strong>actividad63.html
+    </strong>y a&ntilde;ade una selecci&oacute;n mediante
+botones de
+opci&oacute;n con un par de valores.</li>
+
+  <li>Gu&aacute;rdalo como&nbsp;<strong>actividad64.html
+    </strong>. Abre el archivo en
+el
+navegador o en la pesta&ntilde;a <img style="width: 103px; height: 20px;" alt="Vista preliminar" title="Vista preliminar" src="../imagenes/pestanavistapreliminar.png"> para comprobar
+que ninguna de las opciones aparece seleccionada.</li>
+
+  <li>A&ntilde;ade una tercera opci&oacute;n y especifica
+que est&eacute; marcada inicialmente. Guarda y comprueba el
+resultado.<br>
+
+  </li>
+
+</ul>
+
+</div>
+
+<p></p>
+
+<h4>Casillas de
+verificaci&oacute;n</h4>
+
+<h4><br>
+
+</h4>
+
+<p><img class="flotder" style="width: 303px; height: 177px;" alt="Valores para casilla de verificaci&oacute;n" title="Valores para casilla de verificaci&oacute;n" src="imagenes/casillaverif.png">Las casillas de
+verificaci&oacute;n se asemejan a los
+botones de opci&oacute;n, pero permiten que se marque
+m&aacute;s de una opci&oacute;n.&nbsp;</p>
+
+<p>Para crear un control de este tipo &nbsp;seguiremos un
+procedimiento id&eacute;ntico al de los botones radiales, con la
+&uacute;nica diferencia de que elegiremos&nbsp; la
+opci&oacute;n de men&uacute;<span style="font-weight: bold;">&nbsp;</span><span class="refmenu">insertar&nbsp;<img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14">
+formulario <img src="../imagenes/flechamenu.png" height="13" width="14"> campo de formulario </span><span class="refmenu"><img style="width: 14px; height: 13px;" src="../imagenes/flechamenu.png"> </span><span class="refmenu">casilla de verificaci&oacute;n</span><span class="refmenu"> </span>&nbsp;o la misma
+opci&oacute;n en el deslegable desde el icono&nbsp;<img style="width: 73px; height: 41px;" alt="Formulario" title="Formulario" src="imagenes/icoformulario.png">
+de la barra de herramientas para la creaci&oacute;n de cada una de
+las casillas.&nbsp;</p>
+
+<p>El resultado ser&iacute;a similar al siguiente:&nbsp;</p>
+
+<form name="form3">
+  <p>Me interesar&iacute;a colaborar en :</p>
+
+  <p>Teatro: <input name="Teatro" value="X" type="checkbox"> Cine: <input name="Cine" value="X" type="checkbox"> Deportes: <input name="Deportes" value="X" type="checkbox">
+Taller de fotograf&iacute;a <input name="Foto" value="X" type="checkbox"> P&aacute;gina WEB del Centro <input name="WEB" value="X" type="checkbox"> </p>
+
+</form>
+
+<div class="codigo">
+<p>El c&oacute;digo correspondiente es:
+<br>
+
+<br>
+
+<code>&lt;input type="checkbox"
+name="Teatro" value="X"&gt;</code><br>
+
+<br>
+
+<code>Checkbox</code> indica que se trata de casillas de
+verificaci&oacute;n. En
+<code>name</code> iremos poniendo palabras que identifiquen
+las opciones y en el
+campo value pondremos el texto que queremos recibir cuando se marque la
+casilla. En el ejemplo se ha puesto una X, aunque podr&iacute;amos
+haber puesto un S&iacute; o cualquier otro conjunto de caracteres.</p>
+
+</div>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 65" title="Actividad 65" src="../imagenes/numeracion/sesentaycinco.gif">
+<ul>
+
+  <li>Abre el archivo&nbsp;<strong>actividad64.html
+    </strong>y a&ntilde;ade una selecci&oacute;n mediante
+casillas de verificaci&oacute;n&nbsp;con dos o tres valores
+posibles sin que ninguno de ellos est&eacute; seleccionado.</li>
+
+  <li>Gu&aacute;rdalo como&nbsp;<strong>actividad65.html</strong>.
+Abre el archivo en
+el
+navegador o en la pesta&ntilde;a <img style="width: 103px; height: 20px;" alt="Vista preliminar" title="Vista preliminar" src="../imagenes/pestanavistapreliminar.png"> para comprobar
+que ninguna de las opciones aparece seleccionada.</li>
+
+  <li>A&ntilde;ade otra opci&oacute;n y especifica
+que est&eacute; marcada inicialmente. Guarda y comprueba el
+resultado.<br>
+
+  </li>
+
+</ul>
+
+</div>
+
+<p class="avisos"><img class="flotizq" style="width: 28px; height: 25px;" alt="Atenci&oacute;n" src="../imagenes/atencion.gif">Si intentas modificar las
+propiedades de una casilla de verificaci&oacute;n o de un
+bot&oacute;n opci&oacute;n haciendo doble clic sobre los mismos
+o utilizando el bot&oacute;n derecho para acceder a sus propiedades
+no lograr&aacute;s lanzar el panel para hacerlo. Tendr&aacute;s
+que recurrir a la indicaci&oacute;n de la etiqueta <code>&lt;input&gt;</code>
+en la barra de estado y all&iacute; utilizar el bot&oacute;n
+derecho para lanzar las<span class="refmenu"> propiedades
+avanzadas</span>. </p>
+
+<h4>Cuadros de
+men&uacute; y
+listas de selecci&oacute;n</h4>
+
+<p><img class="flotder" style="width: 404px; height: 283px;" alt="Introducci&oacute;n de &iacute;tems de un men&uacute; o lista" title="Introducci&oacute;n de &iacute;tems de un men&uacute; o lista" src="imagenes/listas2.png">
+Los cuadros de men&uacute; permitir&aacute;n presentar
+una lista de opciones predeterminadas cuando creamos el formulario.
+Tienen dos formas de presentaci&oacute;n: los men&uacute;s
+desplegables y las listas. Salvo la forma de presentarlo, la
+&uacute;nica diferencia importante entre ambos modos de
+presentaci&oacute;n es que mientras que en los men&uacute;s
+desplegables s&oacute;lo se puede seleccionar una
+opci&oacute;n, en las listas es posible seleccionar varias si
+as&iacute; lo indicamos al construir el formulario.</p>
+
+<p>Para iniciar la creaci&oacute;n utilizaremos la
+opci&oacute;n de men&uacute; <span class="refmenu">insertar&nbsp;<img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14">
+formulario <img src="../imagenes/flechamenu.png" height="13" width="14"> lista de opciones</span><span class="refmenu"></span> o su hom&oacute;loga al
+desplegar el listado en el&nbsp;el icono&nbsp;<img style="width: 73px; height: 41px;" alt="Formulario" title="Formulario" src="imagenes/icoformulario.png">
+de la barra de herramientas.</p>
+
+<p class="flotizq"><img style="width: 266px; height: 114px;" alt="Especificando la altura y/o la selecci&oacute;n m&uacute;ltiple" title="Especificando la altura y/o la selecci&oacute;n m&uacute;ltiple" src="imagenes/listas1.png"></p>
+
+<p>Una vez all&iacute; se a&ntilde;adir&aacute;n los
+&iacute;tems con una simple pulsaci&oacute;n en el
+bot&oacute;n<img style="width: 108px; height: 22px;" alt="A&ntilde;adir opci&oacute;n" title="A&ntilde;adir opci&oacute;n" src="imagenes/aniadiropcion.png">,
+aunque lo primero que tendremos que hacer ser&aacute; especificar
+si se
+tratar&aacute; de un men&uacute; o de una lista de
+selecci&oacute;n
+para lo cual tendremos que especificar la altura o bien indicar que
+existe la posibilidad de realizar una opci&oacute;n
+m&uacute;ltiple, ya
+que en ambos casos estar&iacute;amos creando una lista, mientras
+que si
+no especificamos estos datos se tratar&aacute; de un
+men&uacute;.</p>
+
+<p>El resultado, seg&uacute;n se trate de una u otra
+posibilidad ser&aacute; similar a lo siguiente:</p>
+
+<form name="menu">
+  <table align="center" border="0" cellpadding="0" cellspacing="5" width="80%">
+
+    <tbody>
+
+      <tr>
+
+        <td width="35%">
+        <p>Elige una opci&oacute;n de la lista
+        <select name="selecciones">
+        <option>&Aacute;frica</option>
+        <option>Am&eacute;rica</option>
+        <option>Asia</option>
+        <option>Europa</option>
+        <option>Ocean&iacute;a</option>
+        </select>
+
+        </p>
+
+        </td>
+
+        <td width="9%">
+        <p><br>
+
+        </p>
+
+        </td>
+
+        <td width="35%">
+        <p>Ahora puedes elegir varias opciones si mantienes
+pulsada la tecla CTRL</p>
+
+        </td>
+
+        <td width="21%">
+        <select name="lista" size="5" multiple="multiple">
+        <option>&Aacute;frica</option>
+        <option>Am&eacute;rica</option>
+        <option>Asia</option>
+        <option>Europa</option>
+        <option>Ocean&iacute;a</option>
+        </select>
+
+        </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+</form>
+
+<div class="codigo">
+<p> El c&oacute;digo necesario es
+id&eacute;ntico para ambos tipos de presentaciones e incluye el
+identificador de tipo select, un nombre para el men&uacute; o lista
+(puede ser el que quieras aunque en este caso se haya puesto
+"selecciones". A continuaci&oacute;n se colocan las diferentes
+posibilidades de la lista encerradas entre <code>&lt;option&gt;</code>
+y
+<code>&lt;/option&gt;</code>. Observa que,
+nuevamente este tipo de campo
+tiene etiquetas de cierre, tanto en las opciones como en la propia
+definici&oacute;n del tipo.&nbsp;</p>
+
+<p class="indentado25"><code>&lt;select
+name="continentes&gt;</code></p>
+
+<p class="indentado25 indentado50"><code>&lt;option&gt;&Aacute;frica&lt;/option&gt;<br>
+
+&lt;option&gt;Am&eacute;rica&lt;/option&gt;
+<br>
+
+&lt;option&gt;Asia&lt;/option&gt; <br>
+
+&lt;option&gt;Europa&lt;/option&gt; <br>
+
+&lt;option&gt;Ocean&iacute;a&lt;/option&gt;</code></p>
+
+<p class="indentado25"><code>&lt;/select&gt;</code></p>
+
+<p><code></code>La diferencia entre un
+men&uacute; y una lista estriba en que la
+lista lleva en la primera etiqueta un atributo <code><span class="Estilo1">size="n"</span></code>
+donde n es el n&uacute;mero de filas que tendremos a la vista
+simult&aacute;neamente. Si le a&ntilde;adimos al final de la
+etiqueta de entrada el atributo <code>multiple="multiple"</code>podremos
+marcar varias de las posibilidades mostradas, algo que no
+podemos hacer cuando se trata de un men&uacute;. (Si no
+hubi&eacute;ramos especificado un tama&ntilde;o para lista,
+pero
+s&iacute; indicamos que es posible realizar una
+selecci&oacute;n
+m&uacute;ltiple, el tama&ntilde;o pasar&aacute; a ser
+autom&aacute;ticamente el del n&uacute;mero de &iacute;tems
+de la lista)</p>
+
+</div>
+
+<br>
+
+<div class="avisos">
+<p>En el panel de introducci&oacute;n de los
+opciones&nbsp;existe la opci&oacute;n <span class="refmenu">seleccionada
+inicialmente</span>.
+Dado el diferente tratamiento que pueden realizar los diversos
+navegadores respecto a las listas o men&uacute;s es conveniente que
+incluyas
+en cada lista una opci&oacute;n&nbsp;que est&eacute;
+seleccionada (normalmente con un
+valor nulo o neutro) para evitar que el navegador env&iacute;e como
+seleccionado el primer valor de la lista aunque no lo haya indicado el
+usuario.</p>
+
+<p>Si quieres modificar una lista de selecci&oacute;n o
+cuadro de men&uacute; ya creados a&ntilde;adiendo o eliminando
+opciones solo podr&aacute;s hacerlo desde la pesta&ntilde;a <img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png"></p>
+
+</div>
+
+Habr&aacute;s observado que en el panel de creaci&oacute;n de
+la lista / men&uacute; existe un bot&oacute;n <img style="width: 110px; height: 24px;" alt="A&ntilde;adir grupo" title="A&ntilde;adir grupo" src="imagenes/aniadirgrupo.png">.
+Cuando estamos elaborando un listado cuyos &iacute;tems se pueden
+agrupar en categor&iacute;as (por ejemplo la confecci&oacute;n
+de un
+men&uacute; en el que se pudiera elegir entre varios primeros
+platos,
+varios segundos y varios postres) es un recurso interesante para
+organizar visualmente los datos del listado. Cuando utilizamos esta
+posibilidad veremos que las opciones de cada grupo aparecen encerradas
+entre las etiquetas de apertura y cierre de optgroup como puede verse
+en el siguiente ejemplo que muestra un posible grupo de postres dentro
+de un men&uacute;<br>
+
+<div class="codigo">
+<p><code>...</code></p>
+
+<p><code>&lt;optgroup label="postres"&gt;</code></p>
+
+<p class="indentado25"><code>&lt;option&gt;fruta
+&lt;/option&gt;<br>
+
+&lt;option&gt;sorbete&lt;/option&gt;<br>
+
+&lt;option&gt;flan&lt;/option&gt;<br>
+
+&lt;option&gt;tarta&lt;/option&gt;</code></p>
+
+<p><code>&lt;/optgroup&gt;</code></p>
+
+<p><code>...</code></p>
+
+<p>&nbsp;El atributo label sirve para especificar el nombre
+que recibir&aacute; el grupo de opciones</p>
+
+</div>
+
+<br>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 66" title="Actividad 66" src="../imagenes/numeracion/sesentayseis.gif">
+<ul>
+
+  <li>Abre el
+archivo <strong>actividad65.html </strong>y
+a&ntilde;ade una lista de selecci&oacute;n bas&aacute;ndote
+en la idea
+apuntada en p&aacute;rrafos anteriores para la
+confecci&oacute;n de un men&uacute;.</li>
+
+  <li>Guarda el archivo como <strong>actividad66.html</strong>
+y<strong> </strong>comprueba el resultado visual.<br>
+
+  </li>
+
+</ul>
+
+</div>
+
+<p><br>
+
+</p>
+
+<h4>Botones de
+acci&oacute;n </h4>
+
+<p><img class="flotder" style="width: 303px; height: 174px;" alt="Panel para inserter el bot&oacute;n de env&iacute;o" title="Panel para inserter el bot&oacute;n de env&iacute;o" src="imagenes/botonenvio.png"> El &uacute;ltimo tipo de
+control de uso habitual en
+los&nbsp;formularios es el
+bot&oacute;n que se utiliza para proceder al env&iacute;o o la
+eliminaci&oacute;n de los datos. Para crear los botones accederemos
+mediante la opci&oacute;n de men&uacute; <span class="refmenu">insertar&nbsp;<img src="../imagenes/flechamenu.png" height="13" width="14">
+formulario <img src="../imagenes/flechamenu.png" height="13" width="14"> campo de formulario <img style="width: 14px; height: 13px;" src="../imagenes/flechamenu.png"> bot&oacute;n de
+env&iacute;o (o
+bot&oacute;n de restablecimiento)</span> o su
+hom&oacute;loga al desplegar el listado en el icono<img style="width: 73px; height: 41px;" alt="Formulario" title="Formulario" src="imagenes/icoformulario.png">
+de la barra de herramientas.</p>
+
+<p>Si dejamos en blanco los apartados nombre del campo y valor
+del campo el programa especifica &uacute;nicamente el tipo y deja
+que sea el navegador el que adjudique&nbsp;el texto que
+aparecer&aacute; en el bot&oacute;n en cada caso. Los botones
+que tienes a continuaci&oacute;n est&aacute;n creados de esta
+forma, por lo que el texto que est&aacute;s viendo en ellos es el
+que ha establecido el navegador con el que ves la p&aacute;gina.</p>
+
+<form name="form5" class="centro"> <input type="submit"> <input type="reset"></form>
+
+<div class="codigo">
+<p>Sin embargo podemos especificar estos campos como se ve en el
+siguiente ejemplo y su resultado.</p>
+
+<p><code>&lt;input type="submit"
+name="submit" value="Enviar"&gt;<br>
+
+&lt;input type="reset" name="reset" value="Borrar datos"&gt;</code><br>
+
+</p>
+
+<form name="form6" class="centro"> <input name="submit" value="Enviar" type="submit"> <input name="reset" value="Borrar datos" type="reset"></form>
+
+<p>Por comodidad lo m&aacute;s sencillo es hacer que los
+atributos
+<code>type</code> y <code>name</code> sean
+coincidentes en cada uno de los casos. En el atributo
+<code>value</code> pondremos el texto que queremos que
+aparezca en el
+bot&oacute;n.</p>
+
+</div>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 67" title="Actividad 67" src="../imagenes/numeracion/sesentaysiete.gif">
+<ul>
+
+  <li>Abre el archivo
+    <strong>actividad66.html</strong>
+y
+a&ntilde;ade botones de env&iacute;o y restablecimiento,
+especificando
+en el campo value el r&oacute;tulo que quieres que aparezca en cada
+uno
+de ellos.</li>
+
+  <li>Guarda el archivo como <strong>actividad67.html</strong>
+y &aacute;brelo en el navegador. En este
+momento
+podr&aacute;s comprobar el funcionamiento completo del formulario
+ya
+que dispones de un bot&oacute;n de env&iacute;o que
+lanzar&aacute; el
+programa de correo con los datos que hayas introducido al cumplimentar
+los diversos controles que has introducido hasta el momento.&nbsp;</li>
+
+  <li>Consulta tu buz&oacute;n de correo y comprueba si te ha
+llegado el mensaje y c&oacute;mo lo ha hecho.
+  </li>
+
+</ul>
+
+</div>
+
+<br>
+
+<h4>A&ntilde;adir estructura a los formularios</h4>
+
+<br>
+
+<p>En muchas ocasiones los formularios incluyen controles que
+presentan
+una clara relaci&oacute;n que permitir&iacute;a agruparlos
+formando una categor&iacute;a. Por ejemplo, podr&iacute;amos
+agrupar los controles para recoger nombre, apellidos,
+direcci&oacute;n y tel&eacute;fono bajo la categor&iacute;a
+de datos de contacto. Para hacerlo utilizaremos la opci&oacute;n de
+men&uacute; <span class="refmenu">insertar&nbsp;<img src="../imagenes/flechamenu.png" height="13" width="14">
+formulario <img src="../imagenes/flechamenu.png" height="13" width="14"> definir conjunto de campos</span> o su
+hom&oacute;loga al desplegar el listado en el icono<img style="width: 73px; height: 41px;" alt="Formulario" title="Formulario" src="imagenes/icoformulario.png">
+de la barra de herramientas.</p>
+
+<form method="post" action=" " name="form7">
+  <fieldset><legend>Datos de contacto</legend>Nombre:
+  <input size="25" name="Nombre">&nbsp;Apellidos:&nbsp;<input size="40" name="apellidos">
+  <p>Direcci&oacute;n: <input size="45" name="direccion"> &nbsp;Tel&eacute;fono: <input size="9" name="telefono"></p>
+
+  </fieldset>
+
+</form>
+
+<p>Adem&aacute;s de la facilidad de interpretaci&oacute;n
+visual que introduce este tipo de agrupamiento tambi&eacute;n tiene
+importancia el agrupamiento de controles desde el punto de vista de
+accesibilidad, ya que se facilita la navegaci&oacute;n para los
+agentes de usuario basados en voz que pueden reproducir correctamente
+el agrupamiento.</p>
+
+<p>La creaci&oacute;n de un grupo de campos puede hacerse
+tanto como
+paso previo, creando primero el grupo e incluyendo posteriormente los
+diferentes controles, como a posteriori, arrastrando para seleccionar
+los r&oacute;tulos y controles que se agrupar&aacute;n y
+creando para
+ellos el conjunto de campos.</p>
+
+<p>El c&oacute;digo que se genera con este tipo de
+agrupamientos es el siguiente:</p>
+
+<div class="codigo">
+<p><code>&lt;fieldset&gt;</code></p>
+
+<p><code>&lt;legend&gt;Datos de
+contacto&lt;/legend&gt;</code></p>
+
+<code>... r&oacute;tulos y controles&nbsp;...<br>
+
+</code>
+<p><code>&lt;/fieldset&gt;</code><br>
+
+Como puede verse la etiqueta que establece el agrupamiento es <code>fieldset</code>,
+mientras que <code>legend</code> recoge el
+r&oacute;tulo con el que se identifica al mismo.</p>
+
+</div>
+
+<br>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 68" title="Actividad 68" src="../imagenes/numeracion/sesentayocho.gif">
+<ul>
+
+  <li>Abre el
+archivo<strong> actividad67.html </strong>y
+agrupa aquellos controles para los que esta t&eacute;cnica resulte
+adecuada. Recuerda que puedes hacerlo con un conjunto de campos ya
+existentes o creando primero el agrupamiento y rellen&aacute;ndolo
+luego con los campos necesarios.</li>
+
+  <li>Guarda el archivo como <strong>actividad68.html </strong>y
+&aacute;brelo en el navegador para
+comprobar el
+aspecto visual que adquiere el formulario. Puedes hacer un
+env&iacute;o
+para ver que el conjunto de campos no tiene repercusi&oacute;n en
+el
+resultado que se env&iacute;a. <br>
+
+  </li>
+
+</ul>
+
+</div>
+
+<br>
+
+<br>
+</div>
+</body>
+</html>

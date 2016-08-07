@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="es-es">
+<head>
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+ 
+  
+  
+  <title>Estructura general - Enfatizaci&oacute;n</title>
+  <link rel="stylesheet" href="../nvu2005.css" type="text/css">
+<link rel="stylesheet" href="../multi2.css" type="text/css">
+<!-- compliance patch for microsoft browsers --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+</head>
+
+
+<body>
+<div id="localizador">
+<p>La base>>Texto - Enfatizaci&oacute;n</p>
+
+</div>
+<div id="flechadcha">
+<a href="texto5.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="texto3.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+<div class="solapas">
+<ul>
+
+
+  <li><a href="texto1.html">Tipos
+y cuerpos</a></li>
+
+
+ <li><a href="texto2.html">Enfatizaci&oacute;n</a></li>
+
+
+
+  <li><a href="texto3.html">Marcado
+por contenido</a></li>
+
+  <li class="activo"><a href="texto4.html">Justificaci&oacute;n</a></li>
+
+          <li><a href="texto5.html">T&iacute;tulos
+o cabeceras</a></li>
+
+          <li><a href="texto6.html">Listas</a></li>
+
+</ul>
+
+
+</div>
+
+<div class="principal"> 
+
+<h2> Justificaci&oacute;n</h2>
+
+<p>La justificaci&oacute;n del texto por defecto se hace a la
+izquierda, aunque podemos tambi&eacute;n hacerla centrada, a la
+derecha o justificada a ambos lados. </p>
+
+<p>N|VU, como los actuales editores gr&aacute;ficos de
+p&aacute;ginas web, permite que marquemos la alineaci&oacute;n
+justificada a ambos lados, pero es posible que si utilizas
+alg&uacute;n editor m&aacute;s antiguo no te ofrezca la
+posibilidad de justificar el texto de forma completa. Eso se debe a que
+cuando se crearon no se hab&iacute;an dictado a&uacute;n las
+&uacute;ltimas especificaciones del lenguaje HTML. En ese caso el
+texto nos quedar&aacute; siempre "en bandera", esto es sin alinear
+en los finales de rengl&oacute;n.&nbsp; </p>
+
+
+<p>Adem&aacute;s de la justificaci&oacute;n por defecto
+podemos tambi&eacute;n justificar el texto a partir del centro o a
+partir de la derecha. Las etiquetas que encontraremos ser&aacute;n
+del siguiente tipo:</p>
+
+
+<p class="codigo"><code>&lt;div
+align="left"&gt;</code> y su
+correspondiente cierre <code>&lt;/div&gt;</code>
+marcan la
+justificaci&oacute;n izquierda y ser&aacute; la
+justificaci&oacute;n que se utilice por defecto si no indicamos
+otra cosa.<br>
+
+<br>
+
+<code>&lt;div align="center"&gt;</code> y&nbsp;<code>&lt;/div&gt;</code>
+marcan la justificaci&oacute;n centrada que repartir&aacute; el
+texto a partir del centro dejando "banderas" a ambos lados del
+p&aacute;rrafo.<br>
+
+<br>
+
+<code>&lt;div align="right"&gt; </code>y <code>&lt;/div&gt;</code>
+delimitan un
+p&aacute;rrafo justificado a partir del margen derecho.<br>
+
+<br>
+
+<code>&lt;div align="justify"&gt;</code> y&nbsp;<code>&lt;/div&gt;</code>
+delimitan un p&aacute;rrafo justificado completamente en ambos
+m&aacute;rgenes.</p>
+
+<p class="avisos"> <img src="../imagenes/atencion.gif" align="left" height="25" width="28"> La
+justificaci&oacute;n completa no tiene efecto en los de navegadores
+de versiones antiguas y se convierte autom&aacute;ticamente en
+alineaci&oacute;n a la izquierda. </p>
+
+<p class="avisos"> <img src="../imagenes/atencion.gif" align="left" height="25" width="28">
+Tambi&eacute;n podemos encontrar escrita la alineaci&oacute;n
+aplicando el atributo a la etiqueta que define el p&aacute;rrafo
+<code>&lt;p
+align="alineaci&oacute;n"&gt;&lt;/p&gt;</code> en
+el
+que podr&aacute;n aparecer las palabras "left", "right", "center" o
+"justify" como alineaciones.</p>
+
+<div class="practicas"> <img class="numact" style="width: 29px; height: 29px;" alt="Actividad 7" title="Actividad 7" src="../imagenes/numeracion/siete.gif">
+<ul>
+
+  <li>Crea un documento que incluya&nbsp;los
+siguientes elementos:&nbsp;
+    <br>
+ 
+    
+    <ul>
+
+      <li>Un p&aacute;rrafo con la justificaci&oacute;n
+por
+defecto, otro con justificaci&oacute;n centrada, otro con
+justificaci&oacute;n a la derecha y un &uacute;ltimo
+p&aacute;rrafo con justificaci&oacute;n completa.</li>
+
+      <li>Alguna palabra resaltada en negrita, en
+it&aacute;lica o subrayada.</li>
+
+    
+    </ul>
+
+  </li>
+
+  <li>Guardamos el documento como <b>actividad7.html</b></li>
+
+  <li>Como viene bien ir tocando de vez en cuando el c&oacute;digo para familiarizarse, pasa a la pesta&ntilde;a&nbsp;<img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png">
+y elimina alguna de las etiquetas que has utilizado para resaltar y
+modifica la alineaci&oacute;n del p&aacute;rrafo que estaba justificado
+a la derecha para que quede centrado. Guarda y comprueba&nbsp;los
+resultados. <i>(Si
+algo no hubiera quedado como hab&iacute;amos previsto volvemos al&nbsp;</i><img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png"><i> para localizar el error, corregirlo y, una vez guardado
+el documento, volver a comprobarlo)</i></li>
+
+</ul>
+
+</div>
+
+<p>Existe otra forma de dar formato al texto utilizando lo que se
+denomina texto preformateado. En este caso, el navegador s&iacute;
+que interpretar&aacute; los saltos de l&iacute;nea que
+introduzcamos y mantendr&aacute; los espacios que se introduzcan
+utilizando una fuente de ancho fijo, pero esto tiene el peligro de que
+nuestro texto puede
+quedar corto o largo en funci&oacute;n de la resoluci&oacute;n
+de pantalla de la persona que visite la p&aacute;gina. </p>
+
+<div class="practicas"> <img class="numact" style="width: 29px; height: 29px;" alt="Actividad 8" title="Actividad 8" src="../imagenes/numeracion/ocho.gif">
+<ul>
+
+  <li>Abre el primer trabajo que has realizado en la actividad 2 (<strong>actividad2.html</strong>) y
+visual&iacute;zalo con la pesta&ntilde;a <img class="imgcentr" style="width: 99px; height: 21px;" alt="Codigo fuente" title="Codigo fuente" src="../imagenes/pestanacodigofuente.png">.&nbsp;</li>
+
+  <li>Localiza el principio del texto que has escrito en la zona
+correspondiente al cuerpo de la p&aacute;gina </li>
+
+  <li>Coloca la etiqueta <code>&lt;pre&gt;</code>
+como inicio del texto
+y, al final del mismo, la correspondiente etiqueta de cierre <code>&lt;/pre&gt;</code></li>
+
+  <li> Guarda el trabajo como <b>actividad8.html</b> y
+comprueba lo que ha ocurrido vi&eacute;ndolo en el navegador o en
+la ventana <img class="imgcentr" style="width: 103px; height: 20px;" alt="Vista preliminar" title="Vista preliminar" src="../imagenes/pestanavistapreliminar.png"></li>
+
+  <li>Lo que acabamos de hacer escribiendo directamente el
+c&oacute;digo podemos hacerlo tambi&eacute;n desplegando el
+formato de parrafo en la barra de formato, donde encontraremos la
+opci&oacute;n <span class="refmenu">preformato</span>,
+pero tendremos que tener seleccionado el texto que deseamos que se
+muestre con dicho formato si queremos aplicarlo a varios p&aacute;rrafos</li>
+
+</ul>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,825 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>CSS - Primeros pasos</title>
+
+
+  <link rel="stylesheet" href="../nvu2005.css" type="text/css">
+
+<!-- compliance patch for microsoft browsers --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <link rel="stylesheet" href="css3.css" type="text/css">
+
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;Primeros pasos</p>
+
+</div>
+
+<div id="flechadcha">
+<a href="css3.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="css1.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<p>Para introducirnos en el mundo de las CSS iremos presentando
+la informaci&oacute;n en&nbsp;peque&ntilde;os bloques,
+acompa&ntilde;ados de un ejemplo que muestre el resultado. En
+muchos casos les seguir&aacute; una pr&aacute;ctica muy simple
+que permita aplicar lo expuesto. La&nbsp;recomendaci&oacute;n
+es que vayas paso a paso y que, en cuanto tengas cierta seguridad,
+experimentes ampliando el ejercicio propuesto con elementos similares
+intentando prever los resultados que vas a obtener. Si lo haces
+as&iacute; es posible que en alg&uacute;n momento te encuentres
+con que no todo sale como pretentes, pero no te preocupes porque lo
+m&aacute;s probable es que algo m&aacute;s adelante encuentres
+la respuesta al problema que se te ha planteado.&nbsp;</p>
+
+<h2>Sintaxis b&aacute;sica </h2>
+
+<p>La sintaxis general de cualquier declaraci&oacute;n de
+estilo, va a
+estar compuesta por tres elementos:</p>
+
+<p class="resaltadocentro">selector
+{propiedad:valor} </p>
+
+<p>donde selector va a ser, b&aacute;sicamente, el elemento
+html que deseamos definir, la propiedad el atributo que queremos
+modificar, apareciendo por &uacute;ltimo el valor que deseamos
+asignarle al atributo. La propiedad se separa del atributo mediante dos
+puntos y ambos se encierran entre llaves. Aunque no es imprescindible
+cuando s&oacute;lo hay una propiedad es conveniente
+a&ntilde;adir un punto y coma al final de cada par
+propiedad / valor (nos ser&aacute; muy &uacute;til para
+facilitar la
+lectura cuando se vayan complicando algo m&aacute;s las
+especificaciones ya que entonces s&iacute; que es necesario
+utilizar el punto y coma como separador)</p>
+
+<div>
+<p class="avisos">Cuando los
+valores requieren especificar un tipo de unidad, esta se indica a
+continuaci&oacute;n del valor num&eacute;rico, sin espacio de
+separaci&oacute;n: 1cm ser&iacute;a una notaci&oacute;n
+correcta, mientras que 1 cm no lo ser&iacute;a.</p>
+
+</div>
+
+<h2>El editor CSS de N|VU</h2>
+
+<p>Ver&aacute;s que constantemente se har&aacute;
+referencia a&nbsp;los c&oacute;digos con los que se obtiene un
+determinado efecto. Es conveniente que te vayas familiarizando con
+ellos, pero al principio te resultar&aacute; de gran ayuda la
+utilizaci&oacute;n del editor de estilos que integra N|VU, al que
+puedes acceder desde la opci&oacute;n de men&uacute; <span class="refmenu">herramientas <img src="../imagenes/flechamenu.png" height="13" width="14">
+editor css</span></p>
+
+<p><a href="javascript:void(0)" onclick="window.open('presentaciondeleditordecss.swf','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=880,height=443')">Ver v&iacute;deo de ejemplo</a>  </p>
+<p>
+    </p>
+    Aunque posteriormente veremos otras formas m&aacute;s eficientes
+    vamos a empezar a familiarizarnos con el editor mediante la
+    creaci&oacute;n de hojas de estilo internas para lo que seguiremos
+    estos pasos </p>
+<ol>
+
+  <li>Pulsar el bot&oacute;n style</li>
+
+  <li>Crear hoja de estilo</li>
+
+  <li>Pulsar <span class="refmenu">regla</span></li>
+
+  <li>Indicar la clase, tipo o identificador. Para que la regla
+afecte a un elemento html habr&aacute; que poner su nombre, sin los
+&aacute;ngulos.</li>
+
+  <li>Pulsar <span class="refmenu">crear regla de
+estilo</span></li>
+
+  <li>Utilizar las pesta&ntilde;as para indicar los atributos
+y valores aplicables.</li>
+
+</ol>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 76" title="Actividad 76" src="../imagenes/numeracion/setentayseis.gif">
+<ul>
+
+  <li>Carga en el
+editor la p&aacute;gina <a href="quijote1.html" target="_blank">quijote1.html</a></li>
+
+  <li>Utliza el Editor CSS para crear una&nbsp;nueva hoja de
+estilo.</li>
+
+  <li>Pasa a la vista&nbsp;<img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png"> para comprobar
+c&oacute;mo se han creado&nbsp;en la secci&oacute;n
+&lt;head&gt; un par de selectores para englobar las reglas de
+estilos que iremos creando. Gu&aacute;rdalo como <strong>actividad76.html</strong></li>
+
+</ul>
+
+</div>
+
+<h2>Selectores de tipos</h2>
+
+<p>El selector m&aacute;s sencillo es el que denominamos de
+tipo. Se refiere a una etiqueta definida en el lenguaje HTML. Su gran
+ventaja ser&aacute; que con una &uacute;nica
+modificaci&oacute;n en una hoja de estilos podremos modificar la
+apariencia de todos las p&aacute;ginas de un sitio al variar la
+presentaci&oacute;n de un determinado tipo.</p>
+
+<p class="ejempcss">Ej: body {color:white}</p>
+
+<p>Para cada selector podremos establecer m&aacute;s de una
+propiedad. Para
+separarlas utilizaremos el punto y coma, siendo habitual para favorecer
+la legibilidad, que cada propiedad se escriba en un rengl&oacute;n.</p>
+
+<p><a href="javascript:void(0)" onclick="window.open('muestra1.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=680,height=200')">Ver
+ejemplo&nbsp;</a></p>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 77" title="Actividad 77" src="../imagenes/numeracion/setentaysiete.gif">
+<ul>
+
+  <li>Si lo hab&iacute;as cerrado vuelve a abrir el
+archivo&nbsp;<strong>actividad76.html</strong></li>
+
+  <li>Crea una
+regla para que los p&aacute;rrafos se presenten
+en color azul marino.</li>
+
+  <li>Cierra el editor CSS y comprueba el resultado.</li>
+
+  <li>Aprovecha la visualizaci&oacute;n para hacer que el
+texto
+Primera Parte se convierta
+en un t&iacute;tulo de tipo <code>h1</code> y el
+t&iacute;tulo del
+Cap&iacute;tulo 1 en un <code>h2</code>.</li>
+
+  <li>Mira en la pesta&ntilde;a&nbsp;<img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png">
+c&oacute;mo se ha definido la regla para los p&aacute;rrafos</li>
+
+  <li>Vuelve al editor de estilos y haz que el p&aacute;rrafo
+est&eacute; justificado y con letra de la familia sans-serif
+(tendr&aacute;s que hacer doble clic&nbsp;sobre la hoja de
+estilo para que se desplieguen los selectores y poder elegir el que
+hemos creado ).</li>
+
+  <li>Crea una regla para que los t&iacute;tulos&nbsp;<code>h1</code>
+se presenten
+en fuente sans-serif y color granate y otra para que los&nbsp;<code>h2</code>
+sean
+tambi&eacute;n sans-serif pero en color gris de intensidad media.</li>
+
+  <li>Comprueba en la pesta&ntilde;a&nbsp;<img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" src="../imagenes/pestanacodigofuente.png">
+c&oacute;mo han quedado definidos los estilos</li>
+
+  <li>Guarda el trabajo como <strong>actividad77.html</strong></li>
+
+</ul>
+
+</div>
+
+<h2>Selector universal</h2>
+
+<p>Se representa mediante el asterisco (*) y se refiere a
+cualquier elemento del documento HTML.&nbsp;Su
+utilizaci&oacute;n est&aacute; muy relacionada con las clases y
+selectores ID, pero suele omitirse.</p>
+
+<h2>Agrupando selectores </h2>
+
+<p>Si queremos aplicar una propiedad com&uacute;n a varios
+selectores sin
+necesidad de tener que definirla en cada caso podemos agruparlos
+list&aacute;ndolos separados por comas y haciendo una
+definici&oacute;n com&uacute;n para
+todos ellos.</p>
+
+<p class="ejempcss">Ej.: h1,h2,h3 {color:blue}</p>
+
+<p><a href="javascript:void(0)" onclick="window.open('muestra2.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=680,height=290')">Ver
+ejemplo</a></p>
+
+<div class="practicas"><img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 78" title="Actividad 78" src="../imagenes/numeracion/setentayocho.gif">
+<ul>
+
+  <li>Vuelve al archivo&nbsp;<strong>actividad77.html</strong>
+que recoge los &uacute;ltimos pasos que hemos dado.</li>
+
+  <li>Crea una regla que agrupe&nbsp;<code>h1</code>
+y&nbsp;<code>h2</code> para especificar que deben
+llevar&nbsp;el tipo de letra de la familia sans-serif.</li>
+
+  <li>Borra este atributo en cada una de las reglas individuales
+para&nbsp;<code>h1</code> y&nbsp;<code>h2</code></li>
+
+  <li>Comprueba que ambos t&iacute;tulos siguen
+present&aacute;ndose con la fuente que hemos
+seleccionado.&nbsp;</li>
+
+  <li>Guarda este nuevo paso como <strong>actividad77.html</strong></li>
+
+</ul>
+
+</div>
+
+<h2>Selectores contextuales</h2>
+
+<p><img class="flotizq" style="width: 500px; height: 443px;" alt="Ejemplo esquem&aacute;tico de relaciones de herencia en una pagina html" title="Ejemplo esquem&aacute;tico de relaciones de herencia en una pagina html" src="documentohtml.png"></p>
+
+<p>La imagen que aparece a la izquierda corresponde a un ejemplo
+esquem&aacute;tico de la organizaci&oacute;n de los elementos
+en una
+p&aacute;gina html.</p>
+
+<p>Se puede observar c&oacute;mo determinados elementos se
+encuentran "anidados" dentro de otros.</p>
+
+<p>Esta situaci&oacute;n genera unas relaciones que pueden
+calificarse
+de familiares (de hecho, la nomenclatura para indicarlas
+utilizar&aacute; los t&eacute;rminos padre, hijo, ascendiente y
+descendiente entre otros).</p>
+
+<p>Vamos a ver a continuaci&oacute;n algunos ejemplos de lo
+que
+significa esta jerarqu&iacute;a en la organizaci&oacute;n de
+los
+elementos de una p&aacute;gina html para lo que
+podremos&nbsp;guiarnos
+por el
+siguiente
+esquema de relaciones:</p>
+
+<p>&nbsp;<br clear="all">
+
+</p>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <th>Relaci&oacute;n</th>
+
+      <th>Descripci&oacute;n</th>
+
+    </tr>
+
+    <tr>
+
+      <td>Un elemento es <strong>padre</strong> de
+otro si...</td>
+
+      <td>El segundo elemento se encuentra directamente entre la
+apertura y el cierre de las etiquetas del elemento padre.<br>
+
+Ej: <code>&lt;p&gt;Los
+&lt;strong&gt;rumiantes&lt;/strong&gt; son
+&lt;em&gt;mam&iacute;feros&lt;/em&gt;</code><br>
+
+El elemento <code>&lt;p&gt;</code> es padre de <code>&lt;strong&gt;</code>
+y de <code>&lt;em&gt;</code></td>
+
+    </tr>
+
+    <tr>
+
+      <td>Un elemento es <strong>hijo</strong> de
+otro si...</td>
+
+      <td>La relaci&oacute;n anterior es
+rec&iacute;proca, por lo que
+los elementos&nbsp;<code>&lt;strong&gt;</code>
+y&nbsp;<code>&lt;em&gt;</code>&gt; del
+ejemplo
+son hijos del
+elemento&nbsp;<code>&lt;p&gt;</code></td>
+
+    </tr>
+
+    <tr>
+
+      <td>Un elemento es <strong>ascendiente</strong>
+de otro si...</td>
+
+      <td>Si el segundo se encuentra entre las etiquetas de
+apertura y cierre del primero (aunque sea de forma indirecta). <br>
+
+Ej: <code>&lt;div&gt;<br>
+
+&lt;p&gt;Los
+&lt;strong&gt;rumiantes&lt;/strong&gt; son
+&lt;em&gt;mam&iacute;feros&lt;/em&gt;<br>
+
+&lt;/div&gt;</code><br>
+
+El elemento <code>&lt;div&gt;</code> es
+ascendiente&nbsp; de&nbsp;<code>&lt;p&gt;</code>
+de&nbsp;<code>&lt;strong&gt;</code> y de<code>
+&lt;em&gt;</code></td>
+
+    </tr>
+
+    <tr>
+
+      <td>Un elemento es <strong>descendiente</strong>
+de otro si...</td>
+
+      <td>Est&aacute; incluido, directa o indirectamente,
+dentro de
+otro elemento. En el ejemplo anterior&nbsp;<code>&lt;em&gt;</code>
+es
+desdendiente de&nbsp;<code>&lt;p&gt;</code> y
+tambi&eacute;n de&nbsp;<code>&lt;div&gt;</code></td>
+
+    </tr>
+
+    <tr>
+
+      <td>Un elemento es <strong>adyacente</strong>
+a otro si ... </td>
+
+      <td>Comparte el mismo padre y, adem&aacute;s se
+encuentra inmediatamente consecutivo al anterior.<br>
+
+Ej: <code>&lt;p&gt;Los
+&lt;strong&gt;ungulados&lt;/strong&gt; son
+&lt;em&gt;mam&iacute;feros&lt;/em&gt; con
+&lt;em&gt;pezu&ntilde;as&lt;/em</code>&gt;<br>
+
+En este ejemplo s&oacute;lo el primer&nbsp;<code>&lt;em&gt;</code>
+ser&iacute;a adyacente a&nbsp;<code>&lt;strong&gt;</code>
+ya que el segundo,
+aunque tiene el mismo padre ya no es inmediatamente posterior.</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<p>Los patrones para indicar estas relaciones para elaborar los
+selectores ser&iacute;an los siguientes:</p>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <th>Patr&oacute;n</th>
+
+      <th>Utilizaci&oacute;n</th>
+
+    </tr>
+
+    <tr>
+
+      <th>x y</th>
+
+      <td>Para apuntar hacia cualquier&nbsp;elemento del tipo
+y que sea&nbsp;<strong>descendiente</strong> de un
+elemento del tipo x </td>
+
+    </tr>
+
+    <tr>
+
+      <th>x&nbsp;&gt; y</th>
+
+      <td>Para referirnos a&nbsp;cualquier&nbsp;elemento
+del tipo y que sea <strong>hijo</strong> de&nbsp;un
+elemento del tipo x </td>
+
+    </tr>
+
+    <tr>
+
+      <th>x + y </th>
+
+      <td>Para identificar cualquier&nbsp;elemento del tipo y
+que sea <strong>adyacente</strong> a&nbsp;un elemento
+del tipo x</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<p>Teniendo en cuenta estas relaciones podemos realizar una
+selecci&oacute;n muy espec&iacute;fica de elementos del
+documento para
+aplicarles un determinado estilo. Podr&iacute;amos, por ejemplo,
+querer que
+los fragmentos que estuvieran enfatizados mediante la etiqueta
+&lt;em&gt; aparecieran en color verde. Pero
+podr&iacute;amos ser incluso m&aacute;s
+espec&iacute;ficos indicando que s&oacute;lo queremos que
+aparezcan en color verde
+los fragmentos enfatizados que formen parte de una lista. Esto lo
+har&iacute;amos colocando primero el selector li y, a
+continuaci&oacute;n separado
+por un espacio, el selector em para luego especificar las propiedades</p>
+
+<p class="ejempcss"> Ej.:<code> li em {color: green}</code></p>
+
+<p><a href="javascript:void(0)" onclick="window.open('muestra4.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=750,height=465')">Ver
+ejemplo </a></p>
+
+<div class="avisos"><strong>Advertencia importante:</strong>
+La&nbsp;versi&oacute;n 6 de Internet Explorer s&oacute;lo
+es capaz de interpretar&nbsp; correctamente el selector
+contextual que utilizamos para apuntar hacia un
+descendiente. Aunque posteriormente veremos alguna forma de corregir
+este error tenlo en cuenta si intentas crear alg&uacute;n selector
+para elementos hijos o adyacentes, que s&iacute;
+funcionar&aacute;n correctamente en los navegadores Mozilla,
+Firefox u Opera.</div>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 79" title="Actividad 79" src="../imagenes/numeracion/setentaynueve.gif">
+<ul>
+
+  <li>Abre en NlVU
+archivo <a href="licenciacc.html" target="_blank">licenciacc.html</a></li>
+
+  <li><span style="color: rgb(255, 0, 0); font-weight: bold;"></span>Crea
+una regla para&nbsp;que todas los t&eacute;rminos enfatizados
+con &lt;em&gt; aparezcan en color azul&nbsp;</li>
+
+  <li>Crea otra regla para que los elementos &lt;em&gt;
+que se encuentren dentro de un item de una lista se muestren en
+negrita.&nbsp;</li>
+
+  <li>&iquest;Te animas a crear una regla para que los
+elementos &lt;em&gt; adyacentes a otro elemento
+&lt;em&gt; se muestren de color rojo</li>
+
+  <li>Guarda el trabajo como <strong>actividad79.html</strong></li>
+
+</ul>
+
+</div>
+
+<h2>Selectores basados en atributos</h2>
+
+<p>Si la posibilidad de utilizar selectores contextuales aporta
+una gran flexibilidad, todav&iacute;a es mucho mayor la que nos
+brinda la posibilidad de decidir que un estilo se aplicar&aacute; a
+aquellos elementos que cumplan determinados atributos.</p>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <th>Patr&oacute;n</th>
+
+      <th>Utilizaci&oacute;n</th>
+
+    </tr>
+
+    <tr>
+
+      <th>x[atributo]</th>
+
+      <td>Para apuntar hacia cualquier&nbsp;elemento del tipo
+x que cuente con un determinado atributo (independientemente del valor
+que tenga el atributo) </td>
+
+    </tr>
+
+    <tr>
+
+      <th>x[atributo="valor"]</th>
+
+      <td>Para referirse a cualquier&nbsp;elemento del tipo x
+que cuente con un
+determinado atributo cuyo valor sea el especificado </td>
+
+    </tr>
+
+    <tr>
+
+      <th>x[atributo~="valor"] </th>
+
+      <td>Algunos elementos pueden admitir varios valores
+separados por espacios para un atributo. Este patr&oacute;n nos
+sirve para identificar a&nbsp;cualquier&nbsp;elemento
+del tipo x que cuente con un
+determinado atributo alguno de cuyos valores sea el especificado.</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="avisos">Al igual que ocurr&iacute;a en el
+caso de los selectores
+contextuales no existe soporte para este tipo de selectores en las
+versiones iguales o inferiores a la 6 de Internet Explorer.<br>
+
+</div>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 80" title="Actividad 80" src="../imagenes/numeracion/ochenta.gif">
+<ul>
+
+  <li>Abre el archivo&nbsp;<a href="selectoresporatributo.html" target="_blank">selectoresporatributo.html</a></li>
+
+  <li><span style="color: rgb(255, 0, 0); font-weight: bold;"></span>Crear
+una hoja de estilo con una regla para&nbsp;que todos los elementos
+que
+incluyan el atributo <code>face</code> en la etiqueta <code>font</code>
+se muestren en negrita.</li>
+
+  <li>A&ntilde;ade una regla para que aquellos elementos que
+tengan el valor <code>Courier</code> como atributo
+&uacute;nico de&nbsp;<code>face</code> se
+muestren en it&aacute;lica.</li>
+
+  <li>Por fin una tercera regla que haga que los que tengan,
+entre
+otros,
+el valor <code>serif</code> en el atributo&nbsp;<code>face</code>
+se muestren en color verde.<br>
+
+  </li>
+
+  <li>Comprueba visualmente los resultados. Recuerda que,
+mientras
+no
+apliquemos un parche, Internet Explorer ser&aacute; incapaz de
+aplicar
+estos selectores.</li>
+
+</ul>
+
+</div>
+
+<h2>Clases </h2>
+
+<p>El selector class nos permite definir diferentes estilos para
+el mismo elemento HTML. El ejemplo siguiente supondr&iacute;a la
+posibilidad de tener dos tipos de p&aacute;rrafo en el documento:
+uno en azul y otro en rojo, en funci&oacute;n de la clase que cada
+uno lleve indicada. Para establecer la clase a&ntilde;adimos un
+punto y el nombre que le adjudicamos a la clase a
+continuaci&oacute;n del selector y antes de iniciar las propiedades.</p>
+
+<p class="ejempcss">Ej.:<code> p.azul {color: blue}
+p.rojo
+{color: red}</code></p>
+
+<p><a href="javascript:void(0)" onclick="window.open('muestra3.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=370')">Ver
+ejemplo </a></p>
+
+<div class="avisos">
+<p>Se puede aplicar m&aacute;s de una
+clase&nbsp;a un elemento html. Al aplicar las clases lo haremos
+separ&aacute;ndolas por un espacio.</p>
+
+<p class="ejempcss">Ej.: &lt;p class="azul
+centrado"&gt;Texto&lt;/p&gt;</p>
+
+</div>
+
+<p>Es muy frecuente que la definici&oacute;n de las clases se
+haga sin
+ligarlas a una etiqueta concreta. En el ejemplo anterior
+podr&iacute;a
+omitirse la referencia al elemento p y eso har&iacute;a que las
+caracter&iacute;sticas de la clase se aplicaran a cualquier
+elemento al que se
+le aplicara. En este caso el selector empieza con un punto seguido del
+nombre de la clase.&nbsp; </p>
+
+<p class="ejempcss">Ej.: <code>.azul {color: blue}
+.rojo {color:
+red}</code></p>
+
+<p class="ejempcss"><code>El efecto ser&aacute;
+equivalente
+si se utiliza el selector universal: *.azul {color: blue} *.rojo
+{color:
+red}</code> </p>
+
+<p><a href="javascript:void(0)" onclick="window.open('muestra5.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=428')">Ver
+ejemplo</a></p>
+
+<p>Para crear una regla de tipo clase en el editor de CSS
+utilizaremos la opci&oacute;n <span class="refmenu">estilo
+con nombre </span>y escribiremos el nombre sin precederlo con el
+punto (el programa se encargar&aacute; de ello).</p>
+
+<p class="centrado"><img style="width: 491px; height: 135px;" alt="Crear una clase con el editor de CSS" title="Crear una clase con el editor de CSS" src="imagenes/crearclase.png"></p>
+
+<p>Una vez definidas las clases, la aplicaci&oacute;n de las
+mismas en N|VU se limita a marcar el fragmento&nbsp;que deseamos
+modificar arrastrando con el rat&oacute;n y elegir la clase
+correspondiente en el listado que aparece en la segunda barra de
+formato. Con el procedimiento de pinchar arrastrar definiremos zonas
+del documento que no tienen que coincidir con un elemento completo,
+como pod&iacute;a ser un p&aacute;rrafo, lo cual hace que el
+programa genere una etiqueta <code>span</code> que englobe
+los fragmentos seleccionados.&nbsp;</p>
+
+<p>Si lo que realmente queremos es aplicar una clase a un
+elemento, por ejemplo un p&aacute;rrafo, una lista ordenada
+completa, un contenedor gen&eacute;rico, etc, es preferible que lo
+seleccionemos situ&aacute;ndonos sobre cualquier punto del mismo y
+marcando la etiqueta que lo identifica en la barra de estado (la que
+aparezca en &uacute;ltimo lugar corresponder&aacute; al punto
+en que nos encontramos). Una vez hecha esta marca podemos aplicar la
+clase:</p>
+
+<ul>
+
+  <li>eligi&eacute;ndola en el desplegable de la 2&ordf;
+barra de formato&nbsp;&nbsp;</li>
+
+  <li>pulsando con el bot&oacute;n derecho sobre el elemento
+se&ntilde;alado en la barra de estado y desplegando <span class="refmenu">clases</span> para elegir la adecuada </li>
+
+</ul>
+
+<h2>Pseudoclases</h2>
+
+<p>Las pseudoclases se utilizan para particularizar algunos
+efectos de determinados selectores en algunas situaciones especiales.
+Uno de los grupos que se aplica m&aacute;s frecuentemente es el que
+tiene que ver con la etiqueta &lt;a&gt; para marcar diferentes
+presentaciones de los enlaces.</p>
+
+<p>La sintaxis es ligeramente diferente de la general: <strong>selector:pseudoclase
+{propiedad : valor}</strong></p>
+
+<h3><strong>Pseudoclases
+relacionadas con los v&iacute;nculos</strong></h3>
+
+<p>Su funci&oacute;n es cambiar la apariencia
+seg&uacute;n el estado del v&iacute;nculo. Existen cuatro
+tipos: </p>
+
+<ul>
+
+  <li><code>a:link</code> sirve
+para establecer
+las propiedades de un enlace no visitado</li>
+
+  <li><code>a:visited</code> indica las
+propiedades que adoptar&aacute; un enlace visitado</li>
+
+  <li><code>a:hover</code> especifica
+la
+apariencia que adoptar&aacute; un enlace en el momento en que el
+bot&oacute;n se sit&uacute;a sobre &eacute;l.</li>
+
+  <li><code>a:active</code>
+fija las propiedades
+que tomar&aacute; un enlace en el momento en que se pulsa sobre
+&eacute;l para activarlo. </li>
+
+</ul>
+
+<p><a href="javascript:void(0)" onclick="window.open('muestra21.htm','','statusbar=0,menubar=0,toolbar=1,directionbar=0,top=0,left=0,width=780,height=290')">Ver
+ejemplo </a></p>
+
+<div class="avisos">
+<p>El orden en el que se deben especificar estas pseudoclases en
+las hojas de
+estilos para que tengan efecto es el que se ha utilizado para
+describirlas. Esto tiene su l&oacute;gica debido a que, en caso de
+haber alguna contradicci&oacute;n entre dos selectores siempre se
+aplica el enumerado en &uacute;ltimo lugar: por ello el que se
+refiere al enlace activo debe ser el &uacute;ltimo para que se
+eviten variaciones en la presentaci&oacute;n mostr&aacute;ndose
+las propiedades del enlace visitado(visited) o con el rat&oacute;n
+encima (hover). Por el mismo motivo la pseudoclase hover debe aparecer
+detras de visited para que la apariencia del enlace pueda modificarse
+al pasar el rat&oacute;n sobre el mismo, independientemente de que
+se haya visitado o no el enlace. Por &uacute;ltimo, visited
+tendr&aacute; que ir despu&eacute;s de link puesto que de lo
+contrario se aplicar&iacute;a la apariencia del enlace no visitado
+aunque ya se hubiera estado en la p&aacute;gina de destino.</p>
+
+</div>
+
+<p>Existen tambi&eacute;n los llamados pseudoelementos que
+ver&aacute;s en la secci&oacute;n dedicada al texto pero
+todav&iacute;a podemos considerar la pseudoclase que se refiere al
+primer elemento hijo <code>first-child</code><strong>
+</strong>que nos
+permitir&iacute;a obtener, por ejemplo un efecto similar al que
+presentan algunas ediciones impresas cuando el primer
+p&aacute;rrafo de un cap&iacute;tulo se muestra en un
+tama&ntilde;o m&aacute;s grande o en it&aacute;lica.</p>
+
+<p><a href="javascript:void(0)" onclick="window.open('muestra22.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=290')">Ver
+ejemplo </a></p>
+
+<div class="practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 80" title="Actividad 81" src="../imagenes/numeracion/ochentayuno.gif">
+<ul>
+  <li>Crea un documento
+que contenga un enlace a una
+p&aacute;gina en la red (o
+bien hazlo con un enlace a un documento local y crea tambi&eacute;n
+este
+&uacute;ltimo)</li>
+  <li>Crea una hoja de estilo en la que incluyas
+caracter&iacute;sticas que te apetezcan para definir las
+pseudoclases en el
+orden especificado.</li>
+  <li>Comprueba las variaciones que se producen al pasar el
+rat&oacute;n sobre el enlace o al visitarlo y volver nuevamente a
+la p&aacute;gina.</li>
+  <li>Modifica el orden subiendo&nbsp;la pseudoclase <code>a:visited</code> al primer
+lugar y comprueba lo que ocurre.</li>
+  <li>Introduce otras variaciones en el orden para comprobar los
+efectos.</li>
+  <li>Guarda el trabajo como <strong>actividad81.html</strong></li>
+</ul>
+
+
+
+
+
+</div>
+
+<h2>El selector id </h2>
+
+<p>Mientras que el selector clase puede aplicarse a varios
+elementos
+del mismo o diferente tipo en una p&aacute;gina podemos crear
+tambi&eacute;n un
+selector id para diferenciar elementos espec&iacute;ficos que
+a&ntilde;adir&aacute;n alguna
+caracter&iacute;stica diferente de las que tienen los elementos de
+su clase.
+El nombre del selector se inicia con el signo # seguido del nombre del
+identificador.</p>
+
+<p class="ejempcss">Ej: <code>#rojo {color: red}</code></p>
+
+<p><a href="javascript:void(0)" onclick="window.open('muestra6.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=440')">Ver
+ejemplo</a></p>
+
+<p>Para crear una regla de tipo id en el editor de CSS
+utilizaremos la opci&oacute;n <span class="refmenu">estilo
+aplcado a todos los elementos coincidentes con el siguiente selector </span>y
+escribiremos el nombre empezando por el signo #</p>
+
+<p class="centrado"><img style="width: 552px; height: 139px;" alt="Crear un selector ID con el editor de CSS" title="Crear un selector ID con el editor de CSS" src="imagenes/crearid.png"></p>
+
+Una vez definidos los selectores <code>ID</code> , la
+aplicaci&oacute;n de los
+mismos habr&aacute; que realizarla seleccionando la etiqueta
+correspondiente al elemento en la barra de estado y pulsando el
+bot&oacute;n derecho para elegir entre las posibilidades que se
+muestren en la opci&oacute;n <span class="refmenu">id</span>
+del men&uacute; desplegable.
+<p><a href="javascript:void(0)" onclick="window.open('muestra6.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=440')">
+</a></p>
+
+<h2>Comentarios</h2>
+
+<p>Puede venir muy bien incluir comentarios que nos sirvan para
+aclarar
+o recordar alg&uacute;n aspecto de las especificaciones que
+escribimos en una
+hoja de estilo. Para hacerlo lo iniciaremos con <code>/*</code>
+y lo finalizaremos
+con <code>*/</code></p>
+
+<p class="ejempcss">Ej:</p>
+
+<p style="font-weight: normal;" class="ejempcss"><code>
+/* pongo la primera l&iacute;nea
+del p&aacute;rrafo con ID=muestra en versales de color azul*/</code></p>
+
+<p style="font-weight: normal;" class="ejempcss"><code>
+p#muestra:first-line {color: #0000FF;
+font-variant: small-caps}</code></p>
+
+<p style="font-weight: normal;" class="ejempcss"><code></code></p>
+</div>
+</body>
+</html>

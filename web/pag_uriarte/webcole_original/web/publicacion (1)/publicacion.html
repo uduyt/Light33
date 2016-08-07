@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+
+
+  
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+
+  
+
+
+  
+  
+  
+  <title>Publicaci&oacute;n</title>
+  <meta content="Ra&uacute;l Luna" name="author">
+
+
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+</head>
+
+
+<body>
+
+
+
+<h2>Publicaci&oacute;n</h2>
+
+
+
+<p>Salvo los casos en los que hemos realizado una
+documentaci&oacute;n
+para su consulta offline utilizando como soporte el formato de
+documento HTML, lo habitual es que nuestro inter&eacute;s sea
+publicar
+el sitio web en un servidor de Internet para que pueda estar accesible
+desde cualquier ordenador.</p>
+
+
+
+<p>Para poder realizar la publicaci&oacute;n, lo primero
+que&nbsp;necesitamos es disponer de un espacio en un servidor.
+Habitualmente todos los proveedores de acceso a internet suelen ofrecer
+un espacio de alojamiento a sus abonados. Tambi&eacute;n existen
+espacios gratuitos, tanto de servidores privados como
+p&uacute;blicos, como es el caso del que proporciona el CNICE al
+profesorado.</p>
+
+
+
+<p>Una vez que disponemos de ese espacio para el alojamiento los
+datos que necesitaremos para poder utilizarlo son:</p>
+
+
+
+<ul>
+
+
+
+  <li>el nombre del ordenador en el que tenemos reservado nuestro
+espacio personal.</li>
+
+
+
+  <li>el nombre de usuario y la contrase&ntilde;a que debemos
+introducir para que el ordenador nos reconozca y nos de permiso para
+escribir en nuestro en nuestro espacio, lo cual supone autorizarnos
+para bajar archivos desde el ordenador remoto, crear en &eacute;l
+carpetas, renombrar archivos, borrarlos y subir archivos desde nuestro
+ordenador local.</li>
+
+
+
+  <li>un programa que encargue de realizar la tarea de transferir
+los archivos entre nuestro ordenador y el ordenador remoto.</li>
+
+
+
+</ul>
+
+
+
+<p>La mayor&iacute;a de los proveedores ofrecen, junto con la
+cuenta de acceso, la direcci&oacute;n de correo
+electr&oacute;nico y un espacio para ftp, aunque no todos permiten
+el acceso con un gestor de ftp, existiendo algunos que tienen unas
+herramientas especiales basadas en web que se encargan de dichas
+funciones. </p>
+
+
+
+<p>Para nuestro ejemplo vamos a utilizar como modelo el servicio
+ofrecido por el CNICE que puede presentar caracter&iacute;sticas
+similares a las de muchos proveedores. Si tu proveedor de acceso es
+diferente podr&aacute;s tomarlo como referencia pero
+tendr&aacute;s que consultar la documentaci&oacute;n sobre
+disponibilidad e instrucciones espec&iacute;ficas de acceso en tu
+caso.</p>
+
+
+
+<p>En cuanto a los posibles programas vamos a ver varias
+posibilidades:</p>
+
+
+
+<ul>
+
+
+
+  <li>Utilizar el gestor de sitios del que dispone N|VU</li>
+
+
+
+  <li>Realizar la transferencia utilizando Internet Explorer o
+los sitios de red de Windows XP</li>
+
+
+
+  <li>Utilizar un programa de c&oacute;digo abierto
+dise&ntilde;ado espec&iacute;ficamente para manejar
+transferencias FTP en entorno Windows: Filezilla</li>
+
+
+
+  <li>Utilizar un programa espec&iacute;fico para realizar
+transferencias FTP en entorno GNU/Linux: GFTP</li>
+
+
+
+</ul>
+
+
+
+<p>Dado que GFTP est&aacute; incluido en la
+mayor&iacute;a de las distribuciones de Linux, que Internet
+Explorer forma parte de Windows y que ya estamos trabajando con N|VU el
+&uacute;nico programa que necesitar&iacute;amos descargar si
+opt&aacute;ramos por esta alternativa ser&iacute;a Filezilla. El
+proceso es similar en todos los casos, por lo que podr&aacute;s
+utilizar aquel que te resulte m&aacute;s c&oacute;modo o con el que
+acabes por familiarizarte antes.</p>
+
+
+
+<h3>Algunos detalles sobre el alojamiento en el servidor del CNICE</h3>
+
+
+
+<p>El sistema operativo utilizado en los ordenadores del CNICE
+adjudica un espacio del disco duro a cada uno de los usuarios para que
+puedan almacenarse sus p&aacute;ginas y otros archivos. Es a ese
+espacio al que accedemos cuando realizamos una conexi&oacute;n de
+ftp.</p>
+
+
+
+<p>Dentro del espacio del usuario existe una carpeta denominada <b>public_html</b>
+(todo en min&uacute;sculas y con un gui&oacute;n bajo uniendo
+ambas palabras) que ser&aacute; la carpeta en la que se
+almacenar&aacute;n las p&aacute;ginas de nuestro sitio WEB para
+que se pueda acceder a ellas con un navegador. Si la carpeta no hubiera
+sido creada de forma autom&aacute;tica por el sistema deberemos
+crearla manualmente. </p>
+
+
+
+<div class="avisos">
+<p><img style="width: 28px; height: 25px; float: left;" alt="Imagen para indicar aviso" src="../imagenes/atencion.gif">Volvemos
+a
+subrayar que el ejemplo que estamos tomando como referencia se basa en
+los ordenadores del CNICE (de hecho, los datos que podr&aacute;s
+ver en las im&aacute;genes corresponden a mi cuenta personal).
+Aunque muchos otros sistemas pueden estar configurados de la misma
+forma, no todos tienen que contar con una carpeta public_html.
+Tambi&eacute;n podr&iacute;a darse el caso de que,
+a&uacute;n contando esta carpeta, los administradores del sistema
+hubieran previsto un acceso que nos llevara directamente a ella sin
+necesidad de que tuvi&eacute;ramos que crearla. </p>
+
+
+
+<p>As&iacute; pues, dada la posible variedad en las
+situaciones, lo recomendable es que tomes estas instrucciones como
+referencia general para comprender el procedimiento y consultes la
+documentaci&oacute;n de tu proveedor para adaptarlo a las
+condiciones del mismo. </p>
+
+
+
+</div>
+
+
+
+<p>En los servidores del CNICE la p&aacute;gina de inicio de
+nuestro sitio WEB debe tener el nombre <b>index.html</b> o
+<b>index.htm (IMPORTANTE: </b>siempre en
+min&uacute;sculas). Si utilizamos este nombre dicha
+p&aacute;gina se mostrar&aacute; de forma autom&aacute;tica
+al teclear la direcci&oacute;n del sitio. Aunque esta es la
+situaci&oacute;n m&aacute;s frecuente, puede ocurrir que en
+otros servidores la p&aacute;gina de inicio reciba, por ejemplo, el
+nombre default.htm o home.htm.</p>
+
+
+
+<p>A pesar de lo dicho respecto al nombre de la p&aacute;gina
+de inicio podr&iacute;amos llamarla con cualquier otro nombre, pero
+en ese caso perder&iacute;amos la ventaja de que el servidor la
+cargara autom&aacute;ticamente y eso obligar&iacute;amos al
+visitante a que tecleara una direcci&oacute;n m&aacute;s larga.</p>
+
+
+
+Nuestra direcci&oacute;n en la WEB ser&aacute; del tipo <strong>http://ordenador.pntic.mec.es/~nombreusuario/</strong><b>
+</b>, aunque recientemente se han configurado los servidores para
+que admitan el tr&aacute;fico web sin necesidad de utilizar la
+virgulilla (~) y sean v&aacute;lidas las direcciones del tipo
+<strong>http://ordenador.pntic.mec.es/nombreusuario/</strong><br>
+
+
+
+&nbsp;<b><br>
+
+
+
+</b>Para obtener el signo ~ puedes utilizar el m&eacute;todo
+de que m&aacute;s se adec&uacute;e a tu contexto de trabajo y
+tus preferencias:
+<div class="avisos">
+<p>Si trabajas
+en <strong>Windows</strong> pulsa la tecla <img style="width: 38px; height: 27px;" alt="Alt" src="../imagenes/teclaalt.png"> y, sin
+soltarla, teclea <img style="width: 26px; height: 27px;" alt="1" src="../imagenes/teclauno.png"><img style="width: 26px; height: 27px;" alt="2" src="../imagenes/teclados.png"><img style="width: 26px; height: 27px;" alt="6" src="../imagenes/teclaseis.png"> en el
+teclado num&eacute;rico. Cuando sueltes la tecla&nbsp;<img style="width: 38px; height: 27px;" alt="Alt" src="../imagenes/teclaalt.png"></p>
+
+
+
+<p>aparecer&aacute; el s&iacute;mbolo buscado.
+&iexcl;&iexcl;&iexcl;No sirve el teclado
+num&eacute;rico de la parte superior!!! tienes que utilizar el de
+la zona derecha para escribir los n&uacute;meros.</p>
+
+
+
+<p>Tambi&eacute;n
+puedes utilizar en <strong>Windows</strong> la
+pulsaci&oacute;n <img style="width: 45px; height: 27px;" alt="AltGr" src="../imagenes/teclaaltgr.png"> + <img style="width: 26px; height: 27px;" alt="4" src="../imagenes/tecla4.png">.
+Aparentemente no ocurre nada, pero en cuanto pulses la barra
+espaciadora o escribas cualquier letra aparecer&aacute; el signo ~
+(Si la letra que pulsas despu&eacute;s de la combinaci&oacute;n
+es la ene lo que obtendr&aacute;s ser&aacute; la letra
+e&ntilde;e)</p>
+
+
+
+<p>Si utilizas
+un sistema <strong>GNU/Linux</strong> puedes obtener el
+s&iacute;mbolo pulsando&nbsp;<img style="width: 45px; height: 27px;" alt="AltGr" src="../imagenes/teclaaltgr.png"> +&nbsp;<img style="width: 26px; height: 27px;" alt="4" src="../imagenes/tecla4.png"> o bien&nbsp;<img style="width: 45px; height: 27px;" alt="AltGr" src="../imagenes/teclaaltgr.png"> + <img style="width: 26px; height: 27px;" alt="e&ntilde;e" src="../imagenes/teclaenie.png"> En
+ambos casos el s&iacute;mbolo se obtiene en cuanto realizamos la
+pulsaci&oacute;n. </p>
+
+
+
+</div>
+
+
+
+<p>Si hubi&eacute;ramos llamado a la p&aacute;gina de un
+modo diferente a index.htm o index.html la direcci&oacute;n
+ser&iacute;a
+<em>http://ordenador.pntic.mec.es/~nombreusuario/nombredelap&aacute;gina.htm</em></p>
+
+
+
+<p class="aviso avisos" align="center"><img style="width: 28px; height: 25px; float: left;" alt="Imagen para indicar aviso" src="../imagenes/atencion.gif">Si
+has
+probado a poner la direcci&oacute;n con la &uacute;ltima barra
+"/" y sin ella habr&aacute;s comprobado que el resultado es el
+mismo: en ambos casos se carga la p&aacute;gina index. El efecto
+que tiene poner la barra es indicarle al servidor que hay un archivo
+que se llama index y que no tiene que buscar entre todos los archivos
+de la carpeta.</p>
+
+
+
+<p>La direcci&oacute;n o URL que identifica nuestra
+p&aacute;gina puede tomar otras formas en otros proveedores como
+puedes comprobar por estos ejemplos que recogen algunas posibilidades:</p>
+
+
+
+<ul>
+
+
+
+  <li> http://personales.ya.com/nombre_usuario/</li>
+
+
+
+  <li>http://www.terra.es/personal/nombre_usuario/</li>
+
+
+
+  <li>http://perso.wanadoo.es/nombre_usuario/</li>
+
+
+
+  <li>http://users.servicios.retecal.es/nombre_usuario/</li>
+
+
+
+  <li>http://usuario.tiscali.es/nombre_usuario/</li>
+
+
+
+  <li>http://es.geocities.com/nombre_usuario/</li>
+
+
+
+</ul>
+
+
+
+<h3>Transferir varios archivos
+simult&aacute;neamente</h3>
+
+
+
+<p>Cuando queramos transferir varios archivos de una vez en uno u
+otro sentido podremos seleccionarlos utilizando los modificadores de
+teclado habituales al hacer clic:</p>
+
+
+
+<ul>
+
+
+
+  <li><strong>Archivos contiguos:</strong> clic sobre
+el primer archivo<strong> <img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"></strong>
+pulsar <img style="width: 36px; height: 26px;" alt="May&uacute;sculas" src="../imagenes/teclamayusc.png"> y
+mantenerla pulsada hasta hacer clic sobre el &uacute;ltimo de la
+serie<br>
+
+
+
+  </li>
+
+
+
+  <li><strong>Archivos salteados:</strong> clic sobre
+el primer archivo<strong></strong><strong> <img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"></strong>
+pulsar <img style="width: 36px; height: 26px;" alt="Ctrl" src="../imagenes/teclactrl.png"> y
+mantenerla pulsada mientras se va haciendo clic sobre el resto de
+archivos a seleccionar.<br>
+
+
+
+  </li>
+
+
+
+  <li><strong>Grupos con archivos contiguos y salteados:</strong>
+Clic sobre el primer archivo<strong></strong><strong> <img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"></strong>
+pulsar&nbsp;<img style="width: 36px; height: 26px;" alt="Ctrl" src="../imagenes/teclactrl.png"> y
+mantenerla pulsada durante todo el proceso de selecci&oacute;n<strong></strong><strong> <img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"> </strong>hacer
+clic sobre los archivos a seleccionar<strong></strong><strong> <img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"></strong>
+cuando aparezca un grupo contiguo pulsar&nbsp;<img style="width: 36px; height: 26px;" alt="May&uacute;sculas" src="../imagenes/teclamayusc.png"> y
+mantenerla pulsada hasta hacer clic sobre el &uacute;ltimo de la
+serie<strong></strong><strong> <img style="width: 14px; height: 13px;" alt="a continuaci&oacute;n" src="../imagenes/flechamenu.png"></strong>
+soltarla y seguir seleccionando los archivos salteados (&nbsp;<img style="width: 36px; height: 26px;" alt="Ctrl" src="../imagenes/teclactrl.png"> sigue
+pulsada desde el principio)</li>
+
+
+
+</ul>
+
+
+
+<p align="center">&nbsp;Vistas pues estas cuestiones generales vamos a ver c&oacute;mo se realiza el proceso con las diferentes herramientas.</p>
+
+
+
+<p> </p>
+
+
+
+<p></p>
+
+
+
+<p></p>
+
+
+
+</body>
+</html>

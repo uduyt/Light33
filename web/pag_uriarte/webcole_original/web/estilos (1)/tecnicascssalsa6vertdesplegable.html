@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Men&uacute; desplegable vertical con CSS</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <script type="text/javascript">
+<!--
+window.onload=mostrarsubmenu;
+function mostrarsubmenu(id) {
+var d = document.getElementById(id);
+for (var i = 1; i<=10; i++) {
+if (document.getElementById('smenu'+i)) {document.getElementById('smenu'+i).style.display='none';}
+}
+if (d) {d.style.display='block';}
+}
+//-->
+  </script>
+  <style type="text/css">
+/* CSS base procedente de los tutoriales de css.alsacreations.com */
+<!-- body {
+margin: 0;
+padding: 0;
+background: white;
+font: 80% verdana, arial, sans-serif;
+}
+dl, dt, dd, ul, li {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+#menu {
+position: absolute;
+top: 0;
+left: 0;
+}
+#menu {
+width: 15em;
+}
+#menu dt {
+cursor: pointer;
+margin: 2px 0;
+height: 20px;
+line-height: 20px;
+text-align: center;
+font-weight: bold;
+border: 1px solid gray;
+background: #ccc;
+}
+#menu dd {
+border: 1px solid gray;
+}
+#menu li {
+text-align: center;
+background: #fff;
+}
+#menu li a, #menu dt a {
+color: #000;
+text-decoration: none;
+display: block;
+border: 0 none;
+height: 100%;
+}
+#menu dt a {
+text-align:center;
+}
+#menu li a:hover, #menu dt a:hover {
+background: #eee;
+}
+#contenedor {
+position: relative;
+top:0;
+left:0;
+margin-left:15em;
+padding:10px;
+}
+-->
+  </style>
+</head>
+
+
+<body>
+
+<dl id="menu">
+
+  <dt onclick="javascript:mostrarsubmenu();"><a href="#">Men&uacute;
+1</a></dt>
+
+  <dt onclick="javascript:mostrarsubmenu('smenu2');">Men&uacute;
+2</dt>
+
+  <dd id="smenu2">
+    <ul>
+
+      <li><a href="#">Submen&uacute; 2.1</a></li>
+
+      <li><a href="#">Submen&uacute; 2.2</a></li>
+
+      <li><a href="#">Submen&uacute; 2.3</a></li>
+
+    </ul>
+
+  </dd>
+
+  <dt onclick="javascript:mostrarsubmenu('smenu3');">Men&uacute;
+3</dt>
+
+  <dd id="smenu3">
+    <ul>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+    </ul>
+
+  </dd>
+
+  <dt onclick="javascript:mostrarsubmenu('smenu4');">Men&uacute;
+4</dt>
+
+  <dd id="smenu4">
+    <ul>
+
+      <li><a href="#">Submen&uacute; 4.1</a></li>
+
+      <li><a href="#">Submen&uacute; 4.1</a></li>
+
+    </ul>
+
+  </dd>
+
+</dl>
+
+<div id="contenedor">
+<p>Por la propia estructura del men&uacute; su
+utilizaci&oacute;n
+m&aacute;s habitual ser&aacute; en p&aacute;ginas cuya
+estructura
+est&eacute; basada en marcos, bien sea en marcos puros o en
+marcos
+internos (<code>iframe</code>).</p>
+
+</div>
+
+</body>
+</html>

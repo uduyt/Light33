@@ -1,0 +1,2651 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-gb">
+<head>
+
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+  
+
+
+  
+  <title>Nvu Bug list</title>
+  <link type="text/css" href="ug.css" rel="stylesheet">
+
+
+  
+  <meta content="Charles Cooke" name="author">
+
+
+  
+  <meta content="Nvu open source wysiwyg Web authoring system - Version 1.0 - Bugs found while writing User Guide" name="description">
+
+
+  
+  <style type="text/css">
+.description { border: 1px solid rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+padding-left: 2px;
+margin-right: 4px;
+padding-right: 2px;
+float: left;
+margin-left: -7em;
+}
+.workaround { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+background-color: rgb(153, 255, 153);
+float: left;
+margin-left: -7em;
+}
+.consequence { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+margin-right: 4px;
+padding-right: 2px;
+background-color: rgb(255, 204, 153);
+float: left;
+margin-left: -7em;
+}
+.rating { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+margin-right: 4px;
+padding-right: 2px;
+background-color: rgb(204, 204, 255);
+float: left;
+margin-left: -7em;
+}
+.rating1 { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+text-transform: uppercase;
+font-weight: bold;
+color: rgb(255, 255, 255);
+background-color: rgb(255, 0, 0);
+}
+.rating2 { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+text-transform: uppercase;
+font-weight: bold;
+color: rgb(255, 255, 255);
+background-color: rgb(255, 153, 102);
+}
+.rating3 { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+text-transform: uppercase;
+font-weight: bold;
+background-color: rgb(255, 255, 153);
+color: rgb(0, 0, 0);
+}
+.rating4 { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+text-transform: uppercase;
+font-weight: bold;
+color: rgb(0, 0, 0);
+background-color: rgb(153, 255, 153);
+}
+.rating5 { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+text-transform: uppercase;
+font-weight: bold;
+background-color: rgb(255, 255, 153);
+color: rgb(0, 0, 0);
+}
+.bugs text { margin-left: 10em;
+}
+.bugs p { margin-left: 10em;
+}
+.clause { border: 2px solid rgb(66, 137, 181);
+padding-left: 2px;
+padding-right: 2px;
+float: right;
+text-transform: uppercase;
+font-weight: bold;
+background-color: rgb(232, 255, 255);
+color: rgb(0, 0, 102);
+}
+.bugs h3 { border-width: 2px;
+border-top: 2px solid rgb(66, 137, 181);
+padding-top: 0.5em;
+margin-top: 2em;
+}
+td { text-align: center;
+}
+td:first-child { text-align: left;
+}
+.prohibited { background-color: rgb(204, 0, 0);
+color: rgb(255, 255, 255);
+font-weight: bold;
+}
+.missing { color: rgb(255, 255, 255);
+font-weight: bold;
+background-color: rgb(255, 153, 102);
+}
+.muddle { background-color: rgb(255, 255, 102);
+color: rgb(0, 0, 0);
+font-weight: normal;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+<h1><a style="float: right;" href="http://www.nvu.com/"><img alt="Document made with Nvu" src="madewithNvu80x15clear.png" border="0"></a>Bug list for Nvu 1.0</h1>
+
+
+
+<p>
+This list is based on experience gained while writing the User Guide
+for Nvu versions 0.5 through to 1.0. Bugs which have been cleared are
+not included. My method has generally been to check for any bugs found
+on previous versions, check for any features covered by release
+notes&nbsp;then use the version in any updating of sites required
+including updating the user Guide.&nbsp;I also test for any
+relevant issues
+mentioned on the lists or forum. I have not included issues related to
+scripts since I am not experienced in these.Only after these checks is
+the list released.</p>
+
+
+<h3>
+Definition</h3>
+
+
+<p>
+Strictly I define a bug as any respect in which the product does not
+comply with its requirement specification. Unfortunately I am not privy
+to the requirement for Nvu and do not know&nbsp;whether it has even
+been formally stated. In this case I must take an ad hoc definition for
+a bug and work from that. I therefore make a personal inference of a
+specification and test departure from that.</p>
+
+
+<h3>
+Specification.</h3>
+
+
+<p><span class="clause"><a name="c1"></a>Clause
+1</span>The
+code which Nvu produces should comply with the relevant sections of
+the relevant specifications.I take these to be:</p>
+
+
+<ul>
+
+
+  <li>HTML 4.01 specification
+http://www.w3.org/TR/html4/cover.html</li>
+
+
+  <li>XHTML&nbsp;specification http://www.w3.org/TR/xhtml1</li>
+
+
+  <li>CSS 2.1 specification http://www.w3.org/TR/CSS21/</li>
+
+
+</ul>
+
+
+<p>(In this context 'relevant' refers to the sections applicable
+to the particular doctype being worked on.)</p>
+
+
+<p style="margin-top: 1em;"><span class="clause"><a name="c2"></a>Clause
+2</span>The
+code which Nvu produces should, when submitted, validate
+using the W3C validators</p>
+
+
+<ul>
+
+
+  <li>HTML Validator http://validator.w3.org/</li>
+
+
+  <li>CSS Validator http://jigsaw.w3.org/css-validator/</li>
+
+
+</ul>
+
+
+<p style="margin-top: 1em;"><span class="clause"><a name="c3"></a>Clause
+3</span>The
+line numbers allocated by Nvu should correspond to the
+line numbers reported for&nbsp;any errors detected during
+validation.</p>
+
+
+<p style="margin-top: 1em;">
+<span class="clause"><a name="c4"></a>Clause
+4</span>
+Pages
+developed using the wysiwyg features of Nvu should not
+require editing in source view to make them work correctly.</p>
+
+
+<p style="margin-top: 1em;"><span class="clause"><a name="c5"></a>Clause
+5</span>Nvu
+should be internally self consistent. Users should be able to use the
+Human Machine Interface (HMI) in a simple way without having to
+continually cross check that selections made do not conflict.</p>
+
+
+<p style="margin-top: 1em;"><span class="clause"><a name="c6"></a>Clause
+6</span>Nvu
+should be stable. Its operation should not vary from time to time
+unless as a result of preferences or other settings deliberately made
+by the user.</p>
+
+
+<p style="margin-top: 1em;"><span class="clause"><a name="c7"></a>Clause
+7</span>The HMI should operate as described by the help system or
+as implied by the control boxes.</p>
+
+
+<h2>Bugs</h2>
+
+
+<p>
+Clauses indicate
+which clause of the specification is not met.</p>
+
+
+<p>I have allocated a rating <span class="rating1">very
+serious</span> <span class="rating2">serious</span>
+<span class="rating3">moderate</span> <span class="rating4">trivial</span>
+to each bug. Necessarily these are personal opinions. I suggest that
+the first three categories need to be cleared before the product can be
+condidered 'polished'. I have rated all the problems with templates as
+'Trivial' not because I consider templates trivial but
+because&nbsp;I
+consider that the purpose and aim of the template needs to be reviewed
+rather than patch the curent implementation.</p>
+
+
+<blockquote>
+  
+  <blockquote>
+    
+    <ul>
+
+
+      <li>1 <a href="#b1">Linked stylesheets</a></li>
+
+
+      <li>2 <a href="#b2">Document type declaration</a></li>
+
+
+      <li>3 <a href="#b3">Document type selection</a></li>
+
+
+      <li>4 <a href="#b4">Incorrect format code
+applied</a></li>
+
+
+      <li>5 <a href="#b5">Managing layers</a></li>
+
+
+      <li>6 &amp; 7 <a href="#b6">Spell checker</a></li>
+
+
+      <li>8 <a href="#b8">Lists</a></li>
+
+
+      <li>9 <a href="#b9">Browsing</a></li>
+
+
+      <li>10 <a href="#b10">id</a></li>
+
+
+      <li>11 <a href="#b11">Format toolmar</a></li>
+
+
+      <li>12 <a href="#b12">Line numbering</a></li>
+
+
+      <li>13 <a href="#b13">Loss of Focus</a></li>
+
+
+      <li>14 <a href="#b14">Tables</a></li>
+
+
+      <li>15 - 18 <a href="#b15">Templates</a></li>
+
+
+      <li>19 <a href="#b19">Table of contents</a></li>
+
+
+      <li>20&nbsp;<a href="#b20">Page tabs</a></li>
+
+
+      <li>21 <a href="#b21">Selection</a></li>
+
+
+      <li>22 <a href="#b22">Frames</a></li>
+
+
+      <li>23 <a href="#b23">Markup cleaner</a></li>
+
+
+      <li>24 <a href="#b24">Saving</a></li>
+
+
+      <li>25 <a href="#b25">Site Manager</a></li>
+
+
+      <li>26 <a href="#b26">CSS editor</a></li>
+
+
+      <li> <a href="#notes">Notes - Response of
+Nvu to various ways of applying formats</a> </li>
+
+
+    
+    </ul>
+
+
+  </blockquote>
+
+
+</blockquote>
+
+
+<div class="bugs">
+<h3><a href="#c4"><span class="clause">Clause
+4</span></a>1.
+<a name="b1"></a>Linked stylesheets</h3>
+
+
+<p><span class="description">Description</span><span class="text">
+The file always appears as an absolute addresses. Once a page
+is moved to a different location e.g. from a local machine to a server
+the stylesheet will be looked for at the incorrect location.</span></p>
+
+
+<p>
+<span class="workaround">Workaround</span>
+In source view the file can be edited to give a
+relative location.</p>
+
+
+<p><span class="consequence">Consequence</span>Beginner
+users will find pages rendered incorrectly if they attempt to use one
+of the
+most powerful and recommended features of Nvu - External stylesheets.
+Experts will hardly notice the problem.</p>
+
+
+<p><span class="rating">Rating</span><span class="rating1"> Very serious</span>.</p>
+
+
+<h3><a href="#c1"><span class="clause">Clause
+1</span></a>2
+<a name="b2"></a>Document
+Type Declaration</h3>
+
+
+<p><span class="description">Description</span>
+The declaration used for html documents is
+incomplete - The URL of the DTD is omitted. Para 7.2 of the
+HTML 4.01 lists the permitted declarations.</p>
+
+
+<p><span class="workaround">Workaround</span>Edit
+the declaration in a text editor and save the page as a template. Base
+all new pages on this.</p>
+
+
+<p><span class="consequence">Consequence</span>
+Some browsers will be triggered into 'quirks
+mode' with
+the result that text will be the wrong size and cross-browser
+compatibility is impaired.</p>
+
+
+<p><span class="rating">Rating</span><span class="rating2">Serious</span></p>
+
+
+<h3>3 <a name="b3"></a>Document Type Selection</h3>
+
+
+<p><span class="description">Description</span><a href="#c5"><span class="clause">Clause 5</span></a>
+When the markup type is set in Tools &gt; Preferences
+&gt; Advanced this setting does not persist. If any file is created
+with a different selection this re-sets the preference.&nbsp; </p>
+
+
+<p><span class="workaround">Workaround</span>Ignore
+and never use the markup setting in
+Preferences.</p>
+
+
+<p><span class="consequence">Consequence</span>
+If not noticed many pages could be created with
+the wrong doctype.</p>
+
+
+<p><span class="rating">Rating</span><span class="rating2">Serious</span></p>
+
+
+<h3>4 <a name="b4"></a>Incorrect format code
+applied</h3>
+
+
+<p><span class="description">Description</span><a href="#c2"><span class="clause">Clause 2</span></a>In
+several cases, when
+formatting parts of a document, (1) code is applied which is not
+permitted by the doctype (2) code is applied which is irrelevant to the
+format or (3) a format is unavailable though not precluded by the
+doctype. These responses depend on whether 'Use CSS Styles instead of
+HTML ...' is set. A number of formats have been tested against all
+available doctype options. <a href="#c7"><span class="clause">Clause 7</span></a>The
+results are <a href="#notes">tabulated at the end of this
+page.</a></p>
+
+
+<p><span class="workaround">Workaround</span>For
+experts, if all formatting is carried out using styles, no probems will
+be encountered.<br>
+
+
+For others, if 'Use CSS Styles instead of HTML ...' is always set and
+Transitional doctype is used no validation errors will occur.<br>
+
+
+For those wishing to use Strict doctype and menu or button formatting
+refer to the table and avoid problem items.
+</p>
+
+
+<p><span class="consequence">Consequence</span>
+Validation errors will occur. Reworking could be time consuming.</p>
+
+
+<p><span class="rating">Rating</span> <span class="rating2">Serious</span></p>
+
+
+<h3>5 <a name="b5"></a>Managing
+Layers&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c4"><span class="clause">Clause 4</span></a>Generating
+a single layer is easy enough. As soon
+as you have several on a page problems arise in positioning them. If
+the grab handle of the one you want lies over (or near) another it is
+impossible to grab it. Focus always goes to the other (irrespective of
+the z-index). I suggest that focus should stay with the selected layer.
+Conversely, grabbing and dragging is an imprecise science, better to
+allocate classes to layers. This can be done but the layer retains its
+grab handle; then the possibility of moving it inadvertently occurs. I
+suggest that, after thought, some method of disabling resizing or
+dragging classed layers, possibly selectively, should be introduced.
+(I&rsquo;ve classed this as a bug because of the first difficulty
+mentioned.)&nbsp;</p>
+
+
+<p><span class="workaround">Workaround</span>The
+User Guide suggests some but the consequences remain.&nbsp;</p>
+
+
+<p><span class="consequence">Consequence</span>
+Limited use of layers presents no problem. Extensive use is virtually
+precluded at present unless edited in source view.</p>
+
+
+<p><span class="rating">Rating</span><span class="rating3">moderate</span>
+</p>
+
+
+<h3>6&nbsp;<a name="b6"></a>Spell checker
+(1)&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c5"><span class="clause">Clause 5</span></a>To
+get &lsquo;Underline
+misspelled words&rsquo; to work this must be set AFTER the file is
+opened. If set before it must be cleared and re-set.</p>
+
+
+<p><span class="workaround">Workaround</span>If
+file is opened when&nbsp;&lsquo;Underline
+misspelled words&rsquo; is set clear the setting and re-set it.</p>
+
+
+<p><span class="consequence">Consequence</span>More
+keystrokes.</p>
+
+
+<p><span class="rating">Rating</span><span class="rating3">moderate</span>
+</p>
+
+
+<h3>7&nbsp;<a name="b7"></a>Spell checker
+(2)&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c6"><span class="clause">Clause 6</span></a>When
+misspelled words are
+underlined right-clicking usually but not always offers spelling
+suggestions. Correct action can be reinstated by switching off
+&lsquo;Underline misspelled words&rsquo; and switching on
+again.</p>
+
+
+<p><span class="workaround">Workaround</span>Clear
+&lsquo;Underline
+misspelled words&rsquo;&nbsp;and re-set it</p>
+
+
+<p><span class="consequence">Consequence</span><span class="consequence"></span>More keystrokes.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating3">moderate</span>
+</p>
+
+
+<h3>8&nbsp;<a name="b8"></a>Lists</h3>
+
+
+<p><span class="description">Description</span><a href="#c1"><span class="clause">Clause 1</span></a>It
+is now possible to nest lists. Two problems occur. (a)
+redundant br elements are introduced which are not cleared by the
+markup cleaner (b) A spurious mode exists. By pressing tab in a list a
+nested list can be created which uses incorrect code.</p>
+
+
+<p><span class="workaround">Workaround</span><a href="#c2"><span class="clause">Clause 2</span></a>The
+break requires no remedial work. Avoid pressing the tab key in a list.</p>
+
+
+<p><span class="consequence">Consequence</span>If
+tab key is pressed most browsers will render the nesting correctly but
+validation will fail.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;&nbsp;<span class="rating3">moderate</span>
+</p>
+
+
+<span class="rating"></span>
+<h3>9&nbsp;<a name="b9"></a>Browsing&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c7"><span class="clause">Clause 7</span></a>If
+the default browser is Mozilla all
+is well. If it is Internet Explorer (version 6 at least) when
+&lsquo;Browse&rsquo; is selected the browser opens but in
+&lsquo;Source&rsquo; view not page view. I note that the first
+time that I tried this after installation it worked correctly. After
+that it failed every time. (Exactly the same action with 0.9, 1.0PR and
+1.0) Still in Nvu 1.00</p>
+
+
+<p><span class="workaround">Workaround</span>To
+use Internet Explorer browse via Windows Explorer.</p>
+
+
+<p><span class="consequence">Consequence</span>
+HMI is less elegant - more keystrokes required.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;&nbsp;<span class="rating3">moderate</span>
+</p>
+
+
+<h3>10 <a name="b10"></a>ID</h3>
+
+
+<p><a href="#c1"><span class="clause">Clause
+1</span></a><span class="description">Description</span>It
+is possible to <strong>a</strong>pply the same id to more
+than one item.</p>
+
+
+<p><span class="workaround">Workaround</span>Don't
+do it - check manually.</p>
+
+
+<p><span class="consequence">Consequence</span>If
+done inadvertently incorrect linking or style application could result.
+Beginners will probably not use the feature, experienced will probably
+not make the error.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;&nbsp;<span class="rating3">moderate</span>
+</p>
+
+
+<h3>11 <a name="b11"></a>Format toolbar</h3>
+
+
+<p><span class="description">Description</span><a href="#c6"><span class="clause">Clause 6</span></a>Occasionally
+both sections of the format toolbar become inactive. When this happens
+one or more of the drop down boxes may become 'grayed out' and inactive
+and some buttons may become inactive while others continue to work.
+Also the file name in the header bar may disappear.&nbsp; &nbsp;</p>
+
+
+<p><span class="workaround">Workaround</span>Close
+Nvu and re-open.</p>
+
+
+<p><span class="consequence">Consequence</span>Frustration.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating3">moderate</span></p>
+
+
+<h3>12<a name="b12"></a> Line numbering</h3>
+
+
+<p><span class="description">Description</span><a href="#c3"><span class="clause">Clause 3</span></a>When
+passed to the validator errors
+are reported on lines which differ in number from those listed in Nvu.
+This is probably linked to unexpected line breaks occurring in Nvu.
+(PHP users experience issues related to &lsquo;reformatting source
+code&rsquo; which is probably related but I cannot comment on this.</p>
+
+
+<p><span class="workaround">Workaround</span>Search
+for correct line.
+</p>
+
+
+<p><span class="consequence">Consequence</span>Frustration.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating3">moderate</span></p>
+
+
+<h3>13 <a name="b13"></a>Loss of focus</h3>
+
+
+<p><span class="description">Description</span><a href="#c6"><span class="clause">Clause 6</span></a>I
+have noticed this several times (I&rsquo;m not sure what conditions
+apply). I copy something from one document. I open an other and try to
+paste. The paste succeeds but to the wrong document. This occurs even
+if the focus appears to be in the correct document e.g. it is possible
+to type there but paste still goes to the wrong document.</p>
+
+
+<p><span class="workaround">Workaround</span>Close
+and re-open Nvu.
+</p>
+
+
+<p><span class="consequence">Consequence</span>Frustration.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating3">moderate</span></p>
+
+
+<h3>14 <a name="b14"></a>Tables</h3>
+
+
+<p><span class="description">Description</span><a href="#c6"><span class="clause">Clause 6</span></a>
+When tables are inserted they start, in a new
+installation, at width= 100%. After some time new tables are inserted
+with width = 100px. This oddity is intermittent but undesirable; 100%
+is a better choice.</p>
+
+
+<p><span class="workaround">Workaround</span>Reset
+width using table properties window.</p>
+
+
+<p><span class="consequence">Consequence</span>Nugatory
+intervention by user is required.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+<h3>15 <a name="b15"></a>Templates
+(1)&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c7"><span class="clause">Clause 7</span></a>When
+repeatable areas are
+inserted (whether block or flow) it is not possible to edit the content
+until they are detached from the template.</p>
+
+
+<p><span class="workaround">Workaround</span>Edit
+content after detaching template.</p>
+
+
+<p><span class="consequence">Consequence</span>
+Illogical action but of little consequence.</p>
+
+
+<p><span class="rating">Rating</span><span class="rating4">trivial</span>
+</p>
+
+
+<h3>16 Templates (2)</h3>
+
+
+<p><span class="description">Description</span><span class="clause">Clause 0</span>A
+bug seems to have been
+introduced between Nvu 0.5 and 0.6. In 0.5 File &ndash; New
+&gt;
+Based on Template &gt; &ldquo;Choose file&rdquo; offers an
+option to choose &ldquo;Files of type template&rdquo;. With 0.7
+onwards only &ldquo;All files&rdquo; is offered.</p>
+
+
+<p><span class="workaround">Workaround</span>Select
+the template file normally.</p>
+
+
+<p><span class="consequence">Consequence</span>
+Possible&nbsp;need to trawl through long list.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+<h3>17 Templates (3)</h3>
+
+
+<p><span class="description">Description</span><a href="#c7"><span class="clause">Clause 7</span></a>In
+the &lsquo;Insert an
+editable area&rsquo; window, when flow areas are selected the
+option &lsquo;Area is movable&rsquo; appears to be available.
+This is meaningless. Still in Nvu 1.00</p>
+
+
+<p><span class="workaround">Workaround</span>None
+- the option does not work.</p>
+
+
+<p><span class="consequence">Consequence</span>
+Possible confusion to user.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+<h3>18 Templates (4)&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c7"><span class="clause">Clause 7</span></a>The
+HMI (Human-machine
+Interface) is quite obscure and needs review. Much of the operation is
+non-intuitive.</p>
+
+
+<p><span class="workaround">Workaround</span>Not
+possible</p>
+
+
+<p><span class="consequence">Consequence</span>In
+its present form the Templates facility is of no real use.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+<h3>19 <a name="b19"></a>Table of
+Contents&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c7"><span class="clause">Clause 7</span></a>According
+to Help system
+Inserting a ToC with &lsquo;Make ToC read only&rsquo; checked
+should omit anchors.&nbsp; This does not happen.</p>
+
+
+<p><span class="workaround">Workaround</span>Tolerate
+the links and bloating of the code.</p>
+
+
+<p><span class="consequence">Consequence</span>Code
+bloat. (Few are likely to find the links objectionable.)</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+<h3>20 <a name="b20"></a>Page
+tabs&nbsp;&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c5"><span class="clause">Clause 5</span></a>These
+normally display the page title. Sometimes (in a long
+session)&nbsp;
+the title of a different page is displayed. On one occason, when all
+the pages of the User Guide were open (titles carry sequential
+numbers), all titles were displaced by one unit. Unfortunately I did
+not record the order of opening or direction of displacement.&nbsp;</p>
+
+
+<p><span class="workaround">Workaround</span>Use
+file name instead of title or close and re-open files..</p>
+
+
+<p><span class="consequence">Consequence</span>
+Confusion to user..</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+<h3>21 <a name="b21"></a>Selection&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c5"><span class="clause">Clause 5</span></a>In
+HTML tags view, when an element
+is selected it is normally highlighted in the Status Bar. This
+doesn&rsquo;t occur when BODY is selected. For a long time I
+thought that it wasn&rsquo;t possible to select BODY.</p>
+
+
+<p><span class="workaround">Workaround</span>Recognise
+that it IS possible to select body.</p>
+
+
+<p><span class="consequence">Consequence</span>
+Illogical and some may miss the possibility of applying styles to body.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+<h3>22 <a name="b22"></a>Frames&nbsp;&nbsp;&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c5"><span class="clause">Clause 5</span></a>When
+a frame is encountered
+the system seems to freeze. It takes a bit of skill to recover without
+closing Nvu. The response has improved with Nvu 1.0 but after switching
+to source view recovery is still very difficult.</p>
+
+
+<p><span class="workaround">Workaround</span>Open
+a different file from File menu or Site Manager.</p>
+
+
+<p><span class="consequence">Consequence</span>Frustration
+until you learn the workaround.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+<h3>23 <a name="b23"></a>Markup
+Cleaner&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c7"><span class="clause">Clause 7</span></a>Does
+not remove all empty
+blocks (e.g. UL), nor empty classes (including empty spans).&nbsp;</p>
+
+
+<p><span class="workaround">Workaround</span>Don't
+clean the file or use another cleaner.&nbsp;</p>
+
+
+<p><span class="consequence">Consequence</span>
+Code bloat</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+<h3>24 <a name="b24"></a>Saving&nbsp;</h3>
+
+
+<p><span class="description">Description</span><a href="#c7"><span class="clause">Clause 7</span></a>If
+you edit something by selecting the
+tag and applying an inline style you do not receive an invitation to
+save i.e. save button remains greyed out and is inactive. You must edit
+something else to bring it to life.</p>
+
+
+<p><span class="workaround">Workaround</span>Make
+any trivial change to the file.</p>
+
+
+<p><span class="consequence">Consequence</span>
+Possible loss of code due to thinking a file has been saved when it has
+not.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+<h3>25 <a name="b25"></a>Site Manager.</h3>
+
+
+<p><span class="description">Description</span><span class="clause"><a href="#c5">Clause 5</a>
+</span>Now
+that Nvu handles xhtml documents Site
+Manager needs enhancing e.g. it displays xhtml documents only when
+'View All files' is selected.. I would prefer the View options to be 1
+&ndash; All files, 2 &ndash; html documents,&nbsp; 3
+&ndash; Image files, then three new types 3 &ndash; xhtml
+documents, 5 &ndash; CSS files, 6 &ndash; Page documents (html
++ xhtml).</p>
+
+
+<p><span class="workaround">Workaround</span>Search
+visually.</p>
+
+
+<p><span class="consequence">Consequence</span>
+Slower in use.</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+<h3>26 <a name="b26"></a>CSS editor<a href="#c7"><span class="clause">Clause 7</span></a></h3>
+
+
+<p><span class="description">Description</span>The
+&lsquo;Down&rsquo; button does not work.</p>
+
+
+<p><span class="workaround">Workaround</span>Select
+an item or items lower on the list and use the 'up' button.</p>
+
+
+<p><span class="consequence">Consequence</span>More
+keystrokes</p>
+
+
+<p><span class="rating">Rating</span>&nbsp;<span class="rating4">trivial</span></p>
+
+
+<br>
+
+
+<h3><a name="notes"></a>Notes - Response of
+Nvu to various ways of applying formats</h3>
+
+
+<table border="1" cellpadding="0" cellspacing="0">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td>File reference</td>
+
+
+      <td>1</td>
+
+
+      <td>1a</td>
+
+
+      <td>5</td>
+
+
+      <td>3</td>
+
+
+      <td>3a</td>
+
+
+      <td>7</td>
+
+
+      <td>2</td>
+
+
+      <td>2a</td>
+
+
+      <td>6</td>
+
+
+      <td>4</td>
+
+
+      <td>4a</td>
+
+
+      <td>8</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td></td>
+
+
+      <td colspan="6" rowspan="1"><b>'Use CSS
+styles'
+UNCHECKED</b></td>
+
+
+      <td colspan="6" rowspan="1"><b>'Use CSS
+styles'&nbsp;CHECKED</b></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td></td>
+
+
+      <td colspan="3" rowspan="1"><b>Transitional
+doctypes</b></td>
+
+
+      <td colspan="3" rowspan="1"><b>Strict
+doctypes</b></td>
+
+
+      <td colspan="3" rowspan="1"><b>Transitional
+doctypes</b></td>
+
+
+      <td colspan="3" rowspan="1"><b>Strict
+doctypes</b></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="text-align: right;">see Note 1</td>
+
+
+      <td><b>Full</b></td>
+
+
+      <td><b>Short</b></td>
+
+
+      <td><b>Full</b></td>
+
+
+      <td><b>Full</b></td>
+
+
+      <td><b>Short</b></td>
+
+
+      <td><b>Full</b></td>
+
+
+      <td><b>Full</b></td>
+
+
+      <td><b>Short</b></td>
+
+
+      <td><b>Full</b></td>
+
+
+      <td><b>Full</b></td>
+
+
+      <td><b>Short</b></td>
+
+
+      <td><b>Full</b></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td> </td>
+
+
+      <td colspan="2" rowspan="1"><b>HTML</b></td>
+
+
+      <td><b>XHTML</b></td>
+
+
+      <td colspan="2" rowspan="1"><b>HTML</b></td>
+
+
+      <td><b>XHTML</b></td>
+
+
+      <td colspan="2" rowspan="1"><b>HTML</b></td>
+
+
+      <td><b>XHTML</b></td>
+
+
+      <td colspan="2" rowspan="1"><b>HTML</b></td>
+
+
+      <td><b>XHTML</b></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><b>Format applied</b></td>
+
+
+      <td colspan="12" rowspan="1">Response of Nvu
+e.g. method applied to achieve format - Coloured cells indicate
+unsatisfactory (or sub-optimal) response (see Key)</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Choose color for text</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td class="prohibited">font</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Text Color</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td class="prohibited">font</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="prohibited">font *4</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Smaller font size</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Size &gt; Smaller</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+      <td>small</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Larger font size</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Size &gt; Larger</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+      <td>big</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Size &gt;&nbsp;x-large</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td class="prohibited">font</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td class="prohibited">font</td>
+
+
+      <td class="prohibited">font</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Chose color for background (Page background)</td>
+
+
+      <td class="muddle">bgcolor *2</td>
+
+
+      <td class="muddle">bgcolor *2</td>
+
+
+      <td class="muddle">bgcolor *2</td>
+
+
+      <td class="prohibited">bgcolor *2</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td></td>
+
+
+      <td></td>
+
+
+      <td></td>
+
+
+      <td></td>
+
+
+      <td></td>
+
+
+      <td></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Chose color for background (Block background)</td>
+
+
+      <td></td>
+
+
+      <td></td>
+
+
+      <td></td>
+
+
+      <td></td>
+
+
+      <td></td>
+
+
+      <td></td>
+
+
+      <td class="muddle">style *3</td>
+
+
+      <td class="muddle">style *3</td>
+
+
+      <td class="muddle">style *3</td>
+
+
+      <td class="prohibited">style *3</td>
+
+
+      <td class="prohibited">style *3</td>
+
+
+      <td class="prohibited">style *3</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Bold</td>
+
+
+      <td>b</td>
+
+
+      <td>b</td>
+
+
+      <td>b</td>
+
+
+      <td>b</td>
+
+
+      <td>b</td>
+
+
+      <td>b</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Text style &gt; Bold</td>
+
+
+      <td>b</td>
+
+
+      <td>b</td>
+
+
+      <td>b</td>
+
+
+      <td>b</td>
+
+
+      <td>b</td>
+
+
+      <td>b</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Italic</td>
+
+
+      <td>i</td>
+
+
+      <td>i</td>
+
+
+      <td>i</td>
+
+
+      <td>i</td>
+
+
+      <td>i</td>
+
+
+      <td>i</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Text style &gt; Italic</td>
+
+
+      <td>i</td>
+
+
+      <td>i</td>
+
+
+      <td>i</td>
+
+
+      <td>i</td>
+
+
+      <td>i</td>
+
+
+      <td>i</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Underline</td>
+
+
+      <td>u</td>
+
+
+      <td>u</td>
+
+
+      <td>u</td>
+
+
+      <td class="prohibited">u</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Text style &gt; Underline</td>
+
+
+      <td>u</td>
+
+
+      <td>u</td>
+
+
+      <td>u</td>
+
+
+      <td class="prohibited">u</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Emphasize</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Text style &gt; Emphasis</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+      <td>em</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Strong emphasize</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Text style &gt;&nbsp;Stronger
+emphasis</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+      <td>strong</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Align right</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Align &gt; Right</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Justify</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Align &gt; Justify</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Button - Indent text</td>
+
+
+      <td>blockquote</td>
+
+
+      <td>align</td>
+
+
+      <td>blockquote</td>
+
+
+      <td>blockquote</td>
+
+
+      <td>blockquote</td>
+
+
+      <td>blockquote</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Increase Indent</td>
+
+
+      <td>blockquote</td>
+
+
+      <td>align</td>
+
+
+      <td>blockquote</td>
+
+
+      <td>blockquote</td>
+
+
+      <td>blockquote</td>
+
+
+      <td>blockquote</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Drop down - Courier</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td class="prohibited">font</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td>font</td>
+
+
+      <td>style</td>
+
+
+      <td>font</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Font &gt; Courier</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td>font</td>
+
+
+      <td class="prohibited">font</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td>font</td>
+
+
+      <td>style</td>
+
+
+      <td>font</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+      <td>style</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Image props &gt; Appearance</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td>align</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td>float</td>
+
+
+      <td>float</td>
+
+
+      <td>float</td>
+
+
+      <td>float</td>
+
+
+      <td>float</td>
+
+
+      <td>float</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>Format &gt; Page colors and background</td>
+
+
+      <td>bgcolor *5 *6</td>
+
+
+      <td>bgcolor *5 *6</td>
+
+
+      <td>bgcolor *5 *6</td>
+
+
+      <td class="prohibited">bgcolor *5 *6</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td class="missing">Inactive</td>
+
+
+      <td>style *5 *7</td>
+
+
+      <td>style *5</td>
+
+
+      <td>style*5 *7</td>
+
+
+      <td class="prohibited">style *5 *7</td>
+
+
+      <td class="prohibited">style *5 *7</td>
+
+
+      <td>style *7</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td colspan="13" rowspan="1"><strong>Key:</strong></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="text-align: center;" class="prohibited" colspan="1" rowspan="1">Red</td>
+
+
+      <td style="text-align: left;" rowspan="1" colspan="12">Uses code prohibited by doctype or setting.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="text-align: center;" class="missing" colspan="1" rowspan="1">Orange</td>
+
+
+      <td style="text-align: left;" rowspan="1" colspan="12">Functionality restricted due to format not
+being available.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="text-align: center;" class="muddle" colspan="1" rowspan="1">Yellow</td>
+
+
+      <td style="text-align: left;" rowspan="1" colspan="12">Codes applied which are irrelevant to format
+applied may produce unexpected results.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="text-align: center;" colspan="1" rowspan="1">Clear</td>
+
+
+      <td style="text-align: left;" rowspan="1" colspan="12">Fully compliant.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td colspan="13" rowspan="1"><strong>Notes</strong>:</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td colspan="13" rowspan="1">* 1 Note Full
+Doctype is as&nbsp;defined in HTML specification. Short Doctype is
+as applied by Nvu to HTML documents. This&nbsp;omits URL of DTD.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td colspan="13" rowspan="1">* 2 Note when
+bgcolor applied to body
+body also has
+alink, vlink, link and text applied.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td colspan="13" rowspan="1">* 3 Note when
+color applied to block
+body also has
+alink, vlink, link and text applied.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td colspan="13" rowspan="1"> * 4 This
+function is intermittent -
+Usually it is
+inaccessible.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td colspan="13" rowspan="1">* 5 Comment
+applies to background.
+Link colours applied in addition always&nbsp;as alink vlink link.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td colspan="13" rowspan="1">* 6 Text also
+applied.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td colspan="13" rowspan="1">* 7 Color also
+applied (within style).</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td colspan="13" rowspan="1">'Inactive'
+Indicates that the function cannot be
+performed. The button and/or menu item may be greyed out or missing but
+not necessarily so leading to more uncertainty.</td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+</div>
+
+
+<p>Charles Cooke 12 July 2005&nbsp;</p>
+
+
+<p><a href="http://validator.w3.org/check?uri=referer">
+<img class="left" style="width: 88px; height: 31px;" src="valid-html401.png" alt="Valid HTML 4.01!"></a><a href="http://jigsaw.w3.org/css-validator/check/referer"><img class="right" style="width: 88px; height: 31px;" src="valid-css.png" alt="Valid CSS"></a></p>
+
+
+</body>
+</html>

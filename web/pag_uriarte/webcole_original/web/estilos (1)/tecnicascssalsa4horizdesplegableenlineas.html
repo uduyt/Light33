@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Men&uacute; horizontal desplegable en
+l&iacute;neas con CSS</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+  <script type="text/javascript">
+<!--
+window.onload=mostrarsubmenu;
+function mostrarsubmenu(id) {
+var d = document.getElementById(id);
+for (var i = 1; i<=10; i++) {
+if (document.getElementById('smenu'+i)) {document.getElementById('smenu'+i).style.display='none';}
+}
+if (d) {d.style.display='block';}
+}
+//-->
+  </script>
+  <style type="text/css">
+<!--
+/* CSS base procedente de los tutoriales de css.alsacreations.com */
+body {margin: 10px;
+padding: 0;
+}
+dt, dl, dd, ul, li {
+list-style-type: none;
+margin: 0 10px 0 0;
+padding: 0;
+}
+#menu {
+position : absolute;
+left: 50px;
+top: 0;
+}
+#menu dt {
+display:table; /* ajuste para Opera */
+}
+#menu dl {
+float: left;
+}
+#menu li {
+display: inline;
+}
+#menu a {
+text-decoration: none;
+color: #000;
+background: #fff;
+}
+#menu a:visited {
+color: #ccc;
+}
+#menu a:hover {
+color: #aac;
+}
+#smenu1, #smenu2, #smenu3, #smenu4 {
+position: absolute;
+left: 0;
+font-size: 0.8em;
+border-top: 1px solid gray;
+width: 400px;
+}
+#contenedor {
+position: relative;
+top:20px;
+left:0;
+padding:10px;
+}
+ #localizadormenu{
+   position:fixed;
+     margin:0;
+	 padding:0;
+	    background-color:#D5C18D;
+		height: 1.6em;
+		width: 100%;
+		z-index:11;
+ }
+ 
+ #localizadormenu p{
+   margin-top: 0px;
+   margin-left:2%;
+   font-size:1.2em;
+   font-weight: bold;
+   color:#FFFFFF;
+   }
+  
+    #localizadormenu a{
+z-index:12;
+  color:#373F68;
+font-stretch: ultra-condensed;
+font-weight: bold;}
+
+#localizadormenu a:hover {color: #B5B19A}
+  </style>
+</head>
+
+
+<body>
+
+<div id="localizadormenu"><p>Men&uacute; horizontal desplegable en l&iacute;neas<a href="menus.html">&nbsp;&nbsp;&nbsp;&nbsp;(Volver)</a></p></div>
+<div id="contenido">
+<div id="menu">
+<dl>
+
+  <dt onmouseover="mostrarsubmenu('smenu1');"><a href="javascript:void(0);">Men&uacute;
+1</a></dt>
+
+  <dd id="smenu1">
+    <ul>
+
+      <li><a href="#">Submen&uacute;
+1.1</a></li>
+
+      <li><a href="#">Submen&uacute;
+1.2</a></li>
+
+      <li><a href="#">Submen&uacute;
+1.3</a></li>
+
+    </ul>
+
+  </dd>
+
+</dl>
+
+<dl>
+
+  <dt onmouseover="mostrarsubmenu();"><a href="#">Men&uacute; 2</a>
+  </dt>
+
+  <dd id="smenu2">
+  </dd>
+
+</dl>
+
+<dl>
+
+  <dt onmouseover="mostrarsubmenu('smenu3');"><a href="javascript:void(0);">Men&uacute;
+3</a></dt>
+
+  <dd id="smenu3">
+    <ul>
+
+      <li><a href="#">Submen&uacute;
+3.1</a></li>
+
+      <li><a href="#">Submen&uacute;
+3.2</a></li>
+
+      <li><a href="#">Submen&uacute;
+3.3</a></li>
+
+      <li><a href="#">Submen&uacute;
+3.4</a></li>
+
+      <li><a href="#">Submen&uacute;
+3.5</a></li>
+
+    </ul>
+
+  </dd>
+
+</dl>
+
+<dl>
+
+  <dt onmouseover="mostrarsubmenu('smenu4');"><a href="javascript:void(0);">Men&uacute;
+4</a></dt>
+
+  <dd id="smenu4">
+    <ul>
+
+      <li><a href="#">Submen&uacute;
+4.1</a></li>
+
+      <li><a href="#">Submen&uacute;
+4.2</a></li>
+
+      <li><a href="#">Submen&uacute;
+4.3</a></li>
+
+    </ul>
+
+  </dd>
+
+</dl>
+
+</div>
+
+<div id="contenedor">
+<p>Este men&uacute; requiere que est&eacute; activado
+Javascript.</p>
+
+<p>Alguna opci&oacute;n de men&uacute; podr&iacute;a
+no desplegar opciones funcionar como enlace directo a otra
+p&aacute;gina. (Caso del Elemento men&uacute; 2 del ejemplo)</p>
+<p>Se ha introducido la propiedad <code>display:table</code> para los selectores <code>dt</code> del men&uacute; para que se muestre correctamente en Opera.</p>
+<p>Tambi&eacute;n se ha a&ntilde;adido la pseudoclase <code>:visited</code> para introducir diferenciaci&oacute;n de color en los enlaces visitados</p>
+</div>
+</div>
+</body>
+</html>

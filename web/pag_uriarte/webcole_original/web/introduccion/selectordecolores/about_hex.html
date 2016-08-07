@@ -1,0 +1,1324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title></title>
+
+
+  <style type="text/css">
+<!--
+.colorbox {
+BORDER-BOTTOM: #666666 1px solid;
+BORDER-LEFT: #666666 1px solid;
+BORDER-RIGHT: #666666 1px solid;
+BORDER-TOP: #666666 1px solid;
+}
+--></style>
+  <script language="JavaScript"><!--
+function decToHex()
+{
+enteredDec = (window.document.convert.dec.value * 1);
+if((enteredDec * 1 != enteredDec)||(Math.floor(enteredDec) != enteredDec)||(enteredDec < 0)||(enteredDec == ""))
+{
+alert("Please enter a whole positive decimal number in the left box.");
+}
+else
+{
+converted = enteredDec.toString(16);
+converted = enteredDec.toString(16);
+converted = converted.toUpperCase()
+window.document.convert.hex.value = converted;
+}
+}
+function hexToDec()
+{
+enteredHex = window.document.convert.hex.value;
+if(isValid(enteredHex,validhex))
+{
+converted = parseInt(enteredHex,16);
+window.document.convert.dec.value = converted;
+}
+else
+{
+alert("Please enter a valid hexidecimal number.\n\nA valid hexidecimal number would contain ONLY the characters...\n\n0123456789ABCDEF\n\nNo spaces, dashes or periods.");
+}
+}
+function isValid(string,allowed)
+{
+for (var i=0; i< string.length; i++)
+{
+if (allowed.indexOf(string.charAt(i)) == -1)
+{
+return false;
+}
+}
+if(string == "")
+{
+return false;
+}
+else
+{
+return true;
+}
+}
+var validhex = '0123456789ABCDEFabcdef';
+//--></script>
+  <link href="../../nvu2005.css" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+<!--
+.Estilo1 {font-size: 12pt}
+-->
+  </style>
+</head>
+
+<body>
+
+<p><font size="5">&iquest;Qu&eacute;
+es y de d&oacute;nde viene un c&oacute;digo hexadecimal?</font>
+</p>
+
+<p>En nuestra vida diaria utilizamos un sistema de
+numeraci&oacute;n decimal (base 10) que utiliza los siguientes
+n&uacute;meros como base... </p>
+
+<p class="centrado"><big><tt>0-1-2-3-4-5-6-7-8-9</tt></big></p>
+
+<p>En alg&uacute;n momento alguien del mundo de la
+inform&aacute;tica decidi&oacute; que algunas cosas
+ser&iacute;an m&aacute;s f&aacute;ciles de hacer si se
+utilizara un sistema de numeraci&oacute;n <i>hexa</i>decimal
+(base 16) ...
+</p>
+
+<p class="centrado"><big><tt>0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F</tt></big></p>
+
+<p>Como nuestro sistema decimal no tiene s&iacute;mbolos
+&uacute;nicos para representar los n&uacute;meros 10, 11, 12
+etc, usamos letras para representar esos valores. A
+continuaci&oacute;n se muestra una tabla con la equivalencia entre
+ambos sistemas desde el 0 al 255...
+</p>
+
+<div class="centrado">
+<table style="width: 50%; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <td>0=00 </td>
+
+      <td>51=33 </td>
+
+      <td>102=66 </td>
+
+      <td>153=99 </td>
+
+      <td>204=CC</td>
+
+    </tr>
+
+    <tr>
+
+      <td>1=01 </td>
+
+      <td>52=34 </td>
+
+      <td>103=67 </td>
+
+      <td>154=9A </td>
+
+      <td>205=CD</td>
+
+    </tr>
+
+    <tr>
+
+      <td>2=02 </td>
+
+      <td>53=35 </td>
+
+      <td>104=68 </td>
+
+      <td>155=9B </td>
+
+      <td>206=CE</td>
+
+    </tr>
+
+    <tr>
+
+      <td>3=03 </td>
+
+      <td>54=36 </td>
+
+      <td>105=69 </td>
+
+      <td>156=9C </td>
+
+      <td>207=CF</td>
+
+    </tr>
+
+    <tr>
+
+      <td>4=04 </td>
+
+      <td>55=37 </td>
+
+      <td>106=6A </td>
+
+      <td>157=9D </td>
+
+      <td>208=D0</td>
+
+    </tr>
+
+    <tr>
+
+      <td>5=05 </td>
+
+      <td>56=38 </td>
+
+      <td>107=6B </td>
+
+      <td>158=9E </td>
+
+      <td>209=D1</td>
+
+    </tr>
+
+    <tr>
+
+      <td>6=06 </td>
+
+      <td>57=39 </td>
+
+      <td>108=6C </td>
+
+      <td>159=9F </td>
+
+      <td>210=D2</td>
+
+    </tr>
+
+    <tr>
+
+      <td>7=07 </td>
+
+      <td>58=3A </td>
+
+      <td>109=6D </td>
+
+      <td>160=A0 </td>
+
+      <td>211=D3</td>
+
+    </tr>
+
+    <tr>
+
+      <td>8=08 </td>
+
+      <td>59=3B </td>
+
+      <td>110=6E </td>
+
+      <td>161=A1 </td>
+
+      <td>212=D4</td>
+
+    </tr>
+
+    <tr>
+
+      <td>9=09 </td>
+
+      <td>60=3C </td>
+
+      <td>111=6F </td>
+
+      <td>162=A2 </td>
+
+      <td>213=D5</td>
+
+    </tr>
+
+    <tr>
+
+      <td>10=0A </td>
+
+      <td>61=3D </td>
+
+      <td>112=70 </td>
+
+      <td>163=A3 </td>
+
+      <td>214=D6</td>
+
+    </tr>
+
+    <tr>
+
+      <td>11=0B </td>
+
+      <td>62=3E </td>
+
+      <td>113=71 </td>
+
+      <td>164=A4 </td>
+
+      <td>215=D7</td>
+
+    </tr>
+
+    <tr>
+
+      <td>12=0C </td>
+
+      <td>63=3F </td>
+
+      <td>114=72 </td>
+
+      <td>165=A5 </td>
+
+      <td>216=D8</td>
+
+    </tr>
+
+    <tr>
+
+      <td>13=0D </td>
+
+      <td>64=40 </td>
+
+      <td>115=73 </td>
+
+      <td>166=A6 </td>
+
+      <td>217=D9</td>
+
+    </tr>
+
+    <tr>
+
+      <td>14=0E </td>
+
+      <td>65=41 </td>
+
+      <td>116=74 </td>
+
+      <td>167=A7 </td>
+
+      <td>218=DA</td>
+
+    </tr>
+
+    <tr>
+
+      <td>15=0F </td>
+
+      <td>66=42 </td>
+
+      <td>117=75 </td>
+
+      <td>168=A8 </td>
+
+      <td>219=DB</td>
+
+    </tr>
+
+    <tr>
+
+      <td>16=10 </td>
+
+      <td>67=43 </td>
+
+      <td>118=76 </td>
+
+      <td>169=A9 </td>
+
+      <td>220=DC</td>
+
+    </tr>
+
+    <tr>
+
+      <td>17=11 </td>
+
+      <td>68=44 </td>
+
+      <td>119=77 </td>
+
+      <td>170=AA </td>
+
+      <td>221=DD</td>
+
+    </tr>
+
+    <tr>
+
+      <td>18=12 </td>
+
+      <td>69=45 </td>
+
+      <td>120=78 </td>
+
+      <td>171=AB </td>
+
+      <td>222=DE</td>
+
+    </tr>
+
+    <tr>
+
+      <td>19=13 </td>
+
+      <td>70=46 </td>
+
+      <td>121=79 </td>
+
+      <td>172=AC </td>
+
+      <td>223=DF</td>
+
+    </tr>
+
+    <tr>
+
+      <td>20=14 </td>
+
+      <td>71=47 </td>
+
+      <td>122=7A </td>
+
+      <td>173=AD </td>
+
+      <td>224=E0</td>
+
+    </tr>
+
+    <tr>
+
+      <td>21=15 </td>
+
+      <td>72=48 </td>
+
+      <td>123=7B </td>
+
+      <td>174=AE </td>
+
+      <td>225=E1</td>
+
+    </tr>
+
+    <tr>
+
+      <td>22=16 </td>
+
+      <td>73=49 </td>
+
+      <td>124=7C </td>
+
+      <td>175=AF </td>
+
+      <td>226=E2</td>
+
+    </tr>
+
+    <tr>
+
+      <td>23=17 </td>
+
+      <td>74=4A </td>
+
+      <td>125=7D </td>
+
+      <td>176=B0 </td>
+
+      <td>227=E3</td>
+
+    </tr>
+
+    <tr>
+
+      <td>24=18 </td>
+
+      <td>75=4B </td>
+
+      <td>126=7E </td>
+
+      <td>177=B1 </td>
+
+      <td>228=E4</td>
+
+    </tr>
+
+    <tr>
+
+      <td>25=19 </td>
+
+      <td>76=4C </td>
+
+      <td>127=7F </td>
+
+      <td>178=B2 </td>
+
+      <td>229=E5</td>
+
+    </tr>
+
+    <tr>
+
+      <td>26=1A </td>
+
+      <td>77=4D </td>
+
+      <td>128=80 </td>
+
+      <td>179=B3 </td>
+
+      <td>230=E6</td>
+
+    </tr>
+
+    <tr>
+
+      <td>27=1B </td>
+
+      <td>78=4E </td>
+
+      <td>129=81 </td>
+
+      <td>180=B4 </td>
+
+      <td>231=E7</td>
+
+    </tr>
+
+    <tr>
+
+      <td>28=1C </td>
+
+      <td>79=4F </td>
+
+      <td>130=82 </td>
+
+      <td>181=B5 </td>
+
+      <td>232=E8</td>
+
+    </tr>
+
+    <tr>
+
+      <td>29=1D </td>
+
+      <td>80=50 </td>
+
+      <td>131=83 </td>
+
+      <td>182=B6 </td>
+
+      <td>233=E9</td>
+
+    </tr>
+
+    <tr>
+
+      <td>30=1E </td>
+
+      <td>81=51 </td>
+
+      <td>132=84 </td>
+
+      <td>183=B7 </td>
+
+      <td>234=EA</td>
+
+    </tr>
+
+    <tr>
+
+      <td>31=1F </td>
+
+      <td>82=52 </td>
+
+      <td>133=85 </td>
+
+      <td>184=B8 </td>
+
+      <td>235=EB</td>
+
+    </tr>
+
+    <tr>
+
+      <td>32=20 </td>
+
+      <td>83=53 </td>
+
+      <td>134=86 </td>
+
+      <td>185=B9 </td>
+
+      <td>236=EC</td>
+
+    </tr>
+
+    <tr>
+
+      <td>33=21 </td>
+
+      <td>84=54 </td>
+
+      <td>135=87 </td>
+
+      <td>186=BA </td>
+
+      <td>237=ED</td>
+
+    </tr>
+
+    <tr>
+
+      <td>34=22 </td>
+
+      <td>85=55 </td>
+
+      <td>136=88 </td>
+
+      <td>187=BB </td>
+
+      <td>238=EE</td>
+
+    </tr>
+
+    <tr>
+
+      <td>35=23 </td>
+
+      <td>86=56 </td>
+
+      <td>137=89 </td>
+
+      <td>188=BC </td>
+
+      <td>239=EF</td>
+
+    </tr>
+
+    <tr>
+
+      <td>36=24 </td>
+
+      <td>87=57 </td>
+
+      <td>138=8A </td>
+
+      <td>189=BD </td>
+
+      <td>240=F0</td>
+
+    </tr>
+
+    <tr>
+
+      <td>37=25 </td>
+
+      <td>88=58 </td>
+
+      <td>139=8B </td>
+
+      <td>190=BE </td>
+
+      <td>241=F1</td>
+
+    </tr>
+
+    <tr>
+
+      <td>38=26 </td>
+
+      <td>89=59 </td>
+
+      <td>140=8C </td>
+
+      <td>191=BF </td>
+
+      <td>242=F2</td>
+
+    </tr>
+
+    <tr>
+
+      <td>39=27 </td>
+
+      <td>90=5A </td>
+
+      <td>141=8D </td>
+
+      <td>192=C0 </td>
+
+      <td>243=F3</td>
+
+    </tr>
+
+    <tr>
+
+      <td>40=28 </td>
+
+      <td>91=5B </td>
+
+      <td>142=8E </td>
+
+      <td>193=C1 </td>
+
+      <td>244=F4</td>
+
+    </tr>
+
+    <tr>
+
+      <td>41=29 </td>
+
+      <td>92=5C </td>
+
+      <td>143=8F </td>
+
+      <td>194=C2 </td>
+
+      <td>245=F5</td>
+
+    </tr>
+
+    <tr>
+
+      <td>42=2A </td>
+
+      <td>93=5D </td>
+
+      <td>144=90 </td>
+
+      <td>195=C3 </td>
+
+      <td>246=F6</td>
+
+    </tr>
+
+    <tr>
+
+      <td>43=2B </td>
+
+      <td>94=5E </td>
+
+      <td>145=91 </td>
+
+      <td>196=C4 </td>
+
+      <td>247=F7</td>
+
+    </tr>
+
+    <tr>
+
+      <td>44=2C </td>
+
+      <td>95=5F </td>
+
+      <td>146=92 </td>
+
+      <td>197=C5 </td>
+
+      <td>248=F8</td>
+
+    </tr>
+
+    <tr>
+
+      <td>45=2D </td>
+
+      <td>96=60 </td>
+
+      <td>147=93 </td>
+
+      <td>198=C6 </td>
+
+      <td>249=F9</td>
+
+    </tr>
+
+    <tr>
+
+      <td>46=2E </td>
+
+      <td>97=61 </td>
+
+      <td>148=94 </td>
+
+      <td>199=C7 </td>
+
+      <td>250=FA</td>
+
+    </tr>
+
+    <tr>
+
+      <td>47=2F </td>
+
+      <td>98=62 </td>
+
+      <td>149=95 </td>
+
+      <td>200=C8 </td>
+
+      <td>251=FB</td>
+
+    </tr>
+
+    <tr>
+
+      <td>48=30 </td>
+
+      <td>99=63 </td>
+
+      <td>150=96 </td>
+
+      <td>201=C9 </td>
+
+      <td>252=FC</td>
+
+    </tr>
+
+    <tr>
+
+      <td>49=31 </td>
+
+      <td>100=64 </td>
+
+      <td>151=97 </td>
+
+      <td>202=CA </td>
+
+      <td>253=FD</td>
+
+    </tr>
+
+    <tr>
+
+      <td>50=32 </td>
+
+      <td>101=65 </td>
+
+      <td>152=98 </td>
+
+      <td>203=CB </td>
+
+      <td>254=FE</td>
+
+    </tr>
+
+    <tr>
+
+      <td>255=FF</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+<p>A continuaci&oacute;n tienes una peque&ntilde;a
+aplicaci&oacute;n que convierte cualquier n&uacute;mero entre
+ambos sistemas: podemos escribir un n&uacute;mero en base 10 en la
+caja de la izquierda y pulsando el bot&oacute;n superior
+obtendremos su equivalente en hexadecimal, o bien escribir un
+n&uacute;mero en base 16 en la caja de la derecha y pulsando el
+bot&oacute;n inferior lo convertiremos en base 10
+</p>
+
+<center>
+<form name="convert">
+  <table border="0" cellpadding="" cellspacing="4">
+
+    <tbody>
+
+      <tr>
+
+        <td colspan="2" align="center"><input name="converta" value="Convertir Decimal a Hexadecimal --&gt;" style="font-size: 8pt;" onclick="decToHex();" type="button"></td>
+
+      </tr>
+
+      <tr>
+
+        <td><input name="dec" value="" size="16" type="text"></td>
+
+        <td align="right"><input name="hex" value="" size="16" type="text"></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="2" align="center"><input name="convertb" value="&lt;-- Convertir Hexadecimal a Decimal" style="font-size: 8pt;" onclick="hexToDec();" type="button"></td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+</form>
+
+</center>
+
+<p>El ordenador es capaz de reproducir colores expresados por una
+combinaci&oacute;n de valores de rojo, verde y azul, la llamada
+combinaci&oacute;n RGB...
+</p>
+
+<p class="centrado">RED -
+GREEN - BLUE o R-G-B
+</p>
+
+<p>Cada uno de los colores puede tomar un valor entre 0 y 255. 0
+representa la ausencia de color y 255 significa la m&aacute;xima
+intensidad del color. Usando esa escala podemos encontrar los
+siguientes valores...
+</p>
+
+<p></p>
+
+<p>
+<table align="center" border="0" cellpadding="0" cellspacing="4">
+
+  <tbody>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;ROJO=
+255-0-0</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#00ff00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;VERDE=
+0-255-0</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;AZUL=
+0-0-255</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;NEGRO=
+0-0-0</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;BLANCO=
+255-255-255</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</p>
+
+<p>Dado que disponemos de tres colores, cada uno de los cuales
+puede oscilar en un rango entre 0 y 255 tenemos un total de 16.777.216
+posibles combinaciones de color (256&nbsp;&sup3;).
+As&iacute; es como se consiguen los 16.7 millones de colores. <i>El
+blanco supone la saturaci&oacute;n total de los tres colores
+b&aacute;sicos mientras que el negro es la ausencia total de color
+seg&uacute;n este esquema.</i>
+</p>
+
+<p>Si sustituimos el valor decimal de cada color por su
+equivalente hexadecimal empezamos a acercarnos a los c&oacute;digos
+hexadecimales que se utilizan para representar los colores al crear un
+documento HTML.
+</p>
+
+<p>
+<table align="center" border="0" cellpadding="0" cellspacing="4">
+
+  <tbody>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;ROJO= FF-0-0</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#00ff00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;VERDE= 0-FF-0</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;AZUL= 0-0-FF</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;NEGRO= 0-0-0</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;BLANCO=
+FF-FF-FF</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</p>
+
+<p>Si ahora usamos la notaci&oacute;n 00 en lugar de 0, 01
+para 1, etc., y eliminamos los guiones de separaci&oacute;n
+conseguimos los c&oacute;digos de color que est&aacute;bamos
+buscando.
+</p>
+
+<p>
+<table align="center" border="0" cellpadding="0" cellspacing="4">
+
+  <tbody>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;ROJO= FF0000</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#00ff00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;VERDE= 00FF00</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;AZUL= 0000FF</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;NEGRO= 000000</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+      <td>&nbsp;BLANCO=
+FFFFFF</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</p>
+
+<p>Aqu&iacute; hay unos pocos ejemplos al azar de
+c&oacute;digos hexadecimales de color.
+</p>
+
+<p>
+<table align="center" border="0" cellpadding="0" cellspacing="4">
+
+  <tbody>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#c80000"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>200-0-0</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>C8-00-00</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>C80000</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#ffff00"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>255-255-0</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>FF-FF-00</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>FFFF00</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#0066cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>0-102-204</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>00-66-CC</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>0066CC</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#bf80d2"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>191-128-210</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>BF-80-D2</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>BF80D2</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#208817"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>32-136-23</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>20-88-17</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>208817</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#e79c03"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>231-156-3</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>E7-9C-03</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>E79C03</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#008080"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>0-128-128</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>00-80-80</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>008080</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#474007"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>71-64-7</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>47-40-07</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>474007</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</p>
+
+<p>F&iacute;jate en que, cuando los valores de rojo, verde y
+azul son iguales el resultado es un tono m&aacute;s o menos
+luminoso de gris seg&uacute;n aumente o disminuya el valor de los
+tres colores.
+</p>
+
+<p>
+<table align="center" border="0" cellpadding="0" cellspacing="4">
+
+  <tbody>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#d2d2d2"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>210-210-210</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>D2-D2-D2</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>D2D2D2</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#aaaaaa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>170-170-170</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>AA-AA-AA</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>AAAAAA</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#757575"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>117-117-117</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>75-75-75</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>757575</td>
+
+    </tr>
+
+    <tr>
+
+      <td class="colorbox" bgcolor="#3c3c3c"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+
+      <td><tt>&nbsp;</tt></td>
+
+      <td>60-60-60</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>3C-3C-3C</td>
+
+      <td>&nbsp;&nbsp;</td>
+
+      <td>3C3C3C</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</p>
+
+<p align="right">Traducci&oacute;n libre a partir del
+documento de Joe Barta
+en <a href="http://www.pagetutor.com/" style="text-decoration: none;" target="_top"><b><font color="#40a838" face="courier new" size="3">pagetutor</font><font color="#082173" face="courier new" size="3">.com<br>
+
+</font></b></a>
+</p>
+
+<hr>
+</body>
+</html>

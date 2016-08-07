@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Estructura general - Etiquetado por contenido</title>
+
+
+  <link rel="stylesheet" href="../nvu2005.css" type="text/css">
+<link rel="stylesheet" href="../multi2.css" type="text/css">
+<!-- compliance patch for microsoft browsers --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+</head>
+
+<div id="localizador">
+<p>La base>>Texto - Etiquetado por contenido</p>
+
+</div>
+<div id="flechadcha">
+<a href="texto4.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="texto2.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+<body>
+<div class="solapas">
+<ul>
+
+
+  <li><a href="texto1.html">Tipos
+y cuerpos</a></li>
+
+
+ <li><a href="texto2.html">Enfatizaci&oacute;n</a></li>
+
+
+
+  <li class="activo"><a href="texto3.html">Marcado
+por contenido</a></li>
+
+  <li><a href="texto4.html">Justificaci&oacute;n</a></li>
+
+          <li><a href="texto5.html">T&iacute;tulos
+o cabeceras</a></li>
+
+          <li><a href="texto6.html">Listas</a></li>
+
+</ul>
+
+
+</div>
+
+<div class="principal">
+
+<h2>Etiquetado por contenido</h2>
+
+<p> Existen otras etiquetas que sirven para indicar claramente el
+tipo de contenido que se est&aacute; mostrando. En un primer
+momento las utilizar&aacute;s poco, aunque si te atreves no es mala
+pr&aacute;ctica que te acostumbres desde el principio a marcar
+correctamente los contenidos. Algunos de los tipos de contenido no
+tienen una opci&oacute;n para introducirlos desde el
+men&uacute;&nbsp;en la actual versi&oacute;n de N|VU y hay
+que introducirlos manualmente en la pesta&ntilde;a <img class="imgcentr" style="width: 99px; height: 21px;" alt="Codigo fuente" title="Codigo fuente" src="../imagenes/pestanacodigofuente.png">.
+Sin embargo, la mayor&iacute;a est&aacute;n accesibles desde la
+opci&oacute;n de men&uacute; <span class="refmenu">Formato
+</span><span class="refmenu"><img class="imgcentr" style="width: 14px; height: 13px;" alt="submen&uacute;" title="submen&uacute;" src="../estilos/flechamenu.png">Estilo
+de texto</span>. Aqu&iacute; tienes una lista de los estilos
+relacionados con el contenido&nbsp;con su efecto visual:</p>
+
+<dl>
+
+  <dt><img class="flotder" style="width: 140px; height: 286px;" alt="Men&uacute; de estilos de texto seg&uacute;n contenido" title="Men&uacute; de estilos de texto seg&uacute;n contenido" src="img/estilodetextoxcontenido.png">Abreviatura <code>&lt;abbr&gt;&lt;/abbr&gt;</code></dt>
+
+  <dd>Se utiliza para indicar que el texto es una abreviatura,
+por ejemplo, <abbr title="adjetivo">adj.</abbr> por
+adjetivo. Si, adem&aacute;s de marcar la abreviatura con este
+c&oacute;digo especificamos como atributo title del mismo el
+significado de la abreviatura, dicho significado se mostrar&aacute;
+al detener el rat&oacute;n sobre la palabra (salvo en Internet
+Explorer 6 que no lo muestra) </dd>
+
+  <dt>Acr&oacute;nimo <code>&lt;acronym&gt;&lt;/acronym&gt;</code></dt>
+
+  <dd>Similar al anterior pero para indicar que lo que sigue es
+un acr&oacute;nimo
+con las siglas de alg&uacute;n organismo, grupo,
+instituci&oacute;n, etc. Ej.: <acronym title="Hypertext Markup Language">html</acronym>. Si
+se especifica el atributo title para que recoja&nbsp;el significado
+del acr&oacute;nimo dicho significado se mostrar&aacute; al
+detener el rat&oacute;n sobre el t&eacute;rmino (En este caso
+Internet Explorer 6 s&iacute; que lo muestra aunque no marca
+visualmente el
+acr&oacute;nimo, cosa que s&iacute; hacen el resto de
+navegadores).&nbsp;</dd>
+
+  <dt>Origen de Cita <code>&lt;cite&gt;&lt;/cite&gt;</code></dt>
+
+  <dd>Se usa para indicar la fuente de una cita, como por ejemplo
+el autor o el t&iacute;tulo de
+un libro. Ej.: La cita anterior pertenece a <cite>El ingenioso
+hidalgo Don Quijote de la Mancha</cite></dd>
+
+  <dt>Cita textual en l&iacute;nea<code>
+&lt;q&gt;&lt;/q&gt;</code></dt>
+
+  <dd>Se utiliza para recoger una cita textual. Los navegadores
+(salvo Internet Explorer) entrecomillan autom&aacute;ticamente la
+cita. Ej.:<q>En un lugar de la Mancha, de cuyo ...</q><strong>
+Nota:</strong>
+La opci&oacute;n cita que puede verse en el men&uacute; no
+corresponde a este c&oacute;digo sino al que denominamos <span style="font-style: italic;">"Origen de la cita"</span>,
+por lo que si queremos utilizarlo habr&aacute; que introducir la
+etiqueta directamente en la pesta&ntilde;a<img class="imgcentr" style="width: 99px; height: 21px;" alt="Codigo fuente" title="Codigo fuente" src="../imagenes/pestanacodigofuente.png">o
+desde la ventana a la que nos da acceso la opcion de men&uacute; <span class="refmenu">insertar<img class="imgcentr" style="height: 13px; width: 14px;" alt="submen&uacute;" title="submen&uacute;" src="../estilos/flechamenu.png"></span><span class="refmenu">html</span></dd>
+
+  <dt>Cita textual en bloque<code>&lt;blockquote&gt;&lt;/blockquote&gt;</code></dt>
+
+  <dd>Su funci&oacute;n es la misma que la de la cita en
+l&iacute;nea, pero mientras &eacute;sta se utiliza para citar
+frases que se insertan en el flujo del texto (de ah&iacute; su
+nombre "en l&iacute;nea"), la cita en bloque se utiliza para
+bloques de texto m&aacute;s extensos. La mayor&iacute;a de los
+navegadores representan las citas en bloque aumentando el sangrado del
+bloque, tanto a la izquierda como a la derecha, aunque no entrecomillan
+la cita. El resultado ser&iacute;a el que se puede apreciar en el
+siguiente ejemplo:
+    <blockquote>Tan pronto como estuvo en su
+habitaci&oacute;n se
+precipit&oacute; a abrir los
+cajones de su escritorio: todo se encontraba en perfecto orden pero la
+excitaci&oacute;n le impidi&oacute; descubrir enseguida los
+documentos que buscaba.
+Termin&oacute; por encontrar la licencia para andar en bicicleta y
+ya se
+dispon&iacute;a a present&aacute;rsela al agente cuando,
+mudando de proceder, lo
+estim&oacute; insuficiente por lo que continu&oacute; buscando
+hasta que encontr&oacute; su
+partida de nacimiento. <cite>Franz Kafka. El proceso.</cite></blockquote>
+
+    <strong>Nota:</strong>
+Tampoco disponemos de una opci&oacute;n en los men&uacute;s
+para introducir este c&oacute;digo, por lo que tambi&eacute;n
+tendremos que hacerlo manualmente en la pesta&ntilde;a<img class="imgcentr" style="width: 99px; height: 21px;" alt="Codigo fuente" title="Codigo fuente" src="../imagenes/pestanacodigofuente.png">o
+desde la ventana a la que nos da acceso la opcion de men&uacute; <span class="refmenu">insertar<img class="imgcentr" style="height: 13px; width: 14px;" alt="submen&uacute;" title="submen&uacute;" src="../estilos/flechamenu.png"></span><span class="refmenu">html</span> </dd>
+
+  <dt>Definici&oacute;n<code>
+&lt;dfn&gt;&lt;/dfn&gt;</code></dt>
+
+  <dd>Marca un texto como t&eacute;rmino que va a ser
+definido a continuaci&oacute;n en el flujo normal del texto. Ej.:
+El f<dfn>onema</dfn> es la unidad m&iacute;nima de
+articulaci&oacute;n ling&uuml;&iacute;stica.</dd>
+
+  <dt>C&oacute;digo<code>
+&lt;code&gt;&lt;/code&gt;</code></dt>
+
+  <dd>Indica que el texto es c&oacute;digo de un programa de
+ordenador. Ej.: <code class="codesinestilo">&lt;script
+type="text/javascript"
+language="JavaScript"&gt;document.write(t6)&lt;/script&gt; </code><strong>Nota:</strong>
+en esta documentaci&oacute;n se han utilizado reglas <acronym title="Cascading Style Sheets">CSS</acronym> para
+modificar la apariencia de los elementos de c&oacute;digo,
+mostr&aacute;ndolos con la apariencia <code>&lt;c&oacute;digo&gt;</code></dd>
+
+  <dt>Salida de ejemplo<code>
+&lt;samp&gt;&lt;/samp&gt;</code></dt>
+
+  <dd>Indica que el texto es el resultado ofrecido por un
+programa de ordenador. Ej.: <samp>No se encuentra el archivo</samp></dd>
+
+  <dt>Entrada de teclado <code>&lt;kbd&gt;&lt;/kbd&gt;</code></dt>
+
+  <dd>Indica que el texto es lo que un usuario teclea en un
+ordenador. Ej.: Introduzca el siguiente
+n&uacute;mero de serie: <kbd>A2345J87</kbd></dd>
+
+  <dt>Variable<code> &lt;var&gt;&lt;/var&gt;</code></dt>
+
+  <dd>Sirve para marcar una variable de un programa de ordenador.
+Ej.: <var>b=45</var></dd>
+
+</dl>
+
+<p>Como has comprobado las variaciones de apariencia son escasas
+y, adem&aacute;s, varias de estas etiquetas est&aacute;n
+intimamente relacionadas con el mundo e la programaci&oacute;n y
+los ordenadores, por lo que es bastante probable que no las necesites.
+De todas maneras no estar&iacute;a de m&aacute;s que tuvieras
+en cuenta las etiquetas <code>&lt;abbr&gt;</code>,
+<code>&lt;acronym&gt;</code>, <code>&lt;q&gt;</code>,
+<code>&lt;cite&gt;</code> y <code>&lt;dfn&gt;</code>
+porque, adem&aacute;s de ahorrarte el trabajo de que tengas que
+especificar la apariencia del texto, pueden ser muy &uacute;tiles
+para facilitar la accesibilidad a programas lectores para personas
+invidentes que podr&aacute;n leer el contenido e informar
+claramente al visitante del tipo de contenido exacto de cada elemento
+de la p&aacute;gina.</p>
+
+<p>Adem&aacute;s de estas opciones, tambi&eacute;n
+tenemos la etiqueta de direcci&oacute;n <code>&lt;address&gt;&lt;/address&gt;</code>
+que nos permitir&aacute; indicar que una referencia corresponde a
+una
+direcci&oacute;n f&iacute;sica o bien una direcci&oacute;n
+electr&oacute;nica. Al tratarse de una etiqueta que se aplica a
+todo un
+p&aacute;rrafo no podremos acceder a ella mediante&nbsp;el
+men&uacute; <span class="refmenu">Formato
+</span><span class="refmenu"><img class="imgcentr" style="width: 14px; height: 13px;" alt="submen&uacute;" title="submen&uacute;" src="../estilos/flechamenu.png">Estilo
+de texto</span> que nos permite especificar un estilo para una
+palabra o grupo de palabras. Lo encontraremos en el
+desplegable&nbsp;<span class="refmenu">tipos de
+p&aacute;rrafo</span> de la <span class="refmenu">barra
+de formato.</span></p>
+
+<div class="practicas"><img class="numact" style="width: 29px; height: 29px;" alt="Actividad 6" title="Actividad 6" src="../imagenes/numeracion/seis.gif">
+<ul>
+
+  <li>Si ya has empezado a dise&ntilde;ar una
+p&aacute;gina en la que
+figure una direcci&oacute;n f&iacute;sica, como por ejemplo la
+de tu
+centro, sit&uacute;a el rat&oacute;n sobre la
+direcci&oacute;n postal
+del mismo y m&aacute;rcala como direcci&oacute;n. En caso de no
+ser
+as&iacute; puedes crear una nueva p&aacute;gina al efecto en la
+que se
+incluya una direcci&oacute;n postal.</li>
+
+  <li>Comprueba que&nbsp; no ha hecho falta
+se&ntilde;alar todo el
+texto, ya que la etiqueta se ha aplicado a todo el p&aacute;rrafo.
+(De
+hecho es probable que, si la direcci&oacute;n no estaba en un
+p&aacute;rrafo individual te veas en la necesidad de separarla para
+que
+no se aplique el tipo de p&aacute;rrafo a otros elementos)</li>
+
+  <li>El tipo direcci&oacute;n se hereda, por lo que si
+pulsas la tecla <img class="imgcentr" style="width: 22px; height: 24px;" alt="Intro" title="Intro" src="../imagenes/teclaintro.png">ver&aacute;s
+que el siguiente p&aacute;rrafo sigue mostr&aacute;ndose
+tambi&eacute;n
+como direcci&oacute;n por lo que tendr&aacute;s que recurrir al
+selector de <span class="refmenu">tipos de
+p&aacute;rrafo</span> para volver a convertirlo en el tipo
+adecuado.</li>
+
+  <li>Si has creado una p&aacute;gina espec&iacute;fica
+para realizar la actividad gu&aacute;rdala&nbsp;como
+    <strong>actividad6.html</strong>. En caso contrario, si has aplicado la
+t&eacute;cnica a una p&aacute;gina que ya estabas creando,
+puedes mantener su nombre. </li>
+
+</ul>
+
+</div>
+
+<br>
+</div>
+</body>
+</html>

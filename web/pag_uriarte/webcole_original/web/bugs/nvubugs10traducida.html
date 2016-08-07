@@ -1,0 +1,4824 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="es-es">
+<head>
+
+
+
+  
+  
+  
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+  <base href="http://web.onetel.net.uk/%7Echarlescooke/nvubugs10.htm"><!-- removed -->
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html ; CHARSET=UTF-8">
+
+
+
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <title>Lista del insecto de Nvu</title>
+  <link type="text/css" href="ug.css" rel="stylesheet">
+
+
+
+
+
+  
+  
+  
+  
+  <meta content="Charles Cooke" name="author">
+
+
+
+
+
+  
+  
+  
+  
+  <meta content="Nvu open source wysiwyg Web authoring system - Version 1.0 - Bugs found while writing User Guide" name="description">
+
+
+
+
+
+  
+  
+  
+  
+  <style type="text/css">
+.description { border: 1px solid rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+padding-left: 2px;
+margin-right: 4px;
+padding-right: 2px;
+float: left;
+margin-left: -7em;
+}
+.workaround { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+background-color: rgb(153, 255, 153);
+float: left;
+margin-left: -7em;
+}
+.consequence { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+margin-right: 4px;
+padding-right: 2px;
+background-color: rgb(255, 204, 153);
+float: left;
+margin-left: -7em;
+}
+.rating { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+margin-right: 4px;
+padding-right: 2px;
+background-color: rgb(204, 204, 255);
+float: left;
+margin-left: -7em;
+}
+.rating1 { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+text-transform: uppercase;
+font-weight: bold;
+color: rgb(255, 255, 255);
+background-color: rgb(255, 0, 0);
+}
+.rating2 { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+text-transform: uppercase;
+font-weight: bold;
+color: rgb(255, 255, 255);
+background-color: rgb(255, 153, 102);
+}
+.rating3 { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+text-transform: uppercase;
+font-weight: bold;
+background-color: rgb(255, 255, 153);
+color: rgb(0, 0, 0);
+}
+.rating4 { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+text-transform: uppercase;
+font-weight: bold;
+color: rgb(0, 0, 0);
+background-color: rgb(153, 255, 153);
+}
+.rating5 { border: 1px solid rgb(0, 0, 0);
+padding-left: 2px;
+padding-right: 2px;
+text-transform: uppercase;
+font-weight: bold;
+background-color: rgb(255, 255, 153);
+color: rgb(0, 0, 0);
+}
+.bugs text { margin-left: 10em;
+}
+.bugs p { margin-left: 10em;
+}
+.clause { border: 2px solid rgb(66, 137, 181);
+padding-left: 2px;
+padding-right: 2px;
+float: right;
+text-transform: uppercase;
+font-weight: bold;
+background-color: rgb(232, 255, 255);
+color: rgb(0, 0, 102);
+}
+.bugs h3 { border-width: 2px;
+border-top: 2px solid rgb(66, 137, 181);
+padding-top: 0.5em;
+margin-top: 2em;
+}
+td { text-align: center;
+}
+td:first-child { text-align: left;
+}
+.prohibited { background-color: rgb(204, 0, 0);
+color: rgb(255, 255, 255);
+font-weight: bold;
+}
+.missing { color: rgb(255, 255, 255);
+font-weight: bold;
+background-color: rgb(255, 153, 102);
+}
+.muddle { background-color: rgb(255, 255, 102);
+color: rgb(0, 0, 0);
+font-weight: normal;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+<h1><a style="float: right;" href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fwww.nvu.com%2f"><img alt="Documento hecho con Nvu" src="http://www.nvu.com/images/madewithNvu80x15clear.png" border="0"></a>
+Lista del insecto para Nvu 1.0</h1>
+
+
+
+
+
+
+<p>
+Esta lista se basa en la experiencia ganada 
+mientras que escribe la gu&iacute;a del usuario para las versiones 0.5 de 
+Nvu a trav&eacute;s a 1.0. Los insectos que han sido despejaron no son
+incluidos. Mi m&eacute;todo ha sido comprobar para saber si hay 
+cualquier insecto encontrado en versiones anteriores, comprobar para 
+saber si hay cualesquiera caracter&iacute;sticas cubiertas por las notas del
+lanzamiento despu&eacute;s&nbsp;utiliza generalmente la versi&oacute;n en 
+cualquier puesta al d&iacute;a de los sitios requeridos incluyendo la puesta
+al d&iacute;a de la gu&iacute;a del usuario.&nbsp;Tambi&eacute;n pruebo para 
+cualquier edici&oacute;n relevante mencionada en las listas o el foro. 
+No he incluido las ediciones relacionadas con las escrituras 
+puesto que me no experimentan en these.Only despu&eacute;s de que estos 
+cheques sean la lista lanzada.</p>
+
+
+
+
+
+<h3>
+Definici&oacute;n</h3>
+
+
+
+
+
+<p>
+Defino terminantemente un insecto como cualquier 
+respecto en el cual el producto no se conforme con su especificaci&oacute;n 
+de requisito. Desafortunadamente no soy privy al requisito para 
+Nvu y no s&eacute;&nbsp;si incluso se ha indicado formalmente. 
+En este caso debo tomar a un anuncio la definici&oacute;n hoc para un 
+insecto y trabajar de eso. I por lo tanto hace una inferencia 
+personal de una salida de la especificaci&oacute;n y de la prueba de eso.</p>
+
+
+
+
+
+<h3>
+Especificaci&oacute;n.</h3>
+
+
+
+
+
+<p><span class="clause"><a name="c1"></a></span><span class="clause">La cl&aacute;usula 1</span>el c&oacute;digo que Nvu 
+produce debe conformarse con las secciones relevantes de la toma 
+relevante de specifications.I &eacute;stos para ser:</p>
+
+
+
+
+
+<ul>
+
+
+
+
+
+  <li>Especificaci&oacute;n http://www.w3.org/TR/html4/cover.html del 
+HTML 4.01</li>
+
+
+
+
+
+  <li>Especificaci&oacute;n&nbsp;http://www.w3.org/TR/xhtml1 de XHTML</li>
+
+
+
+
+
+  <li>Especificaci&oacute;n http://www.w3.org/TR/CSS21/ del 
+CSS 2.1</li>
+
+
+
+
+
+</ul>
+
+
+
+
+
+<p>(en este contexto ' relevante ' refiere a las 
+secciones aplicables al doctype particular que es trabajado 
+encendido.)</p>
+
+
+
+
+
+<p style="margin-top: 1em;"><span class="clause"><a name="c2"></a></span><span class="clause">La cl&aacute;usula 2</span>el c&oacute;digo que Nvu 
+produce debe, cuando est&aacute; sometida, validar con los validators de 
+W3C</p>
+
+
+
+
+
+<ul>
+
+
+
+
+
+  <li>Validator http://validator.w3.org/ del HTML</li>
+
+
+
+
+
+  <li>Validator http://jigsaw.w3.org/css-validator/ del 
+Css</li>
+
+
+
+
+
+</ul>
+
+
+
+
+
+<p style="margin-top: 1em;"><span class="clause"><a name="c3"></a>La cl&aacute;usula 3</span>la l&iacute;nea 
+n&uacute;meros asignados por Nvu debe corresponder a la l&iacute;nea n&uacute;meros 
+divulgados para&nbsp;cualquier error detectado durante la 
+validaci&oacute;n.</p>
+
+
+
+
+
+<p style="margin-top: 1em;">
+<span class="clause"><a name="c4"></a></span><span class="clause"></span>Las p&aacute;ginas <span class="clause">de la cl&aacute;usula</span>
+<span class="clause">4 
+</span>desarrolladas usando las caracter&iacute;sticas del wysiwyg de Nvu no 
+deben requerir corregir en la opini&oacute;n de la fuente para hacerlas 
+trabajan correctamente.</p>
+
+
+
+
+
+<p style="margin-top: 1em;"><span class="clause"><a name="c5"></a></span><span class="clause">La cl&aacute;usula 5</span>Nvu debe estar 
+internamente uno mismo constante. Los usuarios deben poder 
+utilizar el interfaz humano de la m&aacute;quina (HMI) en una manera simple 
+sin tuvieron que cheque continuamente cruzado que no est&aacute;n en 
+conflicto las selecciones hechas.</p>
+
+
+
+
+
+<p style="margin-top: 1em;"><span class="clause"><a name="c6"></a></span><span class="clause">La cl&aacute;usula 6</span>Nvu debe ser estable. 
+Su operaci&oacute;n no debe variar a partir de tiempo al tiempo a 
+menos que como resultado de las preferencias o de otros ajustes hechos
+deliberadamente por el usuario.</p>
+
+
+
+
+
+<p style="margin-top: 1em;"><span class="clause"><a name="c7"></a></span><span class="clause">Cl&aacute;usula 7 que</span>El HMI debe funcionar 
+seg&uacute;n lo descrito por el sistema de ayuda o seg&uacute;n lo implicado por 
+las cajas de control.</p>
+
+
+
+
+
+<h2>Insectos</h2>
+
+
+
+
+
+<p>
+Las cl&aacute;usulas indican qu&eacute; cl&aacute;usula de la 
+especificaci&oacute;n no se resuelve.</p>
+
+
+
+
+
+<p>He asignado <span class="rating4">un trivial <span class="rating1"></span></span><span class="rating1"></span><span class="rating3">moderado
+</span><span class="rating2">serio</span> <span class="rating2"></span><span class="rating1">muy</span>
+<span class="rating3"></span><span class="rating1">serio</span> <span class="rating4"></span>del grado
+a cada insecto. &Eacute;stas 
+son necesariamente opiniones personales. Sugiero que las 
+primeras tres categor&iacute;as necesiten ser despejaran antes de que el 
+producto pueda ser condidered ' pulido '. He clasificado todos 
+los problemas con las plantillas como ' triviales ' no porque 
+considero plantillas triviales pero porque&nbsp;considero que 
+el prop&oacute;sito y la punter&iacute;a de la plantilla necesita ser repasado 
+m&aacute;s bien que remiende la puesta en pr&aacute;ctica curent.</p>
+
+
+
+
+
+<blockquote>
+  
+  
+  
+  
+  <blockquote>
+    
+    
+    
+    
+    <ul>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b1">stylesheets </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b1"></a>ligados 1<a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b1"></a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b2">tipo </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b2"></a>declaraci&oacute;n de 2 
+        <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b2">documentos</a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b3">tipo </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b3"></a>selecci&oacute;n de 3 
+        <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b3">documentos</a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b4">el c&oacute;digo </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b4"></a>incorrecto del 
+formato 4 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b4">se aplic&oacute;</a></li>
+
+
+
+
+
+      <li>5 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b5">capas de manejo</a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b6">inspector del encanto </a>6 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b6"></a>y 7<a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b6"></a></li>
+
+
+
+
+
+      <li>8 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b8">listas</a></li>
+
+
+
+
+
+      <li>9 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b9">hojeando</a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b10">identificaci&oacute;n </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b10"></a>10<a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b10"></a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b11">formato </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b11"></a>11 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b11">toolmar</a></li>
+
+
+
+
+
+      <li>12 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b12">l&iacute;nea enumeraci&oacute;n</a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b13">p&eacute;rdida </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b13"></a>13 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b13">de foco</a></li>
+
+
+
+
+
+      <li>14 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b14">tablas</a></li>
+
+
+
+
+
+      <li>15 - 18 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b15">plantillas</a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b19">contenido </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b19"></a>19<a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b19"></a></li>
+
+
+
+
+
+      <li>20&nbsp;<a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b20">leng&uuml;etas de la p&aacute;gina</a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b21">selecci&oacute;n </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b21"></a>21<a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b21"></a></li>
+
+
+
+
+
+      <li>22 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b22">marcos</a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b23">limpiador </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b23"></a>de 23 
+        <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b23">m&aacute;rgenes de beneficio</a></li>
+
+
+
+
+
+      <li>24 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b24">ahorrando</a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b25">Encargado </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b25"></a>De 25 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b25">Sitios</a></li>
+
+
+
+
+
+      <li><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b26">redactor </a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b26"></a>de 26 <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#b26">CSS</a></li>
+
+
+
+
+
+      <li> <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#notes">Notas - respuesta de Nvu a las varias maneras de
+aplicar formatos</a> </li>
+
+
+
+
+
+    
+    
+    
+    
+    </ul>
+
+
+
+
+
+  </blockquote>
+
+
+
+
+
+</blockquote>
+
+
+
+
+
+<div class="bugs">
+<h3><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c4"><span class="clause">Cl&aacute;usula 4</span></a>1.
+<a name="b1"></a>Stylesheets ligados</h3>
+
+
+
+
+
+<p><span class="description">La descripci&oacute;n</span><span class="text">
+el archivo 
+aparece siempre como direcciones absolutas. Una vez que una 
+p&aacute;gina se mueva a una diversa localizaci&oacute;n e.g. desde una m&aacute;quina 
+local a un servidor el stylesheet ser&aacute; buscado en la localizaci&oacute;n 
+incorrecta.</span></p>
+
+
+
+
+
+<p>
+<span class="workaround"></span><span class="text"></span><span class="workaround">El workaround</span>
+en la opini&oacute;n de la 
+fuente el archivo se puede corregir para dar una localizaci&oacute;n 
+relativa.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>Los usuariosdel principiante <span class="consequence">de
+la consecuencia </span>encontrar&aacute;n las p&aacute;ginas rendidas 
+incorrectamente si procuran utilizar una de las caracter&iacute;sticas m&aacute;s 
+de gran alcance y recomendadas de Nvu - stylesheets externos. 
+Los expertos notar&aacute;n apenas el problema.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span><span class="rating1"> de muy serio</span>.</p>
+
+
+
+
+
+<h3><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c1"><span class="clause"></span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c1"><span class="clause">Cl&aacute;usula 1</span></a>Tipo
+<a name="b2"></a>Declaraci&oacute;n De 2 Documentos</h3>
+
+
+
+
+
+<p><span class="description">La descripci&oacute;n</span>
+el 
+declaraci&oacute;n usado para los documentos del HTML es incompleta - El URL
+del DTD se omite. P&aacute;rrafo 7.2 del HTML 4.01 enumera los 
+declaraciones permitidos.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>corrige el declaraci&oacute;n
+en un editor de textos y ahorra la p&aacute;gina como plantilla. Base 
+todas las p&aacute;ginas nuevas en esto.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence">La consecuencia</span>
+algunos browsers 
+ser&aacute; accionada en ' modo de los caprichos ' con el resultado que el 
+texto ser&aacute; el tama&ntilde;o incorrecto y compatibilidad del 
+cruz-cross-browser est&aacute; deteriorado.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span><span class="rating2">Serio</span></p>
+
+
+
+
+
+<h3>Tipo <a name="b3"></a>Selecci&oacute;n De 3 
+Documentos</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5"><span class="clause"></span></a><span class="clause">5 </span><span class="description">de 
+la descripci&oacute;n</span>
+cuando el tipo del margen de 
+beneficio se fija en herramientas &gt; preferencias &gt; avanz&oacute; este ajuste
+no persiste. Si cualquier archivo se crea con una diversa 
+selecci&oacute;n &eacute;ste reajusta la preferencia.&nbsp; </p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>no hace caso y nunca 
+utiliza del margen de beneficio que fija en preferencias.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence">La consecuencia</span>
+si no not&oacute; que 
+muchas p&aacute;ginas se podr&iacute;an crear con el doctype incorrecto.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span><span class="rating2">Serio</span></p>
+
+
+
+
+
+<h3>el c&oacute;digo <a name="b4"></a>incorrecto del 
+formato 4 se aplic&oacute;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c2"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c2"><span class="clause"></span></a><span class="clause">2 </span><span class="description">de 
+la descripci&oacute;n</span>en varios casos, al ajustar a 
+formato partes de un documento, (1) se aplica el c&oacute;digo que no es 
+permitido por el c&oacute;digo del doctype (2) se aplica que es inaplicable 
+al formato o (3) un formato es inasequible no imposibilitada sin 
+embargo por el doctype. Estas respuestas dependen encendido si '
+los estilos del CSS del uso en vez del HTML... ' est&aacute;n fijados. 
+Un n&uacute;mero de formatos se han probado contra todas las opciones 
+disponibles del doctype. <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause">La cl&aacute;usula 7</span></a>los resultados <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#notes">se tabula en el extremo
+de esta p&aacute;gina.</a></p>
+
+
+
+
+
+<p><span class="workaround"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#notes"></a><span class="workaround">El workaround</span>para los expertos, si 
+se realiza todo el formato usando estilos, ningunos probems ser&aacute; 
+encontrado.<br>
+
+
+
+
+
+Para otros, si ' los estilos del CSS del uso en vez del HTML... 
+' se fijan siempre y el doctype transitorio se utiliza ningunos 
+errores de la validaci&oacute;n ocurrir&aacute;.<br>
+
+
+
+
+
+Para &eacute;sos que desean utilizar el doctype y el men&uacute; o el 
+formato terminante del bot&oacute;n refiera a la tabla y evite los 
+art&iacute;culos del problema.
+</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>Los errores
+de la validaci&oacute;n 
+<span class="consequence">de la consecuencia </span>ocurrir&aacute;n. El volver a trabajar
+pod&iacute;a ser desperdiciador de tiempo.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span> <span class="rating2">Serio</span></p>
+
+
+
+
+
+<h3>5 <a name="b5"></a>Capas De Manejo&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c4"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c4"><span class="clause"></span></a><span class="clause">4 </span><span class="description">de 
+la descripci&oacute;n</span>que genera una sola capa es 
+bastante f&aacute;cil. Tan pronto como usted haga que se presenten 
+varios en problemas de una p&aacute;gina en la colocaci&oacute;n de ellos. 
+Si la manija del gancho agarrador de la usted desea el excedente
+de las mentiras (o acerque) otro es imposible asirlo. El foco va
+siempre al otro (independiente del z-i'ndice). Sugiero que el 
+foco permanezca con la capa seleccionada. Inversamente, asiendo 
+y de fricci&oacute;n es una ciencia imprecisa, mejora para asignar clases a 
+las capas. Esto puede ser hecha pero la capa conserva su manija 
+del gancho agarrador; entonces la posibilidad de moverla ocurre 
+inadvertidamente. Sugiero que, despu&eacute;s de pensamiento, un 
+cierto m&eacute;todo de inhabilitar capas clasificadas que vuelven a 
+clasificar seg&uacute;n el tama&ntilde;o o de fricciones, posiblemente 
+selectivamente, sea introducido. (el ve&rsquo;de I 
+clasific&oacute; esto mientras que un insecto debido a la primera dificultad
+mencion&oacute;.)&nbsp;</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>la gu&iacute;a del usuario 
+sugiere alguno pero sigue habiendo las consecuencias.&nbsp;</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>El uso
+limitado <span class="consequence">consecuencia 
+</span>de capas no presenta ning&uacute;n problema. El uso extenso se 
+imposibilita virtualmente actualmente a menos que est&eacute; corregido en 
+la opini&oacute;n de la fuente.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span><span class="rating3">moderado</span>
+</p>
+
+
+
+
+
+<h3>inspector&nbsp;<a name="b6"></a>del encanto 6 (1)&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5"><span class="clause"></span></a><span class="clause">5 </span><span class="description">de 
+la descripci&oacute;n</span>para conseguir &lsquo;palabras deletreadas mal raya&rsquo; para 
+trabajar esto debe ser fijada DESPU&Eacute;S DE QUE se abra el archivo. 
+Si el sistema antes de que deba ser despej&oacute; y reajuste.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">Workaround</span>si se abre el archivo 
+cuando&nbsp;&lsquo;las palabras deletreadas mal raya&rsquo; se fijan claramente el ajuste y el reajuste &eacute;l.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence">Consecuencia</span>m&aacute;s golpes de teclado.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span><span class="rating3">moderado</span>
+</p>
+
+
+
+
+
+<h3>inspector&nbsp;<a name="b7"></a>del encanto 7 (2)&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c6"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c6"><span class="clause"></span></a><span class="clause">6 </span><span class="description">de 
+la descripci&oacute;n</span>cuando las palabras deletreadas mal
+son el derecho-chascar subrayado generalmente pero ofrecen no siempre 
+sugerencias del deletreo. La acci&oacute;n correcta puede ser 
+reinstalada encendiendo  &lsquo;de palabras deletreadas mal raya&rsquo; y cambiando otra vez.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround"></span>La rayadel claro  &lsquo;<span class="workaround">del 
+workaround </span>deletre&oacute; palabras mal&rsquo;&nbsp;y las reajust&oacute;</p>
+
+
+
+
+
+<p><span class="consequence">Consecuencia</span><span class="consequence"></span>m&aacute;s golpes de 
+teclado.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating3">moderado</span>
+</p>
+
+
+
+
+
+<h3>8&nbsp;<a name="b8"></a>listas</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c1"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c1"><span class="clause"></span></a><span class="clause">1 </span><span class="description">de 
+la descripci&oacute;n</span>es posible ahora jerarquizar 
+listas. Dos problemas ocurren. (a) se introducen los 
+elementos redundantes del Br que no son despejaron por el modo falso 
+del limpiador del margen de beneficio (b) A existen. Presionando
+la leng&uuml;eta en una lista una lista jerarquizada puede ser creada que 
+utiliza c&oacute;digo incorrecto.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c2"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c2"><span class="clause"></span></a><span class="clause">2 </span><span class="workaround">del 
+workaround</span>la rotura no requiere ning&uacute;n trabajo 
+remediador. Evite de presionar el tabulador en una lista.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence">La consecuencia</span>si el tabulador se 
+presiona la mayor&iacute;a de los browsers rinde el nesting correctamente 
+solamente la validaci&oacute;n fallar&aacute;.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;&nbsp;<span class="rating3">moderado</span>
+</p>
+
+
+
+
+
+<span class="rating"></span>
+<h3>9&nbsp;<a name="b9"></a>hojeando&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause"></span></a><span class="clause">7 </span>siel browser del defecto es Mozilla todos <span class="description">de 
+la descripci&oacute;n </span>est&aacute;
+bien. Si es Internet Explorer (versi&oacute;n 6 por lo menos) cuando
+&lsquo;hojee&rsquo; se selecciona el browser se abre pero en &lsquo;la
+opini&oacute;n&rsquo; de la p&aacute;gina de la opini&oacute;n de la
+fuente no. Observo que eso yo intent&oacute; la primera vez esto
+despu&eacute;s de que instalaci&oacute;n que trabaj&oacute;
+correctamente. Despu&eacute;s que fall&oacute; cada vez. (exactamente
+la misma acci&oacute;n con 0.9, 1.0PR y 1.0) a&uacute;n en Nvu 1.00</p>
+
+
+
+
+
+<p><span class="workaround">El workaround</span>para utilizar 
+a Internet Explorer hojea v&iacute;a el explorador de Windows.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence">La consecuencia</span>
+HMI es menos elegante
+- m&aacute;s golpes de teclado requeridos.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;&nbsp;<span class="rating3">moderado</span>
+</p>
+
+
+
+
+
+<h3>IDENTIFICACI&Oacute;N <a name="b10"></a>10</h3>
+
+
+
+
+
+<p><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c1"><span class="clause"></span></a><span class="description">Descripci&oacute;n </span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c1"><span class="clause">de la cl&aacute;usula</span></a><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c1"><span class="clause">1</span></a>es posible <strong>a</strong>pply la misma identificaci&oacute;n a m&aacute;s de un 
+art&iacute;culo.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>no lo hace - cheque 
+manualmente.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence">Consecuencia</span>si inadvertidamente 
+hecho el uso incorrecto el ligarse o del estilo podr&iacute;a resultar. 
+Los principiantes no utilizar&aacute;n probablemente la 
+caracter&iacute;stica, voluntad experimentada probablemente para no hacer el
+error.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;&nbsp;<span class="rating3">moderado</span>
+</p>
+
+
+
+
+
+<h3>formato <a name="b11"></a>11 toolbar</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c6"><span class="clause">Cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c6"><span class="clause"></span></a><span class="clause">6 </span><span class="description">de la 
+descripci&oacute;n</span>de vez en cuando ambas secciones del 
+toolbar del formato llegada a ser inactivo. Cuando sucede esto 
+una o m&aacute;s de la gota abajo las cajas pueden llegar a ser ' grayed 
+fuera de ' e inactivo y algunos botones puede llegar a ser inactivo 
+mientras que otros contin&uacute;an trabajando. Tambi&eacute;n el nombre del
+archivo en la barra del jefe puede desaparecer.&nbsp; &nbsp;</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>Nvu cercano y abre de 
+nuevo.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>Frustraci&oacute;n<span class="consequence">De la 
+Consecuencia</span>.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating3">moderado</span></p>
+
+
+
+
+
+<h3>12<a name="b12"></a> l&iacute;nea enumeraci&oacute;n</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c3"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c3"><span class="clause"></span></a><span class="clause">3 </span><span class="description">de 
+la descripci&oacute;n</span>cuando est&aacute; pasada a los errores 
+del Validator es divulg&oacute; sobre las l&iacute;neas que diferencian en n&uacute;mero
+de &eacute;sas enumeradas en Nvu. Esto se liga probablemente a la 
+l&iacute;nea inesperada roturas que ocurren en Nvu. (los usuarios de PHP 
+experimentan las ediciones relacionadas con &lsquo;el cambio de
+formato del c&oacute;digo de fuente&rsquo; que es probablemente 
+relacionado pero no puedo comentar respecto a esto.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround"></span>B&uacute;squeda<span class="workaround">del workaround </span>para 
+la l&iacute;nea correcta.
+</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>Frustraci&oacute;n<span class="consequence">De la 
+Consecuencia</span>.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating3">moderado</span></p>
+
+
+
+
+
+<h3>p&eacute;rdida <a name="b13"></a>13 de foco</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c6"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c6"><span class="clause"></span></a><span class="clause">6 </span><span class="description">de 
+la descripci&oacute;n</span>he notado esto varias veces (I&rsquo;m no seguro qu&eacute; condiciones se aplican). Copio 
+algo a partir de un documento. Abro un otro e intento pegar. 
+La goma tiene &eacute;xito pero al documento incorrecto. Esto 
+ocurre incluso si el foco aparece estar en el documento correcto e.g. 
+que es posible mecanografiar all&iacute; pero la goma todav&iacute;a va al 
+documento incorrecto.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>cercano y abre de nuevo
+Nvu.
+</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>Frustraci&oacute;n<span class="consequence">De la 
+Consecuencia</span>.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating3">moderado</span></p>
+
+
+
+
+
+<h3>14 <a name="b14"></a>tablas</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c6"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c6"><span class="clause"></span></a><span class="clause">6 </span><span class="description">de 
+la descripci&oacute;n</span>
+cuando las tablas son insertado 
+ellas comienza, en una nueva instalaci&oacute;n, en la anchura = 100%. 
+Despu&eacute;s de una cierta hora las tablas nuevas se insertan con 
+anchura = 100px. Esta singularidad es intermitente pero 
+indeseable; 100% es una opci&oacute;n mejor.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround"></span>Anchuradel reajuste <span class="workaround">del 
+workaround </span>usando la ventana de las caracter&iacute;sticas de la 
+tabla.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>La intervenci&oacute;nde Nugatory <span class="consequence">de
+la consecuencia </span>del usuario se requiere.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3>15 <a name="b15"></a>plantillas (1)&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause">Cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause"></span></a><span class="clause">7 </span><span class="description">de la 
+descripci&oacute;n</span>cuando las &aacute;reas repetibles se 
+insertan (si bloque o flujo) le no son posibles corregir el contenido 
+hasta que se separan de la plantilla.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>corrige el contenido 
+despu&eacute;s de separar la plantilla.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>Acci&oacute;n
+il&oacute;gica <span class="consequence">de la 
+consecuencia </span>pero de poca consecuencia.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span><span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3>16 plantillas (2)</h3>
+
+
+
+
+
+<p><span class="description"></span>El insecto<span class="clause">de la cl&aacute;usula 0</span>A <span class="description">de la descripci&oacute;n </span>se parece haber 
+sido introducido entre Nvu 0.5 y 0.6. En 0.5 archivo &ndash; nuevo &gt; basado en plantilla &gt; &ldquo;elija las 
+ofertas&rdquo; del archivo una opci&oacute;n para elegir &ldquo;archivos del tipo plantilla&rdquo;. Con 0.7
+hacia adelante solamente &ldquo;todo el archivo&rdquo; se ofrece.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>selecciona el archivo 
+de la plantilla normalmente.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>Necesidad
+posible&nbsp;<span class="consequence">de la
+consecuencia </span>de pescar con red barredera a trav&eacute;s de lista 
+larga.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3>17 plantillas (3)</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause"></span></a><span class="clause">7 </span><span class="description">de 
+la descripci&oacute;n</span>en &lsquo;el relleno una 
+ventana editable&rsquo; del &aacute;rea, cuando las &aacute;reas del flujo 
+se seleccionan el &aacute;rea &lsquo;de la opci&oacute;n es movible&rsquo; aparece estar disponible. Esto es sin setido. 
+Todav&iacute;a en Nvu 1.00</p>
+
+
+
+
+
+<p><span class="workaround">Workaround</span>ninguno - la 
+opci&oacute;n no trabaja.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>Confusi&oacute;n
+posible <span class="consequence">de la 
+consecuencia </span>al usuario.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3>18 plantillas (4)&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause"></span></a><span class="clause">7 </span><span class="description">de 
+la descripci&oacute;n</span>El HMI (interfaz human-machine) es 
+absolutamente obscura y necesita la revisi&oacute;n. Mucha de la 
+operaci&oacute;n es no-intuitiva.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">Workaround</span>no posible</p>
+
+
+
+
+
+<p><span class="consequence">La consecuencia</span>en su actual
+forma la facilidad de las plantillas est&aacute; de ning&uacute;n uso verdadero.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3>contenido <a name="b19"></a>19&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause"></span></a><span class="clause">7 </span><span class="description">de 
+la descripci&oacute;n</span>seg&uacute;n el sistema de ayuda que 
+inserta un ToC con &lsquo;hace que el ToC lee comprobado&rsquo; solamente debe omitir las anclas.&nbsp; Esto no 
+sucede.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>tolera los 
+acoplamientos y hinchar del c&oacute;digo.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>El C&oacute;digo<span class="consequence">De la Consecuencia 
+</span>Hincha. (pocos son probables encontrar los 
+acoplamientos desagradables.)</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3>20 <a name="b20"></a>leng&uuml;etas de la p&aacute;gina&nbsp;&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5"><span class="clause"></span></a><span class="clause">5 </span><span class="description">de 
+la descripci&oacute;n</span>&eacute;stos exhibe normalmente el 
+t&iacute;tulo de la p&aacute;gina. (en una sesi&oacute;n larga)&nbsp;  el 
+t&iacute;tulo de una diversa p&aacute;gina se exhibe a veces. En un occason,
+cuando todas las p&aacute;ginas de la gu&iacute;a del usuario estaban abiertas 
+(los t&iacute;tulos llevan n&uacute;meros secuenciales), todos los t&iacute;tulos fueron
+desplazados por una unidad. Desafortunadamente no registr&eacute; la 
+orden de la abertura o la direcci&oacute;n de la dislocaci&oacute;n.&nbsp;</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround"></span>El nombre del archivodel uso 
+<span class="workaround">del workaround </span>en vez del t&iacute;tulo o el cierre y abre de 
+nuevo archivos.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>Confusi&oacute;n
+<span class="consequence">de la consecuencia 
+</span>al usuario.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3>selecci&oacute;n <a name="b21"></a>21&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5"><span class="clause"></span></a><span class="clause">5 </span><span class="description">de 
+la descripci&oacute;n</span>en el HTML marca la visi&oacute;n con 
+etiqueta, cuando un elemento se selecciona le se destaca normalmente 
+en la barra de estado. Este doesn&rsquo;t ocurre cuando 
+se selecciona el CUERPO. Pens&eacute; durante mucho tiempo que &eacute;l el 
+wasn&rsquo;t posible seleccionar el CUERPO.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>reconoce que ES posible
+seleccionar el cuerpo.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence">La consecuencia</span>
+il&oacute;gica y algo 
+pueden faltar la posibilidad de aplicar estilos al cuerpo.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3>22 <a name="b22"></a>marcos&nbsp;&nbsp;&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5"><span class="clause"></span></a><span class="clause">5 </span><span class="description">de 
+la descripci&oacute;n</span>cuando se encuentra un marco el 
+sistema se parece congelar. Toma un poco habilidad para 
+recuperarse sin el cierre de Nvu. La respuesta ha mejorado con 
+Nvu 1.0 pero despu&eacute;s de que el cambiar a la recuperaci&oacute;n de la 
+opini&oacute;n de la fuente siga siendo muy dif&iacute;cil.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>abre un diverso archivo
+del men&uacute; de archivo o del encargado del sitio.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>Frustraci&oacute;n<span class="consequence">de la consecuencia 
+</span>hasta que usted aprende el workaround.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3>Limpiador <a name="b23"></a>De 23 M&aacute;rgenes de 
+beneficio&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause"></span></a><span class="clause">7 </span><span class="description">de 
+la descripci&oacute;n</span>no quita todos los bloques vac&iacute;os 
+(e.g. UL), ni clases vac&iacute;as (palmos vac&iacute;os incluyendo).&nbsp;</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>no limpia el archivo ni
+utiliza otro limpiador.&nbsp;</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>El C&oacute;digo
+<span class="consequence">De la Consecuencia 
+</span>Hincha</p>
+
+
+
+
+
+<p><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3>24 <a name="b24"></a>ahorrando&nbsp;</h3>
+
+
+
+
+
+<p><span class="description"></span><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause">La cl&aacute;usula</span></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause"></span></a><span class="clause">7 </span><span class="description">de 
+la descripci&oacute;n</span>si usted corrige algo seleccionando
+la etiqueta y aplicando un estilo en l&iacute;nea usted no recibe una 
+invitaci&oacute;n de ahorrar es decir excepto el restos del bot&oacute;n greyed 
+hacia fuera y es inactiva. Usted debe corregir algo m&aacute;s para 
+traerlo a la vida.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>realiza cualquier 
+cambio trivial al archivo.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence"></span>La p&eacute;rdida
+posible <span class="consequence">de la 
+consecuencia </span>de c&oacute;digo  debido a pensar un archivo se ha 
+ahorrado cuando no tiene.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3>Encargado <a name="b25"></a>De 25 Sitios.</h3>
+
+
+
+
+
+<p><span class="description"></span><span class="description"></span><span class="clause"><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5">La cl&aacute;usula</a></span><span class="clause"><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c5">5 </a></span><span class="description">de la 
+descripci&oacute;n
+</span>ahora que Nvu maneja las necesidades del encargado del sitio de
+los documentos del xhtml que realzan e.g. exhibe documentos del xhtml
+solamente cuando se selecciona la ' visi&oacute;n todos los archivos.
+Preferir&iacute;a las opciones de la visi&oacute;n para ser 1 &ndash;
+todo el archivo, 2 &ndash; documentos del HTML,&nbsp; 3 &ndash;
+archivos de la imagen, entonces tres nuevos tipos 3 &ndash; documentos
+del xhtml, 5 &ndash; archivos del CSS, 6 &ndash; documentos de
+p&aacute;gina (HTML + xhtml).</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround"></span>B&uacute;squeda<span class="workaround">del workaround 
+</span>visualmente.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence">Consecuencia</span>
+m&aacute;s lenta en uso.</p>
+
+
+
+
+
+<p><span class="rating"></span><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span>
+</p>
+
+
+
+
+
+<h3><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause">cl&aacute;usula </span></a><a name="b26"></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause">7 </span></a>del 
+redactor<a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause"></span></a>de 26 CSS<a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fweb.onetel.net.uk%2f%257Echarlescooke%2fnvubugs10.htm#c7"><span class="clause"></span></a></h3>
+
+
+
+
+
+<p><span class="description">Descripci&oacute;n que</span>  &lsquo;abajo&rsquo; el bot&oacute;n no funciona.</p>
+
+
+
+
+
+<p><span class="workaround"></span><span class="workaround">El workaround</span>selecciona un art&iacute;culo
+o art&iacute;culos m&aacute;s bajo en la lista y utiliza ' encima ' del bot&oacute;n.</p>
+
+
+
+
+
+<p><span class="consequence"></span><span class="consequence">Consecuencia</span>m&aacute;s golpes de teclado</p>
+
+
+
+
+
+<p><span class="rating">Clasificaci&oacute;n</span>&nbsp;<span class="rating4">trivial</span></p>
+
+
+
+
+
+<br>
+
+
+
+
+
+<h3><a name="notes"></a>Respuesta de Nvu a las diversas maneras de 
+aplicar formatos</h3>
+
+
+
+
+
+<table border="1" cellpadding="0" cellspacing="0">
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+    
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td colspan="6" rowspan="1">"Usar estilos&nbsp;CSS..."&nbsp;<b>MARCADO</b></td>
+
+
+
+
+
+      <td colspan="6" rowspan="1">"Usar estilos&nbsp;CSS..." <b>DESMARCADO</b></td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td colspan="3" rowspan="1"><b>DTD Transitional</b></td>
+
+
+
+
+
+      <td colspan="3" rowspan="1"><b>DTD Strict</b></td>
+
+
+
+
+
+      <td colspan="3" rowspan="1"><b>DTD Transitional</b></td>
+
+
+
+
+
+      <td colspan="3" rowspan="1"><b>DTD Strict</b></td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+      <td></td>
+
+
+      <td colspan="2" rowspan="1"><b>HTML</b></td>
+
+
+      <td><b>XHTML</b></td>
+
+
+      <td colspan="2" rowspan="1"><b>HTML</b></td>
+
+
+      <td><b>XHTML</b></td>
+
+
+      <td colspan="2" rowspan="1"><b>HTML</b></td>
+
+
+      <td><b>XHTML</b></td>
+
+
+      <td colspan="2" rowspan="1"><b>HTML</b></td>
+
+
+      <td><b>XHTML</b></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+
+
+
+      <td style="text-align: right;">vea la nota 1</td>
+
+
+
+
+
+      <td><b>Completa</b></td>
+
+
+
+
+
+      <td><b>Corta</b></td>
+
+
+
+
+
+      <td><b>Completa<br>
+
+
+      </b></td>
+
+
+
+
+
+      <td><b>Completa</b></td>
+
+
+
+
+
+      <td><b>Corta</b></td>
+
+
+
+
+
+      <td><b>Completa</b></td>
+
+
+
+
+
+      <td><b>Completa</b></td>
+
+
+
+
+
+      <td><b>Corta</b></td>
+
+
+
+
+
+      <td><b>Completa</b></td>
+
+
+
+
+
+      <td><b>Completa</b></td>
+
+
+
+
+
+      <td><b>Corta</b></td>
+
+
+
+
+
+      <td><b>Completa</b></td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    
+
+
+    <tr>
+
+
+
+
+
+      <td><b>Formato&nbsp; aplicado</b></td>
+
+
+
+
+
+      <td colspan="12" rowspan="1">La respuesta de NVU - las celdas coloreadas indican respuesta 
+insatisfactoria (o diferente de la &oacute;ptima) (v&eacute;ase la clave en la zona inferior)</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - elegir&nbsp; color para el texto</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td class="prohibited">fuente</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Formato &gt; color del texto</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td class="prohibited">fuente</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="prohibited">fuente * 4</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - un tama&ntilde;o de fuente m&aacute;s peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Formato &gt; Tama&ntilde;o &gt; M&aacute;s peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+      <td>peque&ntilde;o</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - un tama&ntilde;o de fuente m&aacute;s grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Formato &gt; Tama&ntilde;o &gt; M&aacute;s grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+      <td>grande</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Formato &gt; tama&ntilde;o &gt;&nbsp;x-grande</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td class="prohibited">fuente</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td class="prohibited">fuente</td>
+
+
+
+
+
+      <td class="prohibited">fuente</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - eligi&oacute; el color para el fondo (fondo de la 
+p&aacute;gina)</td>
+
+
+
+
+
+      <td class="muddle">bgcolor * 2</td>
+
+
+
+
+
+      <td class="muddle">bgcolor * 2</td>
+
+
+
+
+
+      <td class="muddle">bgcolor * 2</td>
+
+
+
+
+
+      <td class="prohibited">bgcolor * 2</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - eligi&oacute; el color para el fondo (fondo del 
+bloque)</td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td></td>
+
+
+
+
+
+      <td class="muddle">estilo * 3</td>
+
+
+
+
+
+      <td class="muddle">estilo * 3</td>
+
+
+
+
+
+      <td class="muddle">estilo * 3</td>
+
+
+
+
+
+      <td class="prohibited">estilo * 3</td>
+
+
+
+
+
+      <td class="prohibited">estilo * 3</td>
+
+
+
+
+
+      <td class="prohibited">estilo * 3</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - En negrilla</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Estilo del formato &gt; del texto &gt; en negrilla</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>b</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - It&aacute;lico</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Formato &gt; estilo &gt; it&aacute;lico del texto</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>i</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - Raya</td>
+
+
+
+
+
+      <td>u</td>
+
+
+
+
+
+      <td>u</td>
+
+
+
+
+
+      <td>u</td>
+
+
+
+
+
+      <td class="prohibited">u</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Formato &gt; estilo &gt; raya del texto</td>
+
+
+
+
+
+      <td>u</td>
+
+
+
+
+
+      <td>u</td>
+
+
+
+
+
+      <td>u</td>
+
+
+
+
+
+      <td class="prohibited">u</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - Acent&uacute;e</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Formato &gt; estilo &gt; &eacute;nfasis del texto</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+      <td>em</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - fuerte acent&uacute;e</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Estilo del formato &gt; del texto &gt;&nbsp;un 
+&eacute;nfasis m&aacute;s fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+      <td>fuerte</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - alinee a la derecha</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>El Formato &gt; Alinea &gt; Derecho</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - Justifique</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>El Formato &gt; Alinea &gt; Justifica</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Bot&oacute;n - texto de la mella</td>
+
+
+
+
+
+      <td>blockquote</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>blockquote</td>
+
+
+
+
+
+      <td>blockquote</td>
+
+
+
+
+
+      <td>blockquote</td>
+
+
+
+
+
+      <td>blockquote</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Mella Del Formato &gt; Del Aumento</td>
+
+
+
+
+
+      <td>blockquote</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>blockquote</td>
+
+
+
+
+
+      <td>blockquote</td>
+
+
+
+
+
+      <td>blockquote</td>
+
+
+
+
+
+      <td>blockquote</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>De la gota mensajero abajo -</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td class="prohibited">fuente</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Formato &gt; Fuente &gt; Mensajero</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td class="prohibited">fuente</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>fuente</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+      <td>estilo</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>El formato &gt; la imagen apoya &gt; aspecto</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td>alinee</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td>flotador</td>
+
+
+
+
+
+      <td>flotador</td>
+
+
+
+
+
+      <td>flotador</td>
+
+
+
+
+
+      <td>flotador</td>
+
+
+
+
+
+      <td>flotador</td>
+
+
+
+
+
+      <td>flotador</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td>Formato &gt; colores y fondo de la p&aacute;gina</td>
+
+
+
+
+
+      <td>bgcolor * 5 * 6</td>
+
+
+
+
+
+      <td>bgcolor * 5 * 6</td>
+
+
+
+
+
+      <td>bgcolor * 5 * 6</td>
+
+
+
+
+
+      <td class="prohibited">bgcolor * 5 * 6</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td class="missing">Inactivo</td>
+
+
+
+
+
+      <td>estilo * 5 * 7</td>
+
+
+
+
+
+      <td>estilo * 5</td>
+
+
+
+
+
+      <td>style*5 * 7</td>
+
+
+
+
+
+      <td class="prohibited">estilo * 5 * 7</td>
+
+
+
+
+
+      <td class="prohibited">estilo * 5 * 7</td>
+
+
+
+
+
+      <td>estilo * 7</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td colspan="13" rowspan="1"><strong>Llave:</strong></td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td style="text-align: center;" class="prohibited" colspan="1" rowspan="1"><strong></strong>Rojo</td>
+
+
+
+
+
+      <td style="text-align: left;" rowspan="1" colspan="12">Las aplicaciones cifran prohibido el doctype o fijando.</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td style="text-align: center;" class="missing" colspan="1" rowspan="1">Anaranjado</td>
+
+
+
+
+
+      <td style="text-align: left;" rowspan="1" colspan="12">La funcionalidad restringi&oacute; debido al formato que no 
+estaba disponible.</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td style="text-align: center;" class="muddle" colspan="1" rowspan="1">Amarillo</td>
+
+
+
+
+
+      <td style="text-align: left;" rowspan="1" colspan="12">Los c&oacute;digos se aplicaron que son inaplicables al 
+formato aplicado pueden producir resultados inesperados.</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td style="text-align: center;" colspan="1" rowspan="1">Claro</td>
+
+
+
+
+
+      <td style="text-align: left;" rowspan="1" colspan="12">Completamente obediente.</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td colspan="13" rowspan="1"><strong></strong><strong>Notas</strong>:</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td colspan="13" rowspan="1">* 1 DTD completa se
+refiera a que est&aacute; indicada seg&uacute;n&nbsp;lo&nbsp;definido
+en
+la especificaci&oacute;n del HTML. DTD corta se refiere a la plantilla
+por defecto utilizada por N|VU para los documentos del HTML
+que&nbsp;omite el URL del DTD.</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td colspan="13" rowspan="1">* 2 observan cuando el bgcolor aplicado al cuerpo del cuerpo 
+tambi&eacute;n tiene el alink, el vlink, el acoplamiento y texto aplicados.</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td colspan="13" rowspan="1">* 3 observan cuando el color aplicado al cuerpo del bloque 
+tambi&eacute;n tiene el alink, el vlink, el acoplamiento y texto aplicados.</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td colspan="13" rowspan="1"> * 4 esta funci&oacute;n es intermitentes - es generalmente 
+inaccesible.</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td colspan="13" rowspan="1">* el comentario 5 se aplica al fondo. El acoplamiento 
+colorea aplicado adem&aacute;s siempre&nbsp;como acoplamiento del 
+vlink del alink.</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td colspan="13" rowspan="1">* el texto 6 tambi&eacute;n se aplic&oacute;.</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td colspan="13" rowspan="1">* el color 7 tambi&eacute;n se aplic&oacute; (dentro de estilo).</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    <tr>
+
+
+
+
+
+      <td colspan="13" rowspan="1">' inactivo ' indica que la funci&oacute;n no puede ser realizada. 
+El art&iacute;culo del bot&oacute;n y/o de men&uacute; puede ser greyed hacia 
+fuera o faltando pero no no necesariamente tan conduciendo a m&aacute;s 
+incertidumbre.</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+</div>
+
+
+
+
+
+<p>Charles Cooke El 12 De Julio De 2005&nbsp;</p>
+
+
+
+
+
+<p><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fvalidator.w3.org%2fcheck%3furi%3dreferer">
+<img class="left" style="width: 88px; height: 31px;" src="images/valid-html401.png" alt="&iexcl;HTML V&aacute;lido 4.01!"></a><a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_es&amp;trurl=http%3a%2f%2fjigsaw.w3.org%2fcss-validator%2fcheck%2freferer"><img class="right" style="width: 88px; height: 31px;" src="images/valid-css.png" alt="Css V&aacute;lido"></a></p>
+
+
+
+
+
+<script type="text/javascript">
+if (window.yzq_a == null) document.write("<scr" + "ipt type=text/javascript src=http://us.js1.yimg.com/us.yimg.com/lib/bc/bc_1.7.0.js></scr" + "ipt>");
+</script>
+<script type="text/javascript">
+if (window.yzq_a) yzq_a('p', 'P=10hzlEJe6S5a5X_IZli3MQSzUDoBLEMMoZIABsZ1&T=13uptb2vl%2fX%3d1124901271%2fE%3d396575033%2fR%3daltavista%2fK%3d5%2fV%3d1.1%2fW%3d9%2fY%3dYAHOO%2fF%3d420597850%2fS%3d1%2fJ%3d31E95E42');
+if (window.yzq_gb && window.yzq4) yzq4();
+else if (window.yzq_eh) yzq_eh();
+</script>
+<noscript><img width=1 height=1 alt=""
+src="http://bc.us.yahoo.com/b?P=10hzlEJe6S5a5X_IZli3MQSzUDoBLEMMoZIABsZ1&T=1448vr45f%2fX%3d1124901271%2fE%3d396575033%2fR%3daltavista%2fK%3d5%2fV%3d3.1%2fW%3d9%2fY%3dYAHOO%2fF%3d2513676030%2fQ%3d-1%2fS%3d1%2fJ%3d31E95E42"></noscript>
+
+
+
+
+<!-- bff102.search.scd.yahoo.com uncompressed/chunked Wed Aug 24 09:34:26 PDT 2005 -->
+</body>
+</html>

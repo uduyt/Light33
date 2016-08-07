@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:background">@color/Primary</item>-->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/PrimaryDark</item>
+        <item name="colorPrimary">@color/Primary</item>
+        <item name="colorAccent">@color/Accent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="toolbarStyle">@style/AppTheme.ToolbarStyle</item>
+        <item name="colorControlNormal">@color/PrimaryVeryDark</item>
+        <item name="colorControlActivated">@color/PrimaryDark</item>
+        <item name="colorControlHighlight">@color/PrimaryVeryDark</item>
+        <item name="android:colorButtonNormal">@color/Primary</item>
+    </style>
+
+    <style name="AppTheme.ToolbarStyle" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:textColor">@color/Accent</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="Widget.App.EditText" parent="Widget.AppCompat.EditText">
+        <!--<item name="colorControlNormal">@color/PrimaryDark</item>
+        <item name="colorControlActivated">@color/PrimaryDark</item>
+        <item name="colorControlHighlight">@color/PrimaryDark</item>-->
+    </style>
+</resources>

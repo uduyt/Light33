@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+  <meta http-equiv="PICS-Label" content="(pics-1.1 &quot;http://www.classify.org/safesurf/&quot; l gen true for &quot;http://www.mako4css.com/&quot; r (ss~~000 1))">
+  <title>Example 1 - BODY</title>
+ 
+<!-- to open up an external stylesheet, copy the styles, and only the styles, into a blank document, starting from here--> 
+  <style type="text/css">
+  body { margin: 0px;
+    background-color: rgb(255, 255, 255);
+    background-repeat: repeat-y;
+    font-family: Verdana,Eyechart,Geneva,Arial,Helvetica,sans-serif;
+    color: rgb(0, 0, 136);
+    }
+
+  .Navigation { position: absolute;
+    top: 100px;
+    left: 3px;
+    width: 135px;
+    height: auto;
+    font-family: Verdana,Eyechart,Geneva,Arial,Helvetica,sans-serif;
+    line-height: 110%;
+    }
+
+  .Inhalt { border: 0.1px solid rgb(255, 255, 255);
+    padding: 5px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 50%;
+    -moz-background-clip: initial;
+    -moz-background-origin: initial;
+    -moz-background-inline-policy: initial;
+    color: rgb(0, 0, 136);
+    margin-left: 160px;
+    margin-right: 20px;
+    font-family: Verdana,Eyechart,Geneva,Arial,Helvetica,sans-serif;
+    width: auto;
+    }
+
+  .Header { margin-top: 10px;
+    margin-left: 160px;
+    }
+
+  .box { border: 2px groove rgb(72, 209, 204);
+    margin: 2px;
+    padding: 2px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 50%;
+    -moz-background-clip: initial;
+    -moz-background-origin: initial;
+    -moz-background-inline-policy: initial;
+    color: rgb(0, 0, 153);
+    font-family: Arial,Tahoma,Verdana,Helvetica,sans-serif;
+    font-size: 12px;
+    }
+
+  .navbox { border: 2px groove rgb(255, 102, 51);
+    margin: 2px;
+    padding: 1px;
+    font-size: 15px;
+    font-family: Arial,Tahoma,Verdana,Helvetica,sans-serif;
+    }
+
+  .oldbrowser { display: none;
+    }
+
+
+  </style>
+<!-- and ending here. Do NOT copy the <style type="text/css"> and end-style declaration -->
+  <script src="Mako.js" type="text/javascript"></script>
+</head>
+
+
+<body>
+
+<p class="oldbrowser">This web site is about Cascading Style Sheets as a means to separate the <strong>presentation</strong> from the <strong>structural markup</strong> of a web site, and it will help you answer some of those frequently asked <a href="CSSFAQ.htm"><strong>Questions</strong></a>, explains some of the <a href="Basics.htm"><strong>Basics</strong></a> of CSS, gives you tips and tricks for tackling the problems with <a href="Issues.htm"><strong>Netscape 4</strong></a>, offers you a tutorial about <a href="Tutorial.htm"><strong>Positioning</strong></a> with CSS (CSS-P, web design without tables). There is also a page with interesting <a href="Links.htm"><strong>Links</strong></a>.
+<br>
+
+<strong>This page uses CSS to present the content in the best possible
+manner. If you can see this message, then CSS (or JavaScript) is not
+enabled in your browser, and the page will not appear as the designer
+intended.</strong></p>
+
+<div class="Header">
+<img src="images/CSS-P.gif" alt="Positioning with CSS" height="66" width="384">
+HEADER with image
+</div>
+
+<div class="Navigation">
+<div class="navbox"><a class="nav" href="Link1.htm">Link 1</a></div>
+
+<div class="navbox"><a class="nav" href="Link2.htm">Link 1</a></div>
+
+<div class="navbox"><a class="nav" href="Link3.htm">Link 1</a></div>
+
+</div>
+
+<div class="Inhalt">CONTENT, with the nested FOOTER box<br>
+
+<br>
+Some text here, like: With this tutorial I'll show you how easy this
+is, and I'll provide you with the CSS stylesheet and the graphics. Some
+CSS vs. NN 4.xx issues are already addressed at CSS Issues.
+<br>
+
+<div class="box">FOOTER BOX<br>
+
+This will be the secondary navigation
+</div>
+<!-- closing tag for the FOOTER BOX -->
+</div>
+<!-- closing tag for the CONTENT BOX -->
+</body>
+</html>

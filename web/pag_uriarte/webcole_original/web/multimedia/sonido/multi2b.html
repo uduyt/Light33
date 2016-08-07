@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="es-es">
+<head>
+
+  
+
+
+
+  
+  <title>Insertar sonidos en N|VU</title>
+<!-- compliance patch for microsoft browsers --><!--[if lt IE 7]>
+<script src="../../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+  <link type="text/css" href="../../nvu2005.css" rel="stylesheet">
+
+
+  
+  <link rel="stylesheet" href="../../multi1.css" type="text/css">
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Multimedia>>Sonido</p>
+
+</div>
+<div id="flechadcha">
+<a href="TutorialHelix/compresionconhelixb.htm" title="avanzar"><img src="../../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="multi2.htm" title="retroceder"><img src="../../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div class="solapas">
+<ul>
+
+
+  <li><a href="multi2.htm">Cuestiones generales</a></li>
+
+
+  <li class="activo"><a href="multi2b.html">Insertar
+sonidos con N|VU</a></li>
+
+
+  <li><a href="TutorialHelix/compresionconhelixb.htm">Compresi&oacute;n
+de sonidos</a></li>
+
+
+</ul>
+
+
+</div>
+
+
+<div class="principal">
+<h2>Insertar
+sonidos en N|VU
+</h2>
+
+
+<p>N|VU no dispone de ning&uacute;n icono que nos
+facilite la introducci&oacute;n directa de fragmentos sonoros. </p>
+
+
+<p>Sin embargo, podemos aprovechar una caracter&iacute;stica
+del navegador para hacerlo, ya que los archivos con
+extensi&oacute;n&nbsp;<acronym title="Ap&oacute;cope de WAVEform audio format">wav</acronym>
+o&nbsp;<acronym title="Musical Instrument Digital Interface">mid</acronym>
+son reconocidos y manejados directamente
+por el mismo.
+</p>
+
+
+<div class="practicas"><img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 39" title="Actividad 39" src="../../imagenes/numeracion/treintaynueve.gif">&nbsp;Crea un nuevo documento con
+N|VU.<br>
+
+
+<ul>
+
+
+  <li>Introduce en el nuevo documento la imagen<img style="width: 26px; height: 25px;" alt="Icono de altavoz" title="Icono de altavoz" src="../imagenes/sonido.gif" hspace="5">que ya
+ten&iacute;as guardada.</li>
+
+
+  <li>Pulsa sobre la imagen y crea un v&iacute;nculo que nos
+lleve al archivo primavera.mid</li>
+
+
+  <li>Guarda el archivo como <strong>actividad39.html</strong> y
+pasa al navegador para ver lo que ocurre.</li>
+
+
+  <li>Vuelve a&nbsp; N|VU y escribe un texto para enlazarlo
+con el
+saludo que grabaste antes. Si no tienes un saludo grabado puedes
+utilizar alguno de los sonidos que aparecen en la carpeta
+Windows\Media. Selecciona ctmelody.wav o ding.wav y c&oacute;pialos
+en la carpeta en la que est&aacute;s almacenando&nbsp;tus
+p&aacute;ginas.</li>
+
+
+  <li>Crea el enlace al archivo de sonido y guarda la
+p&aacute;gina.</li>
+
+
+  <li>Pasa al navegador para comprobar que todo funciona
+correctamente. </li>
+
+
+</ul>
+
+
+</div>
+
+
+<p style="clear: left;"><b><img style="width: 356px; height: 205px; float: right;" alt="Ventana para la introducci&oacute;n manual de c&oacute;digo HTML" title="Ventana para la introducci&oacute;n manual de c&oacute;digo HTML" src="../imagenes/etiqueta.png" hspace="10"></b>Hasta
+aqu&iacute; las cosas han resultado bastante sencillas. Hemos
+incluido en nuestra p&aacute;gina unos sonidos y hemos dejado en
+manos del visitante la opci&oacute;n para que los active si lo
+desea. El problema lo vamos a tener cuando pretendamos que nuestra
+p&aacute;gina cargue autom&aacute;ticamente un sonido. No nos
+queda m&aacute;s remedio que hacerlo tecleando el c&oacute;digo
+necesario. Podr&iacute;amos hacerlo cambiando a la
+pesta&ntilde;a <img style="width: 99px; height: 21px;" alt="C&oacute;digo fuente" title="C&oacute;digo fuente" src="../../imagenes/pestanacodigofuente.png">
+o bien
+utilizando la opci&oacute;n del men&uacute; <span class="refmenu">insertar </span><img class="refmenu" src="../../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu">
+html</span> que nos
+presentar&aacute; la ventana de la ilustraci&oacute;n.
+</p>
+
+
+<p><a name="etiquetas"></a>Adem&aacute;s,
+para complicar un poquito las cosas, las etiquetas de sonido no son
+comunes para ambos navegadores, por lo que deber&iacute;amos
+incluirlas repetidas para que se pudieran escuchar los sonidos
+independientemente del navegador con el que se visite la
+p&aacute;gina.<br clear="all">
+
+
+</p>
+
+
+<p class="codigo">Lo primero que haremos ser&aacute;
+ver las etiquetas b&aacute;sicas.<br>
+
+
+Para la mayor&iacute;a de los navegadores <code>&lt;embed
+src="nombre de archivo"&gt;</code><br>
+
+
+Para versiones antiguas de Explorer <code>&lt;bgsound
+src="nombre de archivo"&gt;</code><br>
+
+
+</p>
+
+
+<p></p>
+
+
+<div class="aviso avisos">
+<p><img src="../../imagenes/atencion.gif" align="left" height="25" hspace="10" width="28">Empecemos
+con la lista de particularidades que provoca la falta de compatibilidad
+entre los principales navegadores:</p>
+
+
+<ul>
+
+
+  <li> La etiqueta&nbsp;<code>embed</code> es
+reconocida por la mayor&iacute;a
+de navegadores en las &uacute;ltimas versiones. </li>
+
+
+  <li> Para garantizar la compatibilidad con las versiones
+previas de Explorer es imprescindible que figure la etiqueta&nbsp;<code>bgsound</code></li>
+
+
+  <li>Si la versi&oacute;n de Explorer es la 5 o superior
+tiene preferencia la etiqueta&nbsp;<code>embed</code>
+sobre&nbsp;<code>bgsound</code>, por lo que los
+modificadores de &eacute;sta no tendr&aacute;n efecto.</li>
+
+
+  <li> Mientras que con la etiqueta <code>bgsound</code>
+Explorer arranca
+autom&aacute;ticamente sin mostrar ning&uacute;n indicador
+gr&aacute;fico s&iacute; que lo hace cuando se utiliza&nbsp;<code>embed</code>
+al
+igual que en Mozilla. </li>
+
+
+  <li> Si queremos que el sonido arranque
+autom&aacute;ticamente hay que a&ntilde;adir en la etiqueta <code>embed</code>
+un atributo de forma que quede <code>&lt;embed
+src="nombre de archivo" hidden="true"&gt;</code> </li>
+
+
+  <li> La representaci&oacute;n gr&aacute;fica de la
+consola para controlar los sonidos depende de los plug-ins que tenga
+instalados cada sistema, por lo que comprobar&aacute;s que la
+imagen se ver&aacute; distorsionada en uno de ellos cuando
+especifiques las dimensiones de la consola.</li>
+
+
+  <li>La consola tiene un comportamiento irregular cuando se
+carga en Explorer utilizando la etiqueta&nbsp;<code>embed</code>:
+el bot&oacute;n de
+parada hace un salto hacia adelante, y para parar la
+reproducci&oacute;n hay que pulsar el bot&oacute;n de pausa.</li>
+
+
+  <li>Cuando se hace una vista preliminar de la p&aacute;gina
+con Mozilla es probable que no se oiga el sonido (depende de las
+configruaciones de cada ordenador). Se debe a que Mozilla necesita que
+el servidor le indique el tipo de archivo que se usa para poder
+manejarlo, mientras que Explorer utiliza la base de datos del propio
+Windows. Si te encuentras con ese problema cuando intentes ver la
+p&aacute;gina en tu ordenador no le des muchas vueltas: comprueba
+que las etiquetas est&aacute;n escritas correctamente y que se
+reproduce el sonido cuando se ve la p&aacute;gina en Explorer;
+cuando publiques la p&aacute;gina en Internet todo se
+solucionar&aacute; de forma aparentemente "m&aacute;gica".<br>
+
+
+    <br>
+
+
+En fin, como se puede comprobar, un considerable galimat&iacute;as
+que sufren quienes tienen que crear las p&aacute;ginas. </li>
+
+
+</ul>
+
+
+</div>
+
+
+<br>
+
+
+&nbsp;
+<div class="practicas"><img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 40" title="Actividad 40" src="../../imagenes/numeracion/cuarenta.gif">
+<ul>
+
+
+  <li> Crea un nuevo documento con el editor y d&eacute;jalo
+completamente en blanco. &nbsp;</li>
+
+
+  <li>Utiliza el men&uacute;&nbsp;<span class="refmenu">insertar
+    </span><img class="refmenu" src="../../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu"> html</span>
+para escribir
+la siguiente etiqueta <code>&lt;embed src="primavera.mid&quot;
+hidden="true"&gt;</code></li>
+
+
+  <li>Guarda el archivo como <strong>actividad40.html </strong>
+y comprueba lo que ocurre al verlo en el navegador.</li>
+
+
+  <li>Vuelve al editor y modifica la etiqueta cambiando&nbsp;<code>embed</code>
+por&nbsp;<code>bgsound</code>. </li>
+
+
+  <li>Guarda los cambios y comprueba lo que ocurre en el navegador</li>
+
+
+  <li>Vuelve al editor y escribe la referencia utilizando ambas
+etiquetas&nbsp;<code>embed</code> y&nbsp;<code>bgsound</code></li>
+
+
+  <li>Modifica la etiqueta com&uacute;n para que quede <code>&lt;embed
+src="primavera.mid&quot; width="145"
+height="60"&gt;</code>.
+Guarda y comprueba en el navegador. </li>
+
+
+  <li>Si trabajas en Windows &nbsp;y tu navegador por defecto es
+Internet Explorer es importante que compruebes la apariencia de las
+p&aacute;ginas en otros navegadores, por lo que te recuerdo la
+importancia de que tengas instalado, al menos, Mozilla Firefox. En
+casos como nos ocupa podr&aacute;s comprobar que pueden aparecer
+diferencias en la
+apariencia de la consola de control y el comportamiento de los botones.</li>
+
+
+</ul>
+
+
+</div>
+
+
+<p>&nbsp;</p>
+
+
+<p class="estilo">La primera
+configuraci&oacute;n de la etiqueta era muy poco respetuosa con el
+visitante, ya que iniciaba la carga de la melod&iacute;a sin darle
+ni siquiera opci&oacute;n para detenerla.<br>
+
+
+Con la &uacute;ltima configuraci&oacute;n de la etiqueta la
+situaci&oacute;n var&iacute;a ya que damos la oportunidad de
+que sea el visitante el que elija (Al menos en Mozilla, ya que en
+algunas versiones de Explorer no se respeta).<br>
+
+
+Si quisiera que la melod&iacute;a se iniciara
+autom&aacute;ticamente pero presentando la consola para poder
+pararla tendr&iacute;a que escribir la etiqueta <code>autostart="true"</code>
+</p>
+
+
+<div class="flotder"><br>
+
+
+<a href="#indice"><br>
+
+
+</a></div>
+
+
+<p>En la siguiente secci&oacute;n veremos c&oacute;mo
+podemos incorporar fragmentos sonoros, e incluso de v&iacute;deo,
+de un tama&ntilde;o manejable para su transmisi&oacute;n por
+Internet.</p>
+
+
+</div>
+</body>
+</html>

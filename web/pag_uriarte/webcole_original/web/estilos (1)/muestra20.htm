@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+  <title>Muestra de estilos</title>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <link href="muestrasdeestilos.css" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+<!-- #visible {
+overflow:visible;
+}
+#oculto {
+overflow:hidden;
+}
+#barras {
+overflow:scroll;
+}
+#auto {
+overflow:auto;
+}
+-->
+  </style>
+  <script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_showHideLayers() { //v6.0
+var i,p,v,obj,args=MM_showHideLayers.arguments;
+for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+obj.visibility=v; }
+}
+//-->
+  </script>
+</head>
+
+
+<body>
+
+<div class="zonaizq">
+<div class="codigo">
+<p><code>&lt;style type="text/css"&gt;<br>
+
+&lt;!-- <br>
+
+#auto {<br>
+
+overflow:auto;<br>
+
+}<br>
+
+#visible {<br>
+
+overflow:visible;<br>
+
+}<br>
+
+#oculto {<br>
+
+overflow:hidden;<br>
+
+}<br>
+
+#barras {<br>
+
+overflow:scroll;<br>
+
+}<br>
+
+--&gt;<br>
+
+&lt;/style&gt;</code><br>
+
+</p>
+
+</div>
+
+<div class="flotder"> <a href="javascript:void(0)" onclick="MM_showHideLayers('derecha','','show')">Visualizar
+el formato resultante <img src="../imagenes/flechamenu.png" border="0" height="13" width="14"></a>
+</div>
+
+</div>
+
+<div class="zonadcha" id="derecha">
+<div id="auto" style="border: thin solid red; width: 200px; height: 80px;">
+<p>Esta capa tiene establecida la propiedad <code>overflow</code>
+en <code>
+auto</code> y se muestra completa aunque sus dimensiones son
+<code>width:200px height:80px;</code></p>
+
+<p>Este p&aacute;rrafo se ha a&ntilde;adido para aumentar
+la longitud del texto. </p>
+
+</div>
+
+<hr>
+<div id="visible" style="border: thin solid red; width: 200px; height: 80px; color: red;">
+<p>Esta capa tiene establecida la propiedad <code>overflow</code>
+en <code>
+visible</code> y se muestra completa, invadiendo el espacio de
+los elementos que van a continuaci&oacute;n y
+superponi&eacute;ndose a ellos. </p>
+
+</div>
+
+<hr>
+<div id="oculto" style="border: thin solid red; width: 200px; height: 80px;">
+<p>Esta capa tiene establecida la propiedad <code>overflow</code>
+en <code>
+hidden</code> y muestra s&oacute;lo el texto que cabe
+dentro de las dimensiones establecidas que son de 200x80 como en los
+otros casos. </p>
+
+<p>Este p&aacute;rrafo se ha a&ntilde;adido para aumentar
+la longitud del texto. </p>
+
+</div>
+
+<hr>
+<div id="barras" style="border: thin solid red; width: 200px; height: 80px;">
+<p>Esta capa tiene establecida la propiedad <code>overflow</code>
+en <code>
+scroll</code> y se muestra completa a&ntilde;adiendo las
+barras de desplazamiento.</p>
+
+</div>
+
+<hr>
+<div class="avisos" style="margin: 10px;">
+<p><img src="../imagenes/atencion.gif" height="25" width="28">Si has visto la
+p&aacute;gina con Internet Explorer habr&aacute;s comprobado
+que con el valor <code>overflow:visible</code> la capa
+aumenta su tama&ntilde;o
+y desplaza al resto de elementos en lugar de superponerse a ellos. </p>
+
+</div>
+
+</div>
+
+</body>
+</html>

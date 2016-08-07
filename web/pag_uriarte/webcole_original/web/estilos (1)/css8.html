@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>CSS: m&aacute;rgenes y rellenos</title>
+
+
+  <meta name="author" content="Ra&uacute;l Luna">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft -->
+<!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+  <link href="../nvu2005.css" type="text/css" rel="stylesheet">
+
+  <style type="text/css">
+th { background-color: rgb(170, 188, 53);
+}
+#centrada {width:450px; margin:auto; border: thin solid;padding:10px;}
+#Contenedora { width:100%; text-align:center;}
+#CentradaIE { width:450px; margin:auto; text-align:justify; border: thin solid;padding:10px;} </style>
+</head>
+
+
+<body>
+
+
+<div id="localizador">
+<p>Estilos&gt;&gt;M&aacute;rgenes y rellenos</p>
+
+</div>
+
+<div id="flechadcha">
+<a href="css9.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="css7.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<h2>M&aacute;rgenes y rellenos</h2>
+
+<p>Lo primero que necesitaremos es conocer, aunque sea
+someramente lo que suponen los elementos en bloque y los elementos en
+l&iacute;nea a la hora de construir una p&aacute;gina.</p>
+
+<h3>Elementos en bloque y elementos en l&iacute;nea </h3>
+
+<p>Para empezar, y aunque sea de una forma muy burda,
+podr&iacute;amos indicar que los elementos en bloque son aquellos
+que generan de forma autom&aacute;tica un salto de linea previo y
+otro posterior, mientras que los elementos en l&iacute;nea forman
+parte de una l&iacute;nea o rengl&oacute;n. Por ejemplo, <code>&lt;p&gt;</code>
+o <code>&lt;h3&gt;</code> ser&iacute;an
+elementos en bloque, mientras que <code>&lt;strong&gt;</code>
+o <code>&lt;img&gt;</code> ser&iacute;an
+elementos en l&iacute;nea.</p>
+
+<p>Aunque hay algunos elementos m&aacute;s que entran dentro
+de la categor&iacute;a de elementos en bloque lo importante para
+abordar los m&aacute;rgenes y rellenos, es tener en cuenta que para
+formatear cualquier elemento en la p&aacute;gina, sea en
+l&iacute;nea o en bloque, lo que se genera es un cuadro, cuyo
+contenido b&aacute;sico es el que se encuentra dentro de las
+etiquetas que delimitan el elemento. </p>
+
+<p class="centrado"><img style="width: 650px; height: 206px;" alt="Elementos en bloque y en l&iacute;nea" title="Elementos en bloque y en l&iacute;nea" src="imagenes/bloqueylinea.png"></p>
+
+<p>Cada uno de estos cuadros est&aacute; formado por varios
+componentes que completan sus dimensiones:</p>
+
+<dl>
+
+  <dt><strong>Zona de contenido:</strong> </dt>
+
+  <dd>Forma el n&uacute;cleo b&aacute;sico y sus
+dimensiones son la altura y la anchura necesarias para que quepa el
+contenido. En el caso de los elementos en l&iacute;nea se
+ajustar&aacute; plenamente al texto, mientras que en los elementos
+en bloque ir&aacute; ajustando la altura pero puede presentar zonas
+vac&iacute;as. </dd>
+
+  <dt><strong>Borde:</strong> </dt>
+
+  <dd>L&iacute;nea que rodea la zona de contenido. Para
+visualizarlo deberemos especificar unas propiedades que ya conocemos
+(grosor, estilo de trazo y color).</dd>
+
+  <dt><strong>Relleno:</strong> </dt>
+
+  <dd>Espacio que separa el contenido propiamente dicho del
+borde. Tendr&aacute; el color de la zona de contenido. </dd>
+
+  <dt><strong>Margen:</strong> </dt>
+
+  <dd>Espacio exterior al borde que lo separa del contenedor
+"padre". En muchos momentos este contenedor "padre" es el propio lienzo
+  </dd>
+
+</dl>
+
+<p><img class="flotder" alt="Identificaci&oacute;n de m&aacute;rgenes y rellenos" title="Identificaci&oacute;n de m&aacute;rgenes y rellenos" src="imagenes/paddingymargin.png" style="width: 469px; height: 255px;">En la imagen que se
+muesta a continuaci&oacute;n nos
+encontramos con un elemento en bloque <code>&lt;h1&gt;</code>
+que genera una
+caja contenedora en la que aparece el texto.</p>
+
+<p>La captura de la imagen se ha hecho de una pantalla en la que
+se hab&iacute;an
+especificado como propiedades del selector <code>h1</code>
+las siguientes:</p>
+
+<ul>
+
+  <li><code>border: solid thin blue;</code></li>
+
+  <li><code>padding:10px;</code></li>
+
+  <li><code>margin:20px;</code></li>
+
+</ul>
+
+<p>Como el texto no ocupa todo el espacio de la caja comprobamos
+que queda un espacio vac&iacute;o en la zona derecha.
+Tambi&eacute;n vemos que entre la zona de contenido y el borde azul
+queda una zona, que mantiene el mismo color del resto del cuadro, cuyo
+grosor es el establecido por la propiedad <code>padding</code>.</p>
+
+<p>Entre el borde azul y el l&iacute;mite del contenedor
+ancestro (en nuestro caso <code>body</code>) y los
+elementos adyacentes observamos
+la existencia de un espacio transparente que deja ver el color del
+contenedor ancestro cuyo grosor corresponde al
+valor de <code>margin</code><strong>.</strong></p>
+
+<p><img class="flotizq" title="Superposici&oacute;n de m&aacute;rgenes" style="width: 469px; height: 255px;" alt="Superposici&oacute;n de m&aacute;rgenes" src="imagenes/superposicionmargen.png">Una
+cuesti&oacute;n que conviene tener en cuenta es que, cuando se
+superponen verticalmente dos zonas de margen no se suman sus anchuras,
+sino que se toma el valor m&aacute;ximo de las dos y ese es el que
+se aplica.&nbsp;</p>
+
+<p>Si lo piensas detenidamente parece que es la
+opci&oacute;n que m&aacute;s se puede acercar a lo que se
+supone que nos planteamos cuando establecemos m&aacute;rgenes para
+dise&ntilde;ar un espacio. En la imagen que se muestra hemos
+aplicado un <code>margin:20px</code> al selector
+<code>&lt;h2&gt;</code> que constitu&iacute;a
+el segundo
+p&aacute;rrafo, con lo cual las dos zonas se superponen. En el caso
+de que el margen del segundo bloque hubiera sido, por ejemplo, de 10
+p&iacute;xeles habr&iacute;a prevalecido el valor 20 del bloque
+<code>&lt;h1&gt;</code>, mientras que si hubiera
+sido superior a 20
+ser&iacute;a ese valor el que se habr&iacute;a tomado como
+referencia para separar ambos bloques verticalmente.</p>
+
+<p>Seg&uacute;n la especificaci&oacute;n CSS2 del W3C el
+contenido deber&iacute;a incluir solo eso: el contenido, pero no
+todos los navegadores lo implementan as&iacute;. En particular, las
+versiones de Internet Explorer anteriores a la 6 interpretan el modelo
+de caja adjudicando como ancho del contenido el que corresponde a la
+suma de la zona de contenido, el relleno y&nbsp; el borde, lo cual
+provoca serios desajustes en la forma de visualizar las
+p&aacute;ginas.&nbsp;</p>
+
+<p>En
+general, podremos especificar la anchura y la altura de los elementos
+en bloque, mientras que los elementos en l&iacute;nea la anchura y
+la altura ser&aacute;n las m&iacute;nimas para que quepa el
+elemento.</p>
+
+<p>Espero que con esta visi&oacute;n b&aacute;sica de los
+cuadros (box) hayas podido explicarte algunas situaciones que tal vez
+te hayan llamado la atenci&oacute;n en momentos previos cuando has
+aplicado propiedades como el color de fondo o los bordes. Es probable
+que si ahora repasas algunas de estas pr&aacute;cticas previas
+puedas entender claramente hasta d&oacute;nde llegaban en algunos
+momentos los colores y por qu&eacute;.</p>
+
+<p>En el editor
+de CSS de N|VU podr&aacute;s acceder a las propiedades que se
+mencionan a continuaci&oacute;n dentro de la
+pesta&ntilde;a <span class="refmenu">caja</span>.</p>
+
+<h3>M&aacute;rgenes. Propiedad abreviada.</h3>
+
+<p>La magnitud que podemos variar en los m&aacute;rgenes es
+su anchura. Como ya hemos visto cuando revisamos la propiedad <code>border</code>,
+el orden de aplicaci&oacute;n de los valores declarados es en
+sentido horario comenzando por el margen superior. En la
+versi&oacute;n
+actual del editor de CSS integrado en N|VU el orden en el que se
+presentan las cajas para introducir los valores no coincide con el que
+se utiliza como norma para su inclusi&oacute;n en los selectores,
+sino
+que aparecen en lo que se podr&iacute;a considerar una lectura de
+arriba a abajo como superior, izquierda, derecha e inferior.</p>
+
+<p><strong>Propiedad:</strong> <code>margin</code>
+</p>
+
+<p><strong>Valores</strong>: puede utilizarse un <strong>valor
+absoluto</strong>, expresado en cualquiera de las unidades
+admisibles en CSS, un valor <strong>relativo</strong>
+expresado&nbsp;en <strong>porcentaje</strong> o
+el valor <strong>auto </strong> para que cada navegador
+aplique su interpretaci&oacute;n por defecto. <br clear="all">
+
+</p>
+
+<h3>M&aacute;rgenes. Propiedad desarrollada.</h3>
+
+<p>Podemos desglosar la propiedad para especificar
+&uacute;nicamente alguno de los m&aacute;rgenes mientras que
+los dem&aacute;s permanecen en su valor autom&aacute;tico.</p>
+
+<p><strong>Propiedad</strong>: <code>margin-top</code>,
+<code>margin-right</code>, <code>margin-bottom</code>,
+<code>margin-left</code></p>
+
+<h4>Una aplicaci&oacute;n inmediata de los m&aacute;rgenes</h4>
+
+<p>Uno de los problemas que suelen solucionarse de forma habitual
+es el centrado de un bloque dentro de la p&aacute;gina. Hay una
+soluci&oacute;n sencill&iacute;sima utilizando hojas de estilo:</p>
+
+<div id="centrada">
+<p>Lo primero que hacemos es crear una capa con la etiqueta<code>
+&lt;div&gt;</code> que incluya el contenido que queremos
+que aparezca
+centrado.</p>
+
+<p>El contenido CSS para conseguir el efecto ser&iacute;a </p>
+
+<p><code>#centrada {width:450px; margin:auto;} </code></p>
+
+<p>Tambi&eacute;n se ha a&ntilde;adido un borde para que
+resulte claro el efecto. </p>
+
+</div>
+
+<p>Parece que el c&oacute;digo es muy sencillo y
+correcto...si est&aacute;s viendo la p&aacute;gina con Mozilla,
+Firefox u Opera
+pero si la est&aacute;s viendo con Internet Explorer
+pensar&aacute;s que se ha escapado alg&uacute;n error porque
+ves el cuadro alineado a la izquierda. Es uno de los problemas con la
+implementaci&oacute;n que hace Internet Explorer de las CSS.
+Mientras que en Mozilla, Konqueror o Gale&oacute;n se ve
+perfectamente, en Internet Explorer hay que hacer una
+peque&ntilde;a componenda que se muestra a continuaci&oacute;n:</p>
+
+<div id="Contenedora">
+<div id="CentradaIE">
+<p>Hay que crear dos capas contenedoras: una general y dentro de
+ella la centrada y crear los selectores de tipo id, o las clases si lo
+preferimos, para especificar las propiedades CSS. </p>
+
+<p> <code>#Contenedora { width:100%; text-align:center;}</code></p>
+
+<p>Aunque la propiedad text-align no deber&iacute;a afectar a
+la capa sino solamente al texto, Internet explorer parece que ha optado
+por implementar esta propiedad como un centrado gen&eacute;rico
+aplicable tambi&eacute;n a las capas. </p>
+
+<p><br>
+
+<code>#CentradaIE { width:450px; margin:auto;
+text-align:justify;} </code></p>
+
+<p>Ahora, se corrige la alineaci&oacute;n del texto en la
+capa en la que est&aacute; realmente el contenido</p>
+
+</div>
+
+</div>
+
+<h3>Relleno. Propiedad abreviada.</h3>
+
+<p>Al igual que en los m&aacute;rgenes la magnitud que
+podemos variar es su anchura. El comportamiento es totalmente
+homologable, aplic&aacute;ndose los valores de la misma forma, por
+lo que unicamente nombraremos la propiedad</p>
+
+<p><strong>Propiedad:</strong> <code>padding</code></p>
+
+<h3>Rellenos. Propiedad desarrollada.</h3>
+
+<p>Desglosamos la propiedad exactamente igual que los
+m&aacute;rgenes.</p>
+
+<p><strong>Propiedad</strong>: <code>padding-top</code>,
+<code>padding-right</code>, <code>padding-bottom</code>,
+<code>padding-left</code></p>
+
+<h3>Anchura y altura </h3>
+
+<p>En los elementos en bloque podemos especificar la anchura y la
+altura, mientras que no es posible hacerlo con los elementos en
+l&iacute;nea que las adec&uacute;an al m&iacute;nimo
+necesario para mostrar el contenido (incluidos rellenos,
+bordes y m&aacute;rgenes) </p>
+
+<p><strong>Propiedad: </strong><code>width</code>
+(anchura)
+<code>height</code> (altura)</p>
+
+<p><strong>Valores:</strong> adem&aacute;s del
+valor <code>auto</code> podemos especificar las
+dimensiones en t&eacute;rminos absolutos utilizando como siempre
+cualquiera de las unidades aceptables y en t&eacute;rminos
+porcentuales sobre el contenedor en el que se inserta el bloque al que
+atribuimos dimensiones.</p>
+
+<p>&nbsp;</p>
+
+<div class="practicas">
+<img style="width: 29px; height: 29px; float: left;" alt="Actividad 90" title="Actividad 90" src="../imagenes/numeracion/noventa.gif">
+<ul>
+
+  <li>Incorpora a tu hoja de estilos el selector <code>&lt;h1&gt;</code>
+y establece las propiedades de margen en un valor de
+30 p&iacute;xeles.</li>
+
+  <li>Haz lo propio con el selector <code>&lt;h2&gt;</code>
+pero
+d&aacute;ndole un valor de 10 p&iacute;xeles.</li>
+
+  <li>Tambi&eacute;n puedes optar por incluir los valores en
+una hoja de estilos interna en el documento html que se propone a
+continuaci&oacute;n. </li>
+
+  <li>Crea un documento en el que incluyas un encabezado&nbsp;<code>&lt;h1&gt;</code>,
+un
+p&aacute;rrafo normal, un encabezado&nbsp;<code>&lt;h2&gt;</code>,
+otro p&aacute;rrafo
+normal, un encabezado&nbsp;<code>&lt;h1&gt;</code>,
+un encabezado&nbsp;<code>&lt;h2&gt;</code> y un
+p&aacute;rrafo
+normal. </li>
+
+  <li>Aplica tu hoja de estilos al documento y observa la
+variaci&oacute;n en la distancia del primer y el segundo&nbsp;<code>&lt;h2&gt;</code>
+respecto a los elementos adyacentes.</li>
+
+  <li>Modifica en la hoja de estilos el valor del margen
+de&nbsp;<code>&lt;h2&gt;</code>
+para ponerlo en 40 p&iacute;xeles y comprueba los resultados. </li>
+
+  <li>Prueba diferentes efectos de las combinaciones de <code>margin</code>
+y <code>padding</code> aplicados a todos los lados o
+s&oacute;lo a algunos de ellos. </li>
+
+  <li>Utiliza <code>span</code><strong> </strong>
+para indicar
+una zona del texto y apl&iacute;cale un estilo en l&iacute;nea
+o bien un selector de tipo <code>id</code> que hayas
+definido en la hoja de estilo con propiedades de margen y relleno.</li>
+
+  <li>Aplica las propiedades <code>width</code> y <code>height</code>
+a un elemento en
+bloque como pueda ser el <code>h1 </code>y a un elemento
+en l&iacute;nea como
+pueda ser la zona <code>span</code> que acabas de definir
+y observa la diferencia.</li>
+
+  <li>Incorpora a tu hoja de estilo las propiedades de
+m&aacute;rgenes y rellenos si las necesitas. </li>
+
+</ul>
+
+</div>
+</div>
+</body>
+</html>

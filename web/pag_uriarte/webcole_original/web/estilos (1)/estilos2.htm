@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+
+<html>
+
+<head>
+
+<title>Aplicar hojas de estilo</title>
+
+<link href="../estilo.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+<!-- 
+  function cargalogo(nombre) {
+   parent.arriba.location.href=nombre;
+}
+// -->
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.Estilo4 {color: #993300; font-size: large; }
+.blancoazul {
+	color: #FFFFFF;
+	background-color: #000099;
+	font-weight: bold;
+}
+.Estilo5 {
+	color: #993300;
+}
+-->
+</style>
+</head>
+
+<body onload="cargalogo('t23a.htm');">
+
+<p>Sintaxis b&aacute;sica </p>
+<p>La sintaxis general de cualquier declaraci&oacute;n de estilo, independientemente 
+  de d&oacute;nde la apliquemos, va a estar compuesta por tres elementos:</p>
+<p style="font-size:x-large; font-width:bold; text-align:center">selector {propiedad:valor} </p>
+<p>donde selector va a ser, b&aacute;sicamente, el elemento html que deseamos 
+  definir, la propiedad el atributo que queremos modificar, apareciendo por &uacute;ltimo 
+  el valor que deseamos asignarle al atributo. La propiedad se separa del atributo 
+  mediante dos puntos y ambos se encierran entre llaves.</p>
+<div>
+  <p class="avisos"><img src="../imagenes/atencion.gif" width="28" height="25" align="left">Cuando 
+    los valores requieren especificar un tipo de unidad, esta se indica a continuaci&oacute;n 
+    del valor num&eacute;rico, sin espacio de separaci&oacute;n: 1cm ser&iacute;a 
+    una notaci&oacute;n correcta, mientras que 1 cm no lo ser&iacute;a.</p>
+</div>
+<p>Selectores de tipos</p>
+<p>El selector m&aacute;s sencillo es el que denominamos de tipo. Se refiere a una etiqueta
+  definida en el lenguaje HTML. Su gran ventaja ser&aacute; que con una &uacute;nica modificaci&oacute;n
+  en una hoja de estilos podremos modificar la apariencia de todos las p&aacute;ginas
+  de un sitio al variar la presentaci&oacute;n de un determinado tipo.</p>
+<p><strong>Ej: body {color:white}</strong></p>
+<p>Para cada selector podremos establecer m&aacute;s de una propiedad. Para separarlas utilizaremos el punto y coma, siendo habitual para favorecer la legibilidad, que cada propiedad se escriba en un rengl&oacute;n.</p>
+<p><a href="javascript:void(0)" onclick=window.open('muestra1.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=680,height=200')>Ver ejemplo </a><br>
+</p>
+<p>Agrupando selectores </p>
+<p>Si queremos aplicar una propiedad com&uacute;n a varios selectores sin necesidad de tener que definirla en cada caso podemos agruparlos list&aacute;ndolos separados por comas y haciendo una definici&oacute;n com&uacute;n para todos ellos.</p>
+<p><strong>Ej.: h1,h2,h3 {color:blue}</strong></p>
+<p><a href="javascript:void(0)" onclick=window.open('muestra2.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=680,height=290')>Ver ejemplo </a></p>
+<p>Selectores contextuales</p>
+<p >Podemos realizar una selecci&oacute;n de elementos del documento para aplicarles un determinado formato. Podr&iacute;amos, por ejemplo querer que los fragmentos que estuvieran enfatizados mediante la etiqueta &lt;em&gt; aparecieran en color verde. Pero podr&iacute;amos ser incluso m&aacute;s espec&iacute;ficos indicando que s&oacute;lo queremos que aparezcan en color verde los fragmentos enfatizados que formen parte de una lista. Esto lo har&iacute;amos colocando primero el selector li y, a continuaci&oacute;n separado por un espacio, el selector em para luego especificar las propiedades</p>
+<p > <strong>Ej.: li em {color: green}</strong></p>
+<p><a href="javascript:void(0)" onclick=window.open('muestra4.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=750,height=390')>Ver ejemplo </a></p>
+<p>Clases </p>
+<p>El selector class nos permite definir diferentes estilos para el mismo elemento
+  HTML. El ejemplo siguiente supondr&iacute;a la posibilidad de tener dos tipos
+  de p&aacute;rrafo en el documento: uno en azul y otro en rojo, en funci&oacute;n
+  de la clase que cada uno lleve indicada. Para establecer la clase a&ntilde;adimos
+  un punto y el nombre que le adjudicamos a la clase a continuaci&oacute;n del selector
+  y antes de iniciar las propiedades.</p>
+<p><strong>Ej.: p.azul {color: blue} 
+p.rojo {color: red}</strong></p>
+<p><a href="javascript:void(0)" onclick=window.open('muestra3.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=370')>Ver ejemplo </a></p>
+<p class="avisos"><img src="../imagenes/atencion.gif" width="28" height="25" align="texttop">S&oacute;lo se puede aplicar una clase a un elemento html.</p>
+<p>Es muy frecuente que la definici&oacute;n de las clases se haga sin ligarlas a una etiqueta concreta. En el ejemplo anterior podr&iacute;a omitirse la referencia al elemento p y eso har&iacute;a que las caracter&iacute;sticas de la clase se aplicaran a cualquier elemento al que se le aplicara. En este caso el selector empieza con un punto seguido del nombre de la clase </p>
+<p><strong>Ej.: .azul {color: blue} .rojo {color: red} </strong></p>
+<p><a href="javascript:void(0)" onclick=window.open('muestra5.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=428')>Ver ejemplo </a></p>
+<p>Pseudoclases</p>
+<p>Las pseudoclases se utilizan para particularizar algunos efectos de determinados 
+  selectores en algunas situaciones especiales. Uno de los grupos que se aplica 
+  m&aacute;s frecuentemente es el que tiene que ver con la etiqueta &lt;a&gt; 
+  para marcar diferentes presentaciones de los enlaces.</p>
+<p>La sintaxis es ligeramente diferente de la general: <strong>selector:pseudoclase
+    {propiedad : valor}</strong></p>
+<p><strong>Pseudoclases relacionadas con los v&iacute;nculos</strong></p>
+<p>Su funci&oacute;n es cambiar la apariencia seg&uacute;n el estado del v&iacute;nculo. Existen cuatro
+  tipos: </p>
+<ul>
+  <li><strong>a:link </strong>sirve para establecer las propiedades de un enlace no visitado</li>
+  <li><strong>a:visited</strong>    indica las propiedades que adoptar&aacute; un enlace visitado</li>
+  <li><strong>a:hover </strong>especifica la apariencia que adoptar&aacute; un enlace en el momento en
+    que el bot&oacute;n se sit&uacute;a sobre &eacute;l.</li>
+  <li><strong>a:active</strong> fija las propiedades que tomar&aacute; un enlace en el momento en que
+    se pulsa sobre &eacute;l para activarlo. </li>
+</ul>
+<p><a href="javascript:void(0)" onClick=window.open('muestra21.htm','','statusbar=0,menubar=0,toolbar=1,directionbar=0,top=0,left=0,width=780,height=290')>Ver
+ejemplo </a></p>
+<div class="avisos">
+  <p><img src="../imagenes/atencion.gif" width="28" height="25" align="absmiddle">El orden en el que se deben especificar estas pseudoclases en las hojas de
+    estilos para que tengan efecto es el que se ha utilizado para describirlas.</p>
+</div>
+<p>Existen tambi&eacute;n los llamados pseudoelementos  que ver&aacute;s en la
+  secci&oacute;n dedicada al texto pero todav&iacute;a podemos considerar la pseudoclase que
+  se refiere al primer elemento hijo <strong>first-child </strong>que
+  nos permitir&iacute;a
+  obtener, por ejemplo un efecto similar al que presentan algunas ediciones impresas
+  cuando el primer p&aacute;rrafo de un cap&iacute;tulo se muestra en un tama&ntilde;o
+  m&aacute;s
+  grande o en it&aacute;lica. </p>
+<p><a href="javascript:void(0)" onClick=window.open('muestra22.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=290')>Ver
+ejemplo </a></p>
+<p>El selector id </p>
+<p>Mientras que el selector clase puede aplicarse a varios elementos del mismo o diferente tipo en una p&aacute;gina podemos crear tambi&eacute;n un selector id para diferenciar elementos espec&iacute;ficos que a&ntilde;adir&aacute;n alguna caracter&iacute;stica diferente de las que tienen los elementos de su clase. El nombre del selector se inicia con el signo # seguido del nombre del identificador.</p>
+<p><strong>Ej: #rojo {color: red}</strong></p>
+<p><a href="javascript:void(0)" onclick=window.open('muestra6.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=440')>Ver ejemplo </a></p>
+<p>Comentarios</p>
+<p>Puede venir muy bien incluir comentarios que nos sirvan para aclarar o recordar alg&uacute;n aspecto de las especificaciones que escribimos en una hoja de estilo. Para hacerlo lo iniciaremos con /* y lo finalizaremos con */</p>
+<p><strong>Ej: /* Esto es un comentario*/</strong></p>
+</body>
+
+
+
+</html>
+

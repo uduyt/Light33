@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Light</string>
+
+    <string name="title_section1">Perfil</string>
+    <string name="title_section2">Consumo</string>
+    <string name="title_section3">Social</string>
+    <string name="title_section4">Market</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="preference_file_key">Start Actiity Shared Preferences</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="key_start_logState">com.light.light.KEY_START_LOGSTATE</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,529 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="es-es">
+<head>
+
+
+  
+
+
+  
+  
+  
+  <title>Crear marcos</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+<!-- compliance patch for microsoft browsers --><!--[if lt IE 7]>
+<script src="../ie7/ie7-standard-p.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Marcos&gt;&gt;Crear marcos</p>
+
+</div>
+<div id="flechadcha">
+<a href="marcos2b.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="marcos1.htm" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<div class="avisos">
+<p><strong>MUY IMPORTANTE: </strong>En el momento de
+elaborar esta documentaci&oacute;n N|VU no est&aacute;
+programado para soportar el trabajo con marcos. Aunque puede abrir una
+p&aacute;gina con&nbsp;marcos ser&aacute; incapaz de realizar ninguna
+modificaci&oacute;n en ella. Por tanto, si queremos modificar una
+p&aacute;gina&nbsp;con esta estructura o crear una nueva
+estructura de marcos deberemos recurrir a un editor externo (En el caso
+de Windows te recomendamos Notepad ++ que tienes incluido en la carpeta
+de programas del CD). <br>
+
+
+
+</p>
+
+
+
+</div>
+
+
+
+<p><br>
+
+
+
+</p>
+
+
+
+<h2>La etiqueta &lt;frameset&gt;</h2>
+
+
+
+<p>Lo primero que hay que hacer para iniciar una
+p&aacute;gina de marcos es crear la definici&oacute;n de los
+mismos. Por lo que hemos visto hasta ahora la organizaci&oacute;n
+de p&aacute;ginas puede resultarnos un tanto sorprendente. Hay que
+tener en cuenta que una definici&oacute;n de marcos no es
+m&aacute;s que una instrucci&oacute;n para que el navegador
+sepa c&oacute;mo tiene que dividir la ventana; en ella no existen
+contenidos para mostrar. Los contenidos que se mostrar&aacute;n en
+cada zona de la pantalla son los que componen cada una de las
+p&aacute;ginas que se muestran simult&aacute;neamente.</p>
+
+
+
+<p>Teniendo en cuenta lo anterior empezaremos por decir que no
+necesitamos las etiquetas de definici&oacute;n habituales: HTML,
+HEAD y BODY, aunque deber&iacute;as revisar la anotaci&oacute;n
+de estilo que figura al final de este apartado.</p>
+
+
+
+<div class="codigo">
+<p>Las etiquetas que nos sirven para
+contener la definici&oacute;n del marco son <code>&lt;frameset&gt;
+&lt;/frameset&gt;</code><br>
+
+
+
+<img src="../imagenes/atencion.gif" align="left" height="25" width="28">Hay navegadores, como por
+ejemplo Netscape, que son incapaces de presentar la p&aacute;gina
+si olvidamos el cierre <code>&lt;/frameset&gt;</code></p>
+
+
+
+</div>
+
+
+
+<h2>Distribuci&oacute;n del espacio
+en columnas o filas</h2>
+
+
+
+<p>L&oacute;gicamente la mera indicaci&oacute;n de que
+queremos crear una estructura de frames no es suficiente:
+habr&aacute; que indicar si la distribuci&oacute;n se
+har&aacute; en vertical o en horizontal y cuantas zonas queremos
+crear.</p>
+
+
+
+<p>La definici&oacute;n de los espacios se puede hacer en
+t&eacute;rminos absolutos (p&iacute;xeles) o relativos (% de
+ventana). El signo * representa el resto de la ventana.</p>
+
+
+
+<div class="codigo">
+<p>A continuaci&oacute;n se muestran
+algunos ejemplos de posibles divisiones de la pantalla.</p>
+
+
+
+<p>Dos columnas con
+una medida absoluta para la primera:<br>
+
+
+
+<code class="indentado25">&lt;frameset
+cols="130,*"&gt;&nbsp;</code><span style="font-weight: bold;"></span></p>
+
+
+
+<p><span style="font-weight: bold;"></span>Dos
+columnas con medidas relativas <br>
+
+
+
+<code class="indentado25">&lt;frameset
+cols="25%,75%*"&gt;</code><span style="font-weight: bold;"></span></p>
+
+
+
+<p><span style="font-weight: bold;"></span>Tres
+filas con medidas absolutas para la superior y la inferior<br>
+
+
+
+<code class="indentado25">&lt;frameset
+rows="25,*,50"&gt; </code><span style="font-weight: bold;"></span></p>
+
+
+
+<p><span style="font-weight: bold;"></span>Dos
+filas con definici&oacute;n relativa<br>
+
+
+
+<code class="indentado25">&lt;frameset
+rows="10%,*"&gt;</code><br>
+
+
+
+</p>
+
+
+
+</div>
+
+
+
+<h2>Contenido de los marcos</h2>
+
+
+
+<p>Una vez establecida la distribuci&oacute;n general
+habr&aacute; que indicar al navegador cu&aacute;l es el
+contenido que tendr&aacute; que mostrar en cada marco la primera
+vez que se cargue la p&aacute;gina.</p>
+
+
+
+<p>Para indicar el contenido de cada marco se utiliza la etiqueta
+<code>&lt;frame&gt;</code>, que no necesita cierre
+si estamos escribiendo un documento HTML, con los siguientes
+atributos: </p>
+
+
+
+<div class="codigo">
+<p><code>name</code>:
+Servir&aacute; para identificar el marco cuando se realicen enlaces
+a una p&aacute;gina con este tipo de estructura.</p>
+
+
+
+<p><code>src</code>:Indicar&aacute;
+cu&aacute;l es el contenido inicial del marco cuando se cargue por
+primera vez la p&aacute;gina.</p>
+
+
+
+<code>frameborder</code>:
+Indicar&aacute; si el marco lleva o no lleva borde. Sus valores
+pueden ser 0 y 1 (Netscape interpreta tambi&eacute;n como
+v&aacute;lidos yes y no).&nbsp;
+<p><code>framespacing</code>:
+Indicar&aacute; la separaci&oacute;n en p&iacute;xeles
+entre los marcos.&nbsp;</p>
+
+
+
+<p class="avisos"><img src="../imagenes/atencion.gif" align="left" height="24" width="28"> Si
+queremos garantizar la
+compatibilidad cuando no deseamos que aparezcan bordes
+habr&iacute;a que incluir la etiqueta <code>border="0"</code>
+en la etiqueta <code>frameset</code>,
+acompa&ntilde;ada de <code>frameborder="0"</code> y
+<code>framespacing="0"</code>, ya que hay
+navegadores que no responden correctamente si s&oacute;lo se
+utilizan estas dos &uacute;ltimas.</p>
+
+
+
+<p><code>marginwidth</code> y <code>marginheight</code>:
+Sirven para
+especificar los m&aacute;rgenes del marco expresados en
+p&iacute;xeles.<br>
+
+
+
+<br>
+
+
+
+<code>scrolling</code>: Admite los
+valores auto, yes y no para indicar si el marco dispondr&aacute; de
+barras de desplazamiento o no.<br>
+
+
+
+<br>
+
+
+
+<code>bordercolor</code>: Permite
+especificar el color del borde que delimitar&aacute; el marco (Si
+se pone color al borde de dos marcos adyacentes tiene prioridad el
+primero en presentarse, esto es, el de la izquierda en el caso de
+columnas y el superior en el caso de filas). Cuando hay m&aacute;s
+de dos marcos Netscape admite diferentes colores de borde, siguiendo la
+prioridad en la presentaci&oacute;n, pero Explorer s&oacute;lo
+presenta el primer color definido. <br>
+
+
+
+<br>
+
+
+
+<code>noresize</code>: Hace que el
+tama&ntilde;o del marco no pueda ser modificado por el usuario.<br>
+
+
+
+<br>
+
+
+
+<img src="../imagenes/atencion.gif" align="left" height="24" width="28"><code>title</code>:
+la inclusi&oacute;n de la etiqueta title es importante para
+favorecer la accesibilidad.</p>
+
+
+
+</div>
+
+
+
+<p>Un ejemplo</p>
+
+
+
+<div class="codigo">
+<p><code>&lt;frameset cols="195,*"
+framespacing="10" frameborder="3"&gt;</code></p>
+
+
+
+<p><code>&lt;frame src="indice.htm" name="izquierda"
+bordercolor="blue"
+scrolling="no" marginwidth="10" marginheight="10"
+title="Men&uacute; con el &iacute;ndice general del conjunto de
+marcos"&gt;</code></p>
+
+
+
+<p><code>&lt;frame src="contenido.htm" name="derecha"
+scrolling="yes"
+marginwidth="10" marginheight="10" title="Zona principal para la
+presentaci&oacute;n del contenido del conjunto de marcos"&gt;</code></p>
+
+
+
+<p><code>&lt;/frameset&gt;</code> </p>
+
+
+
+</div>
+
+
+
+<div class="estilo">
+<p>Lo que se acaba de comentar
+podr&iacute;a ser suficiente para crear una p&aacute;gina
+basada en marcos, pero lo ideal es crear una p&aacute;gina
+siguiendo el esquema siguiente, en el que se indica la estructura de
+los marcos pero se ofrece, a trav&eacute;s de la etiqueta <code>noframes</code>,
+una alternativa para el caso de navegadores que no puedan mostrarlos y,
+adem&aacute;s, se incluye un t&iacute;tulo en la cabecera.<br>
+
+
+
+<code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01
+Frameset//EN"<br>
+
+
+
+<span class="indentado25">"http://www.w3.org/TR/html4/frameset.dtd"&gt;</span></code><br>
+
+
+
+<code>&lt;html&gt;</code></p>
+
+
+
+<p><code>&lt;head&gt;</code></p>
+
+
+
+<p class="indentado25"><code>&lt;title&gt;T&iacute;tulo
+que se ver&aacute; de forma
+constante aunque cambien los marcos&lt;/title&gt;<br>
+
+
+
+&lt;meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1"&gt;</code></p>
+
+
+
+<p><code>&lt;/head&gt;</code></p>
+
+
+
+<p><code><span class="indentado25">&lt;frameset
+cols="80,*" frameborder="no" border="0"
+framespacing="0"&gt; </span></code></p>
+
+
+
+<p class="indentado50"><code>&lt;frame
+src="indice.htm" name="izquierda" bordercolor="blue"
+scrolling="no" noresize marginwidth="10" marginheight="10"
+title="Men&uacute;"&gt;</code></p>
+
+
+
+<p class="indentado50"><code>&lt;frame
+src="contenido.htm" name="derecha" frameborder="0"
+scrolling="yes" marginwidth="10" marginheight="10" title="Zona de
+contenidos"&gt;</code></p>
+
+
+
+<p class="indentado25"><code>&lt;/frameset&gt;</code></p>
+
+
+
+<p><code>&lt;noframes&gt;</code></p>
+
+
+
+<p class="indentado25"><code>&lt;body&gt;</code></p>
+
+
+
+<p class="indentado50"><code>Aqu&iacute;
+ir&iacute;a un mensaje indicando que la
+p&aacute;gina est&aacute; creada con marcos y el navegador no
+los soporta o, incluso, el contenido de una p&aacute;gina
+alternativa para el caso de los navegadores incapaces de mostrar los
+marcos o para garantizar la accesibilidad a los navegantes con
+discapacidades.</code></p>
+
+
+
+<p class="indentado25"><code>&lt;/body&gt;</code></p>
+
+
+
+<p><code>&lt;/noframes&gt;</code></p>
+
+
+
+<p><code>&lt;/html&gt;</code></p>
+
+
+
+</div>
+
+
+
+<div class="practicas"> <img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 71" title="Actividad 71" src="../imagenes/numeracion/setentayuno.gif">
+<p>&nbsp; Utiliza N|VU para crear dos p&aacute;ginas
+que&nbsp; mostrar&aacute;s dentro de&nbsp;una
+estructura de marcos. Una de ellas deber&aacute; contener un
+posible &iacute;ndice con los t&iacute;tulos de diferentes
+ep&iacute;grafes que se ir&aacute;n mostrando en la zona
+principal. La otra puede ser una p&aacute;gina que incluya alguna
+ilustraci&oacute;n y un texto explicativo de los contenidos que se
+ir&aacute;n abordando. Gu&aacute;rdalas con los nombres&nbsp;<strong>indice.html</strong> y&nbsp;<strong>contenidos.html</strong> respectivamente.</p>
+
+
+
+<ul>
+
+
+
+  <li>Si est&aacute;s trabajando con Windows abre Notepad++ y
+selecciona la opci&oacute;n de men&uacute; <span class="refmenu">lenguaje&nbsp;</span><img class="refmenu" src="../imagenes/flechamenu.png" height="13" width="14"><span class="refmenu">
+html</span>. Si no has instalado Notepad++ podr&iacute;as
+utilizar el propio bloc de notas. En caso de trabajar con Linux puedes
+utilizar cualquiera de los editores de texto que tengas disponible
+seg&uacute;n la distribuci&oacute;n que est&eacute;s
+utilizando.</li>
+
+
+
+  <li>Introduce los c&oacute;digos necesariors para crear la
+base del documento con marcos. Ten en cuenta que es importante que
+incluyas como primera sentencia del documento la referencia al <acronym title="Document Type Definition=Definici&oacute;n del tipo de documento">DTD</acronym>
+que puedes copiar y pegar desde el ejemplo previo(los dos primeros
+renglones del c&oacute;digo)</li>
+
+
+
+  <li>Dependiendo de c&oacute;mo hayas creado la
+p&aacute;gina con el &iacute;ndice crea la estructura de marcos
+en columnas y llama a los marcos <b>izquierda</b> y <b>derecha</b>
+(si tus contenidos se presentan en forma de lista o, sencillamente uno
+bajo otro) o en filas y ll&aacute;malos <b>arriba </b>
+y <b> abajo </b>(si has puesto los t&iacute;tulos de
+forma que aparezcan en un rengl&oacute;n o en celdas de una tabla
+de una sola fila).</li>
+
+
+
+  <li>Guarda esta estructura b&aacute;sica con el nombre <strong>actividad71.html</strong> y
+abre la p&aacute;gina en el navegador para comprobar si se ven
+correctamente cada p&aacute;gina en la zona de pantalla que le
+corresponde seg&uacute;n la definici&oacute;n de marcos que
+acabas de hacer. e</li>
+
+
+
+  <li>Ajusta la medida de la columna o fila del &iacute;ndice
+de forma que no aparezcan barras de desplazamiento. Utiliza para ello
+una medida absoluta en p&iacute;xeles. La zona de contenidos la
+puedes dejar en tama&ntilde;o libre mediante el signo *</li>
+
+
+
+  <li>Salva la p&aacute;gina y comprueba el resultado.</li>
+
+
+
+</ul>
+
+
+
+<div class="avisos">
+<p><img src="../imagenes/atencion.gif" height="25" width="28">Si, por
+despiste, has guardado las p&aacute;ginas con el &iacute;ndice
+y el contenido en una carpeta diferente de la que has utilizado para
+guardar la definici&oacute;n de los marcos el navegador no
+ser&aacute; capaz de mostrarlas. Aunque no hay inconveniente en que
+guardes las p&aacute;ginas en carpetas diferentes es preferible que
+no aumentes la dificultad&nbsp;oblig&aacute;ndote a escribir rutas
+relativas m&aacute;s complejas. </p>
+<p>De todas maneras recuerda que las carpetas "por debajo" del documento actual habr&aacute; que referenciarlas como <code>subcarpeta/subcarpeta/archivo.html&nbsp;</code>con tantos nombres de subcarpeta como sean necesarios para alcanzar el arvchivo destino. </p>
+<p>En el caso de los archivos que se encuentren "por encima" del
+documento actual en el &aacute;rbol de directorios habr&aacute; que
+llegar a ellos utilizando la notaci&oacute;n <code>../../carpeta/subcarpeta/archivo.html</code>,
+donde los dos puntos indican que se sube un nivel en el &aacute;rbol de
+directorios. En el ejemplo nos habr&iacute;amos movido dos niveles
+hacia arriba, hasta una carpeta que contiene la carpeta en la que
+est&aacute; nuestro archivo actual,&nbsp;y luego habr&iacute;amos
+tenido que ir hacia una carpeta diferente&nbsp;y,&nbsp;dentro de ella,
+a otra subcarpeta para encontrar el archivo de destino. </p>
+</div>
+
+
+
+</div>
+
+
+
+
+<p><br>
+</p>
+
+
+</div>
+</body>
+</html>

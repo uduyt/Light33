@@ -1,0 +1,474 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+
+<html>
+
+<head>
+
+<title>Aplicar hojas de estilo</title>
+
+<link href="../estilo.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" language="JavaScript">
+
+<!-- 
+
+  function cargalogo(nombre) {
+
+   parent.arriba.location.href=nombre;
+
+}
+
+function Abreejemplo (){
+
+	fp=window.open("ejemploestilo.htm","","top=0,left=0;width=450,height=300,scrolling=no");
+
+return true;
+
+}
+
+function Abreejemplo2 (){
+
+	fp=window.open("ejemploestilo2.htm","","top=0,left=0;width=450,height=300,scrolling=no");
+
+return true;
+
+}
+
+// -->
+
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.Estilo4 {color: #993300; font-size: large; }
+.blancoazul {
+	color: #FFFFFF;
+	background-color: #000099;
+	font-weight: bold;
+}
+.Estilo5 {
+	color: #993300;
+}
+-->
+</style>
+</head>
+
+<body onload="cargalogo('t23.htm');" bgcolor="#FFFFFF">
+<p>&nbsp;</p>
+<h2>&iquest;C&oacute;mo aplicar una hoja de estilos? </h2>
+<p>Cuando un navegador lee el contenido de una hoja de estilos utiliza sus especificaciones 
+  para darle forma al documento. Hay tres formas b&aacute;sicas de indicarle al 
+  navegador la utilizaci&oacute;n de una hoja de estilos.</p>
+<h3> Hoja de estilo interna</h3>
+<p>Cuando un estilo es propio de un &uacute;nico documento podr&iacute;a utilizarse 
+  una hoja de estilos interna, mediante la creaci&oacute;n de una secci&oacute;n 
+  &lt;style&gt; dentro de la cabecera del documento. Este es el m&eacute;todo 
+  que se ha utilizado para mostrar los ejemplos particularizados que puedes consultar 
+  en las ventanas emergentes.</p>
+<p>Ten en cuenta que con este tipo de inclusi&oacute;n perdemos de vista una de 
+  las finalidades prioritarias de las hojas de estilo, ya que se mezcla en el 
+  documento html la especificaci&oacute;n de formato con el contenido, aunque 
+  puede ser un primer paso para que compruebes la potencia de las hojas de estilo.</p>
+<p><strong>Note: </strong> Normalmente los navegadores ignoran las etiquetas que 
+  desconocen, por lo que un navegador antiguo que no soporte estilos ignorar&aacute; 
+  el contenido de &lt;style&gt;, pero mostrar&aacute; el contenido de la secci&oacute;n. 
+  Para evitarlo podemos utilzar las etiquetas de comentario de HTML tal como se 
+  muestra en el siguiente fragmento de c&oacute;digo.</p>
+<div class="codigo"> 
+  <p>&lt;head&gt; <br>
+    &lt;style type="text/css"&gt; <br>
+    <span class="Estilo4">&lt;!-- </span><br>
+    hr {color: sienna} <br>
+    p {margin-left: 20px} <br>
+    body {background-image: url("images/back40.gif")} <br>
+    <span class="Estilo4">--&gt; </span><br>
+    &lt;/style&gt;<br>
+    &lt;/head&gt;</p>
+</div>
+<p><a name="ejemplos"></a>A continuaci&oacute;n tienes un ejemplo de c&oacute;digo 
+  para la inclusi&oacute;n de un estilo global en una p&aacute;gina. Puedes ver 
+  el <a href="javascript:void(0)" onclick="Abreejemplo()">resultado</a> en una 
+  ventana independiente. (Ten en cuenta que se pod&iacute;an haber utilizado otras 
+  etiquetas y otras propiedades de las mismas)</p>
+<div class="codigo">&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;title&gt; T&iacute;tulo de la p&aacute;gina &lt;/title&gt;<br>
+  <br>
+  <div style="font-size:130%; color:#993300">&lt;style type="text/css"><br>
+  &lt;!--<br>
+  body {background: black; font-size: 10pt; font-family: Arial,Helvetica,sans-serif; 
+  color: yellow; text-align:justify; margin-left: 0.5in; margin-right: 0.5in} 
+  <br>
+  H1 {background: aqua; font-size: 14pt; font-weight: bold; color: orange} <br>
+  H2 {font-size: 12pt; font-weight: bold; color: white} <br>
+  --> <br>
+  &lt;/style> </div>
+  <br>
+  &lt;/head&gt;<br>
+  &lt;body&gt; <br>
+  Conjunto de etiquetas del cuerpo de la p&aacute;gina<br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt; </div>
+<p>Como has visto en el ejemplo, la sintaxis se ha modificado al incluir el estilo 
+  en la cabecera:</p>
+<ul>
+  <li>Las caracter&iacute;sticas van encerradas entre las etiquetas &lt;style 
+    type=&quot;text/css&quot;&gt; y &lt;/style&gt;</li>
+  <li>Aunque no es obligatorio conviene iniciar la definici&oacute;n con una etiqueta 
+    de comentario: &lt;!-- y, antes de cerrar el estilo, poner la de cierre de 
+    comentario --&gt; para evitar que los navegadores antiguos puedan presentar 
+    la definici&oacute;n del estilo como si fuera un texto normal.</li>
+  <li>Las propiedades atribuidas a cada elemento van encerradas entre { } y se 
+    escriben seg&uacute;n el esquema propiedad, dos puntos, valor y punto y coma 
+    para separar de la siguiente propiedad.</li>
+</ul>
+<p class="avisos"><img src="../imagenes/atencion.gif" width="28" height="25" align="left">La 
+  inclusi&oacute;n del estilo se har&aacute; despu&eacute;s de la etiqueta de 
+  cierre del t&iacute;tulo &lt;/title&gt;<br>
+</p>
+<div class="practicas"><a name="vuelta"></a><img src="../imagenes/cuarentayocho.gif" width="29" height="29" align="left"> 
+  <p>&nbsp;Crea una p&aacute;gina con varios p&aacute;rrafos de texto. Puedes 
+    utilizar el mismo <a href="javascript:void(0)" onClick="window.open('prensa.htm','auxiliar','menubar=1,scrollbars=1,top=0,left=0,width=450,height=400')">texto</a> 
+    que usamos en la pr&aacute;ctica 30.</p>
+  <ul>
+    <li>Crea en la cabecera del documento una definici&oacute;n de estilo. Aunque 
+      no conozcas todav&iacute;a los atributos que puedes utilizar puedes aprovechar 
+      los que figuran en el ejemplo.</li>
+    <li>Gu&aacute;rdalo como <b>practica47.htm</b> y comprueba la apariencia en 
+      el navegador.</li>
+    <li>Modifica un grupo de p&aacute;rrafos utilizando la etiqueta <b>div </b>para 
+      que se presenten en color azul, e incrusta entre ellos un grupo de palabras 
+      que aparezcan en color rojo.</li>
+    <li>Guarda y comprueba el resultado.</li>
+    <li>Modifica el estilo de la cabecera para que todo el texto de la p&aacute;gina 
+      se presente de color verde (green).</li>
+    <li>Guarda y comprueba el resultado.</li>
+  </ul>
+</div>
+<h3>&nbsp;</h3>
+<p></p>
+<h3>Hoja de estilos externa</h3>
+<p>Aunque iniciamos la exposici&oacute;n de posibilidades con las hojas de estilo 
+  internas realmente lo correcto habr&iacute;a sido iniciarla con las hojas de 
+  estilo externas, ya que &eacute;sta es la forma ideal de aplicar un estilo a 
+  varias p&aacute;ginas de forma simult&aacute;nea. De hecho deber&iacute;a ser 
+  la forma prioritaria puesto que permite separar claramente el contenido y la 
+  estructura, que ir&aacute;n en el documento html, del formato que se aplicar&aacute; 
+  a partir de la hoja de estilos.</p>
+<p>Para hacerlo habr&aacute; que utilizar en cada documento la etiqueta &lt;link&gt; 
+  situada en la cabecera del documento, despu&eacute;s de la etiqueta &lt;title&gt;</p>
+<div class="codigo">&lt;head&gt; 
+  <p></p>
+  <p>&lt;title&gt;p&aacute;gina para mostrar la situaci&oacute;n de los estilos&lt;title&gt;</p>
+  <p>&lt;link rel="stylesheet" type="text/css" href="miestilo.css"&gt; </p>
+  <p>&lt;/head&gt; </div>
+<p>Gracias a este enlace el navegador leer&aacute; las especificaciones de la 
+  hoja de estilos y dar&aacute; formato al contenido de acuerdo a ellas. </p>
+<p>As&iacute; pues hay que seguir dos pasos:</p>
+<ol>
+  <li>Crear un archivo de texto con cualquier editor de texto plano, salv&aacute;ndola 
+    en formato texto con la extensi&oacute;n que se desee, aunque habitualmente 
+    suele utilizarse la extensi&oacute;n .css. En dicho archivo especificaremos 
+    el contenido de las diferentes normas de estilo utilizando la sintaxis b&aacute;sica 
+    <strong>selector {propiedad:valor}</strong></li>
+  <li>Enlazar cada p&aacute;gina a la que queramos aplicarle el estilo con el 
+    archivo creado para que extraiga de &eacute;l las caracter&iacute;sticas. 
+  </li>
+</ol>
+<div class="codigo"> 
+  <p>Para crear un archivo de definiciones que recogiera las caracter&iacute;sticas 
+    del ejemplo anterior escribir&iacute;amos: </p>
+  <p style="font-size:1.3em"><a name="ejemplo2"></a>body {background: black; font-size: 
+    10pt; font-family: Arial,Helvetica,sans-serif; color: yellow; text-align:justify; 
+    margin-left: 0.5in; margin-right: 0.5in} <br>
+    H1 {background: aqua; font-size: 14pt; font-weight: bold; color: orange} <br>
+    H2 {font-size: 12pt; font-weight: bold; color: white}</p>
+  <p ><img src="../imagenes/atencion.gif" width="28" height="25" align="left">Observa 
+    que el archivo no incluye ninguna etiqueta en el formato habitual. Se trata 
+    simplemente de un arcchivo de texto con las propiedades atribuidas a cada 
+    elemento.<br>
+    <br>
+    Una vez definidas las propiedades guardaremos el archivo en formato texto 
+    con el nombre que queramos y la <span style="font-size:1.3em">extensi&oacute;n 
+    css. </span>Por ejemplo, estilodeprueba.css</p>
+  <p >El paso 2 es incluir en la cabecera de la p&aacute;gina, detr&aacute;s de 
+    la etiqueta &lt;/title&gt; la etiqueta<span style="font-size:1.3em; font-weight:bold"> 
+    <b>&lt;link rel=&quot;stylesheet&quot; href=&quot;estilodeprueba.css&quot; 
+    type=&quot;text/css&quot;&gt;</b> <br>
+    <br>
+    </span>El siguiente <a href="javascript:void(0)" onclick="Abreejemplo2()">ejemplo</a> 
+    presenta la misma apariencia que vimos al aplicar el estilo en la p&aacute;gina, 
+    pero est&aacute; creado utilizando este m&eacute;todo.<br>
+  </p>
+</div>
+<p> 
+<div class="practicas"><img src="../imagenes/cuarentaynueve.gif" width="29" height="29" align="left"> 
+  <ul>
+    <li>Abre el bloc de notas y crea un archivo de hoja de estilo. (Puedes copiar 
+      la definici&oacute;n que se muestra en el ejemplo)</li>
+    <li>Guarda el archivo con el nombre <b>primerestilo.css</b> (Es importante 
+      que si est&aacute;s trabajando con el bloc de notas de Windows, en la caja 
+      &quot;Guardar como archivos de tipo&quot; tengas marcada la opci&oacute;n 
+      <b>Todos los archivos</b> y no Documentos de texto)</li>
+    <li>Abre el archivo <b>practica47.htm</b> y elimina de la cabecera la definici&oacute;n 
+      de estilos que hab&iacute;as creado.</li>
+    <li>Introduce ahora el enlace al archivo primerestilo.css siguiendo la sintaxis 
+      que se ha indicado </li>
+    <li>Guarda como <b>practica48.htm</b> y comprueba el resultado en el navegador.</li>
+    <li>Modifica alguna caracter&iacute;stica en el archivo primerestilo.css y 
+      recarga tu p&aacute;gina para comprobar los resultados.</li>
+  </ul>
+</div>
+<p>&nbsp;</p>
+<h3>Combinar hojas de estilo externas en una nueva</h3>
+<p>Si ya tenemos definida una hoja de estilos y deseamos reutilizarla a&ntilde;adiendo 
+  algunas modificaciones podemos crear una nueva hoja de estilos en la que importemos 
+  el contenido de la que ya ten&iacute;amos y a&ntilde;adamos las nuevas reglas. 
+  Puede ser por ejemplo, el caso de un centro en el que se utilizara una hoja 
+  de estilos gen&eacute;rica y cada nivel o departamento aprovechara esas especificaciones 
+  y a&ntilde;adiera las suyas propias para personalizar una zona de la web.</p>
+<div class="codigo"> 
+  <p>Para importar una hoja de estilos ya creada lo debemos indicar en la primera 
+    l&iacute;nea de la nueva hoja (o en la primera y sucesivas si estamos importando 
+    varias hojas) utilizando la sintaxis:</p>
+  <div style="padding:0 2em; font-size:1.3em; border:dotted thin #006699"> @import 
+    url(colegio.css);<br>
+    /* A continuaci&oacute;n a&ntilde;adimos los selectores, clases y pseudoclases 
+    que modificamos con sus propiedades correspondientes */ <br>
+    h1 { font-style : italic } <br>
+    ...
+    <p></p>
+  </div>
+  Lógicamente, al definir la url en la que est&aacute; situada la hoja de estilos 
+  habr&aacute; que utilizar la ruta relativa dentro del sitio web. </div>
+<h3>Estilos en l&iacute;nea </h3>
+<p>Llamamos estilo en l&iacute;nea al que se aplica directamente sobre un elemento 
+  al crear el c&oacute;digo HTML. Evidentemente es el procedimiento menos recomendable, 
+  ya que perdemos practicamente todas las ventajas ofrecidas por las hojas de 
+  estilo al mezclar el contenido y la presentaci&oacute;n. La &uacute;nica ventaja 
+  que puede presentar respecto al c&oacute;digo HTML es que permite la especificaci&oacute;n 
+  de un abanico mucho mayor de propiedades. </p>
+<p>Para usar un estilo en l&iacute;nea var&iacute;a ligeramente la sintaxis que 
+  hemos utilizado hasta ahora, ya que a&ntilde;adimos style como atributo de la 
+  etiqueta que deseamos modificar y las propiedades y valores se encierran entre 
+  comillas en lugar de entre llaves.</p>
+<ul>
+  <li>Tras un espacio a&ntilde;adimos a la etiqueta b&aacute;sica la palabra style 
+    y el signo igual.</li>
+  <li>Abrimos comillas para especificar las caracter&iacute;sticas.</li>
+  <li>Cada caracter&iacute;stica se escribe seguida de dos puntos y el valor que 
+    le adjudicamos. </li>
+  <li>Separamos las caracter&iacute;sticas con punto y coma.</li>
+  <li>Cerramos las comillas al acabar la definici&oacute;n y ponemos el &aacute;ngulo 
+    de cierre de la etiqueta.</li>
+</ul>
+<p> <a href="javascript:void(0)" onclick=window.open('muestra6b.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=720,height=440')>Ver 
+  ejemplo </a></p>
+<p>&iquest;Pueden enlazarse varias hojas de estilos con la misma 
+  p&aacute;gina?</p>
+<p> La respuesta es, sencillamente, s&iacute;. Basta con repetir la etiqueta link 
+  tal como se ha visto poniendo en cada caso el nombre de la hoja con la que se 
+  quiere enlazar. Ahora bien, habr&aacute; que tener en cuenta que si hay contradicci&oacute;n 
+  entre las definiciones de alg&uacute;n elemento, prevalecer&aacute; la hoja 
+  a la que se haya nombrado en &uacute;ltimo lugar al crear los enlaces. Adem&aacute;s, 
+  sobre las hojas enlazadas tendr&aacute;n prioridad las hojas de estilo internas 
+  y, sobre ellas, los estilo en l&iacute;nea aplicados a alg&uacute;n elemento 
+  particular. </p>
+<p> Por ejemplo, si tenemos nuestra p&aacute;gina enlazada con la hoja de estilos 
+  gen&eacute;rica de la web del centro, a continuaci&oacute;n la hemos enlazado 
+  con una hoja de estilos que se est&aacute; usando para el departamento, tenemos 
+  una hoja de estilos interna definida sobre la p&aacute;gina y hay alg&uacute;n 
+  elemento al que le hemos aplicado un estilo en l&iacute;nea pasar&iacute;a algo 
+  similar a lo siguiente:</p>
+<p>La hoja de estilos del centro tiene definidas las propiedades siguientes para 
+  el selector h3: </p>
+<p style="text-indent:2em"> h3 { color: red; text-align: left; font-size: 10pt 
+  } </p>
+<p>La hoja del departamento tiene sin embargo definido el selector h3 de la siguiente 
+  forma: </p>
+<p style="text-indent:2em">h3 { text-align: right} </p>
+<p>La hoja de estilos interna especifica:</p>
+<p style="text-indent:2em">h3 {color: green; font-size: 20pt}</p>
+<p>Y hemos especificado en l&iacute;nea sobre una etiqueta h3</p>
+<p style="text-indent:2em">&lt;h3 style=&quot;font-size: 10pt} </p>
+<p>El resultado final ser&aacute;: </p>
+<ul>
+  <li>color verde porque lo especifica la hoja de estilos interna, </li>
+  <li>alineaci&oacute;n derecha porque lo especifica la hoja del departamento 
+    que es la &uacute;ltima enlazada, </li>
+  <li>tama&ntilde;o 10 puntos porque lo indica el estilo en l&iacute;nea (no por 
+    la indicaci&oacute;n en la hoja de estilos del centro que hab&iacute;a sido 
+    anulada por la interna) </li>
+</ul>
+<p>Aplicar estilos a elementos o secciones de un documento</p>
+<p>Si en vez de a un elemento quiero aplicarle un estilo a un grupo de elementos 
+  puedo englobar dichos elementos entre las etiquetas &lt;div&gt; y &lt;/div&gt; 
+  y aplicar all&iacute; el estilo que ten&iacute;amos definido como clase, tal 
+  como se ve en el siguiente ejemplo. (o bien mediante un estilo en l&iacute;nea) 
+</p>
+<table width="630" cellspacing="10" cellpadding="0">
+  <tr> 
+    <th width="59%">Este c&oacute;digo...</th>
+    <th width="41%">...se ve as&iacute;</th>
+  </tr>
+  <tr> 
+    <td width="59%"> <p class="codigo2">&lt;div class = &quot;azul&quot;&gt; <br>
+        &lt;p&gt; Primer p&aacute;rrafo &lt;/p&gt;<br>
+        &lt;ul&gt;<br>
+        &lt;li&gt;Elemento de lista&lt;/li&gt;<br>
+        &lt;li&gt;Otro elemento&lt;/li&gt;<br>
+        &lt;/ul&gt;<br>
+        &lt;p&gt;Otro p&aacute;rrafo&lt;/p&gt;<br>
+        &lt;/div&gt;</p></td>
+    <td width="41%"> <div class="azul"> Primer párrafo 
+        <ul>
+          <li>Elemento de lista</li>
+          <li>Otro elemento</li>
+        </ul>
+        Otro párrafo </div></td>
+  </tr>
+</table>
+<p>Puedo intercalar, en una zona delimitada por la etiqueta &lt;div&gt; alg&uacute;n 
+  estilo espec&iacute;fico aplicado a un elemento en concreto, como se muestra 
+  a continuaci&oacute;n. En este caso se ha utilizado un estilo en l&iacute;nea 
+  para modificar el selector &lt;p&gt; </p>
+<table width="630" cellspacing="10" cellpadding="0">
+  <tr> 
+    <th width="59%">Este c&oacute;digo...</th>
+    <th width="41%">...se ve as&iacute;</th>
+  </tr>
+  <tr> 
+    <td width="59%"> <p class="codigo2">&lt;div class = &quot;azul&quot;&gt; <br>
+        &lt;p&gt; Primer p&aacute;rrafo de la zona azul&lt;/p&gt;<br>
+        &lt;p style = &quot;color: red&quot;&gt; Este p&aacute;rrafo va en rojo 
+        en medio de una zona azul&lt;/p&gt; <br>
+        &lt;p&gt;Otro p&aacute;rrafo de la zona azul&lt;/p&gt;<br>
+        &lt;/div&gt;</p></td>
+    <td width="41%"> <div class="azul"> Primer párrafo de la zona azul 
+        <p style = "color: red">Este p&aacute;rrafo va en rojo en medio de una 
+          zona azul</p>
+        Otro p&aacute;rrafo de la zona azul<br>
+      </div></td>
+  </tr>
+</table>
+<p>Si lo que pretendo es aplicar el estilo a una zona menor que la correspondiente 
+  a un elemento en bloque, por ejemplo, una palabra dentro de un p&aacute;rrafo 
+  utilizar&eacute; la etiqueta &lt;span&gt; y su cierre &lt;/span&gt; </p>
+<table width="630" cellspacing="10" cellpadding="0">
+  <tr> 
+    <th width="67%">Este c&oacute;digo...</th>
+    <th width="33%">...se ve as&iacute;</th>
+  </tr>
+  <tr> 
+    <td width="67%"> <p class="codigo2">&lt;p&gt; En este p&aacute;rrafo se&ntilde;alo 
+        &lt;span style=&quot;font-size:16px; font-weight: bold; color:orange&quot;&gt; 
+        esta&lt;/span&gt; palabra en tama&ntilde;o de 16 p&iacute;xeles, en negrita 
+        y de color naranja&lt;/p&gt;</p></td>
+    <td width="33%"> <p> En este párrafo señalo <span style="font-size:16px; font-weight:bold;  color:orange">esta</span> 
+        palabra en tamaño de 16 píxeles, en negrita y de color naranja</p></td>
+  </tr>
+</table>
+<div class="avisos"> 
+  <p><img src="../imagenes/atencion.gif" width="28" height="25" align="left">Recuerda 
+    que las hojas enlazadas figuran en el &uacute;ltimo lugar de prioridad y que, 
+    sobre ellas se superpondr&aacute;n la definici&oacute;n de estilo que hagamos 
+    sobre la propia p&aacute;gina y, en el primer lugar de prioridad, las modificaciones 
+    que realicemos para una etiqueta en particular.</p>
+  <p>Adem&aacute;s, a este orden de preferencia hay que a&ntilde;adirle que, si 
+    el usuario tiene especificado un estilo en su navegador este tendr&aacute; 
+    preferencia sobre los estilos creados por el autor cuando haya contradicci&oacute;n. 
+    Por otra parte, el programa navegador (al que se denomina tambi&eacute;n Agente 
+    de usuario) puede imponer su estilo si as&iacute; lo tiene definido en las 
+    configuraciones. </p>
+</div>
+<p>Diferentes medios... diferentes estilos</p>
+<p>Probablemente recuerdes que, cuando se habl&oacute; de los colores del texto 
+  se recomendaba tener en cuenta el destino final que pretend&iacute;amos adjudicarle 
+  a una p&aacute;gina web. <span class="blancoazul">Escribir en blanco sobre fondo 
+  azul marino es una combinaci&oacute;n elegante y muy relajada para la vista 
+  cuando visualizamos la p&aacute;gina en pantalla</span>, pero si queremos que 
+  el contenido se imprima... el color blanco del texto va a dejar poca huella 
+  sobre el folio en blanco.</p>
+<p>Las hojas de estilo vienen en nuestra ayuda para casos similares a &eacute;ste, 
+  permiti&eacute;ndonos especificar que un estilo tenga una apariencia cuando 
+  el documento se muestre en una pantalla y otra diferente cuando se imprima. 
+  Para hacerlo tendremos que recurrir a la directiva <strong>@media</strong>. 
+  Tanto si se trata de una hoja de estilos externa, como interna o con estilos 
+  en l&iacute;nea, cuando incluimos una regla @media las propiedades que se definan 
+  a continuaci&oacute;n se aplicar&aacute;n cuando el documento se muestre en 
+  el tipo de medio especificado. La aplicaci&oacute;n m&aacute;s directa la encontraremos 
+  al definir estilos para <strong>impresi&oacute;n</strong> (<strong>@media print</strong>) 
+  y para <strong>pantalla</strong> (<strong>@media screen</strong>)</p>
+<div class="codigo2" style="font-size:1.3em"> 
+  <p>&lt;style type=&quot;text/css&quot;&gt;<br>
+    &lt;!--<br>
+    /* Definimos las reglas de estilo de la forma habitual.*/<br>
+    <br>
+    <br>
+    body { background-color: #000099; }<br>
+    p { font-family: Arial, Helvetica, sans-serif; font-size: 14pt; color: #FFFFFF;}<br>
+  </p>
+  <p>/*Y ahora indicamos las caracter&iacute;sticas para imprimir*/ <br>
+    <span class="Estilo5">@media print { </span><br>
+    body { background-color: #FFFFFF; }<br>
+    p { font-family: &quot;Times New Roman&quot;, Times, serif; font-size: 10pt; 
+    color: #000000; }<br>
+    <span class="Estilo5">}</span></p>
+  <p>/*Podr&iacute;amos seguir especificando otros selectores o clases de aplicaci&oacute;n 
+    general*/ <br>
+    --&gt;<br>
+    &lt;/style&gt;</p>
+  <p> <a href="javascript:void(0)" onclick=window.open('muestra26.htm','','statusbar=0,menubar=1,toolbar=0,top=0,left=0,width=690,height=250')>Ver 
+    ejemplo</a></p>
+</div>
+<div class="avisos"> 
+  <p><img src="../imagenes/atencion.gif" width="28" height="25" align="left">Cuando 
+    creamos estilos para un tipo de medio la sintaxis se modifica como si cre&aacute;ramos 
+    una especie de &quot;superselector&quot;: todos los selectores aplicables 
+    a ese medio se encierran entre dos llaves precedidas por la regla @media y 
+    el tipo de medio, tal como se ha marcado en la anterior muestra de c&oacute;digo. 
+  </p>
+  <p>No hemos especificado @media screen porque estamos trabajando normalmente 
+    para pantalla y al no haber especificado nada los estilos se aplicar&aacute;n 
+    en el dispositivo que muestre la p&aacute;gina. (realmente lo &uacute;nico 
+    que necesit&aacute;bamos era diferenciar la presentaci&oacute;n del color 
+    de fondo y el tipo de letra cuando se imprimiera) </p>
+</div>
+<p>Pero no solo podemos especificar la pantalla y la impresi&oacute;n como medios 
+  para los que especificar estilos. El listado completo de medios actualmente 
+  establecidos por el W3C es el siguiente:</p>
+<dl>
+  <dt>all </dt>
+  <dd>Cualquier tipo de dispositivo . </dd>
+  <dt>aural </dt>
+  <dd>Referido a navegadores para personas con deficiencias visuales que utilizan 
+    sintetizadores de voz para realizar una lectura de los contenidos.</dd>
+  <dt>braille </dt>
+  <dd>Dispositivos tactiles basados en lenguaje braille. </dd>
+  <dt>embossed </dt>
+  <dd>Impresoras en braille. </dd>
+  <dt>handheld </dt>
+  <dd>Dispositivos port&aacute;tiles, caracterizados por una pantalla peque&ntilde;a, 
+    generalmente monocromos y con limitado ancho de banda. </dd>
+  <dt>print </dt>
+  <dd>Impresoras o documentos mostrados en pantalla en forma de visualizaci&oacute;n 
+    previa a la impresi&oacute;n.</dd>
+  <dt>projection </dt>
+  <dd>Presentaciones proyectadas o impresi&oacute;n de transparencias.</dd>
+  <dt>screen </dt>
+  <dd>Referido, fundamentalmente a pantallas de ordenador.</dd>
+  <dt>tty </dt>
+  <dd>Utilizado para referirse a medios que presentan la informaci&oacute;n con 
+    un tama&ntilde;o fijo de letra, como por ejemplo los teletipos.</dd>
+  <dt>tv </dt>
+  <dd>Referido a dispositivos de tipo televisi&oacute;n, caracterizados por una 
+    menor resoluci&oacute;n que las pantallas de ordenador, pantallas con capacidad 
+    limitada de desplazamiento y presencia de sonido.</dd>
+</dl>
+<p>Cada uno de estos medios puede disponer de algunas propiedades especificas, 
+  que se pueden consultar en la documentaci&oacute;n del W3C. Se puede consultar, 
+  por ejemplo, la traducci&oacute;n de las especificaciones del W3C para <a href="http://www.sidar.org/recur/desdi/traduc/es/css/aural.html" target="_blank">hojas 
+  de estilo auditivas</a> que es una de las mas desarrolladas.</p>
+</body>
+</html>

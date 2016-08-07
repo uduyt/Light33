@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+
+  <title>Muestra de estilos</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <link href="muestrasdeestilos.css" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+<!--
+p { 
+color: blue; 
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+} 
+-->
+  </style>
+  <script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+  </script>
+</head>
+
+
+<body>
+<div class="zonaizq">
+  
+<div class="codigo">  <br>
+<code>
+  p { <br>
+
+  text-align: center;<br>
+
+  color: blue; <br>
+
+  font-family: Arial, Helvetica, sans-serif;<br>
+
+  }</code> <br>
+
+ <br>
+
+</div>
+
+<div class="flotder"><a href="javascript:void(0)" onclick="MM_showHideLayers('derecha','','show')">Visualizar el formato resultante <img src="../imagenes/flechamenu.png" align="middle" border="0" height="13" width="14">
+</a> </div>
+
+</div>
+
+
+<div class="zonadcha" id="derecha">
+  
+<p>Aplicando las caracter&iacute;sticas definidas en el estilo
+cualquier p&aacute;rrafo se mostrar&iacute;a centrado...en color
+azul...con una fuente de "palo seco".</p>
+
+  
+<p>Este es un nuevo p&aacute;rrafo</p>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Recuperar una estructura de marcos o salir de ella</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+</head>
+
+
+<body>
+
+<h2>Recuperar una estructura de marcos o salir de ella</h2>
+
+<p>Puede ocurrir que un buscador haya indexado una
+p&aacute;gina de nuestro sitio que est&aacute; incluida dentro
+de una estructura de marcos. Si un navegante utilizara ese enlace para
+cargar la p&aacute;gina recuperar&iacute;a su contenido, pero
+lo m&aacute;s probable es que, al haber perdido el resto de las
+p&aacute;ginas que compon&iacute;an la estructura, hayamos
+perdido el marco en el que aparec&iacute;an los enlaces de
+navegaci&oacute;n, por lo que la p&aacute;gina habr&aacute;
+perdido una parte importante de su funcionalidad.</p>
+
+<br>
+
+<div class="codigo">
+<p>En la situaci&oacute;n que se ha planteado nos interesa
+recuperar la estructura original para lo cual recurriremos a un simple
+c&oacute;digo javascript que insertaremos en la zona
+&lt;head&gt; de nuestra p&aacute;gina.</p>
+
+<code>&lt;script
+language=
+"JavaScript" type=
+"text/javascript"&gt;</code><br>
+
+<code>&lt;!--</code><br>
+
+<code>if (parent.location.href==location.href) {</code><br>
+
+<code>parent.location.href="mi_p&aacute;gina_de_marcos.htm";</code><br>
+
+<code>}</code><br>
+
+<code>//--&gt;</code><br>
+
+<code>&lt;/
+script&gt;
+</code>
+<p>Aunque en este curso no abordemos Javascript veamos una
+explicaci&oacute;n de lo que hace este script:</p>
+
+<ol>
+
+  <li>Comprueba si la p&aacute;gina "padre" es la propia
+p&aacute;gina que se est&aacute; comprobando...</li>
+
+  <li>En caso de ser as&iacute; eso significa que la
+p&aacute;gina no est&aacute; dentro de la estructura de marcos
+correcta y recarga la ventana de forma que la p&aacute;gina "padre"
+de la actual sea la que contiene la definici&oacute;n de los marcos.</li>
+
+</ol>
+
+</div>
+<div class="practicas">
+<p>Descomprime el archivo <a title="Archivo comprimido que incluye las p&aacute;ginas para este ejercicio" href="houdini.zip">houdini.zip</a>: comprobar&aacute;s que incluye un archivo <em>frameset.htm</em> que define una estructura de marcos.</p>
+<p>Abre cualquiera de los archivos <em>maina.htm</em>, <em>mainb.htm</em> o <em>mainc.htm</em> y comprueba que se abren como p&aacute;ginas individuales.</p>
+<p>Modifica los archivos <em>maina.htm</em>, <em>mainb.htm</em> y <em>mainc.htm</em> para que, cuando intentes abrirlos de forma individual actualicen la ventana cargando la estructura de marcos completa</p>
+</div>
+
+<h2>Escapar de una estructura de marcos</h2>
+
+Otra situaci&oacute;n que puede darse es que alguien que tiene una
+p&aacute;gina creada con marcos haya creado un enlace a nuestras
+p&aacute;ginas que tambi&eacute;n est&aacute;n creadas con
+marcos. En ese caso lo que ocurrir&iacute;a es que nuestra
+estructura quedar&iacute;a "presa" dentro de la zona desde la que
+se la llama, con la consiguiente p&eacute;rdida de espacio para
+mostrar correctamente la informaci&oacute;n.<br>
+
+<br>
+
+En este caso lo que nos interesa es "liberar" nuestras
+p&aacute;ginas con marcos para que puedan ocupar toda la ventana y
+no solo la zona que se les adjudica al encerrarlas en una estructura
+superior
+
+<br>
+
+<div class="codigo">
+<p>Mientras en el caso anterior el script iba en las p&aacute;ginas de
+contenidos, lo que nos interesa en&nbsp;este caso es que el
+c&oacute;digo vaya en la propia p&aacute;gina que define los
+marcos. El c&oacute;digo podr&iacute;a ser el siguiente:</p>
+
+<p><code>&lt;script language="JavaScript"
+type="text/javascript"&gt;<br>
+
+&lt;!--<br>
+
+<span class="indentado25">if (parent != self) {</span><br class="indentado25">
+
+<span class="indentado25">top.location.href="mi_p&aacute;gina_de_marcos.htm";</span><br class="indentado25">
+
+<span class="indentado25">}</span><br>
+
+//--&gt;<br>
+
+&lt;/script&gt;</code></p>
+
+<p>Lo que hace el script es:</p>
+
+<ol>
+
+  <li>Comprueba si el contenedor padre es diferente de la propia
+p&aacute;gina con la definici&oacute;n de los marcos.</li>
+
+  <li>Si&nbsp;es as&iacute; se debe a que la
+p&aacute;gina se encuentra encerrada y lo que hace es recargar la
+ventana poni&eacute;ndose a s&iacute; misma como contenedor
+principal por encima de todo.</li>
+
+</ol>
+
+</div>
+<br>
+<div class="practicas">
+<p>En el archivo <a title="Archivo comprimido que incluye las p&aacute;ginas para este ejercicio" href="houdini.zip">houdini.zip</a> encontrar&aacute;s tambi&eacute;n un archivo llamado <em>frameset2.htm</em> que define una estructura de marcos, haciendo que en su zona principal se cargue el archivo&nbsp;<em>frameset.htm</em> que ya hemos visto que es, a su vez, una estructura de marcos. Compru&eacute;balo en tu navegador.</p>
+<p>Modifica el archivo&nbsp;<em>frameset.htm </em>para evitar que se pueda ver encerrado en una estructura de marcos.&nbsp;</p>
+<p>Comprueba que todo funciona correctamente abriendo en el navegador el archivo<em> frameset2.htm.</em> Si todo ha ido bien deber&iacute;a haber desaparecido el men&uacute; con fondo amarillo y mostrarse s&oacute;lo el archivo <em>frameset.htm</em> (el fondo del&nbsp;men&uacute; es de color ci&aacute;n)</p>
+</div>
+<br>
+
+</body>
+</html>

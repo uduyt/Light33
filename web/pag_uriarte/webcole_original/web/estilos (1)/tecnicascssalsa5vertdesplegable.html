@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Men&uacute; desplegable vertical con CSS</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <script type="text/javascript">
+<!--
+window.onload=mostrarsubmenu;
+function mostrarsubmenu(id) {
+var d = document.getElementById(id);
+for (var i = 1; i<=10; i++) {
+if (document.getElementById('smenu'+i)) {document.getElementById('smenu'+i).style.display='none';}
+}
+if (d) {d.style.display='block';}
+}
+//-->
+  </script>
+  <style type="text/css">
+/* CSS base procedente de los tutoriales de css.alsacreations.com */
+<!-- body {
+margin: 0;
+padding: 0;
+background: white;
+font: 80% verdana, arial, sans-serif;
+}
+dl, dt, dd, ul, li {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+#menu {
+position: relative;
+top: 0;
+left: 0;
+float:left;
+}
+#menu {
+width: 15em;
+}
+#menu dt {
+cursor: pointer;
+margin: 2px 0;
+height: 20px;
+line-height: 20px;
+text-align: center;
+font-weight: bold;
+border: 1px solid gray;
+background: #ccc;
+}
+#menu dd {
+border: 1px solid gray;
+}
+#menu li {
+text-align: center;
+background: #fff;
+}
+#menu li a, #menu dt a {
+color: #000;
+text-decoration: none;
+display: block;
+border: 0 none;
+height: 100%;
+}
+#menu dt a {
+text-align:center;
+}
+#menu li a:hover, #menu dt a:hover {
+background: #eee;
+}
+#contenedor {
+position: relative;
+top:0;
+left:0;
+margin-left:15em;
+padding:10px;
+}
+ #localizadormenu{
+   position:fixed;
+     margin:0;
+	 padding:0;
+	    background-color:#D5C18D;
+		height: 1.6em;
+		width: 100%;
+		z-index:11;
+ }
+ 
+ #localizadormenu p{
+   margin-top: 0px;
+   margin-left:2%;
+   font-size:1.2em;
+   font-weight: bold;
+   color:#FFFFFF;
+   }
+  
+    #localizadormenu a{
+z-index:12;
+  color:#373F68;
+font-stretch: ultra-condensed;
+font-weight: bold;}
+
+#localizadormenu a:hover {color: #B5B19A}
+  </style>
+</head>
+
+
+<body>
+
+<div id="localizadormenu"><p>Men&uacute; vertical desplegable<a href="menus.html">&nbsp;&nbsp;&nbsp;&nbsp;(Volver)</a></p></div>
+<div id="contenido">
+
+<dl id="menu">
+
+  <dt onclick="javascript:mostrarsubmenu();"><a href="#" title="Este elemento es un enlace directo que no despliega menú.">Men&uacute;
+1</a></dt>
+
+  <dt onclick="javascript:mostrarsubmenu('smenu2');" title="Haz clic para desplegar el menú de opciones.">Men&uacute;
+2</dt>
+
+  <dd id="smenu2">
+    <ul>
+
+      <li><a href="#">Submen&uacute;
+2.1</a></li>
+
+      <li><a href="#">Submen&uacute;
+2.2</a></li>
+
+      <li><a href="#">Submen&uacute;
+2.3</a></li>
+
+    </ul>
+
+  </dd>
+
+  <dt onclick="javascript:mostrarsubmenu('smenu3');" title="Haz clic para desplegar el menú de opciones.">Men&uacute;
+3</dt>
+
+  <dd id="smenu3">
+    <ul>
+
+      <li><a href="#">Submen&uacute;
+3.1</a></li>
+
+      <li><a href="#">Submen&uacute;
+3.1</a></li>
+
+      <li><a href="#">Submen&uacute;
+3.1</a></li>
+
+      <li><a href="#">Submen&uacute;
+3.1</a></li>
+
+      <li><a href="#">Submen&uacute;
+3.1</a></li>
+
+      <li><a href="#">Submen&uacute;
+3.1</a></li>
+
+    </ul>
+
+  </dd>
+
+  <dt onclick="javascript:mostrarsubmenu('smenu4');" title="Haz clic para desplegar el menú de opciones.">Men&uacute;
+4</dt>
+
+  <dd id="smenu4">
+    <ul>
+
+      <li><a href="#">Submen&uacute;
+4.1</a></li>
+
+      <li><a href="#">Submen&uacute;
+4.1</a></li>
+
+    </ul>
+
+  </dd>
+
+</dl>
+
+<div id="contenedor">
+<p>En este caso nos encontramos con un men&uacute; en el que,
+al pulsar sobre cada una de las opcines nos llevar&aacute;
+al&nbsp; destino especificado o bien abrir&aacute; un
+submen&uacute;. En ambos casos la pulsaci&oacute;n sobre el
+men&uacute; principal cerrar&aacute; el submen&uacute; que
+pudiera estar abierto.&nbsp;</p>
+
+<p>En el ejemplo el primer elemento del men&uacute;
+ser&iacute;a un enlace directo mientras que los otros tres disponen
+de submen&uacute;s desplegables.</p>
+
+<p>Las acciones que se han descrito se apoyan en un <code>javascript</code>
+que se carga autom&aacute;ticamente con la p&aacute;gina y se
+ocupa de realizar la tarea de apertura y cierre de los
+submen&uacute;s.</p>
+
+<p>Las reglas&nbsp;<acronym title="Cascading Style Sheets">CSS</acronym> se encargan de la apariencia de los
+diversos elementos y, para construirlos en el c&oacute;digo&nbsp;<acronym title="HyperText Markup Language">HTML</acronym> se ha utilizado una lista de
+definiciones: cada t&eacute;rmino de definici&oacute;n es un
+&iacute;tem del men&uacute; principal, mientras que el
+submen&uacute; son los datos de la definici&oacute;n que
+est&aacute;n constituidos por una lista que enumera cada uno de los
+submen&uacute;s. Como ejemplo, adem&aacute;s de consultar el
+c&oacute;digo de la p&aacute;gina, tienes a
+continuaci&oacute;n el c&oacute;digo correspondiente al cuarto
+&iacute;tem del men&uacute; principal:</p>
+
+<div class="codigo">&nbsp; <code>&lt;dt
+onclick="javascript:mostrarsubmenu('smenu4');"&gt;Men&amp;uacute;
+4&lt;/dt&gt;<br>
+
+&nbsp; &lt;dd id="smenu4"&gt;<br>
+
+&nbsp;&nbsp;&nbsp; &lt;ul&gt;<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;li&gt;&lt;a
+href="#"&gt;Submen&amp;uacute;
+4.1&lt;/a&gt;&lt;/li&gt;<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;li&gt;&lt;a
+href="#"&gt;Submen&amp;uacute;
+4.1&lt;/a&gt;&lt;/li&gt;<br>
+
+&nbsp;&nbsp;&nbsp; &lt;/ul&gt;<br>
+
+&nbsp; &lt;/dd&gt;<br>
+
+</code>Como puedes ver, el t&eacute;rmino de
+definici&oacute;n contiene una llamada&nbsp;<code>javascript</code> que se activa al
+hacer clic que es la encargada de que se muestre el submen&uacute;.<code></code></div>
+
+<p>Si reflexionamos sobre la estructura que se ha utilizado nos
+damos cuenta de que no es descabellada la utilizaci&oacute;n de una
+lista de definiciones, puesto que desde el punto de vista
+sem&aacute;ntico s&iacute; que se podr&iacute;a interpretar
+un men&uacute; con submen&uacute;s desplegables como tal.</p>
+
+<p>Por la propia apariencia visual del men&uacute; su
+utilizaci&oacute;n
+m&aacute;s habitual ser&aacute; en p&aacute;ginas cuya
+estructura
+est&eacute; basada en marcos, bien sea en marcos puros o en
+marcos
+internos (<code>iframe</code>).</p>
+
+</div>
+</div>
+</body>
+</html>

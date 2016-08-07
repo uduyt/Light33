@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>CSS: propiedades para fuentes</title>
+
+
+  <meta name="author" content="Ra&uacute;l Luna">
+
+  <link href="../nvu2005.css" type="text/css" rel="stylesheet">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;Estilos para fuentes</p>
+
+</div>
+
+<div id="flechadcha">
+<a href="css6.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="css4.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+
+<div id="contenido">
+
+<h2>Fuentes</h2>
+
+<p>A continuaci&oacute;n vamos a ver una serie de propiedades
+que afectan a las fuentes que utilizamos para mostrar el texto y la
+forma de modificarlas mediante estilos.En el editor
+de CSS de N|VU podr&aacute;s acceder a estas propiedades dentro de
+la
+pesta&ntilde;a <span class="refmenu">texto</span>,
+aunque algunas propiedades no est&aacute;n implementadas. </p>
+
+<h3>Estilos de letra</h3>
+
+<p><b>Propiedad:</b> <code>font-style</code></p>
+
+<p><b>Valores:</b> Se puede utilizar normal o italic.
+Permite alternar entre la presentaci&oacute;n entre ambos tipos.
+Existe un tercer tipo oblique pero la mayor&iacute;a de los
+navegadores la muestran igual que la it&aacute;lica</p>
+
+<p class="ejemplo"><b>Ejemplos:</b> <span style="font-style: normal;">Letra normal</span> <span style="font-style: italic;">Letra it&aacute;lica</span>
+<span style="font-style: oblique;">Letra oblicua</span></p>
+
+<h3>Variantes</h3>
+
+<p>Nos permite hacer que la fuente se muestre con todos los
+caracteres en may&uacute;sculas pero en un tama&ntilde;o
+m&aacute;s reducido. Esta propiedad no se incluye en el editor en
+su
+versi&oacute;n actual, por lo que habr&aacute; que introducir
+el
+c&oacute;digo manualmente si se necesita</p>
+
+<p><b>Propiedad:</b> <code>font-variant</code></p>
+
+<p><b>Valores:</b> <code>normal</code> o
+<code>small-caps</code>
+(may&uacute;sculas peque&ntilde;as) </p>
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b> </p>
+
+<p><span style="font-variant: small-caps;">
+aqu&iacute; se ha aplicado small-caps a un texto escrito totalmente
+en min&uacute;sculas.</span> ESTE SER&Iacute;A EL
+TAMA&Ntilde;O NORMAL DE LAS MAY&Uacute;SCULAS DE ESTA FUENTE</p>
+
+</div>
+
+<h3>Grosor de la letra</h3>
+
+<p><b>Propiedad:</b> <code>font-weight</code></p>
+
+<p><b>Valores:</b> El valor b&aacute;sico es <code>bold</code>
+(negrita) por contraposici&oacute;n al valor por defecto que es
+<code>normal</code>.</p>
+
+<p>Tambi&eacute;n pueden utilizarse dos valores relativos: <code>bolder</code>
+(m&aacute;s gruesa) y <code>lighter</code>
+(m&aacute;s
+fina) que el grosor de fuente que los antecede.</p>
+
+<p>Por &uacute;ltimo disponemos de una escala graduada desde
+100 hasta 900 en intervalos de 100 en la&nbsp;que el valor normal
+es el 400, y 700 el
+equivalente a la negrita, siendo el resto grosores relativos con
+respecto a &eacute;ste. A pesar de que &eacute;sta sea la
+especificaci&oacute;n
+la visualizaci&oacute;n en pantalla no es progresiva, como puedes
+comprobar.</p>
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b> </p>
+
+<p><span style="font-weight: bold;">Letra bold</span></p>
+
+<div align="center">
+<table cellspacing="5" width="80%">
+
+  <tbody>
+
+    <tr align="center" bgcolor="#00bbee">
+
+      <th scope="col"><span class="Estilo3">100</span></th>
+
+      <th scope="col"><span class="Estilo3">200</span></th>
+
+      <th scope="col"><span class="Estilo3">300</span></th>
+
+      <th scope="col"><span class="Estilo3">400</span></th>
+
+      <th scope="col"><span class="Estilo3">500</span></th>
+
+      <th scope="col"><span class="Estilo3">600</span></th>
+
+      <th scope="col"><span class="Estilo3">700</span></th>
+
+      <th scope="col"><span class="Estilo3">800</span></th>
+
+      <th scope="col"><span class="Estilo3">900</span></th>
+
+    </tr>
+
+    <tr align="center">
+
+      <td height="18"><span style="font-weight: 100;">grosor</span></td>
+
+      <td><span style="font-weight: 200;">grosor</span></td>
+
+      <td><span style="font-weight: 300;">grosor</span></td>
+
+      <td><span style="font-weight: 400;">grosor</span></td>
+
+      <td><span style="font-weight: 500;">grosor</span></td>
+
+      <td><span style="font-weight: 600;">grosor</span></td>
+
+      <td><span style="font-weight: 700;">grosor</span></td>
+
+      <td><span style="font-weight: 800;">grosor</span></td>
+
+      <td><span style="font-weight: 900;">grosor</span></td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+<p>Este fragmento esta en grosor normal.<span style="font-weight: bolder;"> Aqu&iacute; se ha aplicado
+bolder. </span><span style="font-weight: lighter;">Y
+ahora hemos aplicado lighter y volvemos a "adelgazar" la fuente hasta
+su
+grosor normal</span></p>
+
+</div>
+
+<h3>Tama&ntilde;o de la fuente</h3>
+
+<p><b>Propiedad:</b> <code>font-size</code></p>
+
+<p><b>Valores:</b> Se pueden expresar introduciendo
+un valor entero que indique su medida en puntos (pt), pulgadas (in),
+cent&iacute;metros (cm), p&iacute;xels (px), anchura de la
+letra eme (em)
+o altura de la letra equis (ex). Tambi&eacute;n se puede utilizar
+un valor porcentual respecto al tama&ntilde;o base que se utiliza
+por defecto.</p>
+
+<p>Por &uacute;ltimo podemos tambi&eacute;n indicar el
+tama&ntilde;o mediante palabras reservadas que indican los valores
+relativos, de menor a mayor, respecto al valor por defecto que es el
+<code>medium</code>: <code>xx-small</code>, <code>x-small</code>,
+<code>small</code>, <code>medium</code>,
+<code>large</code>, <code>x-large</code>,
+<code>xx-large</code> </p>
+
+<p>Una &uacute;ltima posibilidad es utilizar las palabras
+reservadas <code>smaller</code> y <code>larger</code>
+que, en lugar de basarse en el valor medium, toman como valor de
+referencia el tama&ntilde;o de fuente usado inmediatamente antes y
+reducen o amplian el mismo al siguiente tama&ntilde;o en la escala.
+(L&oacute;gicamente no tienen valor cuando nos encontramos en los
+extremos inferior o superior de la escala y pretendemos seguir
+disminuyendo o aumentando respectivamente) </p>
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b><br>
+
+<span style="font-size: 250%;">Tama&ntilde;o 250%</span><br>
+
+<span style="font-size: 18pt;"> Tama&ntilde;o 18
+puntos </span><br>
+
+<span style="font-size: 2em;"> Tama&ntilde;o 2 em </span>
+<span style="font-size: 1em;"> Tama&ntilde;o 1 em </span>
+<br>
+
+<span style="font-size: 3ex;"> Tama&ntilde;o 3 ex </span><span style="font-size: 1ex;"> Tama&ntilde;o 1 ex </span><br>
+
+<span style="font-size: 18px;">Tama&ntilde;o 18
+p&iacute;xels</span><br>
+
+<span style="font-size: 1cm;"> Tama&ntilde;o 1
+cent&iacute;metro </span><br>
+
+<span style="font-size: 0.5in;">Tama&ntilde;o 0,5
+pulgadas</span></p>
+
+<table width="100%">
+
+  <tbody>
+
+    <tr bgcolor="#00bbee">
+
+      <th scope="col"><span class="Estilo3">xx-small</span></th>
+
+      <th scope="col"><span class="Estilo3">x-small</span></th>
+
+      <th scope="col"><span class="Estilo3">small</span></th>
+
+      <th scope="col"><span class="Estilo3">medium</span></th>
+
+      <th scope="col"><span class="Estilo3">large</span></th>
+
+      <th scope="col"><span class="Estilo3">x-large</span></th>
+
+      <th scope="col"><span class="Estilo3">xx-large</span></th>
+
+    </tr>
+
+    <tr>
+
+      <td><span style="font-size: xx-small;">tama&ntilde;o</span></td>
+
+      <td><span style="font-size: x-small;">tama&ntilde;o</span></td>
+
+      <td><span style="font-size: small;">tama&ntilde;o</span></td>
+
+      <td><span style="font-size: medium;">tama&ntilde;o</span></td>
+
+      <td><span style="font-size: large;">tama&ntilde;o</span></td>
+
+      <td><span style="font-size: x-large;">tama&ntilde;o</span></td>
+
+      <td><span style="font-size: xx-large;">tama&ntilde;o</span></td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+<div class="avisos">
+<p><img src="../imagenes/atencion.gif" align="left" height="25" width="28">Si
+necesitas utilizar decimales tendr&aacute;s que usar la
+notaci&oacute;n anglosajona, en la que el separador decimal es el
+punto en lugar de la coma.</p>
+
+<p><strong>MUY IMPORTANTE:</strong> Si utilizas
+unidades absolutas (px, pt, in, cm) la mayor&iacute;a de los
+navegadores no ser&aacute;n capaces de modificar el
+tama&ntilde;o cuando el usuario lo solicite y manejar&aacute;n
+mal los tama&ntilde;os relativos. Ser&iacute;a conveniente
+utilizar como unidad de medida el porcentaje,&nbsp;la <strong>em</strong>
+que
+adoptar&aacute; la anchura por defecto (o la <strong>ex </strong>que
+tomar&aacute; la altura) del valor por defecto cada uno de los
+navegadores&nbsp; y permitir&aacute; unos ajustes correctos al
+redimensionar. Aunque en algunas referencias se considera el
+p&iacute;xel como unidad relativa ya que depende de cada
+dispositivo,
+lo cierto es que Internet Explorer lo interpreta como absoluta.</p>
+
+</div>
+
+<h3>Interlineado</h3>
+
+<p>Repetimos la referencia al interlineado porque
+tambi&eacute;n podemos considerarlo como una propiedad aplicable a
+las fuentes. En el editor CSS lo encontrar&aacute;s como <span class="refmenu">altura de l&iacute;nea</span>.</p>
+
+<p><b>Propiedad:</b> <code>line-height</code></p>
+
+<p><b>Valores:</b> Se pueden expresar introduciendo
+un valor entero que indique su medida en puntos (pt), pulgadas (in),
+cent&iacute;metros (cm), pixels (px) o porcentaje (%). </p>
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b> </p>
+
+<p><span style="line-height: 200%;">En esta
+l&iacute;nea se ha empleado un interlineado del 200%, de forma que
+presente una distancia doble a la habitual, respecto a la anterior y la
+posterior .</span> </p>
+
+<p><span style="line-height: 10pt;">En esta
+l&iacute;nea se ha empleado un interlineado de 10 puntos. Como el
+tama&ntilde;o de la letra es tambi&eacute;n de 10 puntos se
+puede comprobar que la parte superior de las letras llega hasta la base
+del rengl&oacute;n anterior.</span></p>
+
+</div>
+
+<p class="avisos"><img src="../imagenes/atencion.gif" align="left" height="25" width="28">Si
+necesitas utilizar
+decimales tendr&aacute;s que utilizar la notaci&oacute;n
+anglosajona, en la que el separador decimal es el punto en lugar de la
+coma.</p>
+
+<h3>Familia </h3>
+
+<p><b>Propiedad:</b> <code>font-family</code></p>
+
+<p><b>Valores:</b> Se puede utilizar el nombre de la
+letra. Es conveniente a&ntilde;adir, separados por comas, nombres
+de letras similares y finalizar, por si no est&aacute; instalada
+ninguna de ellas, con el nombre de la familia. Las familias de letras
+b&aacute;sicas son: serif, sans-serif, monospace, cursive y
+fantasy. Si el nombre de la fuente tiene espacios en blanco
+habr&iacute;a que encerrarlo entre comillas para que se leyeran
+ambas palabras como una &uacute;nica cadena.</p>
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b> Podr&iacute;amos hacer una
+referencia del tipo <code>font-family:Arial,Helvetica,Verdana,sans-serif</code></p>
+
+<p><span style="font-family: serif; font-size: 18px;">Familia
+serif</span> <br>
+
+<span style="font-family: sans-serif; font-size: 18px;">Familia
+sans-serif</span> <br>
+
+<span style="font-family: monospace; font-size: 18px;">Familia
+monospace</span> <br>
+
+<span style="font-family: cursive; font-size: 18px;">Familia
+cursive</span> <br>
+
+<span style="font-family: fantasy; font-size: 18px;">Familia
+fantasy</span> </p>
+
+</div>
+
+<h2>Combinar los atributos referentes a
+la fuente de letra
+</h2>
+
+<p>En muchas ocasiones puede resultarnos m&aacute;s
+c&oacute;modo agrupar todos los valores de las diferentes
+propiedades en una propiedad abreviada denominada, sencillamente, <code>font</code>.
+</p>
+
+<p>La propiedad abreviada&nbsp;<code>font</code>
+requiere el siguiente orden en la
+presentaci&oacute;n de los valores: estilo, variante, grosor,
+tama&ntilde;o/interlineado, familia </p>
+
+<p> <em> </em> Tal vez te haya llamado la
+atenci&oacute;n la referencia tama&ntilde;o/interlineado. En la
+especificaci&oacute;n actual, si utilizamos interlineado debe
+aparecer junto al valor de tama&ntilde;o y separado del mismo por
+una barra de divisi&oacute;n / ). </p>
+
+<p>Una buena pr&aacute;ctica es definir en la etiqueta body
+las caracter&iacute;sticas de la fuente puesto que se
+heredar&aacute;n para todos los elementos textuales.</p>
+
+<div class="ejemplo">
+<p><b>Ejemplos:</b></p>
+
+<p><code> body {font: italic small-caps bold 1em/35px
+sans-serif} </code><span style="font-family: sans-serif; font-style: italic; font-variant: small-caps; font-weight: bold; font-size: 12pt; line-height: 35px; font-size-adjust: none; font-stretch: normal;">
+Har&iacute;a que todo el texto de la p&aacute;gina tomara como
+base la apariencia que muestra este p&aacute;rrafo.</span></p>
+
+<p><code> body {font: bold 70%/9px serif}</code> <span style="font-family: serif; font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; line-height: 9px; font-size-adjust: none; font-stretch: normal;">
+har&iacute;a que todo el texto de la p&aacute;gina tomara como
+base la apariencia que se muestra aqu&iacute; (al no haber incluido
+valores de estilo ni variante se toma el valor por defecto).
+&nbsp;</span><br>
+
+&nbsp;</p>
+
+</div>
+
+<div class="ejercicio practicas">
+<img class="numact" style="width: 29px; height: 29px; float: left;" alt="Actividad 87" title="Actividad 87" src="../imagenes/numeracion/ochentaysiete.gif">
+<ul>
+
+  <li>A&ntilde;ade a tu hoja de estilos especificaciones de
+fuente.</li>
+
+  <li>Recuerda que puedes establecer unas
+caracter&iacute;sticas globales para el selector <code>body</code>. </li>
+
+  <li>Aunque no es recomendable cambiar la familia de la fuente
+s&iacute; es posible que te resulte conveniente especificar otras
+propiedades
+de fuente para alguna clase que hayas creado. Si a&uacute;n no
+tienes ninguna creada revisa el contenido y seguro que encuentras
+fragmentos que pertenecen estructuralmente al mismo grupo y que
+podr&iacute;as formatear comodamente utilizando las hojas de
+estilos.</li>
+
+  <li>Puede ser interesante que vayas revisando la
+aparici&oacute;n de etiquetas&nbsp;<code>font</code>
+en el c&oacute;digo html
+para ir sustituy&eacute;ndolas de forma que los p&aacute;rrafos
+afectados adquieran su formato gracias a las propiedades de las hojas
+de estilo en lugar de tener que especificar en cada uno de ellos las
+propiedades de <code>font</code>.</li>
+  <li>Combina las propiedades de fuentes con colores, fondos
+y&nbsp;caracter&iacute;sticas de texto que puedan afectar a la
+apariencia de los p&aacute;rrafos.</li>
+
+</ul>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Men&uacute; horizontal simple</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <style type="text/css">
+  body {/* margin: 10px;
+    padding: 0pt;*/
+    }
+
+  .menu { height: 22px;
+    margin-top: 0em;}
+
+  .menu ul { list-style-type: none;
+    width: 100%;
+    }
+
+  .menu li { float: left;
+    }
+
+  .menu a { border: 1px solid gray;
+    margin: 0px 2px;
+    background-color: rgb(255, 255, 255);
+    width: 120px;
+    height: 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    }
+
+  .menu a:visited { color: rgb(204, 102, 204);
+    background-color: rgb(221, 221, 221);
+    }
+
+  .menu a:hover { background-color: rgb(204, 204, 204);
+    }
+
+  .menu a:active { background-color: gray;
+    color: rgb(255, 255, 255);
+    }
+
+ #localizadormenu{
+   position:fixed;
+     margin:0;
+	 padding:0;
+	    background-color:#D5C18D;
+		height: 1.6em;
+		width: 100%;
+		z-index:11;
+ }
+ 
+ #localizadormenu p{
+   margin-top: 0px;
+   margin-left:2%;
+   font-size:1.2em;
+   font-weight: bold;
+   color:#FFFFFF;
+   }
+  
+    #localizadormenu a{
+z-index:12;
+  color:#373F68;
+font-stretch: ultra-condensed;
+font-weight: bold;}
+
+#localizadormenu a:hover {color: #B5B19A}
+  </style>
+</head>
+
+
+<body>
+
+<div id="localizadormenu"><p>Men&uacute; horizontal simple<a href="menus.html">&nbsp;&nbsp;&nbsp;&nbsp;(Volver)</a></p></div>
+<div id="contenido">
+<div class="menu">
+<ul>
+
+  <li><a href="#">V&iacute;nculo a sitio 1</a></li>
+
+  <li><a href="#">V&iacute;nculo a sitio 2</a></li>
+
+  <li><a href="#">V&iacute;nculo a sitio 3</a></li>
+
+  <li><a href="#">V&iacute;nculo a sitio 4</a></li>
+
+</ul>
+
+</div>
+
+<p>La idea base es eliminar las marcas de los elementos de lista
+poniendo
+el valor <code>list-style-type:none</code> y hacerlos flotar a la
+izquierda.&nbsp;</p>
+
+<p>Para evitar que otros listados hereden los estilos de forma
+autom&aacute;tica creamos una clase a la que llamamos <code>menu</code>. (Lo
+hacemos como clase en lugar de como indicador por si
+quisi&eacute;ramos que en otro punto de la p&aacute;gina
+apareciera otro listado con las mismas caracter&iacute;sticas).</p>
+
+<p>Con este esquema base el resto de reglas se refiere a la
+apariencia gr&aacute;fica de los elementos de la lista que sean
+enlaces: m&aacute;rgenes para separarlos, colores,
+alineaci&oacute;n y bordes esencialmente.</p>
+
+<p>Una vez definidas las caracter&iacute;sticas
+b&aacute;sicas comunes se especifican las particulares para las
+pseudoclases <code>:visited :hover</code> y <code>:active</code> que provocar&aacute;n los cambios de apariencia visual en funci&oacute;n del estado del enlace. </p>
+
+<br>
+<div class="codigo"><code>
+&lt;style type="text/css"&gt;<br>
+
+&lt;!--<br>
+
+/* CSS base obtenido de los tutoriales de
+www.alsacreations.com/articles */<br>
+
+.menu { <br>
+<span class="indentado50">
+height: 22px; /* necesario para que se produzca salto tras el
+men&uacute; */</span><br>
+<span class="indentado25">
+}</span><br>
+
+.menu ul { <br>
+<span class="indentado50">
+list-style-type: none;</span><br class="indentado50">
+<span class="indentado50">
+width: 100%; /* ajuste para Opera */</span><br>
+<span class="indentado25">
+}</span><br>
+
+.menu li { <br>
+<span class="indentado50">
+float: left;</span><br>
+<span class="indentado25">
+}</span><br>
+
+.menu a { <br>
+<span class="indentado50">
+margin: 0 2px;</span><br class="indentado50">
+<span class="indentado50">
+width: 120px;</span><br class="indentado50">
+<span class="indentado50">
+height: 20px;</span><br class="indentado50">
+<span class="indentado50">
+display: block;</span><br class="indentado50">
+<span class="indentado50">
+text-align: center;</span><br class="indentado50">
+<span class="indentado50">
+border: 1px solid gray;</span><br class="indentado50">
+<span class="indentado50">
+text-decoration: none;</span><br class="indentado50">
+<span class="indentado50">
+color: #000;</span><br class="indentado50">
+<span class="indentado50">
+background-color: #fff;</span><br>
+<span class="indentado25">
+}</span><br>
+.menu a:visited { <br>
+<span class="indentado50">color: rgb(204, 102, 204);</span><br class="indentado50">
+<span class="indentado50">background-color: rgb(221, 221, 221);</span><br>
+<span class="indentado25">}</span><br>
+.menu a:hover { <br>
+<span class="indentado50">background-color: rgb(204, 204, 204);</span><br>
+<span class="indentado25">}</span><br>
+.menu a:active {<br>
+<span class="indentado50">
+background-color: gray;</span><br class="indentado50">
+<span class="indentado50">
+color: #fff;</span><br>
+<span class="indentado25">
+}</span><br>
+
+--&gt;<br>
+
+&nbsp; &lt;/style&gt;</code><br>
+</div>
+
+<br>
+</div>
+</body>
+</html>

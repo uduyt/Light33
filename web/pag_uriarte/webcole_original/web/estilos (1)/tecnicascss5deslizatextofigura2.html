@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Deslizando el texto a lo largo de una imagen 2</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <style type="text/css">
+body {margin:0, padding:0}
+.contenedor { background-image: url(imagenes/arquitecto.png);
+background-repeat: no-repeat;
+margin:0;
+padding: 0 5px 0 0px;
+}
+#a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o, #p, #q {
+border:1px solid red; /* uncomment this to see where the boxes are */
+float: left;
+clear: left;
+margin: 0 1em 0 0;
+padding:0;
+height: 20px;
+font-size:0px;
+}
+#a {width:100px}
+#b {width:100px}
+#c {width:200px}
+#d {width:190px}
+#e {width:174px}
+#f {width:160px}
+#g {width:122px}
+#h {width:100px}
+#i {width:92px}
+#j {width:126px}
+/* #k {width:121px}
+#l {width:99px}
+#m {width:90px}
+#n {width:84px}
+#o {width:82px}
+#p {width:128px}
+#q {width:55px} */
+  </style>
+</head>
+
+
+<body>
+
+<div class="contenedor">
+<div id="a">&nbsp;</div>
+
+<div id="b"></div>
+
+<div id="c"></div>
+
+<div id="d"></div>
+
+<div id="e"></div>
+
+<div id="f"></div>
+
+<div id="g"></div>
+
+<div id="h"></div>
+
+<div id="i"></div>
+
+<div id="j"></div>
+
+<div id="k"></div>
+
+<div id="l"></div>
+
+<div id="m"></div>
+
+<div id="n"></div>
+
+<div id="o"></div>
+
+<div id="p"></div>
+
+<div id="q"></div>
+
+<div id="r"></div>
+
+<p>
+This is a remake of <a href="http://www.meyerweb.com/eric/css/edge/raggedfloat/demo.html">Eric
+Meyers ragged float</a>.
+This is very similar to Erics, with the difference that a single image
+is used, and positioned using CSS. The idea is to float DIVs into place
+(instead of images), with a fixed width.
+So when the text goes to fill the page, it hits the DIVs and makes the
+text float along side the images curves.
+</p>
+
+<p>
+To get the desired affect, there were 18 DIVs used. Each with a
+specified width. To see how it works better, download this page, and
+uncomment the <code>border: 1px solid red;</code> line. It
+will outline each of the 18 DIVs and show exactly how this demo works.
+</p>
+
+<p>The advantages of this version over Erics, is that only a
+single image is used. The single image size is smaller than using
+18seperate images. That makes download times faster. If the user
+doesn't support CSS then they don't see an image, and the text would
+flow like it would on a normal screen.</p>
+
+<p>For more information, see <a href="http://www.meyerweb.com/eric/css/edge/raggedfloat/demo.html">Eric
+Meyers ragged float</a> demo.</p>
+
+</div>
+
+</body>
+</html>

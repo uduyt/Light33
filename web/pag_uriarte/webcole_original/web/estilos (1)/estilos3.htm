@@ -1,0 +1,326 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+
+<html>
+
+<head>
+
+<title>Crear estilos</title>
+
+<link href="../estilo.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" language="JavaScript">
+
+<!-- 
+
+  function cargalogo(nombre) {
+
+   parent.arriba.location.href=nombre;
+
+}
+
+function Abreejemplo (){
+
+	fp=window.open("ejemploestilo.htm","","top=0,left=0;width=450,height=300,scrolling=no");
+
+return true;
+
+}
+
+// -->
+
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<style type="text/css">
+<!--
+.Estilo1 {color: #FFFFFF}
+-->
+</style>
+</head>
+
+<body onload="cargalogo('t24.htm');" bgcolor="#FFFFFF">
+
+<p>Vamos a hacer un recorrido por las propiedades que afectan al texto y su forma
+de modificarlas mediante estilos.</p>
+
+<p>Color</p>
+
+<p>El atributo de color puede aplicarse al texto, pero tambi&eacute;n
+  a otros elementos de la p&aacute;gina.</p>
+<div align="center">
+  <table width=70% border=0 cellpadding=5 cellspacing=0>
+    <tr valign=TOP>
+      <td bgcolor=black>
+        <p><b><font color="#FFFFFF">black</font></b></p></td>
+      <td bgcolor=silver>
+        <p><b>silver</b></p></td>
+      <td bgcolor=gray>
+        <p><b><font color="#FFFFFF">gray</font></b></p></td>
+      <td bgcolor=white>
+        <p><b>white</b></p></td>
+    </tr>
+    <tr valign=TOP align="center">
+      <td height="16">
+        <p>&nbsp;</p></td>
+      <td height="16">
+        <p>&nbsp;</p></td>
+      <td height="16">
+        <p>&nbsp;</p></td>
+      <td height="16">
+        <p>&nbsp;</p></td>
+    </tr>
+    <tr valign=TOP>
+      <td bgcolor=maroon>
+        <p><b><font color="#FFFFFF">maroon</font></b></p></td>
+      <td bgcolor=red>
+        <p><b>red</b></p></td>
+      <td bgcolor=purple>
+        <p><b><font color="#FFFFFF">purple</font></b></p></td>
+      <td bgcolor=fuchsia>
+        <p><b>fuchsia</b></p></td>
+    </tr>
+    <tr valign=TOP align="center">
+      <td>
+        <p>&nbsp;</p></td>
+      <td>
+        <p>&nbsp;</p></td>
+      <td>
+        <p>&nbsp;</p></td>
+      <td>
+        <p>&nbsp;</p></td>
+    </tr>
+    <tr valign=TOP>
+      <td bgcolor=green>
+        <p><b><font color="#FFFFFF">green</font></b></p></td>
+      <td bgcolor=lime>
+        <p><b>lime</b></p></td>
+      <td bgcolor=olive>
+        <p><b><font color="#FFFFFF">olive</font></b></p></td>
+      <td bgcolor=yellow>
+        <p><b>yellow</b></p></td>
+    </tr>
+    <tr valign=TOP align="center">
+      <td>
+        <p>&nbsp;</p></td>
+      <td>
+        <p>&nbsp;</p></td>
+      <td>
+        <p>&nbsp;</p></td>
+      <td>
+        <p>&nbsp;</p></td>
+    </tr>
+    <tr valign=TOP>
+      <td bgcolor=navy>
+        <p><b><font color="#FFFFFF">navy</font></b></p></td>
+      <td bgcolor=blue>
+        <p><b><font color="#FFFFFF">blue</font></b></p></td>
+      <td bgcolor=teal>
+        <p><b><font color="#FFFFFF">teal</font></b></p></td>
+      <td bgcolor=aqua>
+        <p><b>aqua</b></p></td>
+    </tr>
+    <tr valign=TOP align="center">
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+</table></div>
+  <p><strong>Propiedad:</strong> color     
+  <p><b>Valores y ejemplos:</b> Para nombrar un color pueden utilizarse varios
+  m&eacute;todos:
+  <ul>
+  <li>Los nombres reservados que aparecen en cada uno de los colores de la figura
+    precedente utilizando <span style="color:maroon">color:maroon</span> </li>
+  <li>Combinaci&oacute;n RGB (rojo, verde, azul) utilizando la notaci&oacute;n <span style="color:rgb(150,23,220)">color:rgb(150,23,220) </span>donde
+    indicamos los valores decimales de cada color.</li>
+  <li>Combinaci&oacute;n RGB (rojo, verde, azul) utilizando la notaci&oacute;n <span style="color:rgb(75%,0%,47%)">color:rgb(75%,0%,47%)</span> donde
+    indicamos los valores porcentuales de cada color.</li>
+  <li>Combinaci&oacute;n RGB (rojo, verde, azul) utilizando la notaci&oacute;n
+    hexadecimal <span style="color:#a5376f">color:#a5376f</span> donde los valores
+    de cada color son representados por cada una de las tres parejas y precedidos
+    por el signo #</li>
+  <li>Combinaci&oacute;n RGB (rojo, verde, azul) utilizando la notaci&oacute;n
+    hexadecimal <span style="color:#a53">color:#a53</span> donde los valores
+    de cada color son representados por un &uacute;nico n&uacute;mero o letra
+    y precedidos por el signo # (s&oacute;lo permite 4096 colores ya que completa
+    los pares duplicando: el ejemplo anterior se mostrar&iacute;a como si hubi&eacute;ramos
+    definido <span style="color:#aa5533">color:#aa5533</span>)</li>
+</ul>
+<p>Espaciado de letra</p>
+<p>Podemos especificar una cantidad para aumentar o disminuir el espaciado
+entre las letras de un texto.</p>
+<p><strong>Propiedad: </strong>letter-spacing </p>
+<p><strong>Valores:</strong>  Se pueden expresar introduciendo
+  un valor entero que indique
+
+  la medida en  pixels
+  (px), puntos (pt), pulgadas (in), cent&iacute;metros (cm), anchura
+  de la letra eme (em) o altura de la letra equis may&uacute;scula(ex). Se utiliza el
+  punto como separador decimal en lugar de la coma. Para disminuir el espaciado
+  se utilizan valores negativos</p>
+<div class="ejemplo">
+  <p><strong>Ejemplos:</strong></p>
+<span style="letter-spacing:15px">Aumentado en 15 p&iacute;xeles</span><br><span style="letter-spacing:2pt">Aumentado en 2pt</span><br><span style="letter-spacing:.1in">Aumentado en 0.1in</span><br><span style="letter-spacing:.3cm">Aumentado en 0.3cm</span><br><span style="letter-spacing:1em">Aumentado en 1em </span><br><span style="letter-spacing:1ex">Aumentado en 1ex</span><br><span style="letter-spacing:-1px">Disminuido en 1px</span><br></div>
+<p>Espaciado
+  de palabras </p>
+<p>Podemos especificar una cantidad para aumentar o disminuir el espaciado entre
+  las letras de un texto.</p>
+<p><strong>Propiedad: </strong>word-spacing </p>
+<p><strong>Valores:</strong> Se pueden expresar introduciendo un valor entero
+  que indique la medida en pixels (px), puntos (pt), pulgadas (in), cent&iacute;metros
+  (cm), anchura de la letra eme (em) o altura de la letra equis (ex).
+  Se utiliza el punto como separador decimal en lugar de la coma. Para disminuir
+  el espaciado se utilizan valores negativos</p>
+<div class="ejemplo"><p><strong>Ejemplos:</strong></p>
+<span style="word-spacing:15px">Aumentado en 15 p&iacute;xeles</span><br>
+<span style="word-spacing:5pt">Aumentado en 5pt</span><br>
+<span style="word-spacing:1in">Aumentado en 1in</span><br>
+<span style="word-spacing:.7cm">Aumentado en 0.7cm</span><br>
+<span style="word-spacing:2em">Aumentado en 2em </span><br>
+<span style="word-spacing:1ex">Aumentado en 1ex</span><br>
+<span style="word-spacing:-2px">Disminu&iacute;do en 2px</span></div><p>Alineaci&oacute;n</p>
+<p><b>Propiedad:</b> text-align</p>
+<p><b>Valores:</b> Nos permite introducir todos los valores de alineaci&oacute;n soportados
+  por el est&aacute;ndar HTML 4.0 mediante <b>left</b>, <b>center</b> <b>right
+  </b>y <b>justify</b>.</p>
+<p class="ejemplo"><b>Ejemplos:</b> Todos los textos de este curso est&aacute;n dise&ntilde;ados
+  con el atributo justify para evitar el efecto denominado de &quot;banderas&quot; o &quot;gallardetes&quot; provocado
+  por la falta de ajuste del final o principio de rengl&oacute;n respecto al
+  margen.</p>
+<p>Decoraci&oacute;n</p>
+<p><strong>Propiedad:</strong>text-decoration </p>
+<p><strong>Valores y ejemplos:</strong> Se especifican mediante las palabras reservadas 
+
+
+none (ninguno), 
+  <span style="text-decoration:underline">underline</span> (subrayado), 
+  <span style="text-decoration:overline">overline</span> (superrayado), 
+<span style="text-decoration:line-through">line-through</span> (tachado).
+Aunque parezca un contrasentido uno de los m&aacute;s &uacute;tiles puede ser
+el valor none al eliminar, por ejemplo, la decoraci&oacute;n
+subrayada de los v&iacute;nculos. Tambi&eacute;n se puede utilizar el valor <span style="text-decoration:blink">blink</span> (parpadeante),
+pero pr&aacute;cticamente s&oacute;lo es soportado por Netscape y Mozilla mientras que Internet
+Explorer 6, Konkeror 3.1.3 o incluso Gale&oacute;n 1.3.9 que est&aacute; basado en el mismo
+motor que Mozilla no lo soportan. <br>
+</p>
+<p>Sangr&iacute;a de primera l&iacute;nea </p>
+<p><b>Propiedad:</b> text-indent</p>
+<p><b>Valores:</b> Se pueden expresar introduciendo un valor entero que indique
+  su medida en puntos (pt), pulgadas (in), cent&iacute;metros (cm), p&iacute;xels
+  (px) o porcentaje(%) </p>
+<div class="ejemplo"><p><b>Ejemplos:</b> </p>
+<p style="text-indent:45pt">Este p&aacute;rrafo tiene aplicado
+  un sangrado de 45 puntos y por eso su primera l&iacute;nea se inicia tras dejar
+  un espacio en blanco al principio del rengl&oacute;n.</p></div>
+  <p>&nbsp;</p>
+<p>Control de letra</p>
+<p>Nos permite indicar si un elemento o fragmento se mostrar&aacute; tal como se escribe
+  o con alguna variaci&oacute;n en las letras</p>
+<p><strong>Propiedad: </strong>text-transform </p>
+<p><strong>Valores:</strong> Aparte de 
+
+
+ none que es el valor por defecto, podemos usar 
+capitalize que escribe todas las primeras letras en may&uacute;sculas, uppercase
+que muestra todo el texto en may&uacute;sculas y 
+lowercase que lo presenta en min&uacute;sculas independientemente de c&oacute;mo
+lo hayamos escrito</p>
+<div class="ejemplo"><p ><strong>Ejemplos:</strong></p>
+<table width="630" cellspacing="10" cellpadding="0">
+  <tr>
+    <th width="32%" bgcolor="#0099CC"><span class="Estilo1">Este texto...</span></th>
+    <th width="8%">&nbsp;</th>
+    <th width="60%" bgcolor="#0099CC"><span class="Estilo1">...se ve as&iacute;</span></th>
+  </tr>
+  <tr>
+    <td>Aqu&iacute; aplicamos capitalize  
+    <td><img src="../imagenes/flechaderecha.png" width="29" height="29" align="absmiddle"></td>
+    <td>Aqu&iacute; aplicamos capitalize </td>
+  </tr>
+  <tr>
+    <td width="32%"><p>En este caso es uppercase</p>
+      <td width="8%"><p><img src="../imagenes/flechaderecha.png" width="29" height="29" align="absmiddle"></p>      </td>
+    <td width="60%">
+     
+        <p style="text-transform:capitalize ">En este caso es uppercase</p>
+      </td>
+  </tr>
+  <tr>
+    <td>Y &eacute;ste es Lowercase  
+    <td><img src="../imagenes/flechaderecha.png" width="29" height="29" align="absmiddle"></td>
+    <td>Y &eacute;ste es Lowercase</td>
+  </tr>
+</table>
+</div>
+<p>&nbsp; </p>
+<p>Interlineado</p>
+<p><b>Propiedad:</b> line-height</p>
+
+<p><b>Valores:</b> Se pueden expresar introduciendo un valor entero que indique 
+  su medida en puntos (pt), pulgadas (in), centímetros (cm), pixels (px) o porcentaje 
+  (%). </p>
+
+<div class="ejemplo">
+  <p><b>Ejemplos:</b> </p>
+<p><span style="line-height:200%">En esta línea se ha empleado un interlineado
+    del 200%, de forma que presente una distancia doble a la habitual, respecto
+    a la anterior y la posterior .</span> </p>
+<p><span style="line-height:10pt">En esta línea se ha empleado un interlineado 
+
+  de 10 puntos. Como el tamaño de la letra es también de 10 puntos se puede comprobar 
+
+que la parte superior de las letras llega hasta la base del renglón anterior.</span></p></div>
+
+<p>Pseudoelementos first-letter y first-line </p>
+<p>Como ya  hab&iacute;amos mencionado existen un par de pseudoelementos que tienen
+  que ver con el texto porque permiten modificar la primera letra o el primer
+  rengl&oacute;n de un texto. </p>
+<p>Su utilizaci&oacute;n sigue la sintaxis <strong>selector:pseudolemento {propiedad:valor} </strong> o
+    bien <strong>selector.clase:pseudoelemento{propiedad:valor}</strong> o <strong>selector#id:pseudoelemento{propiedad:valor} </strong>si
+    pretendemos aplicarlo a un selector con una clase o un identificador espec&iacute;fico. </p>
+<p><a href="javascript:void(0)" onClick=window.open('muestra23.htm','','statusbar=0,menubar=0,toolbar=0,top=0,left=0,width=780,height=350')>Ver
+ejemplo </a></p>
+<div class="practicas"> 
+
+  <p><img src="../imagenes/cincuenta.gif" width="29" height="29" align="left"> </p>
+
+<ul>
+
+  <li>Crea una hoja de estilos personalizada seleccionando las caracter&iacute;sticas 
+
+    que consideres m&aacute;s interesantes para la presentaci&oacute;n de tu sitio 
+
+    WEB. </li>
+
+  <li>Utiliza tu nombre de usuario para acceder al curso y guarda el archivo
+    de 
+
+    hoja de estilos con el nombre que consideres m&aacute;s adecuado y la extensi&oacute;n <strong>css</strong>.</li>
+
+    <li>Aunque puedes utilizar para pruebas el archivo <strong>practica48.htm</strong> y
+
+      guardarlo como <strong>practica49.htm </strong>para comprobar los cambios, la recomendaci&oacute;n 
+
+      es que empieces a aplicar tu hoja de estilos al sitio WEB que, a estas alturas, 
+
+      debe estar bastante avanzado. Tienes en la mano una potente herramienta 
+
+      para modificar el aspecto con unas variaciones m&iacute;nimas en el archivo 
+
+      css, as&iacute; que aprov&eacute;chalo para dotar a tu WEB de un aspecto 
+
+      adecuado.</li>
+
+</ul>
+
+</div>
+
+
+</body>
+
+
+
+</html>
+

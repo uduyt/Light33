@@ -1,0 +1,23 @@
+/* CSS Document */
+
+
+body{
+background-image:url(cabecera.jpg);
+background-repeat: no-repeat;
+}
+h2
+{
+
+margin-left:80%;
+margin-top:40px;}
+
+a{
+text-decoration:none;
+color:#373F68;
+font-stretch: ultra-condensed;
+font-family:Helvetica, Arial, sans-serif;
+font-size:22px;
+font-weight: bold;}
+
+a:hover {color: #B5B19A}
+

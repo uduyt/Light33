@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+  
+
+
+  
+  <title>Absolutamente relativo</title>
+  <meta content="Ra&uacute;l Luna" name="author">
+
+
+  <link rel="stylesheet" type="text/css" href="../multi1.css">
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+</head>
+
+
+<body>
+
+<div id="localizador">
+<p>Estilos&gt;&gt;Absolutamente relativo</p>
+
+</div>
+
+<div id="flechadcha">
+<a href="tecnicascss2.html" title="avanzar"><img src="../Images/flechadcha.gif" border="0"></a>
+</div>
+<div id="flechaizq">
+<a href="css10.html" title="retroceder"><img src="../Images/flechaizq.gif" border="0"></a>
+</div>
+
+<div class="solapas">
+<ul>
+
+
+  <li><a href="css10.html">Diseño visual</a></li>
+
+
+ <li class="activo"><a href="absolutamenterelativo.html">Absolutamente relativo</a></li>
+
+
+</ul>
+
+
+</div>
+
+<div class="principal">	
+<h2>Absolutamente relativo</h2>
+
+
+<p>Este t&iacute;tulo aparentemente parad&oacute;jico
+procede el t&iacute;tulo original de un art&iacute;culo en
+ingl&eacute;s <cite>Relatively Absolute de Tommy Olson</cite> en el que se
+intenta ofrecer una aclaraci&oacute;n del sentido de los diversos
+modos de posicionamiento mediante <acronym title="Cascading Style Sheets">CSS</acronym>. De hecho el contenido de este
+apartado del curso no es una traducci&oacute;n del mismo pero
+s&iacute; una adaptaci&oacute;n basada en lo que
+all&iacute; se plantea.</p>
+
+
+<p>Para dise&ntilde;ar una p&aacute;gina web,
+adem&aacute;s de las decisiones referentes a las fuentes, colores y
+elementos gr&aacute;ficos, hay que elegir una
+disposici&oacute;n de los componentes para lo cual se pueden
+emplear tablas, flotaciones y posicionamiento.&nbsp;</p>
+
+
+<p>El uso de las tablas, aunque sigue siendo probablemente el
+m&eacute;todo m&aacute;s extendido es el menos recomendable de
+todos por su incidencia negativa en la accesibilidad y su falta de
+adecuaci&oacute;n para una correcta estructuraci&oacute;n de la
+informaci&oacute;n. De hecho est&aacute; totalmente
+desaconsejado con el <acronym title="World Wide Web Consortium">W3C</acronym>.</p>
+
+
+<p>La utilizacion de la propiedad float es un m&eacute;todo
+mucho m&aacute;s acorde con los est&aacute;ndares y puede ser
+suficiente en muchas ocasiones.</p>
+
+
+<p>El posicionamiento es la tercera t&eacute;cnica y la que
+m&aacute;s dificultades de interpretaci&oacute;n tiene, por lo
+que vamos a intentar aclararlo.</p>
+
+
+<p>Para empezar vamos a tomar como referencia una serie
+num&eacute;rica: 1, 2, 3,... en la que cada n&uacute;mero ocupa
+de forma natural una posici&oacute;n: el 2 aparece
+detr&aacute;s del 1 y antes del 3. Los elementos que componen una
+p&aacute;gina web siguen el mismo esquema y tienen un orden natural
+que es su orden de aparici&oacute;n en el c&oacute;digo que genera la
+p&aacute;gina, por lo
+que podr&iacute;amos decir que coincidir&iacute;an con el
+comportamiento de una serie num&eacute;rica. (F&iacute;jate que he
+especificado el orden de aparici&oacute;n en el c&oacute;digo, no el
+orden de aparici&oacute;n en la p&aacute;gina porque podr&iacute;amos
+confundirnos&nbsp;con lo que vemos si nos guiamos por la
+presentaci&oacute;n de los elementos en pantalla)</p>
+
+
+<p>Una vez fijada la referencia consideremos los diferentes
+valores que puede adoptar la propiedad <code>position</code></p>
+
+
+<dl>
+
+
+  <dt><code></code>static</dt>
+
+
+  <dd>Es el valor por defecto. Cualquier elemento con
+    <code>position:static</code> se situar&aacute; en la ventana en la
+posici&oacute;n por defecto de acuerdo a su orden de
+aparici&oacute;n en el flujo del documento, sin modificar la
+posici&oacute;n. Dada esta particularidad podr&iacute;a
+pensarse que su&nbsp;efecto ser&aacute; nulo. En parte es
+as&iacute; ya que no sirve para modificar la posici&oacute;n de
+un elemento, pero en alg&uacute;n momento ser&aacute; necesario
+recurrir a este valor para restaurar los valores por defecto.</dd>
+
+
+  <dt>relative</dt>
+
+
+  <dd>Algunas veces el lenguaje nos juega malas pasadas y esta
+puede ser una de ellas. La idea de posici&oacute;n relativa nos
+sugiere que debemos considerar un elemento ajeno como punto de
+referencia para situar elemento al que le aplicamos esta propiedad y
+realmente no es as&iacute;: la posici&oacute;n relativa toma
+como referencia la posici&oacute;n que ocupar&iacute;a el
+elemento si se respeta el flujo del documento sin modificar la
+situaci&oacute;n que le corresponder&iacute;a en ese caso. <br>
+
+
+    <br>
+
+
+Si le aplicamos a un elemento la propiedad <code>position:relative</code> pero no
+especificamos ning&uacute;n valor de desplazamiento el efecto es el
+mismo que si no la hubi&eacute;ramos aplicado o hubi&eacute;ramos
+utilizado el valor por defecto <code>position:static</code>.
+Si le adjudicamos un valor <code>top:10px</code>
+el elemento se desplazar&aacute; 10
+p&iacute;xeles hacia abajo respecto a la que habr&iacute;a sido su
+posici&oacute;n normal. Tambi&eacute;n podr&iacute;amos ponerle valores
+negativos. Adem&aacute;s, dado que lo &uacute;nico que hacemos es
+desplazar el elemento pero &eacute;ste&nbsp;sigue ocupando lo mismo,
+es innecesario especificar un valor para <code>bottom</code> o <code>right</code> si lo hemos
+hecho para <code>top</code> y <code>left</code> (o viceversa)<br>
+
+    <br>
+
+Los elementos posicionados relativamente siguen en el flujo del
+documento&nbsp;ocupando el espacio que les corresponde, pero no donde
+aparecen sino donde habr&iacute;an estado si hubieran estado
+posicionados est&aacute;ticamente. Por ello la utilidad del
+posicionamiento relativo no se aplica excesivamente al desplazamiento
+de elementos, sino m&aacute;s bien a convertir elementos en
+posicionados, ya que una vez aplicada, aunque no movamos el elemento ni
+un p&iacute;xel servir&aacute; como referencia para que los elementos
+hijos, que hereden alguna propiedad del que tiene
+    <code>position:relative</code>, dispongan de un nuevo punto de c&aacute;lculo,
+especialmente cuando se utilice el valor absolute.</dd>
+
+
+  <dt>absolute</dt>
+
+
+  <dd>Si lo anterior puede habernos procucido un cierto desconcierto,
+esto va a acabar de complicar la situaci&oacute;n: la
+interpretaci&oacute;n de posici&oacute;n absoluta que podr&iacute;amos
+deducir del t&eacute;rmino tampoco es correcta.&nbsp;<br>
+
+    <br>
+
+Cuando adjudicamos a un elemento <code>position:absolute</code> y le aplicamos un
+desplazamiento la nueva posici&oacute;n se calcula localizando el primer
+ancestro posicionado y situando los bordes a la distancia indicada
+respecto a los bordes de ese elemento. En caso de que no exista
+ning&uacute;n ancestro posicionado la especificaci&oacute;n&nbsp;<acronym title="Cascading Style Sheets Especificaci&oacute;n 2">CSS2</acronym>. toma
+como referencia el bloque contenedor inicial, indicando que ser&aacute;
+el navegador el que determine&nbsp;cu&aacute;l es, lo cual suele
+traducirse en que se&nbsp;toma como referencia el elemento <code>body</code> que
+coincide con la ventana de la aplicaci&oacute;n.<br>
+
+    <br>
+
+Una cuesti&oacute;n que hay que tener en cuenta es que, cuando un
+elemento est&aacute; posicionado con esta propiedad, sale del flujo del
+documento, por lo que el lugar que le corresponder&iacute;a es ocupado
+por el siguiente elemento, lo cual supone que podemos encontrarnos con
+que un elemento puede quedar debajo de otro que est&eacute; situado de
+forma absoluta.<br>
+
+    <br>
+
+En los navegadores con soporte completo para&nbsp;<acronym title="Cascading Style Sheets">CSS</acronym> se pueden especificar
+valores para los cuatro costados y el navegador se encarga de calcular
+el ancho, pero no ocurre as&iacute; con Internet Explorer, lo cual nos
+obliga a especificar, al menos, la anchura del elemento posicionado. Se
+pueden indicar valores negativos para las distancias de los cuatro
+lados, aunque siempre habr&aacute; que tener en cuenta cu&aacute;l es
+el bloque contenedor de referencia para evitar que nuestro elemento
+quede fuera de la pantalla.</dd>
+
+  <dt>fixed</dt>
+
+  <dd>En este caso el elemento de referencia es siempre la ventana del
+navegador, por lo que ser&iacute;a la posici&oacute;n m&aacute;s
+cercana a lo que podr&iacute;amos interpretar como absoluto. Los elementos
+que llevan esta posicion salen del flujo y se mantienen fijos en la
+ventana, pero a&uacute;n mantienen una relaci&oacute;n de profundidad
+con el resto de los elementos: mientras no hayamos alterado el valor
+z-index, los elementos que se han creado antes del posicionado se
+encontrar&aacute;n por debajo de &eacute;l, mientras que los que se
+crean despu&eacute;s se superpondr&aacute;n al elemento posicionado en
+el caso de que tengan que coincidir al desplazar la p&aacute;gina.<br>
+
+    <br>
+
+Como consecuencia de lo anterior, si queremos crear un men&uacute; que
+permanezca fijo en la parte superior de la pantalla y creamos el
+elemento que lo contiene en primer lugar tendremos que modificar su
+valor z-index poni&eacute;ndolo mayor que cualquier otro en el resto de
+la p&aacute;gina.</dd>
+
+  <dt></dt>
+
+
+</dl>
+
+</div>
+</body>
+</html>

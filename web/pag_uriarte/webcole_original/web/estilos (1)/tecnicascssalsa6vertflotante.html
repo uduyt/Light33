@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Men&uacute; vertical con opciones flotantes con CSS</title>
+
+
+  <meta content="Ra&uacute;l Luna" name="author">
+
+  <link rel="stylesheet" type="text/css" href="../nvu2005.css">
+
+<!-- parche de compatibilización con CSS 2 para navegadores microsoft --><!--[if lt IE 7]> <script src="../ie7/ie7-standard-p.js" type="text/javascript"></script> <![endif]-->
+  <script type="text/javascript">
+<!--
+window.onload=mostrarsubmenu;
+function mostrarsubmenu(id) {
+var d = document.getElementById(id);
+for (var i = 1; i<=10; i++) {
+if (document.getElementById('smenu'+i)) {document.getElementById('smenu'+i).style.display='none';}
+}
+if (d) {d.style.display='block';}
+}
+//-->
+  </script>
+  <style type="text/css">
+<!--
+body {
+padding:0;
+margin:0;
+}
+dl, dt, dd, ul, li {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+#menu {
+position: absolute;
+top: 1em;
+left: 1em;
+width: 10em;
+}
+#menu dt {
+cursor: pointer;
+background: #A9BFCB;
+height: 20px;
+line-height: 20px;
+margin: 2px 0;
+border: 1px solid gray;
+text-align: center;
+font-weight: bold;
+}
+#menu dd {
+position: absolute;
+z-index: 100;
+left: 8em;
+margin-top: -1.4em;
+width: 10em;
+background: #A9BFCB;
+border: 1px solid gray;
+}
+#menu dt a {
+text-align:center; /* correción necesaria para mostrar centrados los elementos principales con enlace real */
+} #menu ul {
+padding: 2px;
+}
+#menu li {
+text-align: center;
+font-size: 85%;
+height: 18px;
+line-height: 18px;
+}
+#menu li a, #menu dt a {
+color: #000;
+text-decoration: none;
+display: block;
+}
+#menu li a:hover {
+text-decoration: underline;
+}
+#contenedor {
+position: relative;
+top:0;
+left:0;
+margin-left:12em;
+padding:10px;}
+ #localizadormenu{
+   position:fixed;
+     margin:0;
+	 padding:0;
+	    background-color:#D5C18D;
+		height: 1.6em;
+		width: 100%;
+		z-index:11;
+ }
+ 
+ #localizadormenu p{
+   margin-top: 0px;
+   margin-left:2%;
+   font-size:1.2em;
+   font-weight: bold;
+   color:#FFFFFF;
+   }
+  
+    #localizadormenu a{
+z-index:12;
+  color:#373F68;
+font-stretch: ultra-condensed;
+font-weight: bold;}
+
+#localizadormenu a:hover {color: #B5B19A}
+  </style>
+</head>
+
+
+<body>
+
+<div id="localizadormenu"><p>Men&uacute; vertical con submen&uacute;s flotantes<a href="menus.html">&nbsp;&nbsp;&nbsp;&nbsp;(Volver)</a></p></div>
+<div id="contenido">
+<dl id="menu">
+
+  <dt onmouseover="javascript:mostrarsubmenu('smenu1');"><a href="#">Menu 1</a></dt>
+
+  <dd id="smenu1" onmouseover="javascript:mostrarsubmenu('smenu1');" onmouseout="javascript:mostrarsubmenu();">
+    <ul>
+
+      <li><a href="#">Submen&uacute; 1.1</a></li>
+
+      <li><a href="#">Submen&uacute; 1.2</a></li>
+
+      <li><a href="#">Submen&uacute; 1.3</a></li>
+
+    </ul>
+
+  </dd>
+
+  <dt onmouseover="javascript:mostrarsubmenu('smenu2');" onmouseout="javascript:mostrarsubmenu();">Menu 2</dt>
+
+  <dd id="smenu2" onmouseover="javascript:mostrarsubmenu('smenu2');" onmouseout="javascript:mostrarsubmenu();">
+    <ul>
+
+      <li><a href="#">Submen&uacute; 2.1</a></li>
+
+      <li><a href="#">Submen&uacute; 2.2</a></li>
+
+    </ul>
+
+  </dd>
+
+  <dt onmouseover="javascript:mostrarsubmenu('smenu3');" onmouseout="javascript:mostrarsubmenu();">Menu 3</dt>
+
+  <dd id="smenu3" onmouseover="javascript:mostrarsubmenu('smenu3');" onmouseout="javascript:mostrarsubmenu();">
+    <ul>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+      <li><a href="#">Submen&uacute; 3.1</a></li>
+
+    </ul>
+
+  </dd>
+
+  <dt onmouseover="javascript:mostrarsubmenu('smenu4');" onmouseout="javascript:mostrarsubmenu();">Menu 4</dt>
+
+  <dd id="smenu4" onmouseover="javascript:mostrarsubmenu('smenu4');" onmouseout="javascript:mostrarsubmenu();">
+    <ul>
+
+      <li><a href="#">Submen&uacute; 4.1</a></li>
+
+      <li><a href="#">Submen&uacute; 4.1</a></li>
+
+    </ul>
+
+  </dd>
+
+</dl>
+
+<div id="contenedor">
+<p>Este men&uacute; requiere que est&eacute; activado
+Javascript.</p>
+
+<p>Alguna opci&oacute;n de men&uacute; podr&iacute;a
+no desplegar opciones y funcionar como enlace directo a otra
+p&aacute;gina. (Caso del Elemento men&uacute; 1 del ejemplo)</p>
+
+<p>Los men&uacute;s, debido a la utilizaci&oacute;n de un
+z-index:100 se superponen al contenido de la p&aacute;gina al
+desplegarse.</p>
+
+<p>Por la propia estructura del men&uacute; su
+utilizaci&oacute;n
+m&aacute;s habitual ser&aacute; en p&aacute;ginas cuya
+estructura
+est&eacute; basada en marcos, bien sea en marcos puros o en
+marcos
+internos (<code>iframe</code>).</p>
+
+<p>Al utilizar este men&uacute; en p&aacute;ginas con
+estructrura real de marcos habr&iacute;a que tener en cuenta la
+anchura total del men&uacute; (elementos principales + elementos
+flotantes)&nbsp; para establecer el ancho del marco que lo
+contiene. Esto nos obligar&iacute;a a revisar el c&oacute;digo
+para&nbsp;establecer las medidas del men&uacute; en
+p&iacute;xeles.</p>
+
+</div>
+</div>
+</body>
+</html>

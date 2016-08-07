@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es-es">
+<head>
+  <title>Mostrar y ocultar capas</title>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <link href="muestrasdeestilos.css" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+<!--
+-->
+  </style>
+  <script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_showHideLayers() { //v6.0
+var i,p,v,obj,args=MM_showHideLayers.arguments;
+for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+obj.visibility=v; }
+}
+//-->
+  </script>
+</head>
+
+
+<body>
+
+<p><code>&lt;html&gt;<br>
+
+&lt;head&gt;<br>
+
+&lt;title&gt;Mostrar y ocultar capas &lt;/title&gt;<br>
+
+&lt;script language="Javascript"&gt;<br>
+
+function mostrar(nombreCapa){<br>
+
+document.getElementById(nombreCapa).style.visibility="visible";<br>
+
+}<br>
+
+function ocultar(nombreCapa){<br>
+
+document.getElementById(nombreCapa).style.visibility="hidden";<br>
+
+}<br>
+
+&lt;/script&gt;<br>
+
+&lt;/head&gt;<br>
+<br>
+
+&lt;body&gt;<br>
+
+&lt;ul&gt;<br>
+
+&lt;li&gt;<br>
+
+&lt;a href="#" onClick="mostrar('capa1')"&gt; Mostrar la capa
+haciendo clic &lt;/a&gt; &lt;/li&gt;<br>
+
+&lt;li&gt;<br>
+
+&lt;a href="#" onClick="ocultar('capa1')"&gt; Ocultar la capa 1
+haciendo clic &lt;/a&gt; <br>
+
+&lt;/li&gt;<br>
+
+&lt;li&gt;<br>
+
+&lt;a href="#" onMouseOver="mostrar('capa2')"
+onMouseOut="ocultar('capa2')"&gt;<br>
+
+Mostrar y ocultar la capa 2 al pasar sobre el enlace&lt;/a&gt; <br>
+
+&lt;/li&gt;<br>
+
+&lt;/ul&gt;<br>
+
+&lt;div id="capa1" style="position:absolute; width:100px;
+height:100px; top:100px; left:100px; background-color:blue;
+visibility:hidden"&gt;Capa 1<br>
+
+&lt;/div&gt;<br>
+
+&lt;div id="capa2" style="position:absolute; width:100px;
+height:100px; top:100px; left:200px; background-color:red;
+visibility:hidden"&gt;Capa 2<br>
+
+&lt;/div&gt;<br>
+
+&lt;/body&gt;<br>
+
+&lt;/html&gt; </code>
+<br>
+
+</p>
+
+</body>
+</html>
