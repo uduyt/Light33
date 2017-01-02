@@ -36,7 +36,7 @@ function chargeStripe($amount, $description, $token){
 
 	$stripe = new Stripe();
 	$error=false;
-	$stripe::setApiKey("sk_test_SrHPZ3dg63NAbcqkUnuO2V7r");
+	$stripe::setApiKey("sk_live_kQQpID0F8V4ezVFpOYv56mBb");
 
 	// Get the credit card details submitted by the form
 	$token = $token;

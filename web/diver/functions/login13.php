@@ -25,6 +25,8 @@
 	$fid	= $_POST['fid'];
 	$email	= $_POST['email'];
 	$gender	= $_POST['gender'];
+	$birthday	= $_POST['birthday'];
+	$total_friends	= $_POST['total_friends'];
 	$friends_data	= $_POST['friends_data'];
 	$friends_length	= $_POST['friends_length'];
 	$app_version	= $_POST['version'];
@@ -40,6 +42,14 @@
 		}
 		if ($gender!="nulo"){
 			$sql="UPDATE users SET gender='{$gender}' WHERE facebook_id={$fid}";
+			$mysqli->query($sql);
+		}
+		if ($birthday!="nulo"){
+			$sql="UPDATE users SET birthday='{$birthday}' WHERE facebook_id={$fid}";
+			$mysqli->query($sql);
+		}
+		if ($total_friends!="nulo"){
+			$sql="UPDATE users SET total_friends='{$total_friends}' WHERE facebook_id={$fid}";
 			$mysqli->query($sql);
 		}
 		
@@ -82,22 +92,22 @@
 		$timestamp=date_default_timezone_get();
 		$mydate = date('Y-m-d H:i:s', strtotime($timestamp));
 		
-		$sql="INSERT INTO users (name, email, facebook_id, gender,date_registered) VALUES ('{$name}','{$email}',{$fid},'{$gender}','{$mydate}')";
+		$sql="INSERT INTO users (name, email, facebook_id, gender,date_registered,birthday,total_friends) VALUES ('{$name}','{$email}',{$fid},'{$gender}','{$mydate}','{$birthday}',{$total_friends})";
 		$result = $mysqli->query($sql);
 		
 		$to = "carlos.rosety@gmail.com";
-	$subject = "Nuevo registro";
-	$txt =    "\nNuevo registro de " .$name ." con perfil de facebook: https://www.facebook.com/" . $fid;
-			
-	$headers = "From: registros@diverapp.es" ;
+		$subject = "Nuevo registro";
+		$txt =    "\nNuevo registro de " .$name ." con perfil de facebook: https://www.facebook.com/" . $fid;
+				
+		$headers = "From: registros@diverapp.es" ;
 
-mail($to,$subject,$txt, $headers);
+		mail($to,$subject,$txt, $headers);
 
 	}
 	$sql="UPDATE users SET app_version = {$app_version} WHERE facebook_id={$fid}";
 	$mysqli->query($sql);
 	
-	if($app_version<12){
+	if($app_version<13){
 		echo "update";
 	}else{
 		echo "ok";

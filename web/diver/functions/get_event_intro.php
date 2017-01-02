@@ -27,7 +27,7 @@
 	$row = mysqli_fetch_array($result);
 	$city_name=$row['name'];
 			
-	$sql="SELECT event_id, event_name, price, datetime_start, club_name, lat, clubs.long FROM events INNER JOIN clubs ON events.club_id=clubs.club_id WHERE showing=1 AND clubs.city_id = {$city_id} AND ((events.datetime_close>= DATE_ADD(NOW(), INTERVAL 2 HOUR)) OR (show_admin=1 AND {$fid} IN (SELECT facebook_id
+	$sql="SELECT event_id, event_name, price, datetime_start, club_name, lat,clubs.address, clubs.long FROM events INNER JOIN clubs ON events.club_id=clubs.club_id WHERE clubs.city_id = {$city_id} AND (((events.datetime_close>= DATE_ADD(NOW(), INTERVAL 2 HOUR)) AND showing=1 ) OR (show_admin=1 AND {$fid} IN (SELECT facebook_id
 												FROM users 
 												WHERE clearance like '%a%'))) 
 												

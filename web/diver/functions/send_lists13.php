@@ -1,5 +1,15 @@
 <?php 
 	
+	function generateRandomString($length) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyz';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 	include $_SERVER['DOCUMENT_ROOT'] . '/functions/send_to_stripe.php'; 
 	
 	//include $_SERVER['DOCUMENT_ROOT'] . '/php/db_connect'; 
@@ -37,24 +47,26 @@
 		$timestamp=date_default_timezone_get();
 		$mydate = date('Y-m-d H:i:s', strtotime($timestamp));
 		
+		$localizer=generateRandomString(5);
 	if($data!="none"){
 		$data_array=json_decode($data,true);
 		for($i=0;$i<$people;$i++){
 				
-			$sql="INSERT INTO orders(user_id,people,contact,contact_data,datetime,entry_id,order_name,order_second_name,order_dni,order_dob,promo_code,payment_method, payment_token, payment_last4) VALUES ((SELECT id
+			$sql="INSERT INTO orders(user_id,people,contact,contact_data,datetime,entry_id,order_name,order_second_name,order_dni,order_dob,promo_code,payment_method, payment_token, payment_last4,localizer) VALUES ((SELECT id
 																	FROM users
 																	WHERE facebook_id={$fid}
-																	LIMIT 1) ,{$people},'{$contact_method}','{$contact_data}','{$mydate}',{$entry_id},'{$data_array[$i]["name"]}','{$data_array[$i]["second_name"]}','{$data_array[$i]["dni"]}','{$data_array[$i]["dob"]}','{$promo_code}','{$payment_method}','{$payment_token}','{$payment_last4}')";
+																	LIMIT 1) ,{$people},'{$contact_method}','{$contact_data}','{$mydate}',{$entry_id},'{$data_array[$i]["name"]}','{$data_array[$i]["second_name"]}','{$data_array[$i]["dni"]}','{$data_array[$i]["dob"]}','{$promo_code}','{$payment_method}','{$payment_token}','{$payment_last4}','{$localizer}')";
 			
 			$result = $mysqli->query($sql);
 					
 		}
 	}else{
-		$sql="INSERT INTO orders(user_id,people,contact,contact_data,datetime,entry_id,order_name,order_dni,order_dob,promo_code,payment_method, payment_token, payment_last4) VALUES ((SELECT id
+		$sql="INSERT INTO orders(user_id,people,contact,contact_data,datetime,entry_id,order_name,order_dni,order_dob,promo_code,payment_method, payment_token, payment_last4,localizer) VALUES ((SELECT id
 																	FROM users
 																	WHERE facebook_id={$fid}
-																	LIMIT 1) ,{$people},'{$contact_method}','{$contact_data}','{$mydate}',{$entry_id},'none','none','none','{$promo_code}','{$payment_method}','{$payment_token}','{$payment_last4}')";
+																	LIMIT 1) ,{$people},'{$contact_method}','{$contact_data}','{$mydate}',{$entry_id},'none','none','none','{$promo_code}','{$payment_method}','{$payment_token}','{$payment_last4}','{$localizer}')";
 																	
+		echo $sql;
 			
 			$result = $mysqli->query($sql);
 	}
@@ -142,7 +154,7 @@
 
 	mail($to,$subject,$txt, $headers);
 
-	if($payment_method=="credit_card"){
+	if($payment_method=="stripe"){
 		ChargeStripe($price*100,"Reserva de " . $user_name . ", con perfil de facebook: https://www.facebook.com/" . $fid . " en " . $event_name. ", " . $city_name ,$payment_token);
 	}else{
 		echo "ok";
